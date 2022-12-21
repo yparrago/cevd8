@@ -1,0 +1,6 @@
+services:
+  jerrejerre_carousel.event_subscriber:
+    class: Drupal\jerrejerre_carousel\EventSubscriber\JerrejerreCarouselSubscriber
+    arguments: ['@messenger']
+    tags:
+      - { name: event_subscriber }

@@ -1,0 +1,482 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
+
+:root {
+    /* Use Resolution according to image size, for example 8k (7680 x 4320) */
+    --map-w-size: 2656px;
+    --map-h-size: 1655px;
+    --default-font-weight: 400;
+
+    /* Initial map position */
+    --map-px: -350px;
+    --map-py: -100px;
+
+    --map-z: 0;
+    --map-sec-z: 5;
+
+    --minimap-var: 0.065;
+}
+
+html * {
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: var(--default-font-weight);
+}
+
+html,
+body {
+    position: relative;
+    overflow: hidden;
+}
+
+.map-container {
+    height: 100vh;
+    max-height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    /* cursor: url('../images/cursor.png'), auto; */
+}
+
+.map-container .map-title {
+    position: absolute;
+    left: 50px;
+    top: 80px;
+    z-index: 1;
+    background-color: #B77E49;
+    max-width: 320px;
+    padding: 25px;
+}
+
+.pe-breadcrumb a{
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+.pe-breadcrumb a:hover{
+    color: rgba(255, 255, 255, 0.40);
+}
+.map-container .map-title h1 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.map-wrapper {
+    width: var(--map-w-size);
+    height: var(--map-h-size);
+    position: relative;
+    z-index: var(--map-z);
+    will-change: transform;
+    transform: translate(var(--map-px), var(--map-py));
+}
+
+.map-container #map {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url('/themes/custom/cevtheme/pueblos-etnicos/map-corredores-estrategicos/images/bg_map.jpg');
+    background-size: cover;
+}
+
+.map-container .map-sec {
+    position: absolute;
+    z-index: var(--map-sec-z);
+    width: 54px;
+    height: 54px;
+    text-align: center;
+    color: white;
+}
+
+
+.map-container .map-sec-image {
+    position: absolute;
+    transition: all .2s ease;
+    user-select: none;
+    /* opacity: 0; */
+    transition: all .2s ease;
+    pointer-events: none;
+    display: none;
+    z-index: 100;
+}
+
+.map-container .map-sec-image:hover {
+    display: block;
+}
+
+.map-container .map-sec svg {
+    pointer-events: none;
+}
+
+.map-container .map-sec svg path {
+    opacity: .7;
+    cursor: pointer;
+    pointer-events: all;
+}
+
+.map-container .map-sec svg path:hover {
+    opacity: 1;
+}
+
+.map-container .sonar-wave-container {
+    background-color: #7E7239;
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.map-container .sonar-wave-container:hover~.map-sec-image {
+    opacity: 1;
+}
+
+.map-container .sonar-wave-container:hover .sonar-wave {
+    visibility: hidden;
+}
+
+.map-container .sonar-wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 9999px;
+    opacity: 0;
+    z-index: -100;
+    pointer-events: none;
+}
+
+.map-container .sonar-wave1 {
+    background-color: #E2AB63;
+    animation: sonarWave 2s linear infinite;
+}
+
+.map-container .sonar-wave2 {
+    background-color: #6D8A78;
+    animation: sonarWave 2s 0.5s linear infinite;
+}
+
+#minimap {
+    width: calc(var(--map-w-size) * var(--minimap-var));
+    height: calc(var(--map-h-size) * var(--minimap-var));
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
+    z-index: 2;
+    background: url('/themes/custom/cevtheme/pueblos-etnicos/map-corredores-estrategicos/images/mini_mapa.png') no-repeat;
+    background-size: cover;
+    pointer-events: none;
+}
+
+#minimap-viewport {
+    width: 35%;
+    height: 35%;
+    position: absolute;
+    background-color: #b77e4971;
+    border: 1px solid;
+}
+
+.map-container .transition-none {
+    transition: none;
+}
+
+.map-container .map-menu-buttons {
+    position: absolute;
+    top: 315px;
+    left: 50px;
+    z-index: 10;
+    display: flex;
+}
+
+.map-container .map-menu-button {
+    width: 40px;
+    height: 40px;
+    background-color: #B77E49;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    padding: 2px;
+    transition: all .3s ease;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    margin-right: 4px;
+}
+
+.map-container .map-menu-button:hover {
+    filter: contrast(.7);
+}
+
+.map-container .map-menu-button.active {
+    transform: rotate(45deg);
+    box-shadow: 0px 0px 8px #ffffff69;
+} 
+
+.map-container .map-menu-text {
+    position: absolute;
+    z-index: 20;
+    top: 360px;
+    left: 50px;
+    width: 320px;
+    background-color: #B77E49;
+    border-radius: 3px;
+    padding: 12px;
+    color: white;
+    max-height: 60vh;
+    overflow-y: auto;
+    font-size: 14px;
+}
+
+.map-container .map-menu-text-keywords {
+    color: rgba(0, 0, 0, .5);
+}
+
+.map-container .map-menu-text-keywords a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, .5);
+    font-weight: 600;
+}
+
+.map-container .map-menu-text-keywords a:hover {
+    color: white;
+}
+
+.map-menu-popover .popover-body {
+    background-color: #B77E49;
+    color: white;
+}
+
+.map-menu-popover .popover-arrow::after {
+    border-right-color: #B77E49;
+}
+
+
+@keyframes sonarWave {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    :root {
+        /* Initial map position */
+        --map-px: -1075px;
+        --map-py: 1px;
+
+        --minimap-var: 0.035;
+    }
+    
+    #minimap {
+        left: 10px;
+        bottom: 50px;
+    }
+    
+    .map-container .map-title {
+        left: 10px;
+        top: 70px;
+        max-width: 220px;
+        top: 80px;
+        padding-left: 6px;
+        padding-right: 6px;
+        padding-top: 7px;
+        padding-bottom: 0px;
+    }
+    .pe-breadcrumb a{
+        font-size: 12px;
+    }
+    .map-container h1 {
+        font-size: 18px;
+    }
+
+    .map-container .map-title img {
+        width: 60vw;
+    }
+
+    .map-container .map-title h1 {
+        font-size: 18px;
+    }
+    
+    .map-container .map-sec-image {
+        display: block;
+        /*pointer-events: all;*/
+    }
+    
+    .map-container .map-sec svg path {
+        opacity: 1;
+    }
+
+    .map-container .map-menu-buttons {
+        top: 195px;
+        left: 10px;
+    }
+
+    .map-container .map-menu-text {
+        top: 241px;
+        left: 10px;
+        width: 95vw !important;
+        height: 47vh !important;
+    }
+
+}
+
+
+@media screen and (max-width: 1024px) {
+
+    :root {
+        /* Initial map position */
+        --map-px: -885px;
+        --map-py: -36px;
+
+        --minimap-var: 0.055;
+    }
+
+    .map-container .map-menu-text {
+        width: 450px;
+        height: 32vh;
+    }
+    .map-container .map-sec-image {
+        display: block;
+    }
+    
+    .map-container .map-sec svg path {
+        opacity: 1;
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1366px)  {
+    .map-container .map-title {
+        padding: 20px;
+    }
+
+    .map-container .map-title h1 {
+        font-size: 20px;
+    }
+    .map-container .map-menu-text {
+        height: 45vh;
+        top: 288px;
+        left: 50px;
+    }
+
+    .map-container .map-menu-buttons {
+        top: 240px;
+        left: 50px;
+    }
+}
+
+@media screen and (min-width: 1980px) {
+    :root {
+        --map-px: 0px;
+        --map-py: 0px;
+    }
+}
+
+
+
+
+
+/* ------ Estilos Modales ------- */
+
+.pe-modals .modal-header {
+    background-color: #E3DDCB;
+}
+
+.pe-modals .modal-content-cev {
+    background-color: #E3DDCB;
+}
+
+.pe-modals .modal-body .h2 {
+    /*color: #e4decd !important;*/
+}
+
+.pe-modals h1,
+.pe-modals h2,
+.pe-modals h3,
+.pe-modals p{
+    color: #233A6F!important;
+}
+
+
+.pe-modals .btn-close {
+    color: #233A6F !important;
+}
+
+.pe-modals .modal-icons a {
+   background-color: #335aa8!important;
+}
+
+.pe-modals  {
+    color: #e4decd !important;
+}
+
+.pe-modals a {
+    color: #e4decd !important;
+    text-decoration: none !important;
+}
+
+.pe-modals a:hover {
+    color: white !important;
+}
+/* lineas entre etiquetas */
+.pe-modals .modal-keywords * {
+    color: #4e5772 !important;
+}
+
+.pe-modals .modal-keywords a {
+    color: #335CA6 !important;
+    text-decoration: none !important;
+}
+
+.pe-modals .modal-keywords a:hover{
+    color: #5e5e5e !important;
+}
+
+.pe-modals .nav-tabs {
+    border-bottom: 1px solid #e4decd !important;
+}
+
+.pe-modals .nav-tabs  .nav-link:hover, .nav-link:focus-visible {
+    border: 1px solid #335aa8 !important;
+    /*color: white !important;*/
+}
+
+.pe-modals .nav-tabs .nav-link {
+    color:  #335aa8 !important;
+}
+
+.pe-modals .nav-tabs .nav-link.active {
+    background-color: #335aa8 !important;
+    color:  #e4decd !important;
+    border: 0 !important;
+}
+
+.pe-modals .tab-content {
+    background-color: #E3DDCB !important;
+}
+
+
+.pe-modals .tab-pane ul li, .pe-modals .tab-pane ul li a{
+    color: #335AA5 !important;
+}
+.pe-modals .tab-pane ul li a:hover{
+    color: #5d5d5df7 !important;
+}
+
+.pe-modals .tab-content li{
+    list-style-type: none !important;
+}
+
+.pe-modals .x-share-button.open {
+    background: #5d5d5df7!important;
+}

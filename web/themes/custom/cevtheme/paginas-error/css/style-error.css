@@ -1,0 +1,67 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f5f5f5;
+  background-image: url(../img/back-error.jpg);
+  background-repeat: repeat-y;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+}
+
+.dialog-off-canvas-main-canvas {
+  width: 100%;
+}
+
+.error {
+  width: 100%;
+  background-image: url(../img/socket.png);
+  background-repeat:no-repeat;
+  background-position: center;
+}
+.error p.lead{
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+  position: relative;
+
+}
+
+.error .btnCap {
+  margin: 0px;
+  width: auto;
+  padding: 4px 10px;
+
+/* ESTO ES IGUAL AL BOTON DEL HOME */
+  background-color: #917d26;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: -5px 8px 8px -5px rgb(34 33 33);
+  display: inline-block;
+  text-align: center;
+  border-radius: 2px;
+  font-size: 13px;
+  text-decoration: none;
+  font-family: inherit;
+  cursor: pointer !important;
+  z-index: 3;
+}
+.error .btnCap:hover {
+
+/* ESTO ES IGUAL AL BOTON DEL HOME */
+  background-color: #917d26;
+  color: #fff;
+  box-shadow: -2px 5px 5px -5px rgb(34 33 33);
+}
+@media (max-width: 768px) {
+  .error {
+    background-image: url(../img/socket2.png);
+  }
+ }

@@ -1,0 +1,105 @@
+/* Despliegue modal */
+.modal-content-cev a {
+    color: #85782F;
+}
+
+.modal-content-cev a:hover {
+        color: #293171;
+    }
+
+.volver a {
+    position: relative;
+    top: -3px;
+}
+
+.modal-icons a {
+    background-color: #85782F;
+    color: white !important;
+    padding: 5px;
+    margin-left: 3px !important;
+    border-radius: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    height: 30px;
+    width: 30px;
+    margin-left: 0px;
+}
+.modal-icons a:hover {
+    color: #ffffff;
+    background-color: #101986;
+}
+
+/* .accordion-button::after {
+    font-family: 'icomoon' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    content: "\e902";
+    transition: transform .2s ease-in-out;
+    transform: rotate(0deg);
+    background-image: none;
+    font-size: 1.3rem;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: none;
+    transform: rotate(180deg);
+} 
+
+.accordion-button:focus {
+    border-color: #85782F;
+    box-shadow: 0 0 0 0.25rem rgb(133 120 47 / 25%);
+}*/
+.modal-keywords {
+    margin-top: 0.5rem !important;
+}
+.modal-keywords * {
+    color: #f2f2f2;
+}
+
+.x-share-button.open .share-item {
+    margin-top: 3px;
+}
+
+    .x-share-button.open a {
+        background-color: #85782F;
+        color: #fff;
+    }
+
+        .x-share-button.open a:hover {
+            background-color: #101986;
+            color: #fff;
+        }
+
+.share-items {
+    position: absolute;
+    height: 100%;
+    padding: 0;
+    width: 201px;
+    right: 36px;
+}
+
+.x-share-button {
+    width: 110px;
+    height: 38px;
+}
+
+.modal-content-cev .list-group-item.active {
+    background-color: #293171;
+    border-color: #E0E0E0;
+    color: #f2f2f2;
+}
+
+.rt-player .progress .progress-bar[data-role="player-progress-bar"] {
+    background-color: #101986;
+}
+
+.rt-player .rt-player__buttons button:hover, .rt-player .rt-player__buttons button.active {
+    color: #101986;
+}
+

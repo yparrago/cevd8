@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 300 300" style="enable-background:new 0 0 300 300;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.25;fill:#13AFB6;enable-background:new    ;}
+	.st1{fill:#319965;}
+	.st2{opacity:0.3;fill:#13AFB6;enable-background:new    ;}
+	.st3{fill:#F5AF5A;}
+	.st4{opacity:0.4;fill:#13AFB6;enable-background:new    ;}
+	.st5{fill:#7F5699;}
+	.st6{opacity:0.6;}
+	.st7{fill:#13AFB6;}
+	.st8{fill:#0A9797;}
+	.st9{fill:#E4DECD;}
+</style>
+<g>
+	<ellipse class="st0" cx="150" cy="150" rx="149" ry="149"/>
+	<path class="st1" d="M150,2c81.6,0,148,66.4,148,148s-66.4,148-148,148S2,231.6,2,150S68.4,2,150,2 M150,0C67.3,0,0,67.3,0,150
+		s67.3,150,150,150s150-67.3,150-150S232.7,0,150,0L150,0z"/>
+</g>
+<g>
+	<ellipse class="st2" cx="150" cy="150" rx="140.8" ry="140.8"/>
+	<path class="st3" d="M150,10.3c77.1,0,139.7,62.7,139.7,139.8S227,289.8,150,289.8S10.3,227.1,10.3,150S72.9,10.3,150,10.3
+		 M150,8.2C71.8,8.2,8.2,71.8,8.2,150S71.8,291.8,150,291.8S291.8,228.2,291.8,150S228.2,8.2,150,8.2L150,8.2z"/>
+</g>
+<g>
+	<circle class="st4" cx="150" cy="150" r="132.5"/>
+	<path class="st5" d="M150,18.5c72.5,0,131.5,59,131.5,131.5s-59,131.5-131.5,131.5S18.5,222.5,18.5,150S77.5,18.5,150,18.5
+		 M150,16.4c-73.6,0-133.6,60-133.6,133.6S76.3,283.6,150,283.6s133.6-60,133.6-133.6S223.6,16.4,150,16.4L150,16.4z"/>
+</g>
+<g class="st6">
+	<circle class="st7" cx="150" cy="150" r="124.3"/>
+	<path class="st8" d="M150,26.8c32.9,0,63.8,12.8,87.1,36.1s36.1,54.2,36.1,87.1s-12.8,63.8-36.1,87.1s-54.2,36.1-87.1,36.1
+		s-63.8-12.8-87.1-36.1S26.8,182.9,26.8,150s12.8-63.8,36.1-87.1C86.2,39.7,117.1,26.8,150,26.8 M150,24.6
+		C80.8,24.6,24.6,80.8,24.6,150S80.8,275.4,150,275.4S275.4,219.2,275.4,150S219.2,24.6,150,24.6L150,24.6z"/>
+</g>
+<circle class="st9" cx="150" cy="150" r="117.2"/>
+</svg>

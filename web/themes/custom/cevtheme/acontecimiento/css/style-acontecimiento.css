@@ -1,0 +1,265 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css");
+@import url("../../iconos-transmedia/BACKUP/00 ICONOS 17 DE JUNIO/style.css");
+
+body{
+    background-image:url("../img/background.png");
+    background-size: cover;
+
+
+}
+
+
+
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center,
+
+  }
+  
+  .flex-item-left {
+    flex: 30%;
+  }
+  
+  
+  .flex-item-center {
+    flex: 40%;
+  }
+  
+  .flex-item-right {
+    flex: 30%;
+  }
+
+
+
+
+  .button {
+    padding-left: 20px;
+    font-family: obliqua;
+    text-align: left;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+  
+.button1 {
+    color: #99e2ff;
+   
+}
+
+
+.button1:hover {
+    color: rgb(255, 251, 210);
+  }
+  
+
+
+.presentacion {
+    margin-top: 100px;
+      /*   
+    margin-bottom: 5px;
+    width: 100%;
+    */
+
+}
+
+.presentacion h1, .presentacion p{
+    color: #fff;
+    line-height: 1.5rem;
+
+}
+.presentacion h1 {
+    /* margin-top: 3rem; */
+    font-family: obliqua;
+    font-weight: normal;
+    color: #caeeff;
+    text-shadow: 2px 2px 4px #121212;
+    line-height: 1;
+    font-style: italic;
+    margin-left: 10px;
+}
+
+.presentacion p {
+    font-family: obliqua;
+    margin-top: 30px;
+    font-weight: normal;
+    margin-left: -56px;
+    padding-right: 10px;
+}
+
+
+
+.row.interno{
+    height: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin: unset;
+}
+
+.boton-trm {
+    background-repeat: no-repeat;
+    background-image: url("../img/btn-bk.png");
+    display: flex;
+    z-index: 100;
+    margin-top:100px;
+    width:100%;
+
+}
+
+.videoPpal{
+    width: 70%;
+    height: 100%;
+}
+.videoPpal iframe{
+    width: 100%;
+    height: 100%;
+}
+.elementofijo{
+    width: 30%;
+    height: 76vh;
+    background: rgb(247,46,84);
+    background: linear-gradient(90deg, rgba(247,46,84,0.3) 0%, rgba(0,22,56,0.3) 100%);
+    box-shadow: 2px 2px 4px #464646;
+   
+}
+.elementofijo p, .elementofijo h6{
+    margin: 0.7rem;
+    color: #fff;
+    line-height: 1.2rem;
+    font-family: obliqua;
+    font-weight:bold;
+}
+
+
+.elementofijo p, .elementofijo h7{
+    color: #fff;
+    line-height: 1.2rem;
+    font-family: obliqua;
+    font-weight:normal;
+
+}
+
+.redes{
+    overflow-y: scroll;
+    width: 100%;
+    height: calc(100% - 15%);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-x: hidden;
+}
+.redes::-webkit-scrollbar {
+	border-radius: 25px;
+	color: rgba(197, 200, 202, 0.91),;
+	background-color: transparent;
+	cursor: pointer;
+	width: 10px;
+    
+}
+.redes::-webkit-scrollbar-track{
+    -webkit-box-shadow: inset 0 0 20px 0px #ffffff00;
+    border-radius: 0px;
+}
+.redes::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 10px #faf1f1;
+    cursor: pointer;
+    transition: all 0.7s ease;
+  }
+.elemento {
+    min-height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+
+/*footer*/
+.footer {
+    font-size: 100%;
+    background-color: #163d72;
+    text-align: center;
+    line-height: 1rem;
+}
+p.politica {
+    margin: 0.5rem 0rem;
+}
+.enlace{
+    color: #d7b858;
+    text-decoration: unset;
+    transition: all 0.7s ease;
+}
+.enlace:hover{
+    color: #ffe7a0;
+}
+
+
+
+
+@media all and (max-width: 820px) {
+    .navbar-brand .logo {
+        max-width: 350px;
+    }
+    .videoPpal{
+        width: 100%;
+        margin-bottom: 3rem;
+        height: 40%;
+    }
+    
+    .redes, .elementofijo{
+        width: 100%;
+    }
+    .presentacion p{
+        width: 100%;
+        margin-top: -6rem;
+        margin-left: 0;
+    }
+    .footer{
+        font-size: 60%;
+    }
+  
+
+    .boton-trm {
+        width: 100%;
+        margin-left: unset;
+        margin-top: 0px;
+    }
+
+
+    .flex-item-right, .flex-item-center, .flex-item-left {
+        flex: 100%;
+      }
+
+      .presentacion p {
+        margin-left: 0px;
+        padding-right: 0px;
+    }
+
+    .presentacion h1 {
+        margin-left: 0px;
+    }
+    .redes{
+        height: calc(100% - 20%);
+    }
+    .elemento{
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        margin-bottom: 1rem;
+    }
+      
+    .elementofijo{
+        height: auto;
+    }
+    
+}
+

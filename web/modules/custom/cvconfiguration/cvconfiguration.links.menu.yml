@@ -1,0 +1,6 @@
+cvconfiguration.settings_form:
+  title: Configuración de contenidos de derechos humanos
+  description: Configuraciónes de los contenidos que se muestran en derechos humanos.
+  parent: system.admin_config_system
+  route_name: cvconfiguration.settings_form
+  weight: 10

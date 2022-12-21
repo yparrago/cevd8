@@ -1,0 +1,107 @@
+/* Nuevos estilos */
+.resultados-busqueda-cev body {
+    margin: 0;
+    /*font-family: var(--bs-font-sans-serif);*/
+    font-family: "Obliqua ITC Std";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background: #e6e6e6!important;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent
+}
+.resultados-busqueda-cev .card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: none!important;
+    border-radius: 7px!important;
+    -webkit-box-shadow: 5px 5px 20px 5px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.2);
+    position: relative;
+}
+.resultados-busqueda-cev .card .bottom{
+    background-color: #1C465F;
+}
+.resultados-busqueda-cev .card h5{
+    color: #1C465F;
+}
+.resultados-busqueda-cev .card-body {
+    flex: 1 1 auto;
+    /*padding: 0!important;*/
+}
+.resultados-busqueda-cev .card-body .bottom{
+    border-top: 3px solid #AA8F2C;
+    color: #fff;
+    padding: 1rem;
+}
+.resultados-busqueda-cev .card .icon{
+    align-items: center;
+    background: #1C465F;
+    border-radius: 100px;
+    display: flex;
+    font-size: 1.3rem;
+    height: 30px;
+    justify-content: center;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 30px;
+}
+.resultados-busqueda-cev .card .icon i{
+    color: #fff;
+}
+.resultados-busqueda-cev .card .text{
+ padding: 1rem;   
+}
+.resultados-busqueda-cev .card-title {
+    margin-bottom: .5rem;
+    font-weight: bold;
+}
+.resultados-busqueda-cev .azul-principal{
+    color:#1C465F;
+}
+/* Nuevos estilos formulario  */
+.resultados-busqueda-cev input[type=text].form-control{
+    width: 400px!important;
+}
+.resultados-busqueda-cev input[type=submit].form-control{
+    width: 150px;
+    height: 38px;
+}
+.resultados-busqueda-cev .search{
+    display: flex;
+}
+.resultados-busqueda-cev .titulo-busqueda{
+    font-size: 30px;
+}
+/* Paginador */
+.resultados-busqueda-cev .paginador{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.resultados-busqueda-cev .paginador .page-link{
+    border-radius: 50px!important;
+    border: none;
+    margin: 0 10px;
+}
+.resultados-busqueda-cev .paginador li.active span{
+    background: #04414d!important;
+    border-radius: 50px!important;
+    border: none;
+    margin: 0 10px;
+}
+.resultados-busqueda-cev .paginador .page-link{
+color: #1C465F;
+}
+
+.resultados-busqueda-cev main.container .form-row{
+    display: flex;
+}

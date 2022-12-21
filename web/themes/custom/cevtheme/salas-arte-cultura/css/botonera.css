@@ -1,0 +1,85 @@
+.flotantes {
+    position: fixed;
+    height: auto;
+    width: 45px;
+    top: 12vh;
+    left: 0px;
+    z-index: 0;
+}
+
+.flotantes .texto {
+    background-color: rgba(255, 255, 255, 0.925);
+}
+
+.flotantes li {
+    margin: 1px;
+    left: -30px;
+    width: 30px;
+    position: relative;
+    display: flex;
+    align-content: center;
+    flex-wrap: nowrap;
+    list-style: none;
+}
+
+.flotantes .ocultos {
+    position: relative;
+    left: -100px;
+    margin-bottom: 1px;
+    transition: all 300ms ease;
+}
+
+.flotantes #botones:checked~.ocultos {
+    left: 0;
+}
+
+.flotantes li.texto img {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    padding: 3px;
+}
+
+.flotantes span {
+    opacity: 0;
+    left: -200px;
+    line-height: 1;
+    height: 30px;
+    margin: 0px 10px;
+    text-align: left;
+    z-index: -1;
+    padding: 3px;
+    background: rgba(34, 58, 115, 0.9);
+    color: #fff;
+    display: flex;
+    position: relative;
+    transition: all 300ms ease 0s;
+    cursor: pointer;
+}
+
+.flotantes .texto:hover span {
+    opacity: 0.8;
+    left: -8px;
+}
+.flotantes .texto:hover img{
+    filter: invert(217%);
+    background-color: rgb(209 194 136);
+}
+
+.flotantes a {
+    text-decoration: none;
+    color: #fff;
+}
+.flotantes .texto:hover{
+    box-shadow: 0px 0px 6px 1px #2e3d77;
+}
+
+.flotantes a:hover {
+    color: #ccc;
+}
+
+.flotantes .leyenda {
+    width: max-content;
+    margin: 0px 5px;
+    line-height: 125%;
+}

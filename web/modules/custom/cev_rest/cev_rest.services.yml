@@ -1,0 +1,6 @@
+services:
+  cev_test.normalizer_stdclass:
+    class: Drupal\cev_rest\NormalizerStdclass
+    arguments: ['\stdClass']
+    tags:
+    - { name: normalizer}

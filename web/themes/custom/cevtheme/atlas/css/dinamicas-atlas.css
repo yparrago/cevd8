@@ -1,0 +1,157 @@
+/* COLORES DINAMICAS */
+
+.grupo3 .persona{
+  border-color: #B878EA;
+}
+.grupo3 .link-danger {
+  color: #B878EA;
+}
+.grupo3 .link-danger:focus,  .grupo3 .link-danger:hover{
+  color: #B878EA;
+}
+.grupo3 .progreso{
+  background-color: #B878EA;
+}
+.grupo3 .textoVol a,.grupo3 .textoVol{
+  color: #B878EA;
+}
+.grupo3 .textoVol a:hover{
+  color: #B878EA;
+}
+.grupo3 .next-pre-btn{
+  color: #B878EA;
+}
+.grupo3 .next-pre-btn:hover{
+  color: #B878EA;
+}
+.grupo3 .polifonias img {
+  border-color: #B878EA;
+}
+.grupo3 .poli .icon-circle {
+  background-color: #B878EA;
+}
+.grupo3 .poli .icon-circle:hover{
+  background-color: #B878EA;
+}
+.grupo3 .iconoPROF {
+  background-color: #B878EA !important;
+}
+.grupo3 .iconoPROF a:hover {
+  background-color: #B878EA;
+}
+
+
+.grupo2 .persona{
+    border-color: #F96472;
+  }
+  .grupo2 .link-danger {
+    color: #F96472;
+  }
+  .grupo2 .link-danger:focus,  .grupo2 .link-danger:hover{
+    color: #F96472;
+  }
+.grupo2 .progreso{
+    background-color: #F96472;
+  }
+.grupo2 .textoVol a,.grupo2 .textoVol{
+    color: #F96472;
+  }
+.grupo2 .textoVol a:hover{
+    color: #F96472;
+  }
+.grupo2 .next-pre-btn{
+    color: #F96472;
+  }
+.grupo2 .next-pre-btn:hover{
+    color: #F96472;
+  }
+.grupo2 .polifonias img {
+    border-color: #F96472;
+  }
+.grupo2 .poli .icon-circle {
+    background-color: #F96472;
+  }
+.grupo2 .poli .icon-circle:hover{
+    background-color: #F96472;
+  }
+.grupo2 .iconoPROF {
+    background-color: #F96472 !important;
+  }
+.grupo2 .iconoPROF a:hover {
+    background-color: #F96472;
+  
+}
+
+
+.grupo1 .persona{
+  border-color: #F0680C;
+}
+.grupo1 .link-danger {
+  color: #F0680C;
+}
+.grupo1 .link-danger:focus,  .grupo1 .link-danger:hover{
+  color: #F0680C;
+}
+
+.grupo1 .progreso{
+    background-color: #F0680C;
+}
+.grupo1 .textoVol a, .grupo1 .textoVol{
+    color: #F0680C;
+  }
+  .grupo1 .textoVol a:hover{
+    color: #F0680C;
+  
+  }
+  .grupo1 .polifonias img {
+    border-color: #F0680C;
+  }
+  .grupo1 .poli .icon-circle {
+    background-color: #F0680C;
+  }
+  .grupo1 .poli .icon-circle:hover{
+    background-color: #e25b00;
+  }
+  .grupo1 .iconoPROF {
+    background-color: #F0680C !important;
+  }
+  .grupo1 .iconoPROF a:hover {
+    background-color: #e25b00;
+  }
+
+
+  .grupo4 .persona{
+    border-color: #7482E8;
+  }
+  .grupo4 .link-danger {
+    color: #7482E8;
+  }
+  .grupo4 .link-danger:focus,  .grupo4 .link-danger:hover{
+    color: #7482E8;
+  }
+  .grupo4 .progreso{
+    background-color: #7482E8;
+  }
+  .grupo4 .textoVol a,  .grupo4 .textoVol{
+    color: #7482E8;
+  }
+  .grupo4 .textoVol a:hover{
+    color: #7482E8;
+  
+  }
+ 
+  .grupo4 .polifonias img {
+    border-color: #7482E8;
+  }
+  .grupo4 .poli .icon-circle {
+    background-color: #7482E8;
+  }
+  .grupo4 .poli .icon-circle:hover{
+    background-color: #7482E8;
+  }
+  .grupo4 .iconoPROF {
+    background-color: #7482E8 !important;
+  }
+  .grupo4 .iconoPROF a:hover {
+    background-color: #7482E8;
+  }

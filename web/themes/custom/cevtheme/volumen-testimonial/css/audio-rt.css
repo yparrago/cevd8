@@ -1,0 +1,48 @@
+.rt-player {
+    --accent-color: lightblue;
+}
+
+.rt-player .rt-timer{
+    display: flex;
+    text-align: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
+
+.rt-player .progress {
+    padding: 3px;
+    height: 10px;
+    background-color: #424242;
+    cursor: pointer;
+}
+
+.rt-player .progress .progress-bar[data-role="player-progress-bar"]{
+    background-color: var(--accent-color);
+    transition: width 0.1s linear;
+}
+
+.rt-player .rt-player__buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8px 0px;
+}
+
+.rt-player .rt-player__buttons button{
+    color: #424242 ;
+    font-size: 30px;
+    transition: all 0.2s ease;
+    outline: 0;
+}
+
+.rt-player .rt-player__buttons button:hover,
+.rt-player .rt-player__buttons button.active {
+    color: var(--accent-color);
+}
+
+.rt-player .rt-player__buttons button:focus {
+    outline: 0 !important;
+}

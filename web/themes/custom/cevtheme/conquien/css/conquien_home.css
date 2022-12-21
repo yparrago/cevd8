@@ -1,0 +1,410 @@
+.particulas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+.particulas::before {
+  display: block;
+  z-index: -2;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0.6;
+}
+
+/* INDEX CON QUIEN*/
+#contenedor_divs_index_conquien {
+  margin: auto; 
+  margin-top: 30px;
+  margin-bottom: 15%;  
+}
+
+.div_index_conquien {
+  background: #202B30; 
+  border-radius: 2%; 
+  width: 23%; 
+  padding: 2%; 
+  justify-content: center; 
+  align-items: center; 
+  height: max-content;
+}
+
+.div_index_conquien h2 {
+  color: white; 
+  font-size: 16pt;
+}
+
+.div_index_conquien p {
+  color: white; 
+  font-size: 10pt; 
+  line-height: normal;
+}
+
+.div_index_conquien .btn {
+  width: 100%; 
+  margin: auto; 
+  background: #CF6D5F; 
+  color: white; 
+  text-transform: none; 
+  font-size: 11pt; 
+  text-align: center;
+}
+
+#linea-tiempo[class~="d-none"], #index[class~="d-none"]{
+  display: none !important;
+}
+
+#txt_principal_index {
+  font-size: 12pt !important;
+  color: white;
+}
+
+@media only screen and (min-width: 1669px) {
+
+  #txt_principal_index {
+    font-size: 11pt !important;
+  }
+
+  .div_index_conquien h2 {
+    font-size: 14pt !important;
+  }
+
+  .div_index_conquien p {
+    font-size: 11pt !important;
+  }
+
+  .div_index_conquien .btn {
+    font-size: 16px !important;
+    padding: auto;
+  }
+
+  .div_index_conquien {
+    height: max-content !important;
+  }
+
+  #p_Region {
+    margin-bottom: 22pt !important;
+  }
+
+  #p_TemaTrabajo {
+    margin-bottom: 22pt !important;
+  }
+
+}
+
+@media only screen and (max-width: 1668px) and (min-width: 1160px) {
+
+  #txt_principal_index {
+    font-size: 10pt !important;
+  }
+
+  .div_index_conquien h2 {
+    font-size: 15pt !important;
+  }
+
+  .div_index_conquien p {
+    font-size: 10pt !important;
+  }
+
+  .div_index_conquien .btn {
+    font-size: 16px !important;
+    padding: auto;
+  }
+
+  #btn_Nacional {
+    padding-left: 13%;
+  }
+
+  #btn_Internacional {
+    padding-left: 8%;
+  }
+
+  .div_index_conquien {
+    height: max-content !important;    
+  }
+
+  #p_Region {
+    margin-bottom: 6pt !important;
+  }
+
+  #p_TemaTrabajo {
+    margin-bottom: 5pt !important;
+  }
+
+}
+
+@media only screen and (max-width: 1387px) and (min-width: 1160px) {
+
+  #txt_principal_index {
+    font-size: 12pt !important;
+  }
+
+  .div_index_conquien h2 {
+    font-size: 12pt !important;
+  }
+
+  .div_index_conquien p {
+    font-size: 9pt !important;
+  }
+
+  .div_index_conquien .btn {
+    font-size: 13px !important;
+    padding: auto;
+  }
+
+  #btn_Nacional {
+    padding-left: 13%;
+  }
+
+  #btn_Internacional {
+    padding-left: 8%;
+  }
+
+  .div_index_conquien {
+    height: max-content !important;    
+  }
+
+  #p_Region {
+    margin-bottom: 10pt !important;
+  }
+
+  #p_TemaTrabajo {
+    margin-bottom: 9pt !important;
+  }
+
+}
+
+@media only screen and (max-width: 1159px) and (min-width: 1044px) {
+
+  #txt_principal_index {
+    font-size: 8pt !important;
+  }
+
+  .div_index_conquien h2 {
+    font-size: 10pt !important;
+  }
+
+  .div_index_conquien p {
+    font-size: 8pt !important;
+  }
+
+  .div_index_conquien .btn {
+    font-size: 12px !important;
+    padding: auto;
+  }
+
+  #btn_Nacional {
+    padding-left: 13%;
+  }
+
+  #btn_Internacional {
+    padding-left: 8%;
+  }
+
+  .div_index_conquien {
+    height: max-content !important;  
+  }
+
+  #p_Region {
+    margin-bottom: 12pt !important;
+  }
+
+  #p_TemaTrabajo {
+    margin-bottom: 12pt !important;
+  }
+
+}
+
+@media only screen and (max-width: 1043px) and (min-width: 992px) {
+
+  #txt_principal_index {
+    font-size: 9pt !important;
+  }
+
+  .div_index_conquien h2 {
+    font-size: 10pt !important;
+  }
+
+  .div_index_conquien p {
+    font-size: 8pt !important;
+  }
+
+  .div_index_conquien .btn {
+    font-size: 12px !important;
+    padding: auto;
+  }
+
+  #btn_Nacional {
+    padding-left: 12%;
+  }
+
+  #btn_Internacional {
+    padding-left: 6%;
+  }
+
+  .div_index_conquien {
+    height: max-content !important;  
+  }
+
+  #p_Region {
+    margin-bottom: 12pt !important;
+  }
+
+  #p_TemaTrabajo {
+    margin-bottom: 12pt !important;
+  }
+
+}
+
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+
+  .conquien {
+    position: fixed !important;
+    right: 0 !important;
+    left: 0 !important;
+    z-index: 1020 !important;
+    overflow-y: auto;
+  }
+
+  .conquien .div-content-time-line {
+    min-height: 38rem !important;
+  }
+
+  .conquien .div-title-text-time-line {
+    top: 55px !important;
+    max-width: 97% !important;
+    min-width: 97% !important;
+    background-color: transparent !important;
+  }
+
+  .div_index_conquien h2 {
+    font-size: 9pt !important;
+  }
+
+  .div_index_conquien p {
+    font-size: 8pt !important;
+  }
+
+  .div_index_conquien .btn {
+    font-size: 9px !important;
+    padding: auto;
+  }
+
+  #p_lineaTiempo {
+    margin-bottom: 20pt !important;
+  }
+
+  #p_tipoAliado {
+    margin-bottom: 20pt !important;
+  }
+
+  #btn_LineaTiempo {
+    padding-left: 16%;
+  }
+
+  #btn_Nacional {
+    width: 48% !important;
+    padding-left: 13%;
+  }
+
+  #btn_Internacional {
+    width: 48% !important;
+    padding-left: 9%;
+  }
+
+  .div_index_conquien {
+    height: max-content !important;  
+  }
+
+  #txt_principal_index {
+    font-size: 12pt !important;
+  }
+
+}
+
+@media only screen and (max-width: 991px) and (min-width: 900px) {
+
+  .div_index_conquien .btn {
+    font-size: 10px !important;
+  }
+
+  #btn_Internacional {
+    padding-left: 8% !important;
+  }
+
+  .txt_principal_index {
+    font-size: 10pt !important;
+  }
+
+}
+
+@media only screen and (max-width: 777px) and (min-width: 770px) {
+
+  #p_tipoAliado {
+    margin-bottom: 8pt !important;
+  }
+
+}
+
+@media only screen and (max-width: 769px) and (min-width: 768px) {
+
+  #p_tipoAliado {
+    margin-bottom: 10pt !important;
+  }
+
+}
+
+@media only screen and (max-width: 767px) and (min-width: 576px) {
+
+  /*Index*/
+  .div_index_conquien {
+    width: 95% !important;
+    margin-bottom: 18pt; 
+    height: max-content !important;  
+  }
+
+  .div-title-text-time-line {
+    padding-top: 32px;
+  }
+
+}
+.cqhome{
+  height: 100%;
+  overflow: auto;
+}
+
+.texto_cuadros{
+  font-size: 9pt;
+  color: white;
+}
+
+@media only screen and (max-width: 575px) {
+  .conquien .row-time-line-info-sm {
+    border-top-style: solid;
+    border-top-color: white !important;
+    border-top-width: 2px !important;
+  }
+
+  .conquien .div-title-text-time-line {
+    max-width: 100% !important;
+    min-width: 100% !important;
+    padding-top: 2rem;
+  }
+
+  /*Index*/
+  .div_index_conquien {
+    width: 95% !important;
+    margin-bottom: 18pt; 
+    height: max-content !important;  
+  }
+
+  /*.div_index_conquien .btn {
+    font-size: 9pt !important; 
+  }*/
+}

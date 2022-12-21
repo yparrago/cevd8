@@ -1,0 +1,194 @@
+{#
+/**
+* @file
+* Default theme implementation to display a menu.
+*
+* Available variables:
+* - menu_name: The machine name of the menu.
+* - items: A nested list of menu items. Each menu item contains:
+*   - attributes: HTML attributes for the menu item.
+*   - below: The menu item child items.
+*   - title: The menu link title.
+*   - url: The menu link url, instance of \Drupal\Core\Url
+*   - localized_options: Menu link localized options.
+*   - is_expanded: TRUE if the link has visible children within the current
+*     menu tree.
+*   - is_collapsed: TRUE if the link has children within the current menu tree
+*     that are not currently visible.
+*   - in_active_trail: TRUE if the link is in the active trail.
+*
+* @ingroup themeable
+*/
+#}
+
+
+
+<button  id="menuNormalBTN" class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#menuNormal" aria-controls="menuNormal" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+<button id="menuMovilBTN" class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#menuMovil" aria-controls="menuMovil" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+<a class="navbar-brand" href="/">
+  <span class="logo"></span>
+</a>
+<button id="lupa" type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <i class="bi bi-search fs-5" aria-hidden="true"></i>
+</button>
+<button id="modal" class="btn bd-highlight" data-bs-toggle="modal" data-bs-target="#modalAyuda">
+  <i class="bi bi-question-circle-fill fs-5" data-bs-toggle="modal" data-bs-target="#modalAyuda"></i>
+</button>
+<div id="buscar" class="dropdown-menu dropdown-menu-right" role="menu">
+  <form  id="cevSearchForm" onsubmit="return onSubmitSearchForm();" method="get">
+      <div class="form-group">
+          <input type="text" name="query" id="cevSearchText" class="form-control form-control-search" placeholder="Escriba el término" required="">
+          <label for="searchTarget" class="text-dark">¿Dónde desea buscar?</label>
+          <select class="form-control" id="searchTarget">
+              <option value="0" disabled="">Buscar...</option>
+              <option value="1">Plataforma</option>
+              <option value="2">Archivo</option>
+          </select>
+      </div>
+      <div class="form-group d-flex justify-content-end mt-2">
+          <input type="submit" class="btn btn-lupa" value="Buscar" style="color: white;">
+      </div>
+  </form>
+</div>
+<div class="contenidoMenu">
+  <div class="navbar-collapse collapse" id="menuNormal" style="">                  
+        <div class="container-fluid mt-2">
+          <div class="row conjunto">
+            <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3 columna">
+              <h6 >componentes</h6>
+              {#{ drupal_view('secciones_home', 'menu_sup') }#}
+
+              <form class="buscador" name="enlacesSecciones">
+                <select name="secciones" class="form-select" onfocus='this.size=5;' onblur='this.size=1;' aria-label="Selector de componentes" onChange="redireccionArchivo(this);">
+                  <option selected disabled>Selección de componente</option>
+                  {{ drupal_view('secciones_home', 'menu') }}
+                </select>
+              </form>
+            </div>
+            <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3 columna">
+              <h6 >Acerca de la COMISIÓN DE LA VERDAD</h6>
+              <ul class="list-group list-group-horizontal-sm lista-1" aria-labelledby="Columna 2">
+                <li class="list-group-item modal_cev" data-nid="1000"><a class="dropdown-item" href="#">¿Qué es la Comisión de la Verdad?</a></li>
+                <li class="list-group-item"><a class="dropdown-item" href="https://web.comisiondelaverdad.co/la-comision/mandato-y-funciones" target="_blank">Mandato y funciones</a></li>
+                <!--<li class="list-group-item"><a class="dropdown-item" href="https://web.comisiondelaverdad.co/transparencia" target="_blank">Transparencia</a></li>-->
+                <li class="list-group-item"><a class="dropdown-item" href="/los-y-las-comisionados" target="_blank">Las y los comisionados</a></li>
+                <!--<li class="list-group-item"><a class="dropdown-item" href="#">Accesibilidad</a></li>-->
+                <li class="list-group-item"><a class="dropdown-item" href="https://web.comisiondelaverdad.co" target="_blank">Versión anterior web - Comisión en Liquidación</a></li>
+              </ul>
+            </div>
+            <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 col-xxl-2 columna">
+              <h6 >Objetivos</h6>
+              <ul class="list-group" aria-labelledby="Columna 3">
+                <li class="list-group-item"><a class="dropdown-item" href="/etiquetas/esclarecimiento">Esclarecimiento</a></li>
+                <li class="list-group-item"><a class="dropdown-item" href="/etiquetas/reconocimiento">Reconocimiento</a></li>
+                <li class="list-group-item"><a class="dropdown-item" href="/etiquetas/convivencia">Convivencia</a></li>
+                <li class="list-group-item"><a class="dropdown-item" href="/etiquetas/no-repeticion">No Repetición</a></li>
+              </ul>
+            </div>
+            <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+              <h6 >Enfoques</h6>
+              <ul class="list-group list-group-horizontal-sm" aria-labelledby="columna 4">
+                <li class="list-group-item modal_cev" data-nid="1106"><a class="dropdown-item" href="#">Étnico</a></li>
+                <li class="list-group-item modal_cev" data-nid="1110"><a class="dropdown-item" href="#">Niñas y niños</a></li>
+                <li class="list-group-item modal_cev" data-nid="1107"><a class="dropdown-item" href="#">De género</a></li>
+                <!--<li class="list-group-item"><a class="dropdown-item" href="/etiquetas/jovenes">Jóvenes</a></li>-->
+                <li class="list-group-item modal_cev" data-nid="1108"><a class="dropdown-item" href="#">Psicosocial</a></li>
+                <li class="list-group-item modal_cev" data-nid="1111"><a class="dropdown-item" href="#">Persona Mayor</a></li>
+                <li class="list-group-item modal_cev" data-nid="1109"><a class="dropdown-item" href="#">Estrategia cultural</a></li>
+                <li class="list-group-item modal_cev" data-nid="1112"><a class="dropdown-item" href="#">Discapacidad</a></li>
+              </ul>
+            </div>
+            
+          </div>
+        </div>
+  </div>
+</div>
+<div class="contenidoMenuMovil">
+  <div class="navbar-collapse collapse" id="menuMovil" style="">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="accordion" id="menuColapsables">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <h6 >componentes</h6>
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#menuColapsables">
+              <div class="accordion-body">
+                <form class="buscadorMovil" name="enlacesSeccionesMov">
+                  <select name="seccionesMov" class="form-select" onfocus='this.size=5;' onblur='this.size=1;' aria-label="Selector de componentes" onChange="redireccionArchivo(this)">
+                    <option selected disabled>Selección de componente</option> 
+                    {{ drupal_view('secciones_home', 'menu') }}
+                  </select>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button  collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <h6 >Acerca de la COMISIÓN DE LA VERDAD</h6>
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#menuColapsables">
+              <div class="accordion-body">
+                <ul class="list-group" aria-labelledby="Columna 2">
+                  <li class="list-group-item"><a class="dropdown-item" href="https://web.comisiondelaverdad.co/la-comision/que-es-la-comision-de-la-verdad" target="_blank">¿Qué es la Comisión de la Verdad?</a></li>
+                  <li class="list-group-item"><a class="dropdown-item" href="https://web.comisiondelaverdad.co/la-comision/mandato-y-funciones" target="_blank">Mandato y funciones</a></li>
+                  <!--<li class="list-group-item"><a class="dropdown-item" href="https://web.comisiondelaverdad.co/transparencia" target="_blank">Transparencia</a></li>-->
+                  <li class="list-group-item"><a class="dropdown-item" href="/los-y-las-comisionados" target="_blank">Las y los comisionados</a></li>
+                  <!--<li class="list-group-item"><a class="dropdown-item" href="#">Accesibilidad</a></li>-->
+                  <li class="list-group-item"><a class="dropdown-item" href="https://web.comisiondelaverdad.co" target="_blank">Versión anterior web - Comisión en Liquidación</a></li>
+            
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button  collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                <h6 >Objetivos</h6>
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#menuColapsables">
+              <div class="accordion-body">
+                <ul class="list-group" aria-labelledby="Columna 3">
+                  <li class="list-group-item"><a class="dropdown-item" href="/etiquetas/esclarecimiento">Esclarecimiento</a></li>
+                  <li class="list-group-item"><a class="dropdown-item" href="/etiquetas/reconocimiento">Reconocimiento</a></li>
+                  <li class="list-group-item"><a class="dropdown-item" href="/etiquetas/convivencia">Convivencia</a></li>
+                  <li class="list-group-item"><a class="dropdown-item" href="/etiquetas/no-repeticion">No Repetición</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading4">
+              <button class="accordion-button  collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                <h6 >Enfoques</h6>
+              </button>
+            </h2>
+            <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#menuColapsables">
+              <div class="accordion-body">
+                <ul class="list-group lista-especial" aria-labelledby="columna 4">
+                  <li class="list-group-item modal_cev" data-nid="1106"><a class="dropdown-item" href="#">Étnico</a></li>
+                  <li class="list-group-item modal_cev" data-nid="1110"><a class="dropdown-item" href="#">Niñas y niños</a></li>
+                  <li class="list-group-item modal_cev" data-nid="1107"><a class="dropdown-item" href="#">De género</a></li>
+                  <!--<li class="list-group-item"><a class="dropdown-item" href="/etiquetas/jovenes">Jóvenes</a></li>-->
+                  <li class="list-group-item modal_cev" data-nid="1108"><a class="dropdown-item" href="#">Psicosocial</a></li>
+                  <li class="list-group-item modal_cev" data-nid="1111"><a class="dropdown-item" href="#">Persona Mayor</a></li>
+                  <li class="list-group-item modal_cev" data-nid="1109"><a class="dropdown-item" href="#">Estrategia cultural</a></li>
+                  <li class="list-group-item modal_cev" data-nid="1112"><a class="dropdown-item" href="#">Discapacidad</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>            
+</div>

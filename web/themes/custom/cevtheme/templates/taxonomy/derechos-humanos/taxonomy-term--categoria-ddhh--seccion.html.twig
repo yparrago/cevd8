@@ -1,0 +1,60 @@
+{#
+/**
+* @file
+* Default theme implementation to display a taxonomy term.
+*
+* Available variables:
+* - url: URL of the current term.
+* - name: (optional) Name of the current term.
+* - content: Items for the content of the term (fields and description).
+* Use 'content' to print them all, or print a subset such as
+* 'content.description'. Use the following code to exclude the
+* printing of a given child element:
+* @code
+* {{ content|without('description') }}
+* @endcode
+* - attributes: HTML attributes for the wrapper.
+* - page: Flag for the full page state.
+* - term: The taxonomy term entity, including:
+* - id: The ID of the taxonomy term.
+* - bundle: Machine name of the current vocabulary.
+* - view_mode: View mode, e.g. 'full', 'teaser', etc.
+*
+* @see template_preprocess_taxonomy_term()
+*
+* @ingroup themeable
+*/
+#}
+
+<div id="item-container-principal{{term.field_opcion.value}}" class="img-fit item-principal"> 
+    {% if term.field_opcion.value != -5 %}
+      <img src="{{file_url(term.field_fondo.entity.fileuri)}}" alt="">
+      <div class="text-information">
+        <h4>{{term.	field_subtitulo.value}}</h4>
+      <p> {{term.field_resumen.value}}</p>
+      </div>
+      <h2 class="section-title">{{ name}}</h2>
+      <div class="portfolio-1">
+       <p class="item-text">{{term.description.value}}</p>
+      </div> 
+    {% else %}
+      <div class="item-5">
+  
+        <div class="portfolio-1  img-fit"> 
+          <a href="/huellas-de-desaparicion-0">
+            <img src="/themes/custom/cevtheme/derechos-humanos/img/forensic.jpg" alt="">
+            <h3 class="section-subtitle">Exposición Huellas de desaparición</h3> 
+            <!--<p class="item-text"> es el resultado de la colaboración entre la CEV y el grupo de investigación Forensic Architecture. </p>-->
+          </a>
+        </div>
+
+        
+      </div>
+    {% endif %}
+  </div>
+
+{% if term.field_opcion.value == -4 %}
+{% else %}
+{{ drupal_block('QuepasoBlock') }}
+{{ drupal_block('PorquepasoBlock') }}
+{% endif %}

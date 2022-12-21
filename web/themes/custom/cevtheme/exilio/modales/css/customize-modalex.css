@@ -1,0 +1,155 @@
+/*
+  Basic Changes
+*/
+
+.customize-modalex.modal-content {
+    background-color: #1E2A47 !important;
+}
+
+.customize-modalex.modal-content h1,
+.customize-modalex.modal-content h2,
+.customize-modalex.modal-content h3,
+.customize-modalex.modal-content h4,
+.customize-modalex.modal-content h5,
+.customize-modalex.modal-content h6,
+.customize-modalex.modal-content p {
+    color:  #fff !important;
+}
+
+.customize-modalex .btn-close {
+    color: orange!important;
+}
+.customize-modalex.modal-content .modal-content-cev .arch-relacionados .tab-pane{
+    padding: 20px;
+}
+.customize-modalex.modal-content .modal-content-cev .tab-pane{
+    border: 1px solid teal;
+    background-color: #1E2A47;
+}
+.customize-modalex .video-group .col.col-md-4{
+    border-color: #1E2A47;
+} 
+.customize-modalex .video-group a{
+    border-radius: 15px;
+
+} 
+.customize-modalex.customize-modalex {
+    color: white;
+}
+.customize-modalex .video-group a:hover, .customize-modalex.customize-modalex .video-group a:hover{
+    color: #1E2A47 !important;
+    
+} 
+
+ 
+ .customize-modalex.modal-content a {
+     color:  #70F5E7;
+     overflow-wrap: break-word;
+ }
+ .customize-modalex.modal-content a:hover{
+     color: #fff;
+ }
+ .modal .modal-icons a{
+    color: #fff;
+ }
+ 
+ .customize-modalex.modal-keywords a {
+     color: #70F5E7 !important;
+ }
+ 
+ .customize-modalex.modal-keywords a {
+     text-decoration: none!important;
+ }
+ 
+ .customize-modalex.nav-tabs {
+     border-bottom: 1px solid teal!important;
+ }
+ .customize-modalex .nav-tabs{
+     border-color: transparent;
+ }
+ .customize-modalex .nav-tabs .nav-link {
+     color: #fff !important;
+     border-color: teal;
+     background-color: #1E2A47;
+     color: #70F5E7;
+ }
+ 
+ .customize-modalex .nav-tabs .nav-link:hover, .customize-modalex .nav-tabs .nav-link.active {
+     background-color: teal!important;
+     border-color: teal;
+     color: #fff;
+ }
+ 
+ .customize-modalex .tab-content {
+     background-color: rgba(70, 64, 45, 0.37)!important;
+ }
+ .customize-modalex .tab-content .tab-pane{
+     border-color: teal;
+     background-color: #1E2A47;
+ }
+ .customize-modalex .tab-content li{
+     list-style-type: none!important;
+ }
+ 
+
+ 
+ /* Player custom CSS */
+ 
+ .customize-modalex .rt-player .rt-player__buttons button{
+     color: #EFC356 !important;
+ }
+ 
+ .customize-modalex .rt-player .rt-player__buttons button:hover,
+ .customize-modalex .rt-player .rt-player__buttons button.active {
+     color: #fff !important;
+ }
+     /* trasncription audio texts */
+.customize-modalex .lyricer {
+   color: #fff!important;
+ }
+ 
+  .customize-modalex .rt-player .progress {
+     background-color: #38504a!important;
+ }
+ 
+ .customize-modalex .rt-player .progress .progress-bar[data-role="player-progress-bar"]{
+     background-color: #649589!important;
+ }
+     /* List player custom CSS */
+ .customize-modalex .list-group-item{
+     color: #fff;
+     background: none !important;
+ }
+ 
+ .customize-modalex .list-group-item.active{
+     color: #38504a!important;
+ }
+
+.customize-modalex .accordion-collapse{
+    background-color: #1E2A47 !important;
+ }
+ .customize-modalex .list-group-numbered{
+    color: #70F5E7 !important;
+ }
+ .customize-modalex .list-group-numbered :hover{
+    color:  #ffffff !important;
+ }
+
+ .customize-modalex .list-group-item{
+    color: #70F5E7 ;
+ }
+ .customize-modalex .list-group-item.active{
+    color: #ffffff !important;
+ }
+ /*.accordion-button .collapsed{
+ color: #fff !important;
+ background-color: #e72a2a !important;
+ }*/
+ .customize-modalex .accordion-button {
+    color: #fff !important;
+    background-color: #203C83 !important;
+    }
+.customize-modalex .popover-body{
+    background-color: #1E2A47 !important;
+
+  }

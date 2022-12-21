@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Comisionados</title>
+  <!-- Font Awesome -->
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="css/mdb.min.css" rel="stylesheet">
+  
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+<link href='https://use.typekit.net/wnl6hvg.css' rel='stylesheet' type='text/css'>
+<!-- Your custom styles (optional) -->
+<link href="css/botonera.css" rel="stylesheet">
+<link href="css/header-footer.css" rel="stylesheet">
+<link href="css/commissioners.css" rel="stylesheet">
+<!--ESTILOS DIBUJO-->
+
+
+</head>
+<body>
+  <!--modal ayuda-->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content modal-content-home">
+            <div class="modal-header modal-header-home">
+                <h5 class="modal-title" id="exampleModalLabel">¿Cómo Navegar este website?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Video
+                INDICACIONES
+            </div>
+        </div>
+    </div>
+</div>
+<!--navegacion-->
+<nav class="navbar fixed-top">
+  <div class="container-fluid">
+    <button id="btnMenu" class="navbar-toggler collapsed menu" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">
+      <span class="logo "></span>
+    </a>
+    <button id="lupa" type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+      <i class="bi bi-search fs-5" aria-hidden="true"></i>
+    </button>
+    <button id="modal" class="btn bd-highlight" data-bs-toggle="modal" data-bs-target="#exampleModal" role="button">
+      <i class="bi bi-question-circle-fill fs-5" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
+    </button>
+    
+    <div id="nuevo">
+      <div class="navbar-collapse collapse" id="navbarNav">
+        <ul class=" navbar-nav">
+          <div class="container">
+            <div class="row">
+              <div class="col-3">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#">¿Qué es la Comisión de la Verdad?</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Mandato y funciones</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Versión anterior</a>
+                </li>
+              </div>
+              <div class="col-3">
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><div class="menu">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 27 27" style="width: 3.5rem;" xml:space="preserve">
+                      <g>
+                        <path class="st0" d="M11.5,12.4c0.2,0.3,0.6,0.3,0.9,0c0,0,0,0,0,0c0.2-0.2,0.2-0.5,0-0.8l-4.8-6C7.2,5,6.3,5.3,6.2,6v0 c0,0.2,0,0.5,0.2,0.7L11.5,12.4z"/>
+                        <path class="st0" d="M13.8,15.9c-0.2-0.3-0.1-0.7,0.2-0.9c0,0,0,0,0,0c0.2-0.2,0.6-0.1,0.8,0.1l5,5.8c0.5,0.6,0.1,1.4-0.7,1.4h0 c-0.3,0-0.5-0.1-0.6-0.3L13.8,15.9z"/>
+                        <g>
+                          <path class="st0" d="M16.1,6.4h2.4l2.3,7.6h-2.1l-0.9-3.7c-0.2-0.7-0.4-1.6-0.6-2.4h0c-0.2,0.8-0.3,1.7-0.5,2.4L15.9,14h-2.1 L16.1,6.4z M15.5,10.8h3.7v1.6h-3.7V10.8z M15.9,4.7c0-0.7,0.6-1.2,1.4-1.2c0.8,0,1.4,0.5,1.4,1.2s-0.6,1.2-1.4,1.2 C16.4,5.9,15.9,5.4,15.9,4.7z M17.7,4.7c0-0.3-0.2-0.5-0.4-0.5c-0.2,0-0.4,0.2-0.4,0.5c0,0.3,0.2,0.5,0.4,0.5 C17.5,5.2,17.7,5,17.7,4.7z"/>
+                        </g>
+                        <g>
+                          <path class="st0" d="M6.7,15.9h2.1l1.7,3.4l0.7,1.7h0c-0.1-0.8-0.3-2-0.3-2.9v-2.2h1.9v7.6h-2.1l-1.7-3.4l-0.7-1.7h0 c0.1,0.9,0.3,2,0.3,2.9v2.2H6.7V15.9z M9.1,14.9c-0.2,0-0.3,0.1-0.4,0.5l-1.3-0.1C7.5,14,8.1,13.5,9,13.5c0.8,0,1.2,0.6,1.6,0.6 c0.2,0,0.3-0.1,0.4-0.5l1.3,0.1c-0.1,1.3-0.7,1.8-1.6,1.8C9.8,15.5,9.4,14.9,9.1,14.9z"/>
+                        </g>
+                      </g>
+                    </svg>
+                  </div>lenguas e idiomas</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><div class="menu">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 27 27" style="width: 5rem;" xml:space="preserve">
+                      <g>
+                        <path class="st0" d="M13.5,4c5.3,0,9.5,4.3,9.5,9.5S18.8,23,13.5,23S4,18.8,4,13.5S8.2,4,13.5,4z M5.3,13.4c0,4.7,3.7,8.5,8.2,8.5
+                          s8.2-3.8,8.2-8.5S18,4.9,13.5,4.9S5.3,8.7,5.3,13.4z"/>
+                        <g>
+                          <g>
+                            <path class="st0" d="M20.4,11.8c0.2-0.1,0.4-0.4,0.3-0.6c0,0,0,0,0,0c-0.1-0.2-0.3-0.3-0.5-0.2l-5.4,1.4
+                              c-0.5,0.1-0.6,0.8-0.2,1.1l0,0c0.2,0.1,0.3,0.1,0.5,0.1L20.4,11.8z"/>
+                            <circle class="st0" cx="22.3" cy="10.8" r="1.2"/>
+                          </g>
+                          <g>
+                            <path class="st0" d="M6.6,11.8c-0.2-0.1-0.4-0.4-0.3-0.6c0,0,0,0,0,0C6.4,11,6.6,10.9,6.8,11l5.4,1.4c0.5,0.1,0.6,0.8,0.2,1.1
+                              l0,0c-0.2,0.1-0.3,0.1-0.5,0.1L6.6,11.8z"/>
+                            <circle class="st0" cx="4.7" cy="10.8" r="1.2"/>
+                          </g>
+                        </g>
+                        <g>
+                          <g>
+                            <path class="st0" d="M10.2,19.6c-0.1,0.2-0.4,0.3-0.6,0.1c0,0,0,0,0,0c-0.2-0.1-0.2-0.4-0.1-0.6l2.6-5c0.3-0.5,1-0.4,1.1,0.1v0
+                              c0.1,0.2,0,0.4-0.1,0.5L10.2,19.6z"/>
+                            <circle class="st0" cx="8.8" cy="21.2" r="1.2"/>
+                          </g>
+                          <g>
+                            <path class="st0" d="M16.8,19.6c0.1,0.2,0.4,0.3,0.6,0.1c0,0,0,0,0,0c0.2-0.1,0.2-0.4,0.1-0.6l-2.6-5c-0.3-0.5-1-0.4-1.1,0.1v0
+                              c-0.1,0.2,0,0.4,0.1,0.5L16.8,19.6z"/>
+                            <circle class="st0" cx="18.2" cy="21.2" r="1.2"/>
+                          </g>
+                        </g>
+                        <circle class="st0" cx="13.5" cy="9.3" r="2"/>
+                      </g>
+                    </svg>
+                  </div>Contenidos para personas con discapacidad</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><div class="menu">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 27 27" style="width: 5rem;" xml:space="preserve">
+
+                      <g>
+                        <path class="st0" d="M18.1,15.7L18.1,15.7c-0.2-0.1-0.4-0.2-0.6,0L14.7,18c-0.1,0.1-0.3,0-0.3-0.2l0.5-5.5c0.1-0.9-0.5-1.6-1.4-1.7
+                          c-0.9,0-1.6,0.7-1.6,1.6l0.5,5.5c0,0.2-0.2,0.3-0.3,0.2l-2.8-2.3c-0.2-0.1-0.4-0.1-0.6,0l0,0c-0.2,0.2-0.2,0.5,0,0.7l4.2,4
+                          c0.1,0.1,0.3,0.2,0.5,0.2c0.2,0,0.3-0.1,0.5-0.2l4.2-4C18.3,16.2,18.3,15.9,18.1,15.7z"/>
+                        <path class="st0" d="M9.1,23c-0.4,0-0.7-0.4-0.6-0.7c0,0,0,0,0,0c0-0.3,0.3-0.5,0.6-0.5l8.3-0.1c0.8,0,1.2,0.9,0.7,1.5l0,0
+                          c-0.2,0.2-0.4,0.3-0.7,0.3L9.1,23z"/>
+                        <path class="st0" d="M13.7,3.5c1.9,0,3.7,0.7,5.1,2.2C19,5.9,19.1,6.1,19,6.3c-0.1,0.2-0.2,0.4-0.4,0.4c-0.3,0.1-0.4-0.1-0.6-0.2
+                          c-0.7-0.7-1.5-1.2-2.5-1.5C13.1,4.3,10.9,4.7,9,6.4C8.9,6.6,8.7,6.8,8.5,6.7C8.2,6.7,8.1,6.6,8,6.3C7.9,6.1,8,5.9,8.1,5.7
+                          c0.6-0.6,1.4-1.2,2.2-1.5C11.4,3.7,12.4,3.5,13.7,3.5z"/>
+                        <path class="st0" d="M13.5,5.7c1.4,0,2.7,0.5,3.7,1.5c0.2,0.2,0.3,0.4,0.2,0.7c-0.1,0.2-0.2,0.3-0.4,0.4c-0.2,0-0.4,0-0.5-0.2
+                          c-0.8-0.8-1.8-1.2-2.9-1.3c-1.2,0-2.2,0.4-3.1,1.2c-0.2,0.1-0.3,0.3-0.5,0.2c-0.2,0-0.4-0.1-0.5-0.4c-0.1-0.2,0-0.4,0.1-0.6
+                          c0.3-0.3,0.7-0.6,1.1-0.8C11.6,5.9,12.5,5.7,13.5,5.7z"/>
+                        <path class="st0" d="M13.7,7.9c0.7,0,1.5,0.3,2.1,0.9C16,9,16,9.3,15.9,9.5c-0.1,0.2-0.4,0.3-0.7,0.3c-0.1,0-0.2-0.1-0.3-0.2
+                          c-0.9-0.8-2-0.8-2.9,0c-0.3,0.2-0.6,0.3-0.8,0C11,9.4,11,9,11.3,8.8C11.8,8.2,12.7,7.9,13.7,7.9z"/>
+                      </g>
+                    </svg>
+                  </div>Descargar toda la plataforma para navegar sin internet</a>
+                </li>
+              </div>
+            </div>
+          </div>
+        </ul>
+    </div>
+    </div>
+    <div id="buscar" class="dropdown-menu dropdown-menu-right" role="menu">
+      <form>
+          <div class="form-group">
+              <input type="text" class="form-control form-control-search" placeholder="Escriba el término" required>
+              <label for="category" class="text-dark">¿Dónde desea buscar?</label>
+              <select class="form-control" id="category" required>
+                  <option></option>
+                  <option value="1">Transmedia </option>
+                  <option value="2">SIM</option>
+              </select>
+          </div>
+          <div class="form-group d-flex justify-content-end mt-2">
+              <input type="submit" class="btn btn-primary" value="Buscar" style="color: white;">
+          </div>
+      </form>
+    </div>
+    
+
+  </div>
+</nav>
+<!-- <button class="aside-button">
+  <span>Contenidos relacionados</span>
+  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-layout-grid" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+    <rect x="4" y="4" width="6" height="6" rx="1" />
+    <rect x="14" y="4" width="6" height="6" rx="1" />
+    <rect x="4" y="14" width="6" height="6" rx="1" />
+    <rect x="14" y="14" width="6" height="6" rx="1" />
+  </svg>
+  
+</button>
+<aside>
+  <div class="aside-content">
+    <div class="aside-item">
+      <div class="aside-item-headline">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-stack-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <polyline points="12 4 4 8 12 12 20 8 12 4" />
+          <polyline points="4 12 12 16 20 12" />
+          <polyline points="4 16 12 20 20 16" />
+        </svg>
+        Colecciones
+      </div>
+      <ul>
+        <li><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus ullam laudan</a></li>
+        <li><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus ullam laudan</a></li>
+        <li><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus ullam laudan</a></li>
+      </ul>
+      <a href="#">Ver más >></a>
+    </div>
+    <div class="aside-item">
+      <div class="aside-item-headline">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-files" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <path d="M15 3v4a1 1 0 0 0 1 1h4" />
+          <path d="M18 17h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h4l5 5v7a2 2 0 0 1 -2 2z" />
+          <path d="M16 17v2a2 2 0 0 1 -2 2h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h2" />
+        </svg>
+        Archivos nativos
+      </div>
+      <ul>
+        <li><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus ullam laudan</a></li>
+        <li><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus ullam laudan</a></li>
+        <li><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus ullam laudan</a></li>
+      </ul>
+      <a href="#">Ver más >></a>
+    </div>
+    <div class="aside-item">
+      <div class="aside-item-headline">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-square" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <circle cx="9.5" cy="9.5" r="6.5" />
+          <rect x="10" y="10" width="11" height="11" rx="2" />
+        </svg>
+        Relacionados
+      </div>
+      <ul>
+        <li><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus ullam laudan</a></li>
+        <li><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus ullam laudan</a></li>
+        <li><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus ullam laudan</a></li>
+      </ul>
+      <a href="#">Ver más >></a>
+    </div>
+  </div>
+</aside> -->
+
+ 
+<!--botones flotantes-->
+<!-- <div class="flotantes">
+  <div class="botones">
+      <input type="checkbox" id="botones" style="display: none;">
+      <ul class="ocultos">
+          <li class="texto">
+              <img src="./assets/ico2-producto-01.svg" alt="Productos">
+              <span>
+                  <a href="#">
+                      <p class="leyenda">Productos de comunicaciones</p>
+                  </a>
+              </span>
+          </li>
+          <li class="texto">
+              <img src="./assets/ico3-como.svg" alt="Como lo hicimos">
+              <span>
+                  <a href="#">
+                      <p class="leyenda">¿Cómo y con quien lo hicimos?</p>
+                  </a>
+              </span>
+          </li>
+          <li class="texto">
+              <img src="./assets/ico4-descargarpdf.svg" alt="Descarga 1">
+              <span>
+                  <a href="#">
+                      <p class="leyenda">Descargar cápitulo PDF</p>
+                  </a>
+              </span>
+          </li>
+          <li class="texto">
+              <img src="./assets/ico5-descargar-offline.svg" alt="Sin conexion">
+              <span>
+                  <a href="#">
+                      <p class="leyenda">Descargar cápitulo PDF</p>
+                  </a>
+              </span>
+          </li>
+          <li class="texto">
+              <img src="./assets/ico6-descargables.svg" alt="Descargables">
+              <span>
+                  <a href="#">
+                      <p class="leyenda">Descargables</p>
+                  </a>
+              </span>
+          </li>
+          <li class="texto">
+              <img src="./assets/ico7-anexos.svg" alt="Anexos">
+              <span>
+                  <a href="#">
+                      <p class="leyenda">Anexos</p>
+                  </a>
+              </span>
+          </li>
+          <li class="texto">
+              <img src="./assets/ico8-lenguas.svg" alt="Lenguas">
+              <span>
+                  <a href="#">
+                      <p class="leyenda">Otras lenguas e idiomas</p>
+                  </a>
+              </span>
+          </li>
+          <li class="texto">
+              <img src="./assets/ico9-acceso.svg" alt="Accesibilidad">
+              <span>
+                  <a href="#">
+                      <p class="leyenda">Accesibilidad</p>
+                  </a>
+              </span>
+          </li>
+          <li class="texto">
+              <img src="./assets/ico10-compartir.svg" alt="Compartir">
+              <span>
+                  <a href="#">
+                      <p class="leyenda">Compartir</p>
+                  </a>
+              </span>
+          </li>
+      </ul>
+      <ul class="visibles">
+          <li class="texto">
+              <img src="./assets/ico1-diccionario.svg" alt="oido">
+              <span>
+                  <a href="#">
+                      <p class="leyenda">Diccionario Sonoro</p>
+                  </a>
+              </span>
+          </li>
+          <label for="botones">
+              <li class="texto">
+                  <img src="./assets/ico11-puntos.svg" alt="puntos">
+              </li>
+          </label>
+      </ul>
+  </div>
+</div> -->
+  
+<div class="col-md-12">
+    <div class="wrapper">
+
+            
+            <div id="item-container-principal" class="col-md-12 img-fit item-principal"> 
+              <div class="item-2">
+                <div class="portfolio-principal">
+                  <div class="title-portfolio">
+                    <h3 class="section-subtitle"> Las y los Comisionados</h3>
+                   <p class="item-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.  </p>
+
+                  </div>
+
+                  <!-- <div class="select-porfolio">
+
+
+                     <select name="cars" id="cars">
+                      <option value="Seleccione un comisionado">Seleccione un comisionado</option>
+                     <option value="fransisco">Fransisco José de Roux </option>
+                      <option value="lucia">Lucía González </option>
+                      <option value="alejandra">Alejandra Miller</option>
+                      <option value="alejandro-v">Alejandro Valencia </option>
+                      <option value="alejandro-c">Alejandro Castillejo</option>
+                      <option value="leyner">Leyner Palacios</option>
+                      <option value="alfred"> Alfredo Molano</option>
+                      <option value="patricia">Patricia Tobón</option>
+                      <option value="marta">Marta Ruiz </option>
+                      <option value="saul">Saúl Franco</option>
+                      <option value="carlos">Carlos Beristain</option>
+                      <option value="angela"> Angela Salazar</option>
+                    </select>
+
+                  </div> -->
+                  
+                  
+                   
+                </div>
+
+                
+
+              </div>
+
+           
+              
+              
+              
+            </div>
+
+            <div id="item-container-principal-1" class="col-md-12 img-fit  item-principal"> 
+              
+              <div class="img-fit item-1"> 
+                <div class="portfolio-1 comisionado-1">
+                  <a class="information-1" href="#">
+                    <div class="image-information">
+                      <img src="img/fransisco.jpg" alt="">
+                      <img  src="img/fransisco-1.jpg" alt="">
+                    </div>
+                     
+                    <div class="name-comisionado">
+                      <h3 class="section-subtitle"> Fransisco José <span>de Roux</span> </h3>
+                       <div class="text-information">
+                        <p> Sacerdote y exprovincial jesuita, filósofo y economista. Es fundador del Programa de Desarrollo y Paz del Magdalena Medio, así como del primer laboratorio de paz de Colombia, y es exdirector del Cinep, entre otras labores realizadas. Es el presidente de la Comisión.</p>
+                       </div>
+
+                    </div>
+                   
+                 </a>
+
+              
+                </div>
+               
+                  <div class="portfolio-2 card-dark-blue">
+                    <p class="item-text"> Enseñemos a perdonar; pero  <b>enseñemos también a no ofender </b> . Sería más eficiente </p>
+                  
+                  </div>
+
+                  <div class="portfolio-1 comisionado-1">
+                    <a href="#">
+
+                     <div class="image-information">
+                      <img src="img/lucia.jpg" alt="">
+                      <img src="img/lucia-1.jpg" alt="">
+                     </div>
+                     <div class="name-comisionado">
+                      <h3 class="section-subtitle"> Lucía  <span> González</span> </h3>
+                       <div class="text-information">
+                        <p> Arquitecta, exdirectora del Museo Casa de la Memoria de Medellín. Tiene amplia experiencia en la formulación de proyectos relacionados con la cultura y la transformación social. Ha dirigido entidades culturales y sociales públicas y privadas.</p>
+                       </div>
+
+                    </div>
+
+                    </a>
+                  </div>
+
+                  <div class="portfolio-2 card-dark-blue">
+                   
+                    <p class="item-text"> Enseñemos a perdonar; pero <b>enseñemos también a no ofender </b> . Sería más eficiente</p>
+                  </div>
+
+                  <div class="portfolio-1 comisionado-1">
+                    <a href="#">
+                    <div class="image-information">
+                      <img src="img/alejandra.jpg" alt="">
+                      <img src="img/alejandra-1.jpg" alt="">
+                    </div>
+
+                    <div class="name-comisionado">
+                      <h3 class="section-subtitle"> Alejandra  <span> Miller</span> </h3>
+                       <div class="text-information">
+                        <p>Líder del movimiento feminista en Colombia. Economista y magíster en estudios políticos; investigadora y profesora universitaria, exsecretaria de gobierno del Cauca e integrante de la Ruta Pacífica de las mujeres</p>
+                       </div>
+
+                    </div>
+
+                  </a>
+                  </div>
+
+                  <div class="portfolio-2 card-dark-blue">
+                   
+                    <p class="item-text"> Enseñemos a perdonar; pero <b>enseñemos también a no ofender </b> . Sería más eficiente</p>
+                  </div>
+
+              </div>
+
+              <div class="img-fit item-1"> 
+                <div class="portfolio-2 card-blue">
+                 <p class="item-text"><b> La voz de la verdad</b>  es el silencio de la guerra.  </p>
+                </div>
+               
+                  <div class="portfolio-1 comisionado-1" >
+                    <a href="#">
+                      <div class="image-information">
+                        <img src="img/alejandro.jpg" alt="">
+                        <img src="img/alejandro-2.jpg" alt="">
+                      </div>
+
+                      <div class="name-comisionado">
+                        <h3 class="section-subtitle">Alejandro <span>Valencia</span></h3>
+                         <div class="text-information">
+                          <p>Abogado con cerca de treinta años de experiencia en la promoción y defensa de los derechos humanos, con una vasta experiencia en temas de verdad histórica. Ha sido asesor de múltiples comisiones de la verdad en el mundo.</p>
+                         </div>
+  
+                      </div>
+                    
+                    
+                    
+                  </a>
+                  </div>
+                  <div class="portfolio-2 card-blue">
+                        <p class="item-text"><b> La voz de la verdad</b>  es el silencio de la guerra.</p>
+ 
+                  </div>
+                  <div class="portfolio-1 comisionado-1">
+                    <a href="#">
+                      <div class="image-information">
+                        <img src="img/alejandro-1.jpg" alt="">
+                        <img src="img/alejandro-3.jpg" alt="">
+                      </div>
+
+                      <div class="name-comisionado">
+                        <h3 class="section-subtitle">Alejandro <span> Castillejo</span></h3>
+                         <div class="text-information">
+                          <p>Antropólogo de la Universidad Nacional de Colombia, especialista en Desarrollo y Paz de la Universidad de Jaume I, magister en Paz y Estudio de Conflictos de la European University Center for Peace Studies, magister y doctor en antropología de The New School for Social Research.</p>
+                         </div>
+  
+                      </div>
+
+                  </a>
+                  </div>
+                  <div class="portfolio-2 card-blue">
+                    <p class="item-text"><b> La voz de la verdad</b>  es el silencio de la guerra.</p>
+
+                   </div>
+                   <div class="portfolio-1 comisionado-1">
+                     <a href="#">
+                      <div class="image-information">
+                        <img src="img/layner.jpg" alt="">
+                        <img src="img/layner-1.jpg" alt="">
+                      </div>
+                        
+                      <div class="name-comisionado">
+                        <h3 class="section-subtitle">Leyner <span> Palacios</span></h3>
+                         <div class="text-information">
+                          <p>Cuenta con más de 20 años de trabajo regional en Chocó y el Pacífico colombiano. Ha trabajado directamente con las comunidades afrodescendientes víctimas del conflicto con la Pastoral Social y la Comisión Interétnica por la Verdad del Pacífico.</p>
+                         </div>
+  
+                      </div>
+    
+                   </a>
+                   </div>
+          
+               
+               
+                
+              </div>
+
+              <div class="img-fit item-1"> 
+                <div class="portfolio-1 comisionado-1" >              
+                  <a href="#">
+                    <div class="image-information">
+                      <img src="img/marta.jpg" alt="">
+                      <img src="img/marta-1.jpg" alt="">
+                    </div>
+
+                    <div class="name-comisionado">
+                      <h3 class="section-subtitle">Marta <span>Ruiz</span></h3>
+                       <div class="text-information">
+                        <p> Periodista con una experiencia de más de quince años cubriendo el conflicto armado interno, tanto en prensa como en televisión. Su trabajo ha profundizado en el análisis de temas de desarrollo rural, las dinámicas de la guerra, la defensa de la libertad de expresión y el derecho a la información.</p>
+                       </div>
+
+                    </div>
+
+                </a>
+                </div>
+               
+                  <div class="portfolio-2 card-blue" >
+                    <p class="item-text"> El hombre crece <b> cuando se arrodilla </b>   </p>
+                 
+                  </div>
+                  <div class="portfolio-1 comisionado-1">
+                    <a href="#">
+                      <div class="image-information">
+                        <img src="img/patricia-tobon.jpg" alt="">
+                        <img src="img/patricia-tobon-1.jpg" alt="">
+                      </div>
+
+                      <div class="name-comisionado">
+                        <h3 class="section-subtitle">Patricia <span>Tobón</span></h3>
+                         <div class="text-information">
+                          <p>Indígena emberá, abogada, especializada en derecho constitucional. Ha documentado la vulneración de los derechos humanos en los territorios indígenas del país que han sido afectados por el conflicto armado, así como los esquemas de discriminación contra los pueblos étnicos.</p>
+                         </div>
+  
+                      </div>
+
+                  </a>
+                  </div>
+                  <div class="portfolio-2 card-blue">
+                    <p class="item-text">  El hombre crece <b> cuando se arrodilla </b></p>
+                  </a>
+                  </div>
+                     
+                  <div class="portfolio-1 comisionado-1">
+                    <a href="#">
+                      <div class="image-information">
+                        <img src="img/alfredo.jpg" alt="">
+                        <img src="img/alfredo-1.jpg" alt="">
+                      </div>
+                       
+                      <div class="name-comisionado">
+                        <h3 class="section-subtitle"> Alfredo <span>   Molano</span>  Q.E.P.D.  </h3>
+                         <div class="text-information">
+                          <p>Sociólogo, doctorado honoris causa, columnista, cronista y escritor de cerca de una veintena de libros sobre los orígenes y el impacto del conflicto armado en Colombia.</p>
+                         </div>
+  
+                      </div>
+
+                  </a>
+                    
+                  </div>
+                  <div class="portfolio-2 card-blue">
+                    <p class="item-text">  El hombre crece <b> cuando se arrodilla </b></p>
+                  </a>
+                  </div>
+          
+               
+               
+                
+              </div>
+
+              <div class="img-fit item-1"> 
+                <div class="portfolio-2 card-purple" >
+                  <p class="item-text">Quedar en paz con alguien que nos hizo daño <b> puede llegar a ser un arte. </b>  </p>
+
+                </div>
+               
+                  <div class="portfolio-1 comisionado-1" >
+                    <a href="#">
+                      <div class="image-information">
+                        <img src="img/saul-franco.jpg" alt="">
+                        <img src="img/saul-franco-1.jpg" alt="">
+                      </div>
+
+                      <div class="name-comisionado">
+                        <h3 class="section-subtitle">Saúl <span>  Franco</span></h3>
+                         <div class="text-information">
+                          <p>Médico con doctorado en salud pública, con cuarenta años de experiencia como docente universitario e investigador de la violencia y del conflicto armado y su impacto en la vida y la salud de las personas y las comunidades.</p>
+                         </div>
+  
+                      </div>
+
+                  </a>
+                  </div>
+                  <div class="portfolio-2 card-purple">
+           
+                    <p class="item-text">Quedar en paz con alguien que nos hizo daño <b> puede llegar a ser un arte. </b>  </p>
+                  </div>
+                  <div class="portfolio-1 comisionado-1">
+                    <a href="#">
+                      <div class="image-information">
+                        <img src="img/carlos-Martin.jpg" alt="">
+                        <img src="img/carlos-Martin-1.jpg" alt="">
+                      </div>
+
+                      <div class="name-comisionado">
+                        <h3 class="section-subtitle"> Carlos <span> Beristain</span> </h3>
+                         <div class="text-information">
+                          <p>Médico y psicólogo español con vasta experiencia en atención psicosocial de víctimas en el mundo y como asesor de varias comisiones de la verdad en diversos países. Coordinó el informe Recuperación de la Memoria Histórica – REMHI, de Guatemala.</p>
+                         </div>
+  
+                      </div>
+    
+                  </a>
+                  </div>
+                  <div class="portfolio-2 card-purple">
+           
+                    <p class="item-text">Quedar en paz con alguien que nos hizo daño <b> puede llegar a ser un arte. </b>  </p>
+                  </div>
+                  <div class="portfolio-1 comisionado-1">
+                    <a href="#">
+                      <div class="image-information angela">
+                        <img src="img/angela.jpg" alt="">
+                        <img src="img/angela-1.jpg" alt="">
+                      </div>
+
+                      <div class="name-comisionado">
+                        <h3 class="section-subtitle"> Angela <span> Salazar</span>  Q.E.P.D. </h3>
+                         <div class="text-information">
+                          <p>Conciliadora en equidad y defensora de los derechos de las mujeres. Nacida en Tadó, Chocó, y radicada en Apartadó, Antioquia, allí desarrolló su liderazgo comunitario. </p>
+                         </div>
+  
+                      </div>
+
+                  </a>
+                  </div>
+          
+               
+               
+                
+              </div>
+
+              <!-- <div class="img-fit item-1"> 
+                <div class="portfolio-1 comisionado-1" >
+                  <a href="#">
+                    <div class="image-information">
+                      <img src="img/alfredo.jpg" alt="">
+                      <img src="img/alfredo-1.jpg" alt="">
+                    </div>
+                 
+                  <h3 class="section-subtitle"> Alfredo <span>   Molano</span></h3>
+                   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore...</p>
+                </a>
+                </div>
+               
+                  <div class="portfolio-2 card-blue" >
+                    <p class="item-text"> El hombre crece <b> cuando se arrodilla </b>   </p>
+                 
+                  </div>
+                  <div class="portfolio-1 comisionado-1">
+                    <a href="#">
+                      <div class="image-information">
+                        <img src="img/Patricia-tobon.jpg" alt="">
+                        <img src="img/Patricia-tobon-1.jpg" alt="">
+                      </div>
+                    
+                    <h3 class="section-subtitle">Patricia <span>Tobón</span></h3>
+                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore...</p>
+                  </a>
+                  </div>
+                  <div class="portfolio-2 card-blue">
+                    <p class="item-text">  El hombre crece <b> cuando se arrodilla </b></p>
+                  </a>
+                  </div>
+                     
+                  <div class="portfolio-1 comisionado-1">
+                    <a href="#">
+                      <div class="image-information">
+                        <img src="img/marta.jpg" alt="">
+                        <img src="img/marta-1.jpg" alt="">
+                      </div>
+                    
+                    <h3 class="section-subtitle">Marta <span>Ruiz</span></h3>
+                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore...</p>
+                  </a>
+                  </div>
+                  <div class="portfolio-2 card-blue">
+                    <p class="item-text">  El hombre crece <b> cuando se arrodilla </b></p>
+                  </a>
+                  </div>
+          
+               
+               
+                
+              </div> -->
+
+              
+            </div>
+
+
+
+              
+             
+          
+               
+          
+  
+  
+    
+  </div>
+
+  </div>
+
+  <!--footer-->
+  <footer class="fixed-bottom">
+   <!--  <section class="footer">
+      <div class="container" id="carrusel">
+        <p  class="imgenes-footer" style="display: flex;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        align-items: center;">
+          <a href="#" rel="noopener">
+            <img class="img-footer" src="https://comisiondelaverdad.co/images/logo-sistema-integral-paz.png" alt="logo unidad">
+          </a>
+          <span class="separador"></span>
+          <a href="https://comisiondelaverdad.co/" target="_blank" rel="noopener">
+            <img class="img-footer" src="https://comisiondelaverdad.co/images/logo-cev-sistema-integral.svg" alt="logo unidad">
+          </a>
+          <span class="separador"></span>
+          <a href="https://www.jep.gov.co" target="_blank" rel="noopener">
+            <img class="img-footer" src="https://comisiondelaverdad.co/images/logo-jep-sistema-integral.svg" alt="logo sistema integral">
+          </a>
+          <span class="separador"></span>
+          <a href="https://www.ubpdbusquedadesaparecidos.co" target="_blank" rel="noopener">
+            <img class="img-footer" src="https://comisiondelaverdad.co/images/logo-ubpd-sistema-integral.svg" alt="logo unidad">
+          </a>
+        </p>
+      </div>
+    </section> -->
+    <div class="container-fluid">
+      <p class="politica"><a href="#">Políticas de uso de información</a> © 2021 Comisión para el Esclarecimiento de la Verdad, la Convivencia y la No Repetición</p>
+    </div>
+  </footer>
+
+  <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+  <!-- SCRIPTS -->
+  <script type="text/javascript" src="js/ScrollToPlugin.min.js"></script>
+  <script type="text/javascript" src="js/ScrollTrigger.min.js"></script>
+  <script type="text/javascript" src="js/gsap.min.js"></script>
+  
+  <!-- <script type="text/javascript" src="js/script.js"></script> -->
+  <!--HEADEF FOOTER-->
+  <script type="text/javascript" src="js/script-header-footer.js"></script>
+
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+ <!-- custom -->
+  <script type="text/javascript" src="js/custom.js"></script>
+
+  <!-- FUNCIONES VARIAS--->
+</body>
+
+</html>
+
+

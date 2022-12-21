@@ -1,0 +1,526 @@
+{#
+/**
+* @file
+* Default theme implementation to display a node.
+*
+* Available variables:
+* - node: The node entity with limited access to object properties and methods.
+* Only method names starting with "get", "has", or "is" and a few common
+* methods such as "id", "label", and "bundle" are available. For example:
+* - node.getCreatedTime() will return the node creation timestamp.
+* - node.hasField('field_example') returns TRUE if the node bundle includes
+* field_example. (This does not indicate the presence of a value in this
+* field.)
+* - node.isPublished() will return whether the node is published or not.
+* Calling other methods, such as node.delete(), will result in an exception.
+* See \Drupal\node\Entity\Node for a full list of public properties and
+* methods for the node object.
+* - label: (optional) The title of the node.
+* - content: All node items. Use {{ content }} to print them all,
+* or print a subset such as {{ content.field_example }}. Use
+* {{ content|without('field_example') }} to temporarily suppress the printing
+* of a given child element.
+* - author_picture: The node author user entity, rendered using the "compact"
+* view mode.
+* - metadata: Metadata for this node.
+* - date: (optional) Themed creation date field.
+* - author_name: (optional) Themed author name field.
+* - url: Direct URL of the current node.
+* - display_submitted: Whether submission information should be displayed.
+* - attributes: HTML attributes for the containing element.
+* The attributes.class element may contain one or more of the following
+* classes:
+* - node: The current template type (also known as a "theming hook").
+* - node--type-[type]: The current node type. For example, if the node is an
+* "Article" it would result in "node--type-article". Note that the machine
+* name will often be in a short form of the human readable label.
+* - node--view-mode-[view_mode]: The View Mode of the node; for example, a
+* teaser would result in: "node--view-mode-teaser", and
+* full: "node--view-mode-full".
+* The following are controlled through the node publishing options.
+* - node--promoted: Appears on nodes promoted to the front page.
+* - node--sticky: Appears on nodes ordered above other non-sticky nodes in
+* teaser listings.
+* - node--unpublished: Appears on unpublished nodes visible only to site
+* admins.
+* - title_attributes: Same as attributes, except applied to the main title
+* tag that appears in the template.
+* - content_attributes: Same as attributes, except applied to the main
+* content tag that appears in the template.
+* - author_attributes: Same as attributes, except applied to the author of
+* the node tag that appears in the template.
+* - title_prefix: Additional output populated by modules, intended to be
+* displayed in front of the main title tag that appears in the template.
+* - title_suffix: Additional output populated by modules, intended to be
+* displayed after the main title tag that appears in the template.
+* - view_mode: View mode; for example, "teaser" or "full".
+* - teaser: Flag for the teaser state. Will be true if view_mode is 'teaser'.
+* - page: Flag for the full page state. Will be true if view_mode is 'full'.
+* - readmore: Flag for more state. Will be true if the teaser content of the
+* node cannot hold the main body content.
+* - logged_in: Flag for authenticated user status. Will be true when the
+* current user is a logged-in member.
+* - is_admin: Flag for admin user status. Will be true when the current user
+* is an administrator.
+*
+* @see template_preprocess_node()
+*
+* @todo Remove the id attribute (or make it a class), because if that gets
+* rendered twice on a page this is invalid CSS for example: two lists
+* in different view modes.
+*
+* @ingroup themeable
+*/
+#}
+<style>
+body{
+    /* background: linear-gradient(to right, #243138,#2b403d,#435059,#2b403d,#243138); */
+    background-color: #243138;
+}
+.contenedor{
+    /* background: linear-gradient(to right, #243138,#2b403d,#435059,#2b403d,#243138); */
+    background-color: #243138;
+    position: relative;
+    padding: 2em;
+    margin: 4em 0em 0em 0em;
+}
+.contenedor .row {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.presentacion{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.textoColor {
+    font-weight: bold;
+    text-align: right;
+    font-size: 7rem;
+    transition: all 0.7s ease;
+    line-height: 70px;
+}
+img.card-img-top {
+    width: 15em;
+    height: 24em;
+}
+.textoColor span:nth-child(1), .textoColor2 span:nth-child(1){
+    color: #fff;
+}
+.textoColor span:nth-child(2), .textoColor2 span:nth-child(2){
+    color: #fff;
+}
+.textoColor span:nth-child(3), .textoColor2 span:nth-child(3){
+    color: #fff;
+}
+.textoColor span:nth-child(4), .textoColor2 span:nth-child(4){
+    color: #fff;
+}
+.textoColor span:nth-child(5), .textoColor2 span:nth-child(5){
+    color: #fff;
+}
+.textoColor span:nth-child(6),.textoColor2 span:nth-child(6){
+    color: #fff;
+}
+.textoColor span:nth-child(7), .textoColor2 span:nth-child(7){
+    color: #fff;
+}
+.textoColor span:nth-child(8), .textoColor2 span:nth-child(8){
+    color: #fff;
+}
+.textoParrafo {
+    color: #fff;
+    padding: 1rem;
+    transition: all 0.7s ease;
+}
+.footer{
+    display: none;
+}
+footer {
+    height: 35px !important;
+}
+.marimbulas{
+    display: flex;
+    transition: all 0.7s ease;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.linkModal{
+    filter: blur(6px) drop-shadow(0px -13px 14px #000) opacity(0.6) !important;
+    transform: scale(0.8) !important;
+}
+.marimbulas-elementos{
+    display: inline-flex;
+    width: 300px;
+    transition: all 0.7s ease;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 300px;
+    transform: scale(0);
+    filter: drop-shadow(0px -13px 14px #000) opacity(0);
+}
+.linkModal.ds img.card-img-top, .marimbulas-elementos.ds img.card-img-top    {
+    width: 30em;
+    height: 15em;
+
+}
+.tarjeta {
+    background-color: transparent;
+    border: unset;
+    position: relative;
+    transition: all 0.7s ease;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: space-between;
+    justify-content: space-between;
+}
+
+.linkModal:hover, .linkModal .tarjeta:hover{
+    filter: none !important;
+    z-index: 4;
+    /* filter: drop-shadow(0px -10px 20px rgba(0, 0, 0, 0.548)) opacity(1); */
+    transform: scale(1) !important;
+    opacity: 1 !important;
+}
+.cbodyModal{
+    color: #fff;
+    transition: all 0.7s ease;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    text-align: left;
+}
+.nover{
+    opacity: 0;
+}
+.linkModal:hover .card .nover{
+    opacity: 1;
+}
+.btnModal {
+    margin: 0;
+    padding: 8px;
+    font-size: 100%;
+    background-color: #77BEC1;
+    border-color: #77BEC1;
+    color: #243138;
+    font-weight: bold;
+    width: 120px;
+}
+.btnModal:hover, .btnModal:active, .btnModal:focus{
+    background-color:  #243138;
+    color: #77BEC1;
+    border: 2px solid #77BEC1;
+
+}
+#lanzadorModal{
+    display: none;
+}
+.textoColor2 {
+    text-align: left;
+    margin-right: 2px;
+    transition: all 0.7s ease;
+}
+
+.modal-content{
+    background-color: #243138;
+}
+
+ .modal-icons a{
+    background-color: #77bec1;
+    color: #243138;
+}
+ .modal-icons a:hover{
+    background-color: #08f7f7;
+}
+ .modal-content .modal-keywords *,  .modal-content .modal-description,  .tab-pane{
+    color: #fff;
+}
+ .modal-content .modal-keywords a, .nav-tabs .nav-link,   .tab-pane a,  .btn-close{
+    color: #77bec1;
+}
+ .modal-content .modal-keywords a:hover, .nav-tabs .nav-link:hover,   .tab-pane a:hover,  .btn-close:hover{
+    color: #08f7f7;
+}
+ .rt-player .rt-timer {
+    color: gainsboro;
+}
+ .rt-player .progress{
+    background-color: gainsboro;
+}
+ .rt-player .progress .progress-bar[data-role="player-progress-bar"]{
+    background-color: #243138;
+}
+ .rt-player .rt-player__buttons button{
+    color: gainsboro;
+}
+ .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+    color: #fff;
+    background-color: transparent;
+
+}
+ .rt-player .rt-player__buttons button:hover, .rt-player .rt-player__buttons button.active{
+    color: #7455e8;
+}
+#modelo, #tituloPista {
+    color: #fff;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+}
+
+
+#botonesMarimbula {
+    z-index: 100;
+}
+#botonesMarimbula .form-check-input:checked[type=radio]{
+    background-image: unset;
+    border-color: #fff;
+   box-shadow: 0px 0px 3px 1px #fff;    
+}
+#botonesMarimbula .form-check-input{
+    width: 1.8em;
+    height: 1.8em;
+    transition: all 0.7s ease;
+    margin-right: 1px;
+}
+
+
+#contenedorCanvas{
+    position: relative;
+    transform: rotateX(180deg);
+    height: 220px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+#imgMarimbula {
+    margin: 0px;
+    padding: 0px;
+}
+#imgMarimbula img{
+    width: auto;
+    height: 250px; 
+}
+#tituloPista {
+    text-align: center;
+}
+.contMarinbula{
+    margin-top: 2rem;
+    min-height: 70vh;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.form-check-inline {
+    margin-right: 0;
+}
+.lyricer .lyricer-current-line {
+    color: #fff;
+}
+.lyricer ul li {
+    color: #fff;
+}
+
+/*MEDIA QUERYS*/
+@media only screen and (max-width: 768px) {
+    .contenedor {
+        padding: unset;
+        margin: unset;
+    }
+    .contenedor .row {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .textoColor {
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 3rem;
+    }
+    .textoParrafo{
+        text-align: left;
+        line-height: 17px;
+    }
+    p.politica {
+        font-size: 70% !important;
+        line-height: 15px !important;
+    }
+     .rt-player .rt-player__buttons {
+        overflow-x: scroll;
+    }
+    [data-role="volUp"], [data-role="volDown"], [data-role="mute"] {
+        display: none;
+    }
+   
+    #ecualizadorMarimbula #imgMarimbula{
+        width: auto;
+        height: 200px;
+        margin: 0px;
+        padding: 0;
+    }
+
+    #tituloPista {
+        text-align: center;
+    }
+
+    .marimbulas {
+        display: flex;
+        transition: all 0.7s ease;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .linkModal{
+        width: 130px;
+        height: auto;
+    }
+    .linkModal.ds img.card-img-top {
+        width: 10em;
+        height: 8em;
+    }
+    img.card-img-top {
+        width: 150px;
+        height: 150px;
+    }
+    .cbodyModal{
+        position: relative;
+        left: -100px;
+    }
+    .presentacion{
+        margin-top: 70px;
+        flex-direction: column;
+    }
+    .modal-backdrop{
+        background-color:rgba(0, 0, 0, 0.212);
+        width: 110vw;
+    }
+    #contenedorCanvas {
+        width: 100%;
+        height: 180px;
+    }
+    #botonesMarimbula .form-check-input {
+        width: 1.5em;
+        height: 1.5em;
+    }
+    #imgMarimbula img {
+        height: 210px;
+    }
+}
+
+
+</style>
+
+<h1 class="textoColor2"><span>A</span> <span>v</span><span>i</span><span>v</span><span>a</span>
+    <span>v</span><span>o</span><span>z</span>
+    <span id="modelo">{{ node.label }}</span>
+</h1>
+
+<div class="modal-icons mb-2">
+    <div class="d-flex justify-content-end position-relative">
+        {{content.field_archivo_descargable}}
+        <span class="social-share">
+            <a data-share-menu>
+                <span class="icon icon-ico-share"></span>
+            </a>
+            <div class="x-share-button">
+                <div class="share-items-wrapper">
+                    <div class="share-items">
+                        <a href="https://facebook.com/sharer/sharer.php?u=#https://www.comisiondelaverdad.co{{url}}" target="_blank" class="share-item" title="Compartir en Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="https://twitter.com/intent/tweet?url=https://www.comisiondelaverdad.co{{url}}&text={{node.label}}" target="_blank" class="share-item" title="Compartir en Twitter">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+                        <a target="_blank" type="button"  id="copy-clipboard" data-bs-toggle="popover"  data-bs-content="Copiado al portapapeles" data-bs-html="true" data-bs-placement="top" id="copy-clipboard" data-clipboard-action="copy" data-clipboard-text="https://www.comisiondelaverdad.co{{url}}" class="share-item copy-clipboard">
+                            <i class="bi bi-link-45deg"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </span>
+    </div>
+</div>
+<div class="modal-media">
+    {{ content.body }}
+</div>
+
+<div class="arch-relacionados">
+    <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            {% if node.field_contenidos_relacionados.value %}
+            <button class="nav-link active" id="related-tab-1" data-bs-toggle="tab" data-bs-target="#related-1"
+                type="button" role="tab" aria-controls="related-1" aria-selected="true">
+                <span class="d-flex">
+                    <span class="icon icon-ico-related me-1"></span>
+                    Archivos Relacionados
+                </span>
+            </button>
+            {% endif %}
+            {% if node.field_colecciones.value %}
+            <button class="nav-link" id="collection-tab-1" data-bs-toggle="tab" data-bs-target="#collection-1"
+                type="button" role="tab" aria-controls="collection-1" aria-selected="false">
+                <span class="d-flex">
+                    <span class="icon icon-ico-collections me-1"></span>
+                    Colecciones
+                </span>
+            </button>
+            {% endif %}
+            {% if node.field_archivos_nativos.value %}
+            <button class="nav-link" id="native-tab-1" data-bs-toggle="tab" data-bs-target="#native-1" type="button"
+                role="tab" aria-controls="native-1" aria-selected="false">
+                <span class="d-flex">
+                    <span class="icon icon-ico-files me-1"></span>
+                    Archivos Nativos
+                </span>
+            </button>
+            {% endif %}
+        </div>
+    </nav>
+    {% if node.field_contenidos_relacionados.value %}
+    <div class="tab-content p-2" id="nav-tabContent-1">
+        <div class="tab-pane fade show active" id="related-1" role="tabpanel" aria-labelledby="related-tab-1">
+            {{ content.field_contenidos_relacionados}}
+        </div>
+        {% endif %}
+        {% if node.field_colecciones.value %}
+        <div class="tab-pane fade" id="collection-1" role="tabpanel" aria-labelledby="collection-tab-1">
+            {{ content.field_colecciones}}
+        </div>
+        {% endif %}
+        {% if node.field_archivos_nativos.value %}
+        <div class="tab-pane fade" id="native-1" role="tabpanel" aria-labelledby="native-tab-1">
+            {{ content.field_archivos_nativos}}
+        </div>
+        {% endif %}
+    </div>
+</div>
+<div class="modal-keywords mb-2">
+    <div>
+        {{ content.field_tags }}
+    </div>
+</div>
+<script>
+    var collection = document.querySelectorAll(".arch-relacionados .nav-link");
+    if(collection.length!=0){
+        collection[0].click();
+    }
+
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+      return new bootstrap.Popover(popoverTriggerEl)
+    })
+</script>

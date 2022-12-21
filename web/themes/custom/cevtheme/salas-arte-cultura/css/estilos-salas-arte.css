@@ -1,0 +1,2129 @@
+@import url("themes/custom/cevtheme/salas-arte-cultura/css/fonts/play-fair.min.css");
+@import url("themes/custom/cevtheme/salas-arte-cultura/css/fonts/bootstrap-icons.min.css");
+@import url("themes/custom/cevtheme/salas-arte-cultura/css/modales/audio-rt.css");
+@import url("themes/custom/cevtheme/salas-arte-cultura/css/modales/style.css");
+@import url("themes/custom/cevtheme/salas-arte-cultura/css/modales/timeline.css");
+@import url('themes/custom/cevtheme/salas-arte-cultura/css/fonts/souece-sans.min.css');
+@import url('themes/custom/cevtheme/salas-arte-cultura/css/fonts/souece-sans-2.min.css');
+@import url('themes/custom/cevtheme/salas-arte-cultura/css/fonts/souece-sans-3.min.css');
+
+
+:root {
+  --color-audiovisual-sonora: #4d4d4d;
+  --color-audiovisual2-sonora:  #fc7054;
+  --color-parrafos-sonora: #4d4d4d;
+  --color-tags-sonora:  #fc7054;
+  --color-tabs-sonora: #fc7054;
+  --color-links-sonora:  #fc7054;
+  --color-audiobuttons-sonora: #fc7054;
+  --color-timeline-sonora: rgb(198, 203, 193);
+
+  --color-audiovisual-multi: #163c5a;
+  --color-audiovisual2-multi:  #777fad;
+  --color-parrafos-multi: #595959;
+  --color-tags-multi-multi:  #777fad;;
+  --color-tabs-multi-multi: #777fad;
+  --color-links-multi-multi:  #777fad;
+  --color-audiobuttons-multi: #777fad;
+  --color-timeline-multi: rgb(198, 203, 193);
+
+  --color-audiovisual-acontecimiento: #4d4d4d;
+  --color-audiovisual2-acontecimiento:  #4696be;
+  --color-parrafos-acontecimiento: #4d4d4d;
+  --color-tags-acontecimiento:  #4696be;
+  --color-tabs-acontecimiento: #4696be;
+  --color-links-acontecimiento:  #4696be;
+  --color-audiobuttons-acontecimiento: #4696be;
+  --color-timeline-acontecimiento: rgb(198, 203, 193);
+
+
+  --color-audiovisual-audiovisual: #163c5a;
+  --color-audiovisual2-audiovisual:  rgb(110, 172, 43);
+  --color-parrafos-audiovisual: #595959;
+  --color-tags-audiovisual:  rgb(110, 172, 43);
+  --color-tabs-audiovisual: rgb(110, 172, 43);
+  --color-links-audiovisual:  rgb(110, 172, 43);
+  --color-audiobuttons-audiovisual: rgb(110, 172, 43);
+  --color-timeline-audiovisual: rgb(198, 203, 193);
+
+  --color-audiovisual-graf: #4d4d4d;
+  --color-audiovisual2-graf:  #9745dd;
+  --color-parrafos-graf: #4d4d4d;
+  --color-tags-graf:  #9745dd;
+  --color-tabs-graf: #9745dd;
+  --color-links-graf:  #9745dd;
+  --color-audiobuttons-graf: #9745dd;
+  --color-timeline-graf: rgb(198 203 193);
+}
+
+
+a {
+  color: #a4d7fe;
+}
+
+
+a:hover {
+  color: #dcfcff;
+}
+
+
+u{
+  text-decoration: underline;
+  font-weight: bolder;
+  font-style: italic;
+}
+
+
+.fijo {
+  top: 80px;
+  right: 0;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #4d4d4d;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 110%;
+  transition: all 0.5s ease;
+  position: fixed !important;
+}
+.fijobadge{
+  left: 0%;
+  top: 7px !important;
+}
+.fijo:hover{
+  background-color: #fff;
+}
+.enlaceExterno {
+  position: fixed;
+  right: 0;
+  top: 25vh;
+  z-index: 100;
+}
+.enlaceExterno img {
+  height: 50px;
+}
+.colorIconLike {
+  color: #000;
+  font-size: 1.3em;
+  transition: all 0.7s ease;
+}
+
+
+.puntero{
+  pointer-events: none;
+  display: none;
+}
+.clasetitulon{
+  display: none;
+}
+
+
+
+.viewport {
+  background: #163c5a;
+
+}
+
+.viewport .scene3D-container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 116%;
+  -webkit-perspective: calc(var(--scenePerspective) * var(--cameraSpeed) * 0.5px);
+  perspective: calc(var(--scenePerspective) * var(--cameraSpeed) * 0.5px);
+  -webkit-perspective-origin: calc(var(--scenePerspectiveOriginX) * 1%) calc(var(--scenePerspectiveOriginY) * 1%);
+  perspective-origin: calc(var(--scenePerspectiveOriginX) * -1.2%) calc(var(--scenePerspectiveOriginY) * 1%);
+  will-change: perspective-origin;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.viewport .scene3D-container .scene3D {
+  position: absolute;
+  top: 0;
+  left: 0vw;
+  height: 50vh;
+  width: 100%;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: translateZ(calc(var(--cameraZ) * 1px));
+  transform: translateZ(calc(var(--cameraZ) *1px));
+  will-change: transform;
+}
+
+.viewport .scene3D-container .scene3D > div {
+  position: absolute;
+  display: block;
+  top: 40%;
+}
+
+.elemento {
+  background-color: transparent;
+  max-height: auto;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.elemento:hover{
+  top: 100px !important;
+}
+.elemento a img{
+  transition: all 0.7s ease;
+  
+  
+}
+
+.elemento a img{
+  border-radius: 10px;
+}
+
+.filtro1,.filtro2,.filtro3,.filtro4,.filtro5, .filtro7 {
+  color: rgb(255, 255, 255);
+ 
+  text-decoration: none;
+  width: 100%;
+}
+.filtro1{
+  
+  color:  white;
+  
+}
+.filtro2{
+  color:  white; 
+}
+.filtro3{
+    color:  white;
+}
+
+.filtro5, .filtro7{
+    color:  white
+
+}
+
+
+.tituloCard {
+    font-family: obliqua, sans-serif!important;
+    color: #a6d7ff!important;
+}
+
+
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #163c5a;
+  color: #272935;
+  padding: 0;
+  margin: 0;
+}
+
+
+h1 .logo {
+  display: block;
+  margin: 0 auto;
+  max-width: 150px;
+}
+
+.link {
+  color: white;
+  margin: 0;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1;
+}
+
+.scene3D > div h5 {
+  margin-top: 0;
+  font-family: "Playfair Display SC", serif;
+  font-size: 1.5rem;
+}
+ 
+.presentacion {
+  top: 90px;
+  margin-left: 3rem;
+  z-index: 10;
+}
+.presentacion .row {
+  max-width: 30%;
+  position: absolute;
+  max-height: 300px;
+}
+.presentacion .row .col-4 {
+  width: 100%;
+  max-height: 300px;
+}
+
+.col-12 {
+  margin-top: 15px;
+}
+
+
+.chekeadores{
+  display: flex;
+  flex-direction: row-reverse;
+  top: 75px;
+  right: 25px;
+  z-index: 100;
+}
+.chekeadores .form-check-inline{
+  color: initial;
+  font-weight: 300;
+  margin-right: -1rem;
+  padding-left: 1rem;
+}
+.form-check-input, .form-check-label {
+  cursor: pointer;
+}
+.share-item{
+  cursor: pointer;
+}
+.parrafo{
+  transition: all 0.7s ease;
+}
+.parrMas{
+  border-radius: 5px;
+  background-color: rgb(63, 94, 119,0.9);
+  color: #272935;
+  margin-bottom: 0px;
+  padding: 1rem;
+  width: 150%;
+  line-height: 20px;
+  letter-spacing: -0.1px;
+}
+.parrafoppal{
+  line-height: 20px;
+  letter-spacing: -0.1px;
+  margin-bottom: 0px;
+  height: auto;
+  overflow: auto;
+  max-height: 500px;
+}
+#lmas,#lmenos{
+  cursor: pointer;
+  color: #3c5ae0;
+}
+
+.nover{
+  display: none;
+}
+.filtro7{
+  display: none;
+}
+.mostrarFiltro7{
+  display: block;
+}
+.opcion7 {
+  position: absolute;
+  top: 2rem;
+  right: 12rem;
+}
+.anclaIn{
+  color: #ffffff;
+  text-decoration: underline;
+  
+}
+
+#lmas, #lmenos {
+  cursor: pointer;
+  color: #a4d7fe!important;
+}
+
+
+
+
+#lmas, #lmenos:hover {
+  color: #a4d7fe!important;
+  text-decoration: underline;
+}
+
+
+/*   */
+
+.enlaceExterno {
+  position: fixed;
+  right: 283px;
+  top: 36vh;
+  z-index: 100;
+}
+
+
+.presentacion p{
+  color: #e6e6e6;
+}
+
+.presentacion h1{
+  color:#b0f9fd;
+  font-weight: bold;
+  font-family: obliqua, sans-serif!important;
+}
+
+
+.presentacion h5{
+color: #b0f9fd;
+line-height: 0.8em;
+font-weight: 300;
+}
+
+
+
+.fijo {
+  background-color: #0e80dc;
+
+}
+.like .icon{
+  transition: all 0.7s ease;
+  cursor: pointer;
+}
+.like .icon:hover{
+  filter: blur(1px);
+}
+
+
+.form-check-input {
+  opacity: 0;
+  width: 1em;
+  height: 1em;
+  margin-top: .25em;
+  vertical-align: top;
+  
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+ 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.tooltip{
+  background-color: #fff; 
+  border: 1px solid transparent ; 
+  padding: 5px;
+  font-size: 16px;
+  line-height: 17px;
+  border-radius: 5px;
+  position: fixed !important;
+  transform: translate(-7.3vh, 75px) !important;
+ 
+}
+.tooltip .tooltip-arrow{
+  display: none;
+}
+.tooltip .tooltip-inner{
+  background-color: transparent;
+  text-align: justify;
+  color: #4d4d4d;
+}
+
+.btn-check:focus+.btn{
+  box-shadow: 0 0 0 0.25rem rgb(224 234 230 / 50%); 
+}
+
+.btn {
+  color: #ffffff;
+}
+
+/*botones menu*/
+.btn-check:checked+ .btnInicio {
+  background-color: #0e80dc;
+  border-color: #0e80dc;
+  color: #fff;
+}
+
+.btnInicio{
+  background-color: transparent;
+  border-color: transparent;
+  color: #fff;
+}
+.btnInicio:hover{
+  background-color: #bebaba;
+  color: #4d4d4d;
+}
+
+.btnAudiovisual{
+  background-color: transparent;
+  border-color: transparent;
+  color: #fff;
+}
+.btn-check:checked+ .btnAudiovisual{
+  background-color: #d4f570;
+  border-color: #d4f570;
+  color: #4d4d4d;
+}
+.btnAudiovisual:hover{
+  background-color: #e4f5b2;
+  color: #4d4d4d;
+}
+.btnGrafica{
+  background-color: transparent;
+  border-color: transparent;
+  color: #fff;
+}
+.btnGrafica:hover{
+  background-color: #c077ff;
+
+  color: #fff;
+}
+.btn-check:checked+ .btnGrafica{
+  background-color: #9745dd;
+  border-color: #9745dd;
+
+  color: #fff;
+}
+
+.btnMultiformato{
+  background-color: transparent;
+  border-color: transparent;
+  color: #fff;
+}
+.btnMultiformato:hover{
+  background-color: #dfdbdb;
+  color: #181818;
+}
+.btn-check:checked+ .btnMultiformato{
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: #4d4d4d;
+}
+
+.btnSonora{
+  background-color: transparent;
+  border-color: transparent;
+  color: #fff;
+}
+.btnSonora:hover{
+  background-color: #f89c8a;
+  color: #eee6e6;
+}
+.btn-check:checked+ .btnSonora{
+  background-color: #fc7054;
+  border-color: #fc7054;
+  color: #fff;
+}
+
+.btnAcontecimientos{
+  background-color: transparent;
+  border-color: transparent;
+  color: #fff;
+}
+.btnAcontecimientos:hover{
+  background-color: #7ad5ff;
+  color: #fff;
+}
+.btn-check:checked+ .btnAcontecimientos{
+  background-color: #47b8ec;
+  border-color: #47b8ec;
+  color: #fff;
+}
+
+ /*fin botones menu*/
+
+
+ div#PDF{
+  visibility: hidden;
+  padding-bottom: 16rem;
+  margin-bottom: 2rem;
+ }
+
+
+.footer {
+  display: none;
+}
+footer {
+  height: 35px !important;
+}
+.fixed-bottom>.container-fluid {
+  font-size: 70%;
+  padding: 0px 5px;
+}
+p.politica {
+  margin: 0.5rem 0rem;
+  font-size: 0.8rem;
+}
+.zindexBotones {
+  z-index: 1100;
+}
+
+/* .accordion-button::after { 
+  background-image: url(../assets/flecha-der.svg);
+  transform: rotate(90deg);
+}
+.accordion-button:not(.collapsed)::after {
+  background-image: url(../assets/flecha-der.svg);
+  transform: rotate(-90deg);
+} */
+
+.miruta {
+  z-index: 100;
+  bottom: 46px;
+  width: 50vw;
+  margin: unset;
+  left: -25px;
+}
+
+.scene3D > div {
+  padding: 0!important;
+}
+
+
+
+
+
+
+ /*modales*/
+
+ .tab-content a {
+  color: red;
+  text-decoration: none;
+}
+
+ #modal28 .h2 {
+  color:#152348!important;
+  font-weight:900!important;
+  }
+
+
+  .accordion-button {
+    color: #488f9f;
+
+}
+
+.modal .modal-icons a {
+  height: 30px;
+  width: 30px;
+
+}
+
+.accordion-button:not(.collapsed) {
+  color: #488f9f;
+  background-color: #b0d1d6;
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,.125);
+}
+
+.modal .modal-keywords * {
+  color: #488f9f;
+}
+
+.tab-content a {
+  color: #488f9f;
+}
+
+.miruta {
+  z-index: 100;
+  bottom: 46px;
+  width: 50vw;
+  margin: unset;
+  left: -25px;
+}
+div.text-pdf {
+  font-size: 80%;
+  line-height: 1rem;
+  text-align: justify;
+  text-align: left;
+  height:540px;
+}
+
+.parrafo {
+  text-align: left;
+  height: 540px;
+}
+
+
+.parrafo p {
+  font-weight: lighter;
+  font-size: 70%;
+  color: #555555;
+  line-height: 0.8rem;
+}
+.parrafoppal::-webkit-scrollbar {
+	border-radius: 25px;
+	color: rgb(38 52 59 / 91%),;
+	background-color: transparent;
+	cursor: pointer;
+	width: 10px;
+}
+.parrafoppal::-webkit-scrollbar-thumb {
+	background-color: rgb(95 72 102 / 76%); 
+	border-radius: 5px;
+	cursor: pointer;
+	transition: all 0.7s ease;
+  }
+.parrafoppal::-webkit-scrollbar-thumb:hover {
+	background:  rgb(95 72 102 / 10%); ; 
+	cursor: pointer;
+}
+
+
+#likestexto {
+  font-family: obliqua, sans-serif!important;
+}
+.container.contenedor-cards {
+  position: relative;
+  top: 300px;
+}
+.container.contenedor-cards .row .col-12{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.iosClase .card {
+  width: 33%;
+  margin: 0.5px;
+}
+.iosClase .card .tituloCard{
+  font-size: 100%;
+  text-align: center;
+}
+.iosClase .card a{
+  text-decoration: unset;
+}
+.viewport .scene3D-container .scene3D .elemento .tituloCard {
+  position: absolute;
+  font-size: 120px;
+  top: 102%;
+  font-family: obliqua, sans-serif!important;
+  color: #a6d7ff!important;
+  padding: 29px;
+  text-align: center;
+}
+.presentacion.iosL .row .col-4 .parrafoppal, .presentacion.iosM .row .col-4 .parrafoppal{
+  width: 85vw;
+} 
+.presentacion.iosL, .presentacion.iosM{
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+
+@media all and (max-width: 768px) {
+ 
+  .tituloCard {
+    font-family: obliqua, sans-serif!important;
+    color: #a6d7ff!important;
+    font-size: unset;
+    position: unset;
+    top: unset;
+    padding: unset;
+    font-weight: bold;
+    background-color: #083d59;
+    text-align: center;
+  }
+  
+  .enlaceExterno {
+    position: fixed;
+    left: -8vw;
+    top: 85.5vh;
+    width: 50vw;
+  }
+  .fijo{
+    display: none;
+  }
+  .tooltip{
+    transform: translate(-12.5vh,87vh) !important;
+  }
+  
+  .presentacion {
+    margin-left: auto;
+    margin-right: auto;
+    top: 80px;
+    position: relative;
+  }
+  .presentacion .row {
+    max-width: 100%;
+    max-height: 180px;
+}
+  .presentacion .row .col-4{
+    width: 100%;
+    max-height: 190px;
+  }
+  .presentacion .col-4 h1{
+    font-size: 140%;
+  }
+  .parrMas{
+    width: 100%;
+    height: 200px;
+    position: relative;
+    overflow-y: scroll;
+    z-index: 100;
+
+  }
+  .chekeadores {
+    display: block;
+    position: relative;
+    top: 290px;
+    z-index: unset;
+    margin: 2rem 1rem;
+    right: unset;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: unset;
+  }
+  .viewport .scene3D-container{
+    top: 15vh;
+  }
+  .form-check {
+    padding-left: 0em;
+    margin-bottom: 0rem;
+  }
+  .accordion-item {
+    background-color: transparent;
+    border: 1px solid rgba(0,0,0,.125);
+    border-bottom:1px solid #c7c2c2 !important ;
+  }
+  .accordion-button:not(.collapsed) {
+    color: #fff;
+    background-color: transparent;
+    box-shadow: unset;
+  }
+  .accordion-button:focus {
+    border-color: unset;
+    box-shadow: unset;
+  }
+  .accordion-button{
+    background-color: transparent;
+  }
+  .accordion-body{
+    background-color: #083d59;
+  }
+  p.politica {
+    font-size: 70% !important;
+    line-height: 15px !important;
+  }
+
+  a {
+    text-decoration: unset;
+  }
+  .elemento{
+    margin: 0.3rem;
+    width: 45%;
+    height: auto;
+    font-size: 80%;
+  }
+  .elemento:hover {
+    top: -5px !important;
+  }
+  div#PDF{
+    display: none;
+  }
+}
+
+/*  clases de modales */
+
+a#xCerrar {
+  position: relative;
+  font-size: 1.5rem;
+  top: 0;
+  left: 97%;
+  cursor: pointer;
+}
+@media all and (max-width:768px){
+  a#xCerrar {
+    position: absolute;
+    top: 0px;
+    left: 93%;
+  }
+}
+.logo.img-fluid {
+  background-image: url(/themes/custom/cevtheme/salas-arte-cultura/img/logo-informe-mb.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 90%;
+  width: 350px;
+  height: 70px;
+}
+.tooltip.fade.show.bs-tooltip-start .tooltip-inner{
+  max-width: 400px;
+}
+
+
+
+.modal-content-cev .accordion-button:not(.collapsed) {
+  color: #293171!important;
+  background-color: #cdcdcd!important;
+  
+}
+
+/*
+.acontecimiento Basic Changes
+*/
+
+
+.acontecimiento .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  color: var(--color-audiovisual-acontecimiento);
+}
+
+.acontecimiento .modal-icons a {
+  background: var(--color-audiovisual2-acontecimiento);
+}
+
+
+.acontecimiento .icon-ico-x:before {
+  color:  var(--color-audiovisual2-acontecimiento);
+}
+
+.acontecimiento p {
+  color:  var(--color-parrafos-acontecimiento);
+}
+
+.acontecimiento .modal .modal-keywords * {
+  color:  var(--color-tags-acontecimiento);
+}
+
+.acontecimiento .modal .nav.nav-tabs .nav-link span {
+  color:  var(--color-tabs-acontecimiento);
+}
+
+.acontecimiento a {
+  color: var(--color-links-acontecimiento);
+
+}
+
+.acontecimiento a:hover {
+  color: var(--color-linkshover-acontecimiento);
+
+}
+
+.acontecimiento ::marker {
+  color: var(--color-links-acontecimiento);
+}
+
+
+.acontecimiento .nav-tabs .nav-link {
+font-weight:bold;
+}
+
+/*
+.acontecimiento  audio
+*/
+
+.list-group-item.active {
+  background-color:var(--color-audiobuttons-acontecimiento);
+   border-color: var(--color-audiobuttons-acontecimiento);
+  }
+
+
+.acontecimiento .rt-player .rt-player__buttons button {
+  color:var(--color-audiobuttons-acontecimiento);
+}
+
+.acontecimiento .rt-player .rt-player__buttons button:hover {
+  color:var(--color-linkshover-acontecimiento);
+}
+
+.acontecimiento .rt-player .progress {
+  background-color:var(--color-timeline-acontecimiento);
+
+}
+
+.acontecimiento .rt-player .rt-timer {
+  color:var(--color-timeline-acontecimiento);
+
+}
+
+
+/*
+.acontecimiento   acordeón
+*/
+
+.acontecimiento .accordion-flush .accordion-item .accordion-button {
+  color:var(--color-audiovisual2-acontecimiento);
+}
+
+.acontecimiento .accordion-button:not(.collapsed) {
+  color:var(--color-audiovisual2-acontecimiento);
+  
+}
+
+.acontecimiento .accordion-body {
+  color:  var(--color-parrafos-acontecimiento);
+}
+
+
+
+
+/*
+.audiovisual Basic Changes
+*/
+
+
+.audiovisual .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  color: var(--color-audiovisual-audiovisual);
+}
+
+.audiovisual .mb-1 {
+  color: var(--color-audiovisual);
+}
+
+.audiovisual .modal-icons a {
+  background: var(--color-audiovisual2-audiovisual);
+}
+
+
+.audiovisual .icon-ico-x:before {
+  color:  var(--color-audiovisual2-audiovisual);
+}
+
+.audiovisual p {
+  color:  var(--color-parrafos-audiovisual);
+}
+
+.audiovisual .modal .modal-keywords * {
+  color:  var(--color-tags-audiovisual);
+}
+
+.audiovisual .modal .nav.nav-tabs .nav-link span {
+  color:  var(--color-tabs-audiovisual);
+}
+
+.audiovisual a {
+  color: var(--color-links-audiovisual);
+
+
+}
+
+.audiovisual a:hover {
+  color: var(--color-linkshover-audiovisual);
+
+}
+
+.audiovisual ::marker {
+  color: var(--color-links-audiovisual);
+}
+
+
+.audiovisual .nav-tabs .nav-link {
+font-weight:bold;
+}
+
+/*
+.audiovisual  audio
+*/
+
+.list-group-item.active {
+  background-color:var(--color-audiobuttons-audiovisual);
+   border-color: var(--color-audiobuttons-audiovisual);
+}
+
+.audiovisual .rt-player .rt-player__buttons button {
+  color:var(--color-audiobuttons-audiovisual);
+}
+
+.audiovisual .rt-player .rt-player__buttons button:hover {
+  color:var(--color-linkshover-audiovisual);
+}
+
+.audiovisual .rt-player .progress {
+  background-color:var(--color-timeline-audiovisual);
+
+}
+
+.audiovisual .rt-player .rt-timer {
+  color:var(--color-timeline-audiovisual);
+
+}
+
+
+/*
+.audiovisual  acordeón
+*/
+
+.audiovisual .accordion-flush .accordion-item .accordion-button {
+  color:var(--color-audiovisual2-audiovisual);
+}
+
+.audiovisual .accordion-button:not(.collapsed) {
+  color:var(--color-audiovisual2-audiovisual);
+  
+}
+
+.audiovisual .accordion-body {
+  color:  var(--color-parrafos-audiovisual);
+}
+
+
+
+
+/*
+-graf Basic Changes
+*/
+
+
+.graf .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  color: var(--color-audiovisual-graf);
+}
+
+.graf .modal-icons a {
+  background: var(--color-audiovisual2-graf);
+}
+
+
+.graf .icon-ico-x:before {
+  color:  var(--color-audiovisual2-graf);
+}
+
+.graf p {
+  color:  var(--color-parrafos-graf);
+}
+
+.graf .modal .modal-keywords * {
+  color:  var(--color-tags-graf);
+}
+
+.graf .modal .nav.nav-tabs .nav-link span {
+  color:  var(--color-tabs-graf);
+}
+
+.graf a {
+  color: var(--color-links-graf);
+
+}
+
+.graf a:hover {
+  color: var(--color-linkshover-graf);
+
+}
+
+.graf ::marker {
+  color: var(--color-links-graf);
+}
+
+
+.graf .nav-tabs .nav-link {
+font-weight:bold;
+}
+
+/*
+.graf   audio
+*/
+
+.list-group-item.active {
+  background-color:var(--color-audiobuttons-graf);
+   border-color: var(--color-audiobuttons-graf);
+}
+
+
+.graf .rt-player .rt-player__buttons button {
+  color:var(--color-audiobuttons-graf);
+}
+
+.graf .rt-player .rt-player__buttons button:hover {
+  color:var(--color-linkshover-graf);
+}
+
+.graf .rt-player .progress {
+  background-color:var(--color-timeline-graf);
+
+}
+
+.graf .rt-player .rt-timer {
+  color:var(--color-timeline-graf);
+
+}
+
+
+/*
+.graf   acordeón
+*/
+
+.graf .accordion-flush .accordion-item .accordion-button {
+  color:var(--color-audiovisual2-graf);
+}
+
+.graf .accordion-button:not(.collapsed) {
+  color:var(--color-audiovisual2-graf);
+  
+}
+
+.graf .accordion-body {
+  color:  var(--color-parrafos-graf);
+}
+
+
+
+
+/*
+.multi Basic Changes
+*/
+
+
+.multi .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  color: var(--color-audiovisual-multi);
+}
+
+.multi .mb-1 {
+  color: var(--color-audiovisual-multi);
+}
+
+.multi .modal-icons a {
+  background: var(--color-audiovisual2-multi);
+}
+
+
+.multi .icon-ico-x:before {
+  color:  var(--color-audiovisual2-multi);
+}
+
+.multi p {
+  color:  var(--color-parrafos-multi);
+}
+
+.multi .modal .modal-keywords * {
+  color:  var(--color-tags-multi);
+}
+
+.multi .modal .nav.nav-tabs .nav-link span {
+  color:  var(--color-tabs-multi);
+}
+
+.multi a {
+  color: var(--color-links-multi);
+
+}
+/* 
+.multi a:hover {
+  color: var(--color-linkshover-multi);
+
+} */
+
+.multi ::marker {
+  color: var(--color-links-multi);
+}
+
+
+.multi .nav-tabs .nav-link {
+font-weight:bold;
+}
+
+/*
+ .multi audio
+*/
+
+.list-group-item.active {
+  background-color:var(--color-audiobuttons-multi);
+   border-color: var(--color-audiobuttons-multi);
+}
+
+
+.multi .rt-player .rt-player__buttons button {
+  color:var(--color-audiobuttons-multi);
+}
+
+.multi .rt-player .rt-player__buttons button:hover {
+  color:var(--color-linkshover-multi);
+}
+
+.multi .rt-player .progress {
+  background-color:var(--color-timeline-multi);
+
+}
+
+.multi .rt-player .rt-timer {
+  color:var(--color-timeline-multi);
+
+}
+
+
+/*
+.multi acordeón
+*/
+
+.multi .accordion-flush .accordion-item .accordion-button {
+  color:var(--color-audiovisual2-multi);
+}
+
+.multi .accordion-button:not(.collapsed) {
+  color:var(--color-audiovisual2-multi);
+  
+}
+
+.multi .accordion-body {
+  color:  var(--color-parrafos-multi);
+}
+
+
+
+
+
+/*
+.sonora Basic Changes
+*/
+
+
+.sonora .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  color: var(--color-audiovisual-sonora);
+}
+
+.sonora .modal-icons a {
+  background: var(--color-audiovisual2-sonora);
+}
+
+
+.sonora .icon-ico-x:before {
+  color:  var(--color-audiovisual2-sonora);
+}
+
+.sonora p {
+  color:  var(--color-parrafos-sonora);
+}
+
+.sonora .modal .modal-keywords * {
+  color:  var(--color-tags-sonora);
+}
+
+.sonora .modal .nav.nav-tabs .nav-link span {
+  color:  var(--color-tabs-sonora);
+}
+
+.sonora a {
+  color: var(--color-links-sonora);
+
+}
+
+.sonora a:hover {
+  color: var(--color-linkshover-sonora);
+
+}
+
+.sonora ::marker {
+  color: var(--color-links-sonora);
+}
+
+
+.sonora .nav-tabs .nav-link {
+font-weight:bold;
+}
+
+/*
+.sonora audio
+*/
+
+.list-group-item.active {
+  background-color:var(--color-audiobuttons-sonora);
+   border-color: var(--color-audiobuttons-sonora);
+}
+
+
+.sonora .rt-player .rt-player__buttons button {
+  color:var(--color-audiobuttons-sonora);
+}
+
+.sonora .rt-player .rt-player__buttons button:hover {
+  color:var(--color-linkshover-sonora);
+}
+
+.sonora .rt-player .progress {
+  background-color:var(--color-timeline-sonora);
+
+}
+
+.sonora .rt-player .rt-timer {
+  color:var(--color-audiovisual-multi);
+
+}
+
+
+/*
+.sonora acordeón
+*/
+
+.sonora .accordion-flush .accordion-item .accordion-button {
+  color:var(--color-audiovisual2-sonora);
+}
+
+.sonora .accordion-button:not(.collapsed) {
+  color:var(--color-audiovisual2-sonora);
+  
+}
+
+.sonora .accordion-body {
+  color:  var(--color-parrafos-sonora);
+}
+
+
+
+/* Contraste  */
+
+
+.contraste a {
+  color: #000000;
+  text-decoration: underline;
+}
+
+
+.contraste a:hover {
+  color: #000000;
+  text-decoration: underline;
+}
+
+
+.contraste .fijo {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+
+}
+
+
+.contraste .fijo:hover{
+  background-color: #fff;
+  text-decoration: underline;
+}
+
+.contraste .viewport {
+  background: #ffffff;
+
+}
+
+.contraste .filtro1,
+.contraste .filtro2,
+.contraste .filtro3,
+.contraste .filtro4,
+.contraste .filtro5, 
+.contraste .filtro6, 
+.contraste .filtro7 {
+  color: rgb(0, 0, 0);
+
+}
+
+
+
+.contraste .tituloCard {
+  color: #000000;
+}
+
+
+.contraste body {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.contraste .link {
+  color: rgb(0, 0, 0);
+  text-decoration: underline;
+}
+
+
+
+.contraste .parrMas{
+  background-color: rgba(213, 213, 213, 0.9);
+  color: #000000;
+
+}
+
+.contraste #lmas,#lmenos{
+  color: #3a3a3a;
+}
+
+
+.contraste .anclaIn{
+  color: #434343;
+  text-decoration: underline;
+}
+
+.contraste #lmas, #lmenos {
+  color: #323232;
+  text-decoration: underline;
+}
+
+
+.contraste #lmas, #lmenos:hover {
+  color: #323232;
+  text-decoration: underline;
+}
+
+
+.contraste .presentacion p{
+  color: #000000;
+}
+
+.contraste .presentacion h1{
+  color:#000000;
+}
+
+
+.contraste  .presentacion h5{
+color: #000000;
+
+}
+
+.contraste .fijo {
+  background-color: #a8a8a8;
+
+}
+
+.contraste .tooltip .tooltip-inner{
+  color: #000000;
+}
+
+.contraste .btn-check:focus+.btn{
+  box-shadow: 0 0 0 0.25rem rgba(76, 76, 76, 0.5); 
+}
+
+.contraste .btn {
+  color: #8c8c8c;
+}
+
+
+/*botones menu*/
+
+.contraste .btn-check:checked+ .btnInicio {
+  background-color: #000000;
+  border-color: #000000;
+  color: #fff;
+}
+
+.contraste .btnInicio{
+  color: rgb(0, 0, 0);
+}
+.contraste .btnInicio:hover{
+  background-color: #bbbbbb;
+  color: black;
+  text-decoration: underline;
+}
+
+.contraste .btnAudiovisual{
+  background-color: #bbbbbb;
+  color: black;
+  text-decoration: underline;
+}
+.contraste .btn-check:checked+ .btnAudiovisual{
+  background-color: #bbbbbb;
+  color: black;
+  text-decoration: underline;
+}
+.contraste .btnAudiovisual:hover{
+  background-color: #ffffff;
+  color: black;
+  text-decoration: underline;
+}
+.contraste .btnGrafica{
+  background-color: #bbbbbb;
+  color: black;
+  text-decoration: underline;
+}
+.contraste .btnGrafica:hover{
+  background-color: #ffffff;
+  color: black;
+  text-decoration: underline;
+}
+.contraste .btn-check:checked+ .btnGrafica{
+  background-color: #bbbbbb;
+  color: black;
+  text-decoration: underline;
+}
+
+.contraste .btnMultiformato{
+  background-color: #bbbbbb;
+  color: black;
+  text-decoration: underline;
+}
+.contraste .btnMultiformato:hover{
+  background-color: #ffffff;
+  color: black;
+  text-decoration: underline;
+}
+
+.contraste .btn-check:checked+ .btnMultiformato{
+  background-color: #bbbbbb;
+  color: black;
+  text-decoration: underline;
+}
+
+.contraste .btnSonora{
+  background-color: #bbbbbb;
+  color: black;
+  text-decoration: underline;
+}
+.contraste .btnSonora:hover{
+  background-color: #ffffff;
+  color: black;
+  text-decoration: underline;
+}
+.contraste .btn-check:checked+ .btnSonora{
+  background-color: #bbbbbb;
+  color: black;
+  text-decoration: underline;
+}
+
+.contraste .btnAcontecimientos{
+  background-color: #bbbbbb;
+  color: black;
+  text-decoration: underline;
+}
+.contraste .btnAcontecimientos:hover{
+  background-color: rgb(255, 255, 255);
+  color: black;
+  text-decoration: underline;
+}
+.contraste .btn-check:checked+ .btnAcontecimientos{
+  background-color: #bbbbbb;
+  color: black;
+  text-decoration: underline;
+}
+
+
+
+/* contraste clases de modales */
+
+
+
+
+
+.contraste .modal-content-cev .accordion-button:not(.collapsed) {
+  color: #000000!important;
+  background-color: #ffffff!important;
+  
+}
+
+/*
+.acontecimiento Basic Changes
+*/
+
+
+.contraste .acontecimiento .h1,
+.contraste .acontecimiento .h2,
+.contraste .acontecimiento.h3, 
+.contraste .acontecimiento.h4, 
+.contraste .acontecimiento.h5, 
+.contraste .acontecimiento.h6, 
+.contraste .acontecimiento h1, 
+.contraste .acontecimiento h2, 
+.contraste .acontecimiento h3, 
+.contraste .acontecimiento h4, 
+.contraste .acontecimiento h5, 
+.contraste .acontecimiento h6 {
+  color: black;
+}
+
+.contraste .acontecimiento .modal-icons a {
+  background: black;
+}
+
+
+.contraste .acontecimiento .icon-ico-x:before {
+  color: black;
+}
+
+.contraste .acontecimiento p {
+  color: black;
+}
+
+.contraste .acontecimiento .modal .modal-keywords * {
+  color:  black;
+}
+
+.contraste .acontecimiento .modal .nav.nav-tabs .nav-link span {
+  color: black;
+}
+
+.contraste .acontecimiento a {
+  color: black;
+
+}
+
+.contraste .acontecimiento a:hover {
+  color: rgb(55, 55, 55);
+
+}
+
+.contraste .acontecimiento ::marker {
+  color: black;
+}
+
+
+/*
+.acontecimiento  audio
+*/
+
+.contraste .list-group-item.active {
+  background-color:gray;
+   border-color: gray;
+  }
+
+
+.contraste .acontecimiento .rt-player .rt-player__buttons button {
+  color:black;
+}
+
+.contraste .acontecimiento .rt-player .rt-player__buttons button:hover {
+  color:gray
+}
+
+.contraste .acontecimiento .rt-player .progress {
+  background-color:black
+
+}
+
+.contraste .acontecimiento .rt-player .rt-timer {
+  color:black;
+
+}
+
+
+/*
+.acontecimiento   acordeón
+*/
+
+.contraste .acontecimiento .accordion-flush .accordion-item .accordion-button {
+  color:black;
+}
+
+.contraste .acontecimiento .accordion-button:not(.collapsed) {
+  color:black;
+  
+}
+
+.contraste .acontecimiento .accordion-body {
+  color:  black;
+
+}
+
+
+/*
+.audiovisual Basic Changes
+*/
+
+
+
+.contraste .audiovisual .h1,
+.contraste .audiovisual .h2,
+.contraste .audiovisual .h3, 
+.contraste .audiovisual .h4, 
+.contraste .audiovisual .h5, 
+.contraste .audiovisual .h6, 
+.contraste .audiovisual h1, 
+.contraste .audiovisual h2, 
+.contraste .audiovisual h3, 
+.contraste .audiovisual h4, 
+.contraste .audiovisual h5, 
+.contraste .audiovisual h6 {
+  color: black;
+}
+
+
+
+.contraste .audiovisual .mb-1 {
+  color: black;
+}
+
+.contraste .audiovisual .modal-icons a {
+  background: black;
+}
+
+.contraste .audiovisual .icon-ico-x:before {
+  color:  black;
+}
+
+.contraste .audiovisual p {
+  color: black;
+}
+
+.contraste .audiovisual .modal .modal-keywords * {
+  color:  black;
+}
+
+.contraste .audiovisual .modal .nav.nav-tabs .nav-link span {
+  color:  black;
+}
+
+.contraste .audiovisual a {
+  color: black;
+  text-decoration: underline;
+}
+
+.contraste .audiovisual a:hover {
+  color: gray;
+  text-decoration: underline;
+
+}
+
+.contraste .audiovisual ::marker {
+  color: black;
+}
+
+
+
+
+
+
+/*
+.audiovisual  audio
+*/
+
+.contraste .list-group-item.active {
+  background-color:gray;
+   border-color: gray;
+}
+
+.contraste .audiovisual .rt-player .rt-player__buttons button {
+  color:black;
+}
+
+.contraste .audiovisual .rt-player .rt-player__buttons button:hover {
+  color:black;
+}
+
+.contraste .audiovisual .rt-player .progress {
+  background-color:gray;
+
+}
+
+.contraste .audiovisual .rt-player .rt-timer {
+  color:black;
+
+}
+
+
+/*
+.audiovisual  acordeón
+*/
+
+.contraste .audiovisual .accordion-flush .accordion-item .accordion-button {
+  color:black;
+}
+
+.contraste .audiovisual .accordion-button:not(.collapsed) {
+  color:black;
+  
+}
+
+.contraste .audiovisual .accordion-body {
+  color: black;
+}
+
+
+
+
+/*
+-graf Basic Changes
+*/
+
+
+
+.contraste .graf .h1,
+.contraste .graf.h2,
+.contraste .graf .h3, 
+.contraste .graf .h4, 
+.contraste .graf .h5, 
+.contraste .graf .h6, 
+.contraste .graf h1, 
+.contraste .graf h2, 
+.contraste .graf h3, 
+.contraste .graf h4, 
+.contraste .graf h5, 
+.contraste .graf h6 {
+  color: black;
+}
+
+
+.contraste .graf .modal-icons a {
+  background: gray;
+}
+
+
+.contraste .graf .icon-ico-x:before {
+  color:  black;
+}
+
+.contraste .graf p {
+  color: black;
+}
+
+.contraste .graf .modal .modal-keywords * {
+  color: black;
+}
+
+.contraste .graf .modal .nav.nav-tabs .nav-link span {
+  color: black;
+}
+
+.contraste .graf a {
+  color: black;
+  text-decoration: underline;
+
+}
+
+.contraste .graf a:hover {
+  color: gray;
+  text-decoration: underline;
+
+}
+
+.contraste .graf ::marker {
+  color: black;
+}
+
+
+
+.contraste .list-group-item.active {
+  background-color:gray;
+   border-color: gray;
+}
+
+
+.contraste .graf .rt-player .rt-player__buttons button {
+  color: black;
+}
+
+.contraste .graf .rt-player .rt-player__buttons button:hover {
+  color: black;
+}
+
+.contraste .graf .rt-player .progress {
+  background-color:gray;
+
+}
+
+.contraste .graf .rt-player .rt-timer {
+  color: black;
+
+}
+
+
+/*
+.graf   acordeón
+*/
+
+.contraste .graf .accordion-flush .accordion-item .accordion-button {
+  color: black;
+}
+
+.contraste .graf .accordion-button:not(.collapsed) {
+  color: black;
+  
+}
+
+.contraste .graf .accordion-body {
+  color: black;
+}
+
+
+
+
+/*
+.multi Basic Changes
+*/
+
+
+.contraste .multi .h1,
+.contraste .multi .h2,
+.contraste .multi .h3, 
+.contraste .multi .h4, 
+.contraste .multi .h5, 
+.contraste .multi .h6, 
+.contraste .multi h1, 
+.contraste .multi h2, 
+.contraste .multi h3, 
+.contraste .multi h4, 
+.contraste .multi h5, 
+.contraste .multi h6 {
+  color: black;
+}
+
+
+.contraste .multi .mb-1 {
+  color: black;
+}
+
+.contraste .multi .modal-icons a {
+  background: gray;
+}
+
+
+.contraste .multi .icon-ico-x:before {
+  color: black;
+}
+
+.contraste .multi p {
+  color: black;
+}
+
+.contraste .multi .modal .modal-keywords * {
+  color: black;
+}
+
+.contraste .multi .modal .nav.nav-tabs .nav-link span {
+  color: black;
+}
+
+.contraste .multi a {
+  color: black;
+
+}
+
+.contraste .multi a:hover {
+  color: black;
+
+}
+
+.contraste .multi ::marker {
+  color: black;
+}
+
+
+
+
+/*
+ .multi audio
+*/
+
+.contraste .list-group-item.active {
+  background-color:gray;
+   border-color: gray;
+}
+
+
+.contraste .multi .rt-player .rt-player__buttons button {
+  color: black;
+}
+
+.contraste .multi .rt-player .rt-player__buttons button:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+.contraste .multi .rt-player .progress {
+  background-color:gray;
+
+}
+
+.contraste .multi .rt-player .rt-timer {
+  color: black;
+
+}
+
+
+/*
+.multi acordeón
+*/
+
+.contraste .multi .accordion-flush .accordion-item .accordion-button {
+  color: black;
+}
+
+.contraste .multi .accordion-button:not(.collapsed) {
+  color: black;
+  
+}
+
+.contraste .multi .accordion-body {
+  color: black;
+}
+
+
+
+
+
+/*
+.sonora Basic Changes
+*/
+
+.contraste .sonora .h1,
+.contraste .sonora .h2,
+.contraste .sonora .h3, 
+.contraste .sonora .h4, 
+.contraste .sonora .h5, 
+.contraste .sonora .h6, 
+.contraste .sonora h1, 
+.contraste .sonora h2, 
+.contraste .sonora h3, 
+.contraste .sonora h4, 
+.contraste .sonora h5, 
+.contraste .sonora h6 {
+  color: black;
+}
+
+.contraste .sonora .modal-icons a {
+  color: black;
+}
+
+
+.contraste .sonora .icon-ico-x:before {
+  color: black;
+}
+
+.contraste .sonora p {
+  color: black;
+}
+
+.contraste .sonora .modal .modal-keywords * {
+  color: black;
+}
+
+.contraste .sonora .modal .nav.nav-tabs .nav-link span {
+  color: black;
+}
+
+.contraste .sonora a {
+  color: black;
+text-decoration: underline;
+
+}
+
+.contraste .sonora a:hover {
+  color: gray;
+  text-decoration: underline;
+
+}
+
+.contraste .sonora ::marker {
+  color: black;
+}
+
+
+
+
+/*
+.sonora audio
+*/
+
+.contraste .list-group-item.active {
+  background-color:gray;
+   border-color: gray;
+}
+
+
+.contraste .sonora .rt-player .rt-player__buttons button {
+  color: black;
+}
+
+.contraste .sonora .rt-player .rt-player__buttons button:hover {
+  color: gray;
+  
+}
+
+.contraste .sonora .rt-player .progress {
+  background-color:gray;
+
+}
+
+.contraste .sonora .rt-player .rt-timer {
+  color:black;
+
+}
+
+
+/*
+.sonora acordeón
+*/
+
+.contraste .sonora .accordion-flush .accordion-item .accordion-button {
+  color:black;
+}
+
+.contraste .sonora .accordion-button:not(.collapsed) {
+  color:black;
+  
+}
+
+.contraste .sonora .accordion-body {
+  color:black;
+}

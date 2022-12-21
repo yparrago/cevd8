@@ -1,0 +1,125 @@
+/* aside styles */
+
+/* body{
+    background: #202020;
+} */
+
+.aside-button{
+    position: fixed;
+    right: 0px;
+    background: #fff;
+    top: 120px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    z-index: 100;
+    transition: all 0.3s;
+}
+
+.aside-button.showing{
+    right: 350px;
+    background:#0071bc;
+}
+.aside-button:hover{
+    background:#0071bc;
+}
+.aside-button.showing svg, .aside-button:hover svg{
+    stroke:#fff;
+}
+
+.aside-button svg{
+    stroke:#0071bc;
+    width: 30px;
+    height: 30px;
+}
+
+.aside-button span{
+    position: absolute;
+    right: 80%;
+    font-size: 14px;
+    line-height: 1;
+    padding: 6px 12px 6px 12px;
+    text-align: right;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s;
+    z-index: -1;
+}
+
+.aside-button:hover span, .aside-button.showing span{
+    opacity: 1;
+    visibility: visible;
+    right: 100%;
+}
+
+aside{
+    position: fixed;
+    width: 350px;
+    height: 50vh;
+    right: 0;
+    transform: translateX(100%);
+    top: 85px;
+    z-index: 99;
+    background: #f2f2f2;
+    
+    border-radius: 2px 0 0 2px;
+    height:calc(100vh - 135px);
+    transition: all 0.3s ease;
+}
+
+aside.show{
+    transform: translateX(0%);
+    box-shadow: -5px 8px 10px rgba(43, 43, 43, 0.3);
+}
+
+aside .aside-content{
+    height: 100%;
+    overflow: auto;
+    /* background: red; */
+    padding: 25px 20px 25px 25px;
+}
+
+aside .aside-content .aside-item{
+    margin-bottom: 25px;
+}
+
+aside .aside-content .aside-item .aside-item-headline{
+    display: flex;
+    align-items: center;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #bbb;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+aside .aside-content .aside-item .aside-item-headline svg{
+    height: 28px;
+    width: 28px;
+    margin-right: 10px;
+}
+
+aside .aside-content .aside-item ul {
+    margin-bottom: 0px;
+    padding-left: 24px;
+}
+
+aside .aside-content .aside-item ul li{
+    margin-bottom: 10px;
+}
+
+aside .aside-content .aside-item ul a{
+    line-height: 1.4;
+    font-size: 15px;
+    display: block;
+    color: initial;
+}
+
+aside .aside-content .aside-item ul a:hover{
+    text-decoration: underline;
+    color: #1266f1;
+ }
+
+

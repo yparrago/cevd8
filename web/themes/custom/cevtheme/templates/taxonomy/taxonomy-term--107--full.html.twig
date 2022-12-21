@@ -1,0 +1,128 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a taxonomy term.
+ *
+ * Available variables:
+ * - url: URL of the current term.
+ * - name: (optional) Name of the current term.
+ * - content: Items for the content of the term (fields and description).
+ *   Use 'content' to print them all, or print a subset such as
+ *   'content.description'. Use the following code to exclude the
+ *   printing of a given child element:
+ *   @code
+ *   {{ content|without('description') }}
+ *   @endcode
+ * - attributes: HTML attributes for the wrapper.
+ * - page: Flag for the full page state.
+ * - term: The taxonomy term entity, including:
+ *   - id: The ID of the taxonomy term.
+ *   - bundle: Machine name of the current vocabulary.
+ * - view_mode: View mode, e.g. 'full', 'teaser', etc.
+ *
+ * @see template_preprocess_taxonomy_term()
+ *
+ * @ingroup themeable
+ */
+#}
+
+ {# Plantilla Volumen testimonial #}
+ {{ attach_library('cevtheme/volumen_library') }}
+
+
+ <div class="nav container" style="height: 70px;"></div>
+
+ <div class="rt-dots-container show-bg">
+     <div class="container">
+         <div class="titulos">
+             <h1 class="fw-bold col-10 col-md-5">Sonido y Memoria</h1>
+             <!--<h5><i><b>Cuando los pájaros no cantaban: historias y fragmentos del conflicto armado en Colombia</b></i></h5>-->
+             <p id="rt-dots-description" class="mt-2 lh-sm col-12 col-md-12">
+                 Narrativa sonora del Volumen Testimonial. Serie de relatos sonoros, atmósferas y redes de resonancia que invitan a la sensibilización sobre el conflicto armado del país desde la inmersión en la escucha.
+             </p>
+             <!-- tags #Memoria #Sonido #Resonancias #Legado #Porvenir #Testimonios #Caribe  EAO 09/11/1984-->
+             <div class="keywords">
+              <a href="https://www.comisiondelaverdad.co/etiquetas/memoria">Memoria</a> |
+              <!-- <a href="https://www.comisiondelaverdad.co/etiquetas/sonido">Sonido</a> | 
+              <a href="https://www.comisiondelaverdad.co/etiquetas/resonancia">Resonancias</a> | -->
+              <a href="https://www.comisiondelaverdad.co/etiquetas/legado">Legado</a> |
+              <a href="https://www.comisiondelaverdad.co/etiquetas/porvenir">Porvenir</a> |
+              <!-- <a href="https://www.comisiondelaverdad.co/etiquetas/testimonio">Testimonios</a> | -->
+              <a href="https://www.comisiondelaverdad.co/etiquetas/caribe">Caribe</a> |
+              <a href="https://www.comisiondelaverdad.co/etiquetas/esclarecimiento">Esclarecimiento</a> |
+              <a href="https://www.comisiondelaverdad.co/etiquetas/convivencia">Convivencia</a> |
+              <a href="https://www.comisiondelaverdad.co/etiquetas/no-repetición">No Repetición</a>
+            </div>
+         </div>
+         <div class="flex-1">
+             <div class="dots-container">
+                 <div class="dots">
+                     <div id="dot-main-menu" class="dot flex-centered dropdown">
+                         <div class="dot flex-centered" id="dots-menu-dropdown-toggle" data-bs-toggle="dropdown"
+                             aria-expanded="false" aria-label="Menu">
+                             <i class="bi bi-list" style="color: white;"></i>
+                         </div>
+                         <ul class="dropdown-menu animate smoothGrow" aria-labelledby="dots-menu-dropdown-toggle">
+                             <li>
+                                 <a class="dropdown-item" aria-label="Opción del Menu" data-page-sec="home">Inicio</a>
+                             </li>
+                             <li>
+                                 <h6 class="dropdown-header"><b>Lado A</b><br> Escucha profunda de cómo comunidades<br>concretas imaginan el porvenir</h6>
+                             </li>
+                             <li>
+                                 <a class="dropdown-item" aria-label="Opción del Menu" data-page-sec="relatosDelPorvenir">Relatos del porvenir</a>
+                             </li>
+                             <li>
+                                 <a class="dropdown-item" aria-label="Opción del Menu" data-page-sec="territoriosDeLaEscucha">Territorios de la Escucha</a>
+                             </li>
+                             <li>
+                                 <h6 class="dropdown-header"><b>Lado B</b><br>Documental sonoro y micro piezas<br>audiovisuales que cuentan cómo se hizo<br> el ejercicio de escucha profunda<br></h6>
+                             </li>
+                             <li>
+                                 <a class="dropdown-item" aria-label="Opción del Menu" data-page-sec="itinerariosDeSentidos">Itinerarios de sentido</a>
+                             </li>
+                         </ul>
+                     </div>
+                 </div>
+                 <div id="dots-map" class="map" style="display: none;">
+                     <img src="/themes/custom/cevtheme/volumen-testimonial/assets/map.png" class="map-image">
+                 </div>
+                 <div class="dots-breadcumb" id="dots-breadcrumb">
+                     <div class="dots-breadcumb-side"></div>
+                     <div class="dots-breadcumb-title"></div>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>
+ <!-- Use Earphones Modal -->
+    <div id="use-earphones-modal" aria-labelledby="Recomendamos usar audífonos para una mejor experiencia" class="modal" tabindex="-1" role="alertdialog">
+        <div class="modal-dialog modal-dialog-centered mx-auto">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <span class="icon-ico-x"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex flex-column align-items-center">
+                        <img src="/themes/custom/cevtheme/volumen-testimonial/assets/earphones.svg" width="82" alt="earphones icon">
+                        <p class="">Recomendamos usar audífonos para una mejor experiencia</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{{ content.field_botones_menu_flotante }}
+{{ content.field_avivavoz }}
+{{ content.field_descargar_capitulo_pdf }}
+{{ content.field_enlace_anexos }}
+{{ content.field_descargable }}
+{{ content.field_anexos }}
+{{ content.field_id_frente_espejo }}
+{{ content.field_enlace_casos }}
+
+<script src="/themes/custom/cevtheme/js/driver.min.js"></script>
+<script type="text/javascript">
+{{ term.field_script_tour.value|raw }}
+</script>

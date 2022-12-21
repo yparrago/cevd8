@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modals</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Oblicua -->
+    <link href='https://use.typekit.net/wnl6hvg.css' rel='stylesheet' type='text/css'>
+
+    <!-- Source Sans Pro -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link href="./css/timeline.css" rel="stylesheet" type="text/css">
+    <link href="./css/audio-rt.css" rel="stylesheet" type="text/css">
+    <link href="./css/share-button.css" rel="stylesheet" type="text/css">
+    <link href="./css/style.css" rel="stylesheet" type="text/css">
+    <link href="./css/customize-modal.css" rel="stylesheet" type="text/css">
+    <!-- iconos hechos fuente -->
+    <link href='./css/iconmood.css' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <!-- <script>
+        setTimeout(() => {
+            document.querySelector('button[data-bs-target="#basic-modal"]').click()
+        }, 500)
+    </script> -->
+    <div class="container pt-4">
+        <div class="buttons">
+            <button data-bs-target="#basic-modal">Basic</button>
+            <button data-bs-target="#custom-css-modal">Custom CSS</button>
+            <button data-bs-target="#gallery-modal">Gallery</button>
+            <a href="./modals-video.html" class="btn btn-secondary mb-2">Go to Video Modals ➡️</a><br>
+            <a href="./modals-audio.html" class="btn btn-secondary mb-2">Go to Audio Modals ➡️</a>
+            <button data-bs-target="#pdf-modal">PDF</button>
+            <button data-bs-target="#links-modal">External Links</button>
+            <button data-bs-target="#timeline-modal">Timeline</button>
+            <button data-bs-target="#accordeon-modal">Accordeon</button>
+        </div>
+
+        <label class="mt-4">
+            <input type="checkbox" name="fullscreen" id="fullscreen">
+            Convert Modals to Fullscreen (use ESC to close the modal)
+        </label>
+    </div>
+
+    <!-- Basic Modal -->
+    <div class="modal fade" id="basic-modal" tabindex="-1" aria-labelledby="basic-modal-label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header px-4 pb-0 border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <span class="icon-ico-x"></span>
+                    </button>
+                </div>
+                <div class="modal-body p-4">
+                    <h1 class="h2">TÍTULO DEL MODAL DE TEXTO</h1>
+                    <div class="modal-keywords mb-2">
+                        <div>
+                            <a href="#">Phasellus</a> |
+                            <a href="#">Consectetur</a> |
+                            <a href="#">Consequat</a> |
+                            <a href="#">Malesuada</a>
+                        </div>
+                    </div>
+                    <div class="modal-icons mb-2">
+                        <div class="d-flex justify-content-end position-relative">
+                            <a href="#">
+                                <span class="icon icon-ico-like"></span>
+                            </a>
+                            <a href="#">
+                                <span class="icon icon-ico-download"></span>
+                            </a>
+                            <span class="social-share">
+                                <a href="#" data-share-menu>
+                                    <span class="icon icon-ico-share"></span>
+                                </a>
+                                <div class="x-share-button">
+                                    <div class="share-items-wrapper">
+                                        <div class="share-items">
+                                            <a href="https://facebook.com" target="_blank" class="share-item">
+                                                <i class="bi bi-facebook"></i>
+                                            </a>
+                                            <a href="https://instagram.com" target="_blank" class="share-item">
+                                                <i class="bi bi-instagram"></i>
+                                            </a>
+                                            <a href="#" target="_blank" class="share-item">
+                                                <i class="bi bi-link-45deg"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="modal-media">
+                        <figure>
+                            <img src="https://picsum.photos/600/300" class="w-100" data-zoomable alt>
+                        </figure>
+                    </div>
+                    <p class="modal-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa illum soluta debitis corrupti?
+                        Pariatur, dignissimos vero eius dolore perspiciatis blanditiis temporibus quam ipsam magnam
+                        sint, optio culpa? Omnis, consequuntur rerum!
+                    </p>
+
+                    <div>
+                        <nav>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <button class="nav-link active" id="related-tab-1" data-bs-toggle="tab"
+                                    data-bs-target="#related-1" type="button" role="tab" aria-controls="related-1"
+                                    aria-selected="true">
+                                    <span class="d-flex">
+                                        <span class="icon icon-ico-related me-1"></span>
+                                        <span class="nav-link-text">Archivos Relacionados</span>
+                                    </span>
+                                </button>
+                                <button class="nav-link" id="collection-tab-1" data-bs-toggle="tab"
+                                    data-bs-target="#collection-1" type="button" role="tab" aria-controls="collection-1"
+                                    aria-selected="false">
+                                    <span class="d-flex">
+                                        <span class="icon icon-ico-collections me-1"></span>
+                                        <span class="nav-link-text"><span class="nav-link-text"><span
+                                                    class="nav-link-text"><span
+                                                        class="nav-link-text">Colecciones</span></span></span></span>
+                                    </span>
+                                </button>
+                                <button class="nav-link" id="native-tab-1" data-bs-toggle="tab"
+                                    data-bs-target="#native-1" type="button" role="tab" aria-controls="native-1"
+                                    aria-selected="false">
+                                    <span class="d-flex">
+                                        <span class="icon icon-ico-files me-1"></span>
+                                        <span class="nav-link-text">Archivos Nativos</span>
+                                    </span>
+                                </button>
+                            </div>
+                        </nav>
+                        <div class="tab-content p-2" id="nav-tabContent-1">
+                            <div class="tab-pane fade show active" id="related-1" role="tabpanel"
+                                aria-labelledby="related-tab-1">
+                                <p class="mb-1">Titulo listado</p>
+                                <ul>
+                                    <li><a href="#">Link 1</a></li>
+                                    <li><a href="#">Link 2</a></li>
+                                </ul>
+                            </div>
+                            <div class="tab-pane fade" id="collection-1" role="tabpanel"
+                                aria-labelledby="collection-tab-1">
+                                <p class="mb-1">Titulo listado</p>
+                                <ul>
+                                    <li><a href="#">Link 3</a></li>
+                                    <li><a href="#">Link 4</a></li>
+                                </ul>
+                            </div>
+                            <div class="tab-pane fade" id="native-1" role="tabpanel" aria-labelledby="native-tab-1">
+                                <p class="mb-1">Titulo listado</p>
+                                <ul>
+                                    <li><a href="#">Link 5</a></li>
+                                    <li><a href="#">Link 6</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom CSS Modal -->
+    <div class="modal fade" id="custom-css-modal" tabindex="-1" aria-labelledby="custom-css-modal-label"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header px-4 pb-0 border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <span class="icon-ico-x"></span>
+                    </button>
+                </div>
+                <div class="modal-body p-4">
+                    <h1 class="h2">TÍTULO DEL MODAL DE TEXTO</h1>
+                    <div class="modal-keywords mb-2">
+                        <div>
+                            <a href="#">Phasellus</a> |
+                            <a href="#">Consectetur</a> |
+                            <a href="#">Consequat</a> |
+                            <a href="#">Malesuada</a>
+                        </div>
+                    </div>
+                    <div class="modal-icons mb-2">
+                        <div class="d-flex justify-content-end position-relative">
+
+                            <a href="#">
+                                <span class="icon icon-ico-like"></span>
+                            </a>
+                            <a href="#">
+                                <span class="icon icon-ico-download"></span>
+                            </a>
+                            <span class="social-share">
+                                <a href="#" data-share-menu>
+                                    <span class="icon icon-ico-share"></span>
+                                </a>
+                                <div class="x-share-button">
+                                    <div class="share-items-wrapper">
+                                        <div class="share-items">
+                                            <a href="https://facebook.com" target="_blank" class="share-item">
+                                                <i class="bi bi-facebook"></i>
+                                            </a>
+                                            <a href="https://instagram.com" target="_blank" class="share-item">
+                                                <i class="bi bi-instagram"></i>
+                                            </a>
+                                            <a href="#" target="_blank" class="share-item">
+                                                <i class="bi bi-link-45deg"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="modal-media">
+                        <figure>
+                            <img src="https://picsum.photos/600/300" class="w-100" alt>
+                        </figure>
+                    </div>
+                    <p class="modal-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa illum soluta debitis corrupti?
+                        Pariatur, dignissimos vero eius dolore perspiciatis blanditiis temporibus quam ipsam magnam
+                        sint, optio culpa? Omnis, consequuntur rerum!
+                    </p>
+                    <div>
+                        <nav>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                    <button class="nav-link active" id="related-tab-2" data-bs-toggle="tab"
+                                        data-bs-target="#related-2" type="button" role="tab" aria-controls="related-2"
+                                        aria-selected="true">
+                                        <span class="d-flex">
+                                            <span class="icon icon-ico-related me-1"></span>
+                                            <span class="nav-link-text">Archivos Relacionados</span>
+                                        </span>
+                                    </button>
+                                    <button class="nav-link" id="collection-tab-2" data-bs-toggle="tab"
+                                        data-bs-target="#collection-2" type="button" role="tab"
+                                        aria-controls="collection-2" aria-selected="false">
+                                        <span class="d-flex">
+                                            <span class="icon icon-ico-collections me-1"></span>
+                                            <span class="nav-link-text">Colecciones</span>
+                                        </span>
+                                    </button>
+                                    <button class="nav-link" id="native-tab-2" data-bs-toggle="tab"
+                                        data-bs-target="#native-2" type="button" role="tab" aria-controls="native-2"
+                                        aria-selected="false">
+                                        <span class="d-flex">
+                                            <span class="icon icon-ico-files me-1"></span>
+                                            <span class="nav-link-text">Archivos Nativos</span>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </nav>
+                        <div class="tab-content p-2" id="nav-tabContent-1">
+                            <div class="tab-pane fade show active" id="related-2" role="tabpanel"
+                                aria-labelledby="related-tab-2">
+                                <p class="mb-1">Titulo listado</p>
+                                <ul>
+                                    <li><a href="#">Link 1</a></li>
+                                    <li><a href="#">Link 2</a></li>
+                                </ul>
+                            </div>
+                            <div class="tab-pane fade" id="collection-2" role="tabpanel"
+                                aria-labelledby="collection-tab-2">
+                                <p class="mb-1">Titulo listado</p>
+                                <ul>
+                                    <li><a href="#">Link 3</a></li>
+                                    <li><a href="#">Link 4</a></li>
+                                </ul>
+                            </div>
+                            <div class="tab-pane fade" id="native-2" role="tabpanel" aria-labelledby="native-tab-2">
+                                <p class="mb-1">Titulo listado</p>
+                                <ul>
+                                    <li><a href="#">Link 5</a></li>
+                                    <li><a href="#">Link 6</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gallery Modal -->
+    <div class="modal fade" id="gallery-modal" tabindex="-1" aria-labelledby="gallery-modal-label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header px-4 pb-0 border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <span class="icon-ico-x"></span>
+                    </button>
+                </div>
+                <div class="modal-body p-4">
+                    <h1 class="h2">TÍTULO DEL MODAL DE GALERIA</h1>
+                    <div class="modal-keywords mb-2">
+                        <div>
+                            <a href="#">Phasellus</a> |
+                            <a href="#">Consectetur</a> |
+                            <a href="#">Consequat</a> |
+                            <a href="#">Malesuada</a>
+                        </div>
+                    </div>
+                    <p class="modal-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa illum soluta debitis corrupti?
+                        Pariatur, dignissimos vero eius dolore perspiciatis blanditiis temporibus quam ipsam magnam
+                        sint, optio culpa? Omnis, consequuntur rerum!
+                    </p>
+                    <div class="modal-icons mb-2">
+                        <div class="d-flex justify-content-end position-relative">
+
+                            <a href="#">
+                                <span class="icon icon-ico-like"></span>
+                            </a>
+                            <a href="#">
+                                <span class="icon icon-ico-download"></span>
+                            </a>
+                            <span class="social-share">
+                                <a href="#" data-share-menu>
+                                    <span class="icon icon-ico-share"></span>
+                                </a>
+                                <div class="x-share-button">
+                                    <div class="share-items-wrapper">
+                                        <div class="share-items">
+                                            <a href="https://facebook.com" target="_blank" class="share-item">
+                                                <i class="bi bi-facebook"></i>
+                                            </a>
+                                            <a href="https://instagram.com" target="_blank" class="share-item">
+                                                <i class="bi bi-instagram"></i>
+                                            </a>
+                                            <a href="#" target="_blank" class="share-item">
+                                                <i class="bi bi-link-45deg"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="modal-media mb-3">
+                        <div id="carousel-gallery-modal" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators" style="bottom: 100px;">
+                                <button type="button" data-bs-target="#carousel-gallery-modal" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"
+                                    style="width: 8px; height: 8px;border-radius: 100%"></button>
+                                <button type="button" data-bs-target="#carousel-gallery-modal" data-bs-slide-to="1"
+                                    aria-label="Slide 2" style="width: 8px; height: 8px;border-radius: 100%"></button>
+                                <button type="button" data-bs-target="#carousel-gallery-modal" data-bs-slide-to="2"
+                                    aria-label="Slide 3" style="width: 8px; height: 8px;border-radius: 100%"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="border rounded">
+                                        <figure class="mb-1">
+                                            <img src="https://picsum.photos/600/300" class="d-block w-100" data-zoomable
+                                                alt>
+                                        </figure>
+                                        <div class="d-md-block p-3" style="font-size: 12px;">
+                                            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe in quo,
+                                                quisquam perferendis illum rem nam eligendi minus, consequatur
+                                                distinctio accusantium deserunt harum error culpa omnis vel assumenda
+                                                corporis recusandae.
+                                            </p>
+                                            <a href="#">Fuente</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="border rounded">
+                                        <figure class="mb-1">
+                                            <img src="https://picsum.photos/600/300" class="d-block w-100" data-zoomable
+                                                alt>
+                                        </figure>
+                                        <div class="d-md-block p-3" style="font-size: 12px;">
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe in quo,
+                                                quisquam perferendis illum rem nam eligendi minus, consequatur
+                                                distinctio accusantium deserunt harum error culpa omnis vel assumenda
+                                                corporis recusandae.
+                                            </p>
+                                            <a href="#">Fuente</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="border rounded">
+                                        <figure class="mb-1">
+                                            <img src="https://picsum.photos/600/300" class="d-block w-100" data-zoomable
+                                                alt>
+                                        </figure>
+                                        <div class="d-md-block p-3" style="font-size: 12px;">
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe in quo,
+                                                quisquam perferendis illum rem nam eligendi minus, consequatur
+                                                distinctio accusantium deserunt harum error culpa omnis vel assumenda
+                                                corporis recusandae.
+                                            </p>
+                                            <a href="#">Fuente</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-gallery-modal"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel-gallery-modal"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <h2 class="h5">Colleción de Galerías</h2>
+                    <div class="row mb-4">
+                        <div class="col position-relative">
+                            <img src="https://picsum.photos/300/150" class="w-100 rounded" alt>
+                            <p class="mb-0">Titulo</p>
+                        </div>
+                        <div class="col position-relative">
+                            <img src="https://picsum.photos/300/150" class="w-100 rounded" alt>
+                            <p class="mb-0">Titulo</p>
+                        </div>
+                        <div class="col position-relative">
+                            <img src="https://picsum.photos/300/150" class="w-100 rounded" alt>
+                            <p class="mb-0">Titulo</p>
+                        </div>
+                        <div class="col position-relative">
+                            <img src="https://picsum.photos/300/150" class="w-100 rounded" alt>
+                            <p class="mb-0">Titulo</p>
+                        </div>
+                        <div class="col position-relative">
+                            <img src="https://picsum.photos/300/150" class="w-100 rounded" alt>
+                            <p class="mb-0">Titulo</p>
+                        </div>
+                    </div>
+                    <div>
+                        <nav>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <button class="nav-link active" id="related-tab-3" data-bs-toggle="tab"
+                                    data-bs-target="#related-3" type="button" role="tab" aria-controls="related-3"
+                                    aria-selected="true">
+                                    <span class="d-flex">
+                                        <span class="icon icon-ico-related me-1"></span>
+                                        <span class="nav-link-text">Archivos Relacionados</span>
+                                    </span>
+                                </button>
+                                <button class="nav-link" id="collection-tab-3" data-bs-toggle="tab"
+                                    data-bs-target="#collection-3" type="button" role="tab" aria-controls="collection-3"
+                                    aria-selected="false">
+                                    <span class="d-flex">
+                                        <span class="icon icon-ico-collections me-1"></span>
+                                        <span class="nav-link-text">Colecciones</span>
+                                    </span>
+                                </button>
+                                <button class="nav-link" id="native-tab-3" data-bs-toggle="tab"
+                                    data-bs-target="#native-3" type="button" role="tab" aria-controls="native-3"
+                                    aria-selected="false">
+                                    <span class="d-flex">
+                                        <span class="icon icon-ico-files me-1"></span>
+                                        <span class="nav-link-text">Archivos Nativos</span>
+                                    </span>
+                                </button>
+                            </div>
+                        </nav>
+                        <div class="tab-content p-2" id="nav-tabContent-3">
+                            <div class="tab-pane fade show active" id="related-3" role="tabpanel"
+                                aria-labelledby="related-tab-3">
+                                <p class="mb-1">Titulo listado</p>
+                                <ul>
+                                    <li><a href="#">Link 1</a></li>
+                                    <li><a href="#">Link 2</a></li>
+                                </ul>
+                            </div>
+                            <div class="tab-pane fade" id="collection-3" role="tabpanel"
+                                aria-labelledby="collection-tab-3">
+                                <p class="mb-1">Titulo listado</p>
+                                <ul>
+                                    <li><a href="#">Link 3</a></li>
+                                    <li><a href="#">Link 4</a></li>
+                                </ul>
+                            </div>
+                            <div class="tab-pane fade" id="native-3" role="tabpanel" aria-labelledby="native-tab-3">
+                                <p class="mb-1">Titulo listado</p>
+                                <ul>
+                                    <li><a href="#">Link 5</a></li>
+                                    <li><a href="#">Link 6</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PDF Modal -->
+    <div class="modal fade" id="pdf-modal" tabindex="-1" aria-labelledby="pdf-modal-label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header px-4 pb-0 border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <span class="icon-ico-x"></span>
+                    </button>
+                </div>
+                <div class="modal-body p-4">
+                    <h1 class="h2">TÍTULO DEL MODAL DE PDF</h1>
+                    <div class="modal-keywords mb-2">
+                        <div>
+                            <a href="#">Phasellus</a> |
+                            <a href="#">Consectetur</a> |
+                            <a href="#">Consequat</a> |
+                            <a href="#">Malesuada</a>
+                        </div>
+                    </div>
+                    <p class="modal-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa illum soluta debitis corrupti?
+                        Pariatur, dignissimos vero eius dolore perspiciatis blanditiis temporibus quam ipsam magnam
+                        sint, optio culpa? Omnis, consequuntur rerum!
+                    </p>
+                    <div class="modal-icons mb-2">
+                        <div class="d-flex justify-content-end position-relative">
+                            <a href="#">
+                                <span class="icon icon-ico-like"></span>
+                            </a>
+                            <a href="#">
+                                <span class="icon icon-ico-download"></span>
+                            </a>
+                            <span class="social-share">
+                                <a href="#" data-share-menu>
+                                    <span class="icon icon-ico-share"></span>
+                                </a>
+                                <div class="x-share-button">
+                                    <div class="share-items-wrapper">
+                                        <div class="share-items">
+                                            <a href="https://facebook.com" target="_blank" class="share-item">
+                                                <i class="bi bi-facebook"></i>
+                                            </a>
+                                            <a href="https://instagram.com" target="_blank" class="share-item">
+                                                <i class="bi bi-instagram"></i>
+                                            </a>
+                                            <a href="#" target="_blank" class="share-item">
+                                                <i class="bi bi-link-45deg"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="modal-media mb-2">
+                        <div id="adobe-dc-view" style="height: 500px;"></div>
+                    </div>
+                    <div class="mt-4">
+                        <nav>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <button class="nav-link active" id="related-tab-7" data-bs-toggle="tab"
+                                    data-bs-target="#related-7" type="button" role="tab" aria-controls="related-7"
+                                    aria-selected="true">
+                                    <span class="d-flex">
+                                        <span class="icon icon-ico-related me-1"></span>
+                                        <span class="nav-link-text">Archivos Relacionados</span>
+                                    </span>
+                                </button>
+                                <button class="nav-link" id="collection-tab-7" data-bs-toggle="tab"
+                                    data-bs-target="#collection-7" type="button" role="tab" aria-controls="collection-7"
+                                    aria-selected="false">
+                                    <span class="d-flex">
+                                        <span class="icon icon-ico-collections me-1"></span>
+                                        <span class="nav-link-text">Colecciones</span>
+                                    </span>
+                                </button>
+                                <button class="nav-link" id="native-tab-7" data-bs-toggle="tab"
+                                    data-bs-target="#native-7" type="button" role="tab" aria-controls="native-7"
+                                    aria-selected="false">
+                                    <span class="d-flex">
+                                        <span class="icon icon-ico-files me-1"></span>
+                                        <span class="nav-link-text">Archivos Nativos</span>
+                                    </span>
+                                </button>
+                            </div>
+                        </nav>
+                        <div class="tab-content p-2" id="nav-tabContent-7">
+                            <div class="tab-pane fade show active" id="related-7" role="tabpanel"
+                                aria-labelledby="related-tab-7">
+                                <p class="mb-1">Titulo listado</p>
+                                <ul>
+                                    <li><a href="#">Link 1</a></li>
+                                    <li><a href="#">Link 2</a></li>
+                                </ul>
+                            </div>
+                            <div class="tab-pane fade" id="collection-7" role="tabpanel"
+                                aria-labelledby="collection-tab-7">
+                                <p class="mb-1">Titulo listado</p>
+                                <ul>
+                                    <li><a href="#">Link 3</a></li>
+                                    <li><a href="#">Link 4</a></li>
+                                </ul>
+                            </div>
+                            <div class="tab-pane fade" id="native-7" role="tabpanel" aria-labelledby="native-tab-7">
+                                <p class="mb-1">Titulo listado</p>
+                                <ul>
+                                    <li><a href="#">Link 5</a></li>
+                                    <li><a href="#">Link 6</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Links Modal -->
+    <div class="modal fade" id="links-modal" tabindex="-1" aria-labelledby="links-modal-label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header px-4 pb-0 border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <span class="icon-ico-x"></span>
+                    </button>
+                </div>
+                <div class="modal-body p-4">
+                    <h1 class="h2">TÍTULO DEL MODAL DE LINKS</h1>
+                    <div class="modal-keywords mb-2">
+                        <div>
+                            <a href="#">Phasellus</a> |
+                            <a href="#">Consectetur</a> |
+                            <a href="#">Consequat</a> |
+                            <a href="#">Malesuada</a>
+                        </div>
+                    </div>
+                    <p class="modal-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa illum soluta debitis corrupti?
+                        Pariatur, dignissimos vero eius dolore perspiciatis blanditiis temporibus quam ipsam magnam
+                        sint, optio culpa? Omnis, consequuntur rerum!
+                    </p>
+                    <div class="modal-icons mb-2">
+                        <div class="d-flex justify-content-end position-relative">
+
+                            <a href="#">
+                                <span class="icon icon-ico-like"></span>
+                            </a>
+                            <a href="#">
+                                <span class="icon icon-ico-download"></span>
+                            </a>
+                            <span class="social-share">
+                                <a href="#" data-share-menu>
+                                    <span class="icon icon-ico-share"></span>
+                                </a>
+                                <div class="x-share-button">
+                                    <div class="share-items-wrapper">
+                                        <div class="share-items">
+                                            <a href="https://facebook.com" target="_blank" class="share-item">
+                                                <i class="bi bi-facebook"></i>
+                                            </a>
+                                            <a href="https://instagram.com" target="_blank" class="share-item">
+                                                <i class="bi bi-instagram"></i>
+                                            </a>
+                                            <a href="#" target="_blank" class="share-item">
+                                                <i class="bi bi-link-45deg"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="modal-links mb-4">
+                        <div class="row mb-4">
+                            <div class="col-6 col-lg-4 mb-4">
+                                <a href="#">
+                                    <div class="position-relative">
+                                        <img src="https://picsum.photos/600/600" class="w-100" alt>
+                                        <span class="position-absolute text-white"
+                                            style="left: 10px;bottom: 10px;">Title</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 col-lg-4 mb-4">
+                                <a href="#">
+                                    <div class="position-relative">
+                                        <img src="https://picsum.photos/600/600" class="w-100" alt>
+                                        <span class="position-absolute text-white"
+                                            style="left: 10px;bottom: 10px;">Title</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 col-lg-4 mb-4">
+                                <a href="#">
+                                    <div class="position-relative">
+                                        <img src="https://picsum.photos/600/600" class="w-100" alt>
+                                        <span class="position-absolute text-white"
+                                            style="left: 10px;bottom: 10px;">Title</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 col-lg-4 mb-4">
+                                <a href="#">
+                                    <div class="position-relative">
+                                        <img src="https://picsum.photos/600/600" class="w-100" alt>
+                                        <span class="position-absolute text-white"
+                                            style="left: 10px;bottom: 10px;">Title</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 col-lg-4 mb-4">
+                                <a href="#">
+                                    <div class="position-relative">
+                                        <img src="https://picsum.photos/600/600" class="w-100" alt>
+                                        <span class="position-absolute text-white"
+                                            style="left: 10px;bottom: 10px;">Title</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 col-lg-4 mb-4">
+                                <a href="#">
+                                    <div class="position-relative">
+                                        <img src="https://picsum.photos/600/600" class="w-100" alt>
+                                        <span class="position-absolute text-white"
+                                            style="left: 10px;bottom: 10px;">Title</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <nav>
+                                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                    <button class="nav-link active" id="related-tab-8" data-bs-toggle="tab"
+                                        data-bs-target="#related-8" type="button" role="tab" aria-controls="related-8"
+                                        aria-selected="true">
+                                        <span class="d-flex">
+                                            <span class="icon icon-ico-related me-1"></span>
+                                            <span class="nav-link-text">Archivos Relacionados</span>
+                                        </span>
+                                    </button>
+                                    <button class="nav-link" id="collection-tab-8" data-bs-toggle="tab"
+                                        data-bs-target="#collection-8" type="button" role="tab"
+                                        aria-controls="collection-8" aria-selected="false">
+                                        <span class="d-flex">
+                                            <span class="icon icon-ico-collections me-1"></span>
+                                            <span class="nav-link-text">Colecciones</span>
+                                        </span>
+                                    </button>
+                                    <button class="nav-link" id="native-tab-8" data-bs-toggle="tab"
+                                        data-bs-target="#native-8" type="button" role="tab" aria-controls="native-8"
+                                        aria-selected="false">
+                                        <span class="d-flex">
+                                            <span class="icon icon-ico-files me-1"></span>
+                                            <span class="nav-link-text">Archivos Nativos</span>
+                                        </span>
+                                    </button>
+                                </div>
+                            </nav>
+                            <div class="tab-content p-2" id="nav-tabContent-8">
+                                <div class="tab-pane fade show active" id="related-8" role="tabpanel"
+                                    aria-labelledby="related-tab-8">
+                                    <p class="mb-1">Titulo listado</p>
+                                    <ul>
+                                        <li><a href="#">Link 1</a></li>
+                                        <li><a href="#">Link 2</a></li>
+                                    </ul>
+                                </div>
+                                <div class="tab-pane fade" id="collection-8" role="tabpanel"
+                                    aria-labelledby="collection-tab-8">
+                                    <p class="mb-1">Titulo listado</p>
+                                    <ul>
+                                        <li><a href="#">Link 3</a></li>
+                                        <li><a href="#">Link 4</a></li>
+                                    </ul>
+                                </div>
+                                <div class="tab-pane fade" id="native-8" role="tabpanel" aria-labelledby="native-tab-8">
+                                    <p class="mb-1">Titulo listado</p>
+                                    <ul>
+                                        <li><a href="#">Link 5</a></li>
+                                        <li><a href="#">Link 6</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Timeline Modal -->
+    <div class="modal fade" id="timeline-modal" tabindex="-1" aria-labelledby="timeline-modal-label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header px-4 pb-0 border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <span class="icon-ico-x"></span>
+                    </button>
+                </div>
+                <div class="modal-body p-4">
+                    <h1 class="h2">TÍTULO DEL MODAL DE LINEA DE TIEMPO</h1>
+                    <div class="modal-keywords mb-2">
+                        <div>
+                            <a href="#">Phasellus</a> |
+                            <a href="#">Consectetur</a> |
+                            <a href="#">Consequat</a> |
+                            <a href="#">Malesuada</a>
+                        </div>
+                    </div>
+                    <p class="modal-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa illum soluta debitis corrupti?
+                        Pariatur, dignissimos vero eius dolore perspiciatis blanditiis temporibus quam ipsam magnam
+                        sint, optio culpa? Omnis, consequuntur rerum!
+                    </p>
+                    <div class="modal-icons mb-2">
+                        <div class="d-flex justify-content-end position-relative">
+                            <a href="#">
+                                <span class="icon icon-ico-like"></span>
+                            </a>
+                            <a href="">
+                                <img src="./images/ico-access.svg" alt="Share">
+                            </a>
+                            <a href="#">
+                                <span class="icon icon-ico-download"></span>
+                            </a>
+                            <span class="social-share">
+                                <a href="#" data-share-menu>
+                                    <span class="icon icon-ico-share"></span>
+                                </a>
+                                <div class="x-share-button">
+                                    <div class="share-items-wrapper">
+                                        <div class="share-items">
+                                            <a href="https://facebook.com" target="_blank" class="share-item">
+                                                <i class="bi bi-facebook"></i>
+                                            </a>
+                                            <a href="https://instagram.com" target="_blank" class="share-item">
+                                                <i class="bi bi-instagram"></i>
+                                            </a>
+                                            <a href="#" target="_blank" class="share-item">
+                                                <i class="bi bi-link-45deg"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="modal-media mb-4">
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <div style="display:inline-block;width:100%;overflow-y:auto;">
+                                    <ul class="timeline timeline-horizontal">
+                                        <li class="timeline-item">
+                                            <div class="timeline-year">
+                                                <span>1950</span>
+                                            </div>
+                                            <div class="timeline-badge active" data-panel="#timeline-panel-1"></div>
+                                            <div class="timeline-text" style="left: 20px">
+                                                <span>Texto 1</span>
+                                            </div>
+                                        </li>
+                                        <li class="timeline-item">
+                                            <div class="timeline-year">
+                                                <span>1960</span>
+                                            </div>
+                                            <div class="timeline-badge" data-panel="#timeline-panel-2"></div>
+                                            <div class="timeline-text" style="left: 20px">
+                                                <span>Texto 2</span>
+                                            </div>
+                                        </li>
+                                        <li class="timeline-item">
+                                            <div class="timeline-year">
+                                                <span>1970</span>
+                                            </div>
+                                            <div class="timeline-badge" data-panel="#timeline-panel-3"></div>
+                                            <div class="timeline-text" style="left: 20px">
+                                                <span>Texto 3</span>
+                                            </div>
+                                        </li>
+                                        <li class="timeline-item">
+                                            <div class="timeline-year">
+                                                <span>1980</span>
+                                            </div>
+                                            <div class="timeline-badge" data-panel="#timeline-panel-4"></div>
+                                            <div class="timeline-text" style="left: 20px">
+                                                <span>Texto 4</span>
+                                            </div>
+                                        </li>
+                                        <li class="timeline-item">
+                                            <div class="timeline-year">
+                                                <span>1990</span>
+                                            </div>
+                                            <div class="timeline-badge" data-panel="#timeline-panel-5"></div>
+                                            <div class="timeline-text" style="left: 20px">
+                                                <span>Texto 5</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-panels mb-4">
+                            <div id="timeline-panel-1" class="row p-3 bg-secondary bg-opacity-25 rounded-3 w-100 m-0">
+                                <div class="col-12 col-lg-4 mb-2 mb-lg-0">
+                                    <img src="https://picsum.photos/600/300" class="w-100 h-100 rounded-1" alt>
+                                </div>
+                                <div class="col-12 col-lg-8">
+                                    <p class="mb-2">Texto 1</p>
+                                    <hr class="my-2">
+                                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, sequi
+                                        laboriosam
+                                        repellat beatae, asperiores expedita vero libero suscipit doloribus deserunt
+                                        deleniti enim corrupti obcaecati quasi fugiat alias voluptatibus ea natus.</p>
+                                </div>
+                            </div>
+                            <div id="timeline-panel-2"
+                                class="row p-3 bg-secondary bg-opacity-25 rounded-3 w-100 m-0 d-none">
+                                <div class="col-12 col-lg-4 mb-2 mb-lg-0">
+                                    <img src="https://picsum.photos/600/300" class="w-100 h-100 rounded-1" alt>
+                                </div>
+                                <div class="col-12 col-lg-8">
+                                    <p class="mb-2">Texto 2</p>
+                                    <hr class="my-2">
+                                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, sequi
+                                        laboriosam
+                                        repellat beatae, asperiores expedita vero libero suscipit doloribus deserunt
+                                        deleniti enim corrupti obcaecati quasi fugiat alias voluptatibus ea natus.</p>
+                                </div>
+                            </div>
+                            <div id="timeline-panel-3"
+                                class="row p-3 bg-secondary bg-opacity-25 rounded-3 w-100 m-0 d-none">
+                                <div class="col-12 col-lg-4 mb-2 mb-lg-0">
+                                    <img src="https://picsum.photos/600/300" class="w-100 h-100 rounded-1" alt>
+                                </div>
+                                <div class="col-12 col-lg-8">
+                                    <p class="mb-2">Texto 3</p>
+                                    <hr class="my-2">
+                                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, sequi
+                                        laboriosam
+                                        repellat beatae, asperiores expedita vero libero suscipit doloribus deserunt
+                                        deleniti enim corrupti obcaecati quasi fugiat alias voluptatibus ea natus.</p>
+                                </div>
+                            </div>
+                            <div id="timeline-panel-4"
+                                class="row p-3 bg-secondary bg-opacity-25 rounded-3 w-100 m-0 d-none">
+                                <div class="col-12 col-lg-4 mb-2 mb-lg-0">
+                                    <img src="https://picsum.photos/600/300" class="w-100 h-100 rounded-1" alt>
+                                </div>
+                                <div class="col-12 col-lg-8">
+                                    <p class="mb-2">Texto 4</p>
+                                    <hr class="my-2">
+                                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, sequi
+                                        laboriosam
+                                        repellat beatae, asperiores expedita vero libero suscipit doloribus deserunt
+                                        deleniti enim corrupti obcaecati quasi fugiat alias voluptatibus ea natus.</p>
+                                </div>
+                            </div>
+                            <div id="timeline-panel-5"
+                                class="row p-3 bg-secondary bg-opacity-25 rounded-3 w-100 m-0 d-none">
+                                <div class="col-12 col-lg-4 mb-2 mb-lg-0">
+                                    <img src="https://picsum.photos/600/300" class="w-100 h-100 rounded-1" alt>
+                                </div>
+                                <div class="col-12 col-lg-8">
+                                    <p class="mb-2">Texto 5</p>
+                                    <hr class="my-2">
+                                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, sequi
+                                        laboriosam
+                                        repellat beatae, asperiores expedita vero libero suscipit doloribus deserunt
+                                        deleniti enim corrupti obcaecati quasi fugiat alias voluptatibus ea natus.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <nav>
+                                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                    <button class="nav-link active" id="related-tab-9" data-bs-toggle="tab"
+                                        data-bs-target="#related-9" type="button" role="tab" aria-controls="related-9"
+                                        aria-selected="true">
+                                        <span class="d-flex">
+                                            <span class="icon icon-ico-related me-1"></span>
+                                            <span class="nav-link-text">Archivos Relacionados</span>
+                                        </span>
+                                    </button>
+                                    <button class="nav-link" id="collection-tab-9" data-bs-toggle="tab"
+                                        data-bs-target="#collection-9" type="button" role="tab"
+                                        aria-controls="collection-9" aria-selected="false">
+                                        <span class="d-flex">
+                                            <span class="icon icon-ico-collections me-1"></span>
+                                            <span class="nav-link-text">Colecciones</span>
+                                        </span>
+                                    </button>
+                                    <button class="nav-link" id="native-tab-9" data-bs-toggle="tab"
+                                        data-bs-target="#native-9" type="button" role="tab" aria-controls="native-9"
+                                        aria-selected="false">
+                                        <span class="d-flex">
+                                            <span class="icon icon-ico-files me-1"></span>
+                                            <span class="nav-link-text">Archivos Nativos</span>
+                                        </span>
+                                    </button>
+                                </div>
+                            </nav>
+                            <div class="tab-content p-2" id="nav-tabContent-9">
+                                <div class="tab-pane fade show active" id="related-9" role="tabpanel"
+                                    aria-labelledby="related-tab-9">
+                                    <p class="mb-1">Titulo listado</p>
+                                    <ul>
+                                        <li><a href="#">Link 1</a></li>
+                                        <li><a href="#">Link 2</a></li>
+                                    </ul>
+                                </div>
+                                <div class="tab-pane fade" id="collection-9" role="tabpanel"
+                                    aria-labelledby="collection-tab-9">
+                                    <p class="mb-1">Titulo listado</p>
+                                    <ul>
+                                        <li><a href="#">Link 3</a></li>
+                                        <li><a href="#">Link 4</a></li>
+                                    </ul>
+                                </div>
+                                <div class="tab-pane fade" id="native-9" role="tabpanel" aria-labelledby="native-tab-9">
+                                    <p class="mb-1">Titulo listado</p>
+                                    <ul>
+                                        <li><a href="#">Link 5</a></li>
+                                        <li><a href="#">Link 6</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Accordeon Modal -->
+    <div class="modal fade" id="accordeon-modal" tabindex="-1" aria-labelledby="accordeon-modal-label"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header px-4 pb-0 border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <span class="icon-ico-x"></span>
+                    </button>
+                </div>
+                <div class="modal-body p-4">
+                    <h1 class="h2">TÍTULO DEL MODAL DE ACORDEON</h1>
+                    <div class="modal-keywords mb-2">
+                        <div>
+                            <a href="#">Phasellus</a> |
+                            <a href="#">Consectetur</a> |
+                            <a href="#">Consequat</a> |
+                            <a href="#">Malesuada</a>
+                        </div>
+                    </div>
+                    <p class="modal-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa illum soluta debitis corrupti?
+                        Pariatur, dignissimos vero eius dolore perspiciatis blanditiis temporibus quam ipsam magnam
+                        sint, optio culpa? Omnis, consequuntur rerum!
+                    </p>
+                    <div class="modal-icons mb-2">
+                        <div class="d-flex justify-content-end position-relative">
+
+                            <a href="#">
+                                <span class="icon icon-ico-like"></span>
+                            </a>
+                            <a href="#">
+                                <span class="icon icon-ico-download"></span>
+                            </a>
+                            <span class="social-share">
+                                <a href="#" data-share-menu>
+                                    <span class="icon icon-ico-share"></span>
+                                </a>
+                                <div class="x-share-button">
+                                    <div class="share-items-wrapper">
+                                        <div class="share-items">
+                                            <a href="https://facebook.com" target="_blank" class="share-item">
+                                                <i class="bi bi-facebook"></i>
+                                            </a>
+                                            <a href="https://instagram.com" target="_blank" class="share-item">
+                                                <i class="bi bi-instagram"></i>
+                                            </a>
+                                            <a href="#" target="_blank" class="share-item">
+                                                <i class="bi bi-link-45deg"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="modal-media mb-4">
+                        <div class="accordion accordion-flush" id="accordion-modal">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                        aria-controls="flush-collapseOne">
+                                        Accordion Item #1
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingOne" data-bs-parent="#accordion-modal">
+                                    <div class="accordion-body">Lorem ipsum dolor, sit amet consectetur adipisicing
+                                        elit. Libero iusto amet dolore illum neque voluptatibus deleniti corporis
+                                        reprehenderit at pariatur officiis, odio similique placeat nisi accusamus
+                                        molestias sint dolores maxime.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                        aria-controls="flush-collapseTwo">
+                                        Accordion Item #2
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingTwo" data-bs-parent="#accordion-modal">
+                                    <div class="accordion-body">Lorem ipsum dolor, sit amet consectetur adipisicing
+                                        elit. Libero iusto amet dolore illum neque voluptatibus deleniti corporis
+                                        reprehenderit at pariatur officiis, odio similique placeat nisi accusamus
+                                        molestias sint dolores maxime.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                        aria-controls="flush-collapseThree">
+                                        Accordion Item #3
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingThree" data-bs-parent="#accordion-modal">
+                                    <div class="accordion-body">Lorem ipsum dolor, sit amet consectetur adipisicing
+                                        elit. Libero iusto amet dolore illum neque voluptatibus deleniti corporis
+                                        reprehenderit at pariatur officiis, odio similique placeat nisi accusamus
+                                        molestias sint dolores maxime.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <nav>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <button class="nav-link active" id="related-tab-010" data-bs-toggle="tab"
+                                    data-bs-target="#related-011" type="button" role="tab" aria-controls="related-011"
+                                    aria-selected="true">
+                                    <span class="d-flex">
+                                        <span class="icon icon-ico-related me-1"></span>
+                                        <span class="nav-link-text">Archivos Relacionados</span>
+                                    </span>
+                                </button>
+                                <button class="nav-link" id="collection-tab-010" data-bs-toggle="tab"
+                                    data-bs-target="#collection-010" type="button" role="tab"
+                                    aria-controls="collection-010" aria-selected="false">
+                                    <span class="d-flex">
+                                        <span class="icon icon-ico-collections me-1"></span>
+                                        <span class="nav-link-text">Colecciones</span>
+                                    </span>
+                                </button>
+                                <button class="nav-link" id="native-tab-010" data-bs-toggle="tab"
+                                    data-bs-target="#native-010" type="button" role="tab" aria-controls="native-010"
+                                    aria-selected="false">
+                                    <span class="d-flex">
+                                        <span class="icon icon-ico-files me-1"></span>
+                                        <span class="nav-link-text">Archivos Nativos</span>
+                                    </span>
+                                </button>
+                            </div>
+                        </nav>
+                        <div class="tab-content p-2" id="nav-tabContent-1">
+                            <div class="tab-pane fade show active" id="related-011" role="tabpanel"
+                                aria-labelledby="related-tab-010">
+                                <p class="mb-1">Titulo listado</p>
+                                <ul>
+                                    <li><a href="#">Link 1</a></li>
+                                    <li><a href="#">Link 2</a></li>
+                                </ul>
+                            </div>
+                            <div class="tab-pane fade" id="collection-010" role="tabpanel"
+                                aria-labelledby="collection-tab-010">
+                                <p class="mb-1">Titulo listado</p>
+                                <ul>
+                                    <li><a href="#">Link 3</a></li>
+                                    <li><a href="#">Link 4</a></li>
+                                </ul>
+                            </div>
+                            <div class="tab-pane fade" id="native-010" role="tabpanel" aria-labelledby="native-tab-010">
+                                <p class="mb-1">Titulo listado</p>
+                                <ul>
+                                    <li><a href="#">Link 5</a></li>
+                                    <li><a href="#">Link 6</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    <script src="./js/share-button.js"></script>
+    <script src="./js/fullscreenImg.js"></script>
+    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function (event) {
+            // Add Common attributes with a for
+            $(".buttons button").each((i, btn) => {
+                $(btn).attr("type", "button")
+                $(btn).attr("class", "btn btn-primary")
+                $(btn).attr("data-bs-toggle", "modal")
+            })
+
+            // Fullscreen toggler
+            $("#fullscreen").change(e => {
+                let modalsDialogs = $(".modal .modal-dialog");
+
+                modalsDialogs.each((i, modal) => {
+                    $(modal).toggleClass("modal-fullscreen")
+                    $($(modal).find(".modal-body")).toggleClass("container")
+                })
+            })
+        });
+    </script>
+
+    <!-- PDF script -->
+    <script>
+        document.addEventListener("adobe_dc_view_sdk.ready", () => {
+            try {
+                let adobeDCView = new AdobeDC.View({
+                    clientId: "",
+                    divId: "adobe-dc-view"
+                });
+
+                adobeDCView.previewFile({
+                    content: {
+                        location: {
+                            url: "assets/sample.pdf"
+                        }
+                    },
+                    metaData: {
+                        fileName: "sample.pdf"
+                    }
+                }, {});
+            } catch (e) {
+                document.getElementById("adobe-dc-view").innerText = e
+            }
+        });
+    </script>
+
+    <!-- Timeline Script -->
+    <script>
+        $(document).ready(() => {
+            let badges = $(".timeline .timeline-badge");
+            let panels = $(".timeline-panels > div")
+            let current = ""
+            badges.each((i, tb) => {
+                $(tb).click(() => {
+                    let id = $(tb).data('panel');
+                    current = id;
+
+                    panels.each((i, p) => !$(p).hasClass('d-none') ? $(p).addClass('d-none') :
+                        null)
+                    badges.each((i, p) => $(p).hasClass('active') ? $(p).removeClass('active') :
+                        null)
+                    $(id).removeClass('d-none');
+                    $(tb).addClass('active')
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>

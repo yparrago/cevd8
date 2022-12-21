@@ -1,0 +1,373 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+body{
+    /* background: linear-gradient(to right, #243138,#2b403d,#435059,#2b403d,#243138); */
+    background-color: #243138;
+}
+.contenedor{
+    /* background: linear-gradient(to right, #243138,#2b403d,#435059,#2b403d,#243138); */
+    background-color: #243138;
+    position: relative;
+    padding: 2em;
+    margin: 4em 0em 0em 0em;
+}
+.contenedor .row {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.presentacion{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.textoColor {
+    font-weight: bold;
+    text-align: right;
+    font-size: 7rem;
+    transition: all 0.7s ease;
+    line-height: 70px;
+}
+img.card-img-top {
+    width: 15em;
+    height: 24em;
+}
+.textoColor span:nth-child(1), .textoColor2 span:nth-child(1){
+    color: #fff;
+}
+.textoColor span:nth-child(2), .textoColor2 span:nth-child(2){
+    color: #fff;
+}
+.textoColor span:nth-child(3), .textoColor2 span:nth-child(3){
+    color: #fff;
+}
+.textoColor span:nth-child(4), .textoColor2 span:nth-child(4){
+    color: #fff;
+}
+.textoColor span:nth-child(5), .textoColor2 span:nth-child(5){
+    color: #fff;
+}
+.textoColor span:nth-child(6),.textoColor2 span:nth-child(6){
+    color: #fff;
+}
+.textoColor span:nth-child(7), .textoColor2 span:nth-child(7){
+    color: #fff;
+}
+.textoColor span:nth-child(8), .textoColor2 span:nth-child(8){
+    color: #fff;
+}
+.textoParrafo {
+    color: #fff;
+    padding: 1rem;
+    transition: all 0.7s ease;
+}
+.footer{
+    display: none;
+}
+footer {
+    height: 35px !important;
+}
+.marimbulas{
+    display: flex;
+    transition: all 0.7s ease;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.linkModal{
+    filter: blur(6px) drop-shadow(0px -13px 14px #000) opacity(0.6) !important;
+    transform: scale(0.8) !important;
+}
+.marimbulas-elementos{
+    display: inline-flex;
+    width: 300px;
+    transition: all 0.7s ease;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 300px;
+    transform: scale(0);
+    filter: drop-shadow(0px -13px 14px #000) opacity(0);
+}
+.linkModal.ds img.card-img-top, .marimbulas-elementos.ds img.card-img-top    {
+    width: 30em;
+    height: 15em;
+
+}
+.tarjeta {
+    background-color: transparent;
+    border: unset;
+    position: relative;
+    transition: all 0.7s ease;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: space-between;
+    justify-content: space-between;
+}
+
+.linkModal:hover, .linkModal .tarjeta:hover{
+    filter: none !important;
+    z-index: 4;
+    /* filter: drop-shadow(0px -10px 20px rgba(0, 0, 0, 0.548)) opacity(1); */
+    transform: scale(1) !important;
+    opacity: 1 !important;
+}
+.cbodyModal{
+    color: #fff;
+    transition: all 0.7s ease;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    text-align: left;
+}
+.nover{
+    opacity: 0;
+}
+.linkModal:hover .card .nover{
+    opacity: 1;
+}
+.btnModal {
+    margin: 0;
+    padding: 8px;
+    font-size: 100%;
+    background-color: #77BEC1;
+    border-color: #77BEC1;
+    color: #243138;
+    font-weight: bold;
+    width: 120px;
+}
+.btnModal:hover, .btnModal:active, .btnModal:focus{
+    background-color:  #243138;
+    color: #77BEC1;
+    border: 2px solid #77BEC1;
+
+}
+#lanzadorModal{
+    display: none;
+}
+.textoColor2 {
+    text-align: left;
+    margin-right: 2px;
+    transition: all 0.7s ease;
+}
+
+.modal-avivavoz{
+    background-color: #243138;
+}
+.modal-avivavoz .modal-icons a {
+    background-color: #77bec1;
+    color: #243138;
+    padding: 5px;
+    margin-left: 4px;
+    border-radius: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+.modal-avivavoz .modal-icons a:hover{
+    background-color: #fff;
+}
+.modal-avivavoz .modal-keywords *,  .modal-avivavoz .modal-content .modal-description,  .tab-pane{
+    color: #ffffff50;
+}
+.modal-avivavoz .modal-keywords a, .modal-avivavoz .nav-tabs .nav-link, .modal-avivavoz .tab-pane a,  .btn-close{
+    color: #77bec1;
+}
+.modal-avivavoz .modal-keywords a:hover, .modal-avivavoz .nav-tabs .nav-link:hover, .modal-avivavoz .tab-pane a:hover,  .btn-close:hover{
+    color: #fff
+}
+.modal-avivavoz .modal-content-cev .rt-player .rt-player__buttons button.active {
+    color: #fff;
+}
+.modal-avivavoz .modal-content-cev .rt-player .progress {
+    background-color: #ffffff50;
+}
+.modal-avivavoz .modal-content-cev .rt-player .progress .progress-bar[data-role="player-progress-bar"] {
+    background-color: #77bec1;
+}
+.modal-avivavoz .modal-content-cev .rt-player .rt-player__buttons button {
+    color: #77bec1;
+}
+.modal-avivavoz .modal-content-cev .rt-player .rt-player__buttons button:hover{
+    color: white;
+}
+.modal-avivavoz .rt-player .rt-timer {
+    color: gainsboro;
+}
+.modal-avivavoz .rt-player .progress{
+    background-color: gainsboro;
+}
+.modal-avivavoz .rt-player .progress .progress-bar[data-role="player-progress-bar"]{
+    background-color: #243138;
+}
+.modal-avivavoz .rt-player .rt-player__buttons button{
+    color: gainsboro;
+}
+.modal-avivavoz .nav-tabs
+{
+border-color: transparent;
+}
+.modal-avivavoz .nav-tabs .nav-item.show .nav-link, .modal-avivavoz .nav-tabs .nav-link.active{
+    color: #fff;
+    background-color: transparent;
+
+}
+.modal-avivavoz .rt-player .rt-player__buttons button:hover, .modal-avivavoz .rt-player .rt-player__buttons button.active{
+    color: #7455e8;
+}
+#modelo, #tituloPista {
+    color: #fff;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+}
+
+
+#botonesMarimbula {
+    z-index: 100;
+}
+#botonesMarimbula .form-check-input:checked[type=radio]{
+    background-image: unset;
+    border-color: #fff;
+   box-shadow: 0px 0px 3px 1px #fff;    
+}
+#botonesMarimbula .form-check-input{
+    width: 1.8em;
+    height: 1.8em;
+    transition: all 0.7s ease;
+    margin-right: 1px;
+}
+
+
+#contenedorCanvas{
+    position: relative;
+    transform: rotateX(180deg);
+    height: 220px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+#imgMarimbula {
+    margin: 0px;
+    padding: 0px;
+}
+#imgMarimbula img{
+    width: auto;
+    height: 250px; 
+}
+#tituloPista {
+    text-align: center;
+}
+.contMarinbula{
+    margin-top: 2rem;
+    min-height: 70vh;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.form-check-inline {
+    margin-right: 0;
+}
+.lyricer .lyricer-current-line {
+    color: #fff;
+}
+.lyricer ul li {
+    color: #fff;
+}
+
+/*MEDIA QUERYS*/
+@media only screen and (max-width: 768px) {
+    .contenedor {
+        padding: unset;
+        margin: unset;
+    }
+    .contenedor .row {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .textoColor {
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 3rem;
+    }
+    .textoParrafo{
+        text-align: left;
+        line-height: 17px;
+    }
+    p.politica {
+        font-size: 70% !important;
+        line-height: 15px !important;
+    }
+     .rt-player .rt-player__buttons {
+        overflow-x: scroll;
+    }
+    [data-role="volUp"], [data-role="volDown"], [data-role="mute"] {
+        display: none;
+    }
+   
+    #ecualizadorMarimbula #imgMarimbula{
+        width: auto;
+        height: 200px;
+        margin: 0px;
+        padding: 0;
+    }
+
+    #tituloPista {
+        text-align: center;
+    }
+
+    .marimbulas {
+        display: flex;
+        transition: all 0.7s ease;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .linkModal{
+        width: 130px;
+        height: auto;
+    }
+    .linkModal.ds img.card-img-top {
+        width: 10em;
+        height: 8em;
+    }
+    img.card-img-top {
+        width: 150px;
+        height: 150px;
+    }
+    .cbodyModal{
+        position: relative;
+        left: -100px;
+    }
+    .presentacion{
+        margin-top: 70px;
+        flex-direction: column;
+    }
+    .modal-backdrop{
+        background-color:rgba(0, 0, 0, 0.212);
+        width: 110vw;
+    }
+    #contenedorCanvas {
+        width: 100%;
+        height: 180px;
+    }
+    #botonesMarimbula .form-check-input {
+        width: 1.5em;
+        height: 1.5em;
+    }
+    #imgMarimbula img {
+        height: 210px;
+    }
+}

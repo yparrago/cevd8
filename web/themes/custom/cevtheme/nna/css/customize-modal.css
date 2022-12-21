@@ -1,0 +1,210 @@
+/*
+  Basic Changes
+*/
+
+.css-custom-modal .modal-content {    
+    background-color: #262042;
+    border-color: #124a62; ;
+}
+
+.css-custom-modal h1,
+h2,
+h3 {
+    color: white;
+}
+
+.css-custom-modal .btn-close {
+    color: orange;
+}
+
+.css-custom-modal .modal-icons a {
+   background-color: teal;
+}
+
+.css-custom-modal {
+    color: white;
+}
+
+.css-custom-modal a {
+    color: white;
+}
+
+.css-custom-modal .modal-keywords * {
+    color: #ffffff50;
+}
+
+.css-custom-modal .modal-keywords a {
+    text-decoration: none;
+    color: #3fc2fb;
+}
+
+.css-custom-modal .modal-keywords a:hover{
+    color: #8dcce7;
+}
+
+
+.css-custom-modal .nav-tabs {
+    border-bottom: 1px solid teal;
+}
+
+.css-custom-modal .nav-tabs  .nav-link:hover, .nav-link:focus-visible {
+    border: 1px solid teal;
+}
+
+.css-custom-modal .nav-tabs .nav-link {
+    color: white;
+}
+
+.css-custom-modal .nav-tabs .nav-link.active {
+    background-color: teal;
+    border: 0;
+}
+
+.css-custom-modal .tab-content {
+    background-color: rgba(70, 64, 45, 0.37);
+}
+
+.css-custom-modal .tab-content li{
+    list-style-type: none;
+}
+
+.css-custom-modal .x-share-button.open {
+    background: #1D3E6D;
+}
+
+/* Player custom CSS */
+
+.css-custom-modal .rt-player .rt-player__buttons button{
+    color: #3fc2fb;
+}
+
+.css-custom-modal .rt-player .rt-player__buttons button:hover,
+.css-custom-modal .rt-player .rt-player__buttons button.active {
+    color: #fff !important;
+}
+    /* trasncription audio texts */
+.css-custom-modal .lyricer {
+  color: #fff;
+}
+
+.css-custom-modal .rt-player .progress {
+    background-color: #293e75;
+}
+
+.css-custom-modal .rt-player .progress .progress-bar[data-role="player-progress-bar"]{
+    color: #3fc2fb;
+}
+    /* List player custom CSS */
+.css-custom-modal.list-group-item{
+    color: #fff;
+    background: none !important;
+}
+
+.css-custom-modal .list-group-item.active{
+    color: #38504a;
+}
+
+
+
+.nna-modal .modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #262042;
+    background-clip: padding-box;
+    border: 1pxsolidrgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
+    color: #eeeced;
+}
+
+.nna-modal .h2, h2 {
+    font-size: calc(1.325rem + .9vw);
+    color: #ebc44a;
+}
+
+.modal .modal-keywords * {
+    text-decoration: none;
+    color: #8a6396;
+}
+
+
+
+.nna-modal .btn {
+    color: #3fc2fb;
+}
+
+.nna-modal .btn:hover {
+    color: #99dcf8;
+}
+
+.nna-modal .modal-icons a {
+    background-color: #3fc2fb;
+    color: #ffffff;
+}
+
+.nna-modal .modal-icons a:hover {
+    background-color: #8dcce7;
+    color: rgb(255, 255, 255)!important;
+}
+
+.nna-modal .btn-close {
+    color: #3fc2fb !important;
+}
+.rt-player .rt-player__buttons button {
+    color: #0dcaf0;
+}
+
+.rt-player .progress {
+    background-color: #e9ecef;
+
+}
+
+
+.nna .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #495057;
+    background-color: #262042;
+    border-color: #124a62; ;
+}
+
+.nna-modal .modal a:hover {
+    color: #d0d0d0;
+}
+
+.nna-modal .nav-link {
+    color: #0dcaf0!important;
+}
+
+.nna .button, select {
+    background-color: #3ec1fb;
+    width: 50%;
+    color: white;
+    border-radius: 10px;
+}
+
+.nna-modal a {
+    color: #8a6396;
+    text-decoration: underline;
+}
+
+.nna-modal .mb-1 {
+    margin-bottom: .25rem!important;
+    color: #ffc107;
+}
+
+.nna-modal .nav-tabs {
+    border-bottom: 1px solid #124a62;
+}
+
+
+.nna li {
+color:#8a6396;
+}
+
+
+.nna-modal .trans{
+	width:90%; 
+	margin-left:5%;
+}

@@ -1,0 +1,197 @@
+/*
+  Basic Changes
+*/
+
+#custom-css-modal .modal-content {
+    background-color: #a080fb;
+}
+
+#custom-css-modal h1,
+h2,
+h3 {
+    color: white;
+}
+
+#custom-css-modal .btn-close {
+    color: orange;
+}
+
+#custom-css-modal .modal-icons a {
+   background-color: teal;
+}
+
+#custom-css-modal {
+    color: white;
+}
+
+#custom-css-modal a {
+    color: white;
+}
+
+#custom-css-modal .modal-keywords * {
+    color: white;
+}
+
+#custom-css-modal .modal-keywords a {
+    text-decoration: none;
+}
+
+#custom-css-modal .nav-tabs {
+    border-bottom: 1px solid teal;
+}
+
+#custom-css-modal .nav-tabs  .nav-link:hover, .nav-link:focus-visible {
+    border: 1px solid teal;
+}
+
+#custom-css-modal .nav-tabs .nav-link {
+    color: white;
+}
+
+#custom-css-modal .nav-tabs .nav-link.active {
+    background-color: teal;
+    border: 0;
+}
+
+#custom-css-modal .tab-content {
+    background-color: rgba(70, 64, 45, 0.37);
+}
+
+#custom-css-modal .tab-content li{
+    list-style-type: none;
+}
+
+#custom-css-modal .x-share-button.open {
+    background: #1D3E6D;
+}
+
+/* Player custom CSS */
+
+#custom-css-modal .rt-player .rt-player__buttons button{
+    color: #EFC356 ;
+}
+
+#custom-css-modal .rt-player .rt-player__buttons button:hover,
+#custom-css-modal .rt-player .rt-player__buttons button.active {
+    color: #fff !important;
+}
+    /* trasncription audio texts */
+#custom-css-modal .lyricer {
+  color: #fff;
+}
+
+#custom-css-modal .rt-player .progress {
+    background-color: #38504a;
+}
+
+#custom-css-modal .rt-player .progress .progress-bar[data-role="player-progress-bar"]{
+    background-color: #649589;
+}
+    /* List player custom CSS */
+#custom-css-modal.list-group-item{
+    color: #fff;
+    background: none !important;
+}
+
+#custom-css-modal .list-group-item.active{
+    color: #38504a;
+}
+
+
+
+.nna-modal .modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #262042;
+    background-clip: padding-box;
+    border: 1pxsolidrgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
+    color: #eeeced;
+}
+
+.nna-modal .h2, h2 {
+    font-size: calc(1.325rem + .9vw);
+    color: #ebc44a;
+}
+
+.modal .modal-keywords * {
+    text-decoration: none;
+    color: #8a6396;
+}
+
+
+
+.nna-modal .btn {
+    color: #3fc2fb;
+}
+
+.nna-modal .btn:hover {
+    color: #99dcf8;
+}
+
+.nna-modal .modal-icons a {
+    background-color: #3fc2fb;
+    color: #ffffff;
+}
+
+.nna-modal .modal-icons a:hover {
+    background-color: #8dcce7;
+    color: rgb(255, 255, 255)!important;
+}
+
+.nna-modal .btn-close {
+    color: #3fc2fb !important;
+}
+.rt-player .rt-player__buttons button {
+    color: #0dcaf0;
+}
+
+.rt-player .progress {
+    background-color: #e9ecef;
+
+}
+
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #495057;
+    background-color: #262042;
+    border-color: #124a62; ;
+}
+
+.nna-modal .modal a:hover {
+    color: #d0d0d0;
+}
+
+.nna-modal .nav-link {
+    color: #0dcaf0!important;
+}
+
+.button, select {
+    background-color: #3ec1fb;
+    width: 50%;
+    color: white;
+    border-radius: 10px;
+}
+
+.nna-modal a {
+    color: #8a6396;
+    text-decoration: underline;
+}
+
+.nna-modal .mb-1 {
+    margin-bottom: .25rem!important;
+    color: #ffc107;
+}
+
+.nna-modal .nav-tabs {
+    border-bottom: 1px solid #124a62;
+}
+
+
+li {
+color:#8a6396;
+}

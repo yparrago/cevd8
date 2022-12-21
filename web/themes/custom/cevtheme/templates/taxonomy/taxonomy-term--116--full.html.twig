@@ -1,0 +1,159 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a taxonomy term.
+ *
+ * Available variables:
+ * - url: URL of the current term.
+ * - name: (optional) Name of the current term.
+ * - content: Items for the content of the term (fields and description).
+ *   Use 'content' to print them all, or print a subset such as
+ *   'content.description'. Use the following code to exclude the
+ *   printing of a given child element:
+ *   @code
+ *   {{ content|without('description') }}
+ *   @endcode
+ * - attributes: HTML attributes for the wrapper.
+ * - page: Flag for the full page state.
+ * - term: The taxonomy term entity, including:
+ *   - id: The ID of the taxonomy term.
+ *   - bundle: Machine name of the current vocabulary.
+ * - view_mode: View mode, e.g. 'full', 'teaser', etc.
+ *
+ * @see template_preprocess_taxonomy_term()
+ *
+ * @ingroup themeable
+ */
+#}
+{# Plantilla Pueblos Etnicos #}
+ {{ attach_library('cevtheme/pueblos_etnicos_library') }}
+
+
+<nav class="navbar"></nav>
+<div id="containerPE">
+    <div id="backgrounds-containerPE" class="position-absolute inset-0"></div>
+    <div class="container position-relative text-white">
+      <div class="containerPE-header h-100 pt-3 d-flex mb-3">
+        <a href=".">
+          <img id="containerPE-logo" src="/themes/custom/cevtheme/pueblos-etnicos/img/logoPE.svg" class="me-3" width="200" alt="Logo">
+        </a>
+        <div class="containerPE-header-desc">
+          <p class="mb-0"></p>
+        </div>
+      </div>
+
+      <div class="containerPE-body">
+        <div class="row h-100">
+          <div class="col-md-3 d-none d-md-block">
+            <div class="scrolled-text-container mt-5">
+              <div class="scrolled-text-content">
+                <p>
+                 Para los pueblos étnicos, el conflicto armado y sus orígenes, no se explican únicamente a partir de la confrontación entre actores armados.
+                </p>
+                <p>
+                 Las memorias de las violencias históricas, la trata esclavista, la invasión y la Colonia; así como las violencias contra los cuerpos, el territorio y la naturaleza en el conflicto armado se narran como un continuum de violencias, que han puesto en riesgo el ser, el proyecto de futuro colectivo de los pueblos negros, afrocolombianos, raizales, palenqueros, indígenas, y rrom.
+                </p>
+                <p>
+                 Este capítulo es un relato amplio narrado desde las voces de los pueblos étnicos que relatan sus resistencias históricas, así como el dolor individual y colectivo de una violencia que ha sido continua y desproprorcionada.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 position-relative">
+            <div class="circle-portrait mw-100 position-relative rounded-circle overflow-hidden">
+              <div class="position-relative">
+                <img id="containerPE-circle-frame" src="/themes/custom/cevtheme/pueblos-etnicos/img/Marco.svg" class="position-relative">
+              </div>
+              <div id="circle-carousel" class="circle-carousel position-absolute inset-0"></div>
+            </div>
+            <div id="continerPE-circle-button" class="continerPE-circle-button d-md-none">
+              <div class="">
+                <i class="bi bi-plus-lg"></i>
+              </div>
+            </div>
+            <div class="scrolled-text-container floating" style="display: none;">
+              <div class="scrolled-text-content">
+                <p>
+                  Para los pueblos étnicos, el conflicto armado y sus orígenes, no se explican únicamente a partir de la confrontación entre actores armados.
+                </p>
+                <p>
+                  Las memorias de las violencias históricas, la trata esclavista, la invasión y la Colonia; así como las violencias contra los cuerpos, el territorio y la naturaleza en el conflicto armado se narran como un continuum de violencias, que han puesto en riesgo el ser, el proyecto de futuro colectivo de los pueblos negros, afrocolombianos, raizales, palenqueros, indígenas, y rrom.
+                </p>
+                <p>
+                  Este capítulo es un relato amplio narrado desde las voces de los pueblos étnicos que relatan sus resistencias históricas, así como el dolor individual y colectivo de una violencia que ha sido continua y desproprorcionada.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-3">
+            <div class="menusPE-container mt-5">
+              <div class="menuPE-list-container my-3" style="display: none;">
+                <div class="menuPE-list-items"></div>
+              </div>
+              <div class="menuPE-balls">
+                <div id="menuPE-section1" class="menuPE-balls-item" data-bs-container="body" data-bs-toggle="popover"
+                  data-bs-placement="top" data-bs-content="Quienes son los pueblos étnicos en Colombia" data-bs-trigger="hover"
+                  data-bs-custom-class="menuPE-section1-popover">
+                  <img src="/themes/custom/cevtheme/pueblos-etnicos/img/menu-circle-1.svg" alt="">
+                </div>
+                <div id="menuPE-section2" class="menuPE-balls-item" data-bs-container="body" data-bs-toggle="popover"
+                  data-bs-placement="top" data-bs-content="Conflicto armado en los territorios étnicos" data-bs-trigger="hover"
+                  data-bs-custom-class="menuPE-section2-popover">
+                  <img src="/themes/custom/cevtheme/pueblos-etnicos/img/menu-circle-2.svg" alt="">
+                </div>
+                <div id="menuPE-section3" class="menuPE-balls-item" data-bs-container="body" data-bs-toggle="popover"
+                  data-bs-placement="top" data-bs-content="Voces y Testimonios de los Pueblos Étnicos " data-bs-trigger="hover"
+                  data-bs-custom-class="menuPE-section3-popover">
+                  <img src="/themes/custom/cevtheme/pueblos-etnicos/img/menu-circle-3.svg" alt="">
+                </div>
+                <div id="menuPE-section4" class="menuPE-balls-item" data-bs-container="body" data-bs-toggle="popover"
+                  data-bs-placement="top" data-bs-content="Metodología Étnica de la Comisión de la Verdad" data-bs-trigger="hover"
+                  data-bs-custom-class="menuPE-section4-popover">
+                  <img src="/themes/custom/cevtheme/pueblos-etnicos/img/menu-circle-4.svg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="javascript:void(0);" id="sound-controlDS">
+      <span class="sound-iconDS" aria-label="Control de sonido"></span>
+    </a>
+  </div>
+ <!-- Modal instruction -->
+  <div id="how-to-use-modal" data-bs-backdrop="static" data-bs-keyboard="false"
+    aria-labelledby="Cómo funciona la linea de tiempo" class="modal" tabindex="-1" role="alertdialog">
+    <div class="modal-dialog modal-dialog-centered mx-auto">
+      <div class="modal-content">
+        <div class="modal-header">
+        <h1>¿Cómo navegar este contenido?</h1>
+          <button type="button" class="btn-close fs-3 icon-ico-x" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="d-flex flex-column align-items-center">
+            <!-- Mobile -->
+            <img class="d-md-none" style="max-width:320px;" src="/themes/custom/cevtheme/pueblos-etnicos/img/plano-de-navegacion-de-contenido-moviles.png" alt="plano de como navegar el contenido">
+            <!-- Desktop -->
+            <img class="d-none d-md-block" src="/themes/custom/cevtheme/pueblos-etnicos/img/plano-de-navegacion-de-contenido.svg" alt="plano de como navegar el contenido">
+            <p class="">Para explorar el contenido de este componente haga click en los botones que hacen parte del menú de navegación.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+{# BOTONES FLOTANTES #}
+{{ content.field_botones_menu_flotante }}
+{{ content.field_avivavoz }}
+{{ content.field_descargar_capitulo_pdf }}
+{{ content.field_descargable }}
+{{ content.field_anexos }}
+{{ content.field_enlace_anexos }}
+{{ content.field_id_frente_espejo }}
+{{ content.field_enlace_casos }}
+
+<script src="/themes/custom/cevtheme/js/driver.min.js"></script>
+<script type="text/javascript">
+{{ term.field_script_tour.value|raw }}
+</script>

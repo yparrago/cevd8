@@ -1,0 +1,63 @@
+<div class="modal fade modal-home" id="helpModal" tabindex="-1" aria-labelledby="helpModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content modal-content-home">
+            <div class="modal-header modal-header-home">
+                <h5 class="modal-title" id="helpModalLabel">¿Cómo Navegar este website?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body modal-body-home">
+                Video
+                INDICACIONES
+            </div>
+        </div>
+    </div>
+</div>
+    {% block head %}
+        
+        {% if page.header %}
+            <nav class="navbar fixed-top navBar-ppal" aria-label="Menú principal">
+                <div class="container-fluid">
+                    {{ page.header }}
+                </div>
+            </nav>
+        {% endif %}
+    {% endblock %}
+    
+    
+    
+{% block content %}
+    {{ page.content }}
+{% endblock %}
+{% if page.floating_menu %}
+    {{ page.floating_menu }}
+{% endif %}
+{% block footer %}
+{{ page.footer }}
+ <!-- Modal -->
+ <div class="modal fade css-custom-modal" id="modalInfoCev" tabindex="-1" role="dialog" aria-labelledby="modalContenidos" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" id="modalXLCev" role="document">
+        <div class="modal-content">
+            <div class="modal-header px-4 pb-0 border-0">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    <span class="icon-ico-x"></span>
+                </button>
+            </div>
+            <div class="modal-content-cev modal-body p-4">
+                
+            </div>
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es" target="_blank" style="text-decoration: none">
+                <div class="creative-commons-block bg-primary text-white p-3 d-flex flex-column align-items-center">
+                    <div class="d-flex mb-2">
+                        <img class="mx-1" src="/themes/custom/cevtheme/img/icon-cc.png" width="30" height="30" alt="">
+                        <img class="mx-1" src="/themes/custom/cevtheme/img/icon-person.png" width="30" height="30" alt="">
+                        <img class="mx-1" src="/themes/custom/cevtheme/img/icon-nc.png" width="30" height="30" alt="">
+                        <img class="mx-1" src="/themes/custom/cevtheme/img/icon-sa.png" width="30" height="30" alt="">
+                    </div>
+                    <p class="mb-0">Atribución-NoComercial-CompartirIgual</p>
+                    <p class="mb-0">4.0 Internacional (CC BY-NC-SA 4.0)</p>
+                </div>
+            </a> 
+        </div>
+    </div>
+ </div>
+{% endblock %}

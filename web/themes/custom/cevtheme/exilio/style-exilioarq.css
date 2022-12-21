@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
+
+:root {
+
+    --default-font-weight: 400;
+
+    --map-z: 0;
+    --map-sec-z: 5;
+    --clouds-z: 30;
+    --bird-z: 10;
+}
+
+html * {
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: var(--default-font-weight);
+    
+}
+
+html,
+body {
+    /* background: #ececec; */
+    height: fit-content;
+    position: relative;
+    overflow: hidden;
+    background-color: #0A0C12;
+}
+
+html { height: 100vh; }
+body { height: 100%; }
+
+.map-container {
+    height: 100vh;
+    max-height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+
+.map-wrapper {
+    width: 9123px;
+    height: 1081px;
+    position: relative;
+    z-index: 0;
+    transition: transform 100ms ease;
+    will-change: transform;
+    transform: translate( 0, 0);
+}
+
+#map {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url('/themes/custom/cevtheme/exilio/img/fondoarq.svg');
+    background-size: cover;
+}
+.map-wrapperarq {
+    width: 9123px;
+    height: 1081px;
+    position: relative;
+    z-index: 0;
+    transition: transform 100ms ease;
+    will-change: transform;
+   transform: translate( 0px, 0px);
+}
+
+#maparq {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url('/themes/custom/cevtheme/exilio/img/fondoarq.svg');
+    background-size: cover;
+}
+.map-sec {
+    position: absolute;
+    z-index: var(--map-sec-z);
+    width: 580px;
+}
+.map-secpeq {
+    position: absolute;
+    z-index: 10;
+
+}
+.buttpoyo{
+    position: absolute;
+    z-index: var(--map-sec-z);
+    width: 300px;
+}
+.apoyo {
+    display: none;
+}
+#togapoyo{
+    display:none;
+   
+}
+#vocesapoyobut{
+  position: absolute;
+    top: 960px;
+    left: 930px;
+}
+/*#togvoces{
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 20%;
+    left: 20%;
+    width: 100%;
+}*/
+
+.map-sec .title {
+    font-weight: 800;
+    font-size: 2.4rem;
+    margin-bottom: 0px; 
+    text-align: left;
+    line-height: normal;
+}
+.map-sec .subtitle {
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-top: -5px;
+    margin-bottom: 0px; 
+    color: #ffffff;
+    text-align: center;
+    max-width: 450px;
+}
+
+.map-sec .titlemid {
+    font-weight: 500;
+    width: 130px;
+    font-size: 1.1rem;
+    margin-bottom: 8px; 
+    text-align: center;
+    color: #70F5E7;
+ 
+}
+.map-sec .titlemid:hover {
+    transform: scale(1.1);
+    opacity: .5;
+}
+.map-secpeq .titlenav {
+    font-weight: 500;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #70F5E7;
+    transition: all .2s ease;
+}
+.map-sec .linkword {
+    font-size: 1.1rem;
+    line-height: normal;
+    margin-top: 5px;
+    text-align: center;
+    color: #70F5E7;
+}
+.map-sec .desc {
+    font-size: 1.4rem;
+    line-height: normal;
+    margin-top: 5px;
+    text-align: left;
+    color: #ffffff;
+}
+.map-sec .button {
+    font-size: 1rem;
+    text-align: center;
+    background: none;
+    padding: 8px;
+    vertical-align: top;
+    border: 1px solid;
+    color: #70F5E7;
+}
+.map-secpeq .titlenav:hover{
+    transform: scale(1.1);
+    opacity: .5;
+}
+.map-sec .button:hover {
+    background: #000000;
+    color: #fff;
+    transition: color 100ms linear;
+}
+.map-sec-image {
+    position: absolute;
+    transition: all 5.2s ease;
+}
+.map-sec-imageint {
+    position: absolute;
+    transition: all .2s ease;
+    z-index: 10;
+}
+.map-sec-imagesvg {
+    position: absolute;
+    transition: all .2s ease;
+}
+.map-sec-imageint:hover {
+    transform: scale(1.05);
+}
+.map-sec-imagevoc {
+    position: absolute;
+    transition: all .2s ease;
+    z-index: 10;
+}
+.map-sec-imagevoc:hover {
+    transform: scale(1.1);
+    opacity: .5;
+}
+.map-sec-imagemapref {
+    position: absolute;
+    transition: all .2s ease;
+    z-index: 10;
+}
+.map-sec-imagemapref:hover {
+    filter: hue-rotate(95deg);
+}
+.map-sec-imageapoy {
+    position: absolute;
+    transition: all .2s ease;
+    z-index: 10;
+}
+.map-sec-imageapoy:hover {
+    transform: scale(1.1);
+    opacity: .5;
+}
+.map-sec-imagearrow{
+    position: absolute;
+    transition: all .2s ease;
+    z-index: 10;
+}
+.map-sec-imagearrow:hover {
+    transform: scale(1.5);
+    opacity: .5;
+}
+#basemp{
+pointer-events: none;
+
+}
+/*.map-sec-container:hover .map-sec-image {
+    transform: scale(1.1);
+    opacity: .3;
+}*/
+
+#backgroundcirculos {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url('/themes/custom/cevtheme/exilio/img/circles.svg');
+    background-size: cover;
+    opacity: 0.2;
+}
+#mediaback{
+    position: absolute;
+    z-index: 1;
+    width:762px;
+    height: 540px;
+    top: 440px;   
+    left: 2510px;
+    background: url('/themes/custom/cevtheme/exilio/img/backmedia.svg');
+    background-size: cover;
+}
+#vivenciaback{
+    position: absolute;
+    z-index: 1;
+    width:1490px;
+    height: 750px;
+    top: 2040px;   
+    left: 2090px;
+    background: url('/themes/custom/cevtheme/exilio/img/backvivencias.svg');
+    background-size: cover;
+}
+#causasback{
+    position: absolute;
+    z-index: 1;
+    width:1600px;
+    height: 1260px;
+    top: 1540px;   
+    left: 0px;
+    background: url('/themes/custom/cevtheme/exilio/img/v_v29.svg');
+    background-size: cover;
+}
+#rutasback{
+    position: absolute;
+    z-index: 1;
+    width:1078px;
+    height:584px;
+    top: 2990px;   
+    left: 900px;
+    background: url('/themes/custom/cevtheme/exilio/img/maparutas.svg');
+    background-size: cover;
+}
+.volver{
+    position:fixed;
+    z-index: 100;
+    top: 100px;   
+    left: 50px;  
+    color: #fff ;
+    font-family: obliqua, sans-serif !important;
+    /*  width:118px;
+    height: 35px;*/
+   /* background: url('/themes/custom/cevtheme/exilio/img/volverarq.svg');
+    background-size: cover;*/
+}
+.volver a {
+    color: #fff !important;
+
+}
+.volver a:hover{
+  
+    color: #aaa563 !important;
+    /*  width:118px;
+    height: 35px;*/
+   /* background: url('/themes/custom/cevtheme/exilio/img/volverarq.svg');
+    background-size: cover;*/
+}
+@media only screen and (max-width: 1400px) {
+    .map-sec {
+        position: absolute;
+        z-index: var(--map-sec-z);
+        width: 600px;
+    }
+    .map-sec .desc {
+        font-size: 1.2rem;
+        line-height: normal;
+        margin-top: 5px;
+        text-align: left;
+        color: #ffffff;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .map-sec {
+        position: absolute;
+        z-index: var(--map-sec-z);
+        width: 300px;
+    }
+    .map-sec .desc {
+        font-size: 1.1rem;
+        line-height: normal;
+        margin-top: 5px;
+        text-align: left;
+        color: #ffffff;
+    }
+    .map-sec .title {
+        font-weight: 800;
+        font-size: 2rem;
+        margin-bottom: 0px; 
+        text-align: left;
+        line-height: normal;
+    }
+    .volver{
+        position:fixed;
+        z-index: 100;
+        top: 100px;   
+        left: 20px;  
+    
+    }
+    #seca-1{
+        top:120px !important;
+        left: 360px !important;
+    }
+    .map-wrapper {
+        transform: translate( -330px, 0) ;
+    }
+    
+  }

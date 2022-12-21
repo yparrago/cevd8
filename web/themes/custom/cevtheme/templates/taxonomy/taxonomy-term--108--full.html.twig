@@ -1,0 +1,127 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a taxonomy term.
+ *
+ * Available variables:
+ * - url: URL of the current term.
+ * - name: (optional) Name of the current term.
+ * - content: Items for the content of the term (fields and description).
+ *   Use 'content' to print them all, or print a subset such as
+ *   'content.description'. Use the following code to exclude the
+ *   printing of a given child element:
+ *   @code
+ *   {{ content|without('description') }}
+ *   @endcode
+ * - attributes: HTML attributes for the wrapper.
+ * - page: Flag for the full page state.
+ * - term: The taxonomy term entity, including:
+ *   - id: The ID of the taxonomy term.
+ *   - bundle: Machine name of the current vocabulary.
+ * - view_mode: View mode, e.g. 'full', 'teaser', etc.
+ *
+ * @see template_preprocess_taxonomy_term()
+ *
+ * @ingroup themeable
+ */
+#}
+
+ {# Plantilla Di�logo social #}
+ {{ attach_library('cevtheme/dialogosocial_library') }}
+
+
+<div id="dialogoSocial">
+        <div style="height: 70px; background: whitesmoke"></div>
+        <audio id="sound-ds-dial">
+            <source src="/themes/custom/cevtheme/dialogo-social/audio/dial.mp3" type="audio/mp3">
+        </audio>
+
+        <div id="wheelDS" class="containerDS">
+            <div class="sliderDS" data-sort="0">
+                <div class="sliderDS-container leftDS-container"></div>
+                <div class="sliderDS-container middleDS-container">
+                    <div class="imagesDS">
+                        <img src="/themes/custom/cevtheme/dialogo-social/img/middle.png" alt="Juan Andres Moncaleano y Marycruz Rentería, sonríen">
+                        <div class="imagesDS-title">
+                            <h1><b>Diálogo</b> social</h1>
+                        </div>
+                        <div class="imagesDS-text">
+                            <p>
+                                Esta es una invitación a compartir la escucha entre iguales y con quienes también tenemos diferencias 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timelineDS-container">
+                        <div class="timelineDS-phrase">
+                            <p>
+                                El diálogo social ha sido la oportunidad para promover la escucha amplia, plural y equilibrada.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sliderDS-container rightDS-container">
+                    <div class="imageDS-container">
+                        <div class="imageDS-container-content">
+                            <p class="titleDS">Los pueblos étnicos se expresan mediante murales</p>
+                            <p>
+                                Comunidades étnicas de Bojayá (Chocó), San Basilio de Palenque, el corregimiento de Mahates (Bolívar) y otros territorios de Colombia, se reunieron en Bogotá para crear murales colectivos donde cuentan sus resistencias en el marco del conflicto armado
+                           </p>
+                            <button class="btn timeline-button py-0 px-3 modal_cev" data-class="dg-modals" data-nid="626">Ver</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lineDS hideDS">
+                <p class="lineDS-label"></p>
+            </div>
+            <a href="javascript:void(0);" id="sound-controlDS">
+                <span class="sound-iconDS" aria-label="Control de sonido"></span>
+            </a>
+            <div class="indicatorDS" aria-label="Control de progreso">
+                <div class="indicator-lineDS-container">
+                    <span class="indicator-lineDS"></span>
+                </div>
+                <div class="indicator-barDS">
+                    <img src="/themes/custom/cevtheme/dialogo-social/img/progress_indicator.svg" width="170" alt="">
+                </div>
+            </div>
+            <div class="modalDS desktop" role="alert">
+                <div class="modal-overlayDS"></div>
+                <div class="modal-contentDS">
+                    <div class="modal-mouse-iconDS">
+                        <span class="modal-mouse-wheelDS"></span>
+                    </div>
+                    <p>Deslice para navegar</p>
+                    <button class="modal-buttonDS buttonDS">Haga clic para continuar</button>
+                </div>
+            </div>
+
+            <div class="modalDS mobile" role="alert">
+                <div class="modal-overlayDS"></div>
+                <div class="modal-contentDS">
+                    <div class="modal-mouse-iconDS horizontal">
+                        <span class="modal-mouse-wheelDS"></span>
+                    </div>
+                    <p>Deslice para navegar</p>
+                    <button class="modal-buttonDS buttonDS">Haga clic para continuar</button>
+                </div>
+            </div>
+        </div>
+
+        <div style="background: whitesmoke; height: 21px"></div>
+    </div>
+{{ content.field_botones_menu_flotante }}
+{{ content.field_avivavoz }}
+{{ content.field_descargar_capitulo_pdf }}
+{{ content.field_descargable }}
+{{ content.field_anexos }}
+{{ content.field_enlace_anexos }}
+{{ content.field_id_frente_espejo }}
+{{ content.field_enlace_casos }}
+
+<script src="/themes/custom/cevtheme/js/driver.min.js"></script>
+<script type="text/javascript">
+{{ term.field_script_tour.value|raw }}
+</script>

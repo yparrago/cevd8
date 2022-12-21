@@ -1,0 +1,58 @@
+{# Menu widget #}
+
+{#Main video, the one thats gonna be reproduced #}
+
+<div class="video-collection">
+  <div class="modal-media mb-4">
+    <div class="modal-video rounded">
+      <div id="modal-others-video-container">
+        <iframe id="frame-others"
+          src="{{content.field_media_oembed_video_1[0]["#attributes"]["src"]}}"
+          frameborder="0"
+          allowfullscreen="allowfullscreen"></iframe>
+      </div>
+    </div>
+  </div>
+
+  {# List of the others videos #}
+
+  <div class="mb-4" id="{{ media.id() }}">
+    <div class="row mb-4 video-group">
+        {% for item in content.field_video_image_preview %}
+          <a href="#modal-others-video-container" class="col col-md-4">
+          <div data-video="{{content.field_media_oembed_video_1[loop.index0]["#attributes"]["src"]}}"
+                  data-frame="#frame-others"
+                  style="cursor: pointer;"
+                >
+              <div class="w-100 rounded" alt>
+                {{content.field_video_image_preview[loop.index0]}}
+              </div>
+
+              {% if content.field_video_image_preview[loop.index0] %}
+                {% if content.field_video_image_preview[loop.index0]["#item"].title %}
+                  <p class="mb-0 text-truncate" style="font-weight: 600;">
+                    {{content.field_video_image_preview[loop.index0]["#item"].title}}
+                  </p>
+                {% endif %}
+                <p>{{content.field_video_image_preview[loop.index0]["#item"].alt}}</p>
+              {% endif %}
+          </div>
+          </a>
+        {% endfor %}
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+jQuery(function($){
+  $("*[data-video]").each((i, elem) => {
+    let el = $(elem);
+    el.click(() => {
+      // if (!el.data("frame") || !$(el.data("frame"))) return;
+      // $(el.data("frame")).attr("src", el.data("video"));
+      el.parents(".video-collection")
+        .find("iframe")
+        .attr("src", el.data("video"));
+    });
+  });
+});
+</script>

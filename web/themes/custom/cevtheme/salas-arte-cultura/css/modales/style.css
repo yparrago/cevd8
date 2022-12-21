@@ -1,0 +1,106 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+
+
+* {
+    font-family: 'Source Sans Pro', sans-serif !important;
+    text-decoration: none;
+}
+
+.modal-video {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.modal-video iframe,
+.modal-video object,
+.modal-video embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.modal .modal-icons a {
+    background-color: blueviolet;
+    color: white;
+    padding: 5px;
+    margin-left: 4px;
+    border-radius: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.modal .modal-icons img {
+    width: 20px;
+    height: 20px;
+}
+
+.modal .modal-video-collection button {
+    text-decoration: none;
+    color: black;
+}
+
+.modal .modal-keywords * {
+    text-decoration: none;
+    color: #5a3333;
+}
+
+
+.modal .modal-keywords p {
+    font-size: 12px;
+}
+
+.modal-video-collection button.active {
+    color: royalblue;
+}
+
+h1,
+h2,
+h3 {
+    font-family: obliqua, sans-serif !important;
+}
+
+.buttons>button {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.modal .btn-close {
+   /* background: url('../images/ico-x.svg') center/1em auto no-repeat !important;*/
+  background: none !important;
+}
+
+.modal .social-share {
+    display: contents;
+}
+
+.img-zoomable {
+    cursor: zoom-in;
+}
+
+.modal .nav.nav-tabs {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+}
+
+
+@media screen and (min-width: 768px) {
+    .modal .nav.nav-tabs {
+        overflow-x: initial;
+        flex-wrap: wrap;
+    }
+}
+
+.modal .nav.nav-tabs .nav-link span  {
+    /* width: max-content; */
+}
+
+.modal .nav.nav-tabs .nav-link .icon{
+    padding-top: 4px;
+}

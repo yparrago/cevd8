@@ -1,0 +1,331 @@
+/*
+  VIdeo VT
+*/
+
+
+
+.itinerarios-modal .modal-content {
+    /*background-color: #6E7DA0;*/
+    background-image: url("../assets/bg-itinerarios.jpg");
+    background-repeat: repeat repeat;
+}
+
+.itinerarios-modal .tab-pane, .itinerarios-modal .modal-content-cev .tab-content .tab-pane {
+    border-color: #1d3e60;
+    background-color: #1d3e6020;
+}
+.itinerarios-modal .modal-body h1{
+    color: white;
+}
+
+
+.itinerarios-modal h1,
+h2,
+h3,
+p{
+    color: white;
+}
+
+/*Color text trascription */
+/*
+.lyricer {
+  color: #fff;
+}
+*/
+
+
+.itinerarios-modal .btn-close {
+    color: #EFC356;
+}
+.itinerarios-modal  {
+    color: white;
+}
+
+.itinerarios-modal .modal-icons a {
+   background-color: #EFC356;
+    color: #1D3E6D !important;
+}
+
+
+.itinerarios-modal a {
+    color: #EFC356;
+    text-decoration: none;
+}
+
+.itinerarios-modal a:hover {
+    color: white !important;
+}
+
+.itinerarios-modal .modal-keywords * {
+    color: #1D3E6D;
+}
+
+.itinerarios-modal .modal-keywords a {
+    color: #EFC356;
+    text-decoration: none;
+}
+
+.itinerarios-modal .modal-keywords a:hover{
+    color: white;
+}
+
+.itinerarios-modal .nav-tabs {
+    border-bottom: 1px solid rgba(70, 64, 45, 0.37);
+}
+
+.itinerarios-modal .nav-tabs  .nav-link:hover, .nav-link:focus-visible {
+    border: 1px solid rgba(70, 64, 45, 0.37);
+    color: white;
+}
+
+.itinerarios-modal .nav-tabs .nav-link {
+    color: #EFC356;
+}
+.itinerarios-modal .nav-tabs, .territorio-modal .nav-tabs, .relatos-modal .nav-tabs
+{
+    border: 0px solid transparent;
+}
+
+.itinerarios-modal .nav-tabs .nav-link.active {
+    background-color: rgba(70, 64, 45, 0.37);
+    color: white;
+    border: 0;
+}
+
+.itinerarios-modal .tab-content {
+    background-color: rgba(70, 64, 45, 0.37);
+}
+
+.itinerarios-modal .tab-content li{
+    list-style-type: none;
+}
+
+.itinerarios-modal .x-share-button.open {
+    background: #1D3E6D;
+}
+
+
+/*
+  Relatos del porvenir Modals
+*/
+
+
+.relatos-modal .modal-content {
+    /*background-color: #6E7DA0;*/
+    background-image: url("../assets/bg-relatos.jpg");
+    background-position: center center;
+    background-size: cover;
+}
+
+.relatos-modal .modal-body h1{
+    color: white;
+}
+
+.relatos-modal h1,
+h2,
+h3,
+p{
+    color: white;
+}
+
+
+.relatos-modal .btn-close {
+    color: #EFC356;
+}
+
+.relatos-modal .modal-icons a {
+   background-color: #EFC356;
+    color: #38504a !important;
+}
+
+.relatos-modal {
+    color: white;
+}
+.relatos-modal .x-share-button.open .share-item {
+    margin-top: 0px;
+}
+
+.relatos-modal a {
+    color: #EFC356;
+
+    text-decoration: none;
+}
+
+.relatos-modal a:hover {
+    color: white !important;
+}
+
+.relatos-modal .modal-keywords * {
+    color: #1D3E6D;
+}
+
+.relatos-modal .modal-keywords a {
+    color: #EFC356;
+    text-decoration: none;
+}
+
+.relatos-modal .modal-keywords a:hover{
+    color: white;
+}
+.territorios-modal .tab-pane, .relatos-modal .tab-pane, .territorios-modal .modal-content-cev .tab-content .tab-pane, .relatos-modal .modal-content-cev .tab-content .tab-pane {
+    border-color: #38504a;
+    background-color: #38504a20;
+}
+/* .relatos-modal .nav-tabs {
+    border-bottom: 1px solid rgba(70, 64, 45, 0.37);
+} */
+
+.relatos-modal .nav-tabs  .nav-link:hover, .nav-link:focus-visible {
+    border: 1px solid rgba(70, 64, 45, 0.37);
+    color: white;
+}
+
+.relatos-modal .nav-tabs .nav-link {
+    color: #EFC356;
+}
+
+.relatos-modal .nav-tabs .nav-link.active {
+    background-color: rgba(70, 64, 45, 0.37);
+    color: white;
+    border: 0;
+}
+
+.relatos-modal .tab-content {
+    background-color: rgba(70, 64, 45, 0.37);
+}
+
+.relatos-modal .tab-content li{
+    list-style-type: none;
+}
+
+.relatos-modal .x-share-button.open {
+    background: #38504a;
+}
+
+.relatos-modal .rt-player .rt-player__buttons button{
+    color: #EFC356 ;
+}
+
+.relatos-modal .rt-player .rt-player__buttons button:hover,
+.relatos-modal .rt-player .rt-player__buttons button.active {
+    color: #fff !important;
+}
+
+.relatos-modal .lyricer {
+  color: #fff;
+}
+
+.relatos-modal .rt-player .progress {
+    background-color: #38504a;
+}
+
+.relatos-modal .rt-player .progress .progress-bar[data-role="player-progress-bar"]{
+    background-color: #649589;
+}
+
+
+/*
+ Territorio de la escucha Modals
+*/
+.territorio-modal  .modal-content {
+    /*background-color: #6E7DA0;*/
+    background-image: url("../assets/bg-territorio.jpg");
+    background-repeat: repeat repeat;
+}
+
+.territorio-modal .modal-body h1{
+    color: white;
+}
+
+.territorio-modal .btn-close {
+    color: #41585E;
+}
+
+.territorio-modal .modal-icons a {
+   background-color: #41585E;
+    color: #9E9271;
+}
+
+.territorio-modal {
+    color: white;
+}
+
+.territorio-modal a {
+    color: #41585E;
+    text-decoration: none;
+}
+
+.territorio-modal a:hover {
+    color: white;
+}
+
+.territorio-modal .modal-keywords * {
+    color: #1D3E6D;
+}
+
+.territorio-modal .modal-keywords a {
+    color: #41585E;
+    text-decoration: none;
+}
+
+.territorio-modal .modal-keywords a:hover{
+    color: white;
+}
+
+
+.territorio-modal .nav-tabs  .nav-link:hover, .nav-link:focus-visible {
+    border: 1px solid rgba(70, 64, 45, 0.37);
+    color: white;
+}
+
+.territorio-modal .nav-tabs .nav-link {
+    color: #41585E;
+}
+
+.territorio-modal .nav-tabs .nav-link.active {
+    background-color: rgba(197, 190, 170, 0.37);
+    color: white;
+    border: 0;
+}
+
+.territorio-modal .tab-content {
+    background-color: rgba(197, 190, 170, 0.37);
+}
+
+.territorio-modal .tab-content li{
+    list-style-type: none;
+}
+
+.territorio-modal .x-share-button.open {
+    background: rgba(197, 190, 170, 0.50);
+}
+
+.territorio-modal .rt-player .rt-player__buttons button{
+    color: #41585E ;
+}
+
+.territorio-modal .rt-player .rt-player__buttons button:hover,
+.territorio-modal .rt-player .rt-player__buttons button.active {
+    color: #fff !important;
+}
+
+.territorio-modal .lyricer {
+  color: #fff;
+}
+
+.territorio-modal .rt-player .progress {
+    background-color: #38504a;
+}
+
+.territorio-modal .rt-player .progress .progress-bar[data-role="player-progress-bar"]{
+    background-color: #fff;
+}
+
+.territorio-modal .list-group-item{
+    color: #fff;
+    background: none !important;
+}
+
+.territorio-modal .list-group-item.active{
+    color: #38504a;
+}

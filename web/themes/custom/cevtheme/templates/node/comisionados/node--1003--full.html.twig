@@ -1,0 +1,413 @@
+{#
+  /**
+  * @file
+  * Default theme implementation to display a node.
+  *
+  * Available variables:
+  * - node: The node entity with limited access to object properties and methods.
+  *   Only method names starting with "get", "has", or "is" and a few common
+  *   methods such as "id", "label", and "bundle" are available. For example:
+  *   - node.getCreatedTime() will return the node creation timestamp.
+  *   - node.hasField('field_example') returns TRUE if the node bundle includes
+  *     field_example. (This does not indicate the presence of a value in this
+  *     field.)
+  *   - node.isPublished() will return whether the node is published or not.
+  *   Calling other methods, such as node.delete(), will result in an exception.
+  *   See \Drupal\node\Entity\Node for a full list of public properties and
+  *   methods for the node object.
+  * - label: (optional) The title of the node.
+  * - content: All node items. Use {{ content }} to print them all,
+  *   or print a subset such as {{ content.field_example }}. Use
+  *   {{ content|without('field_example') }} to temporarily suppress the printing
+  *   of a given child element.
+  * - author_picture: The node author user entity, rendered using the "compact"
+  *   view mode.
+  * - metadata: Metadata for this node.
+  * - date: (optional) Themed creation date field.
+  * - author_name: (optional) Themed author name field.
+  * - url: Direct URL of the current node.
+  * - display_submitted: Whether submission information should be displayed.
+  * - attributes: HTML attributes for the containing element.
+  *   The attributes.class element may contain one or more of the following
+  *   classes:
+  *   - node: The current template type (also known as a "theming hook").
+  *   - node--type-[type]: The current node type. For example, if the node is an
+  *     "Article" it would result in "node--type-article". Note that the machine
+  *     name will often be in a short form of the human readable label.
+  *   - node--view-mode-[view_mode]: The View Mode of the node; for example, a
+  *     teaser would result in: "node--view-mode-teaser", and
+  *     full: "node--view-mode-full".
+  *   The following are controlled through the node publishing options.
+  *   - node--promoted: Appears on nodes promoted to the front page.
+  *   - node--sticky: Appears on nodes ordered above other non-sticky nodes in
+  *     teaser listings.
+  *   - node--unpublished: Appears on unpublished nodes visible only to site
+  *     admins.
+  * - title_attributes: Same as attributes, except applied to the main title
+  *   tag that appears in the template.
+  * - content_attributes: Same as attributes, except applied to the main
+  *   content tag that appears in the template.
+  * - author_attributes: Same as attributes, except applied to the author of
+  *   the node tag that appears in the template.
+  * - title_prefix: Additional output populated by modules, intended to be
+  *   displayed in front of the main title tag that appears in the template.
+  * - title_suffix: Additional output populated by modules, intended to be
+  *   displayed after the main title tag that appears in the template.
+  * - view_mode: View mode; for example, "teaser" or "full".
+  * - teaser: Flag for the teaser state. Will be true if view_mode is 'teaser'.
+  * - page: Flag for the full page state. Will be true if view_mode is 'full'.
+  * - readmore: Flag for more state. Will be true if the teaser content of the
+  *   node cannot hold the main body content.
+  * - logged_in: Flag for authenticated user status. Will be true when the
+  *   current user is a logged-in member.
+  * - is_admin: Flag for admin user status. Will be true when the current user
+  *   is an administrator.
+  *
+  * @see template_preprocess_node()
+  *
+  * @todo Remove the id attribute (or make it a class), because if that gets
+  *   rendered twice on a page this is invalid CSS for example: two lists
+  *   in different view modes.
+  *
+  * @ingroup themeable
+*/
+#}
+
+{# Plantilla Acontecimiento #}
+
+{{ attach_library('cevtheme/comisionados_library') }}
+
+<div class="col-md-12">
+    <div class="wrapper">
+
+
+        <div id="item-container-principal" class="col-md-12 img-fit item-principal"> 
+          <div class="item-2">
+            <div class="portfolio-principal">
+              <div class="title-portfolio">
+                <h3 class="section-subtitle"> Las y los Comisionados</h3>
+                <!--<p class="item-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.  </p>-->
+
+            </div>
+
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+    </div>
+
+    <div id="item-container-principal-1" class="col-md-12 img-fit  item-principal"> 
+
+      <div class="img-fit item-1"> 
+        <div class="portfolio-1 comisionado-1 modal_cev" data-nid="988">
+          <a class="information-1" href="#">
+            <div class="image-information">
+              <img src="/themes/custom/cevtheme/comisionados/img/fransisco.jpg" alt="">
+              <img  src="/themes/custom/cevtheme/comisionados/img/fransisco-1.jpg" alt="">
+          </div>
+
+          <div class="name-comisionado">
+              <h3 class="section-subtitle"> Fransisco José <span>de Roux</span> </h3>
+              <div class="text-information">
+                <p> Sacerdote y exprovincial jesuita, filósofo y economista. Es fundador del Programa de Desarrollo y Paz del Magdalena Medio, así como del primer laboratorio de paz de Colombia, y es exdirector del Cinep, entre otras labores realizadas. Es el presidente de la Comisión.</p>
+            </div>
+
+        </div>
+
+    </a>
+
+
+</div>
+
+<div class="portfolio-2 card-dark-blue">
+    <p class="item-text"> Enseñemos a perdonar; pero  <b>enseñemos también a no ofender </b> . Sería más eficiente </p>
+
+</div>
+
+<div class="portfolio-1 comisionado-1 modal_cev" data-nid="996">
+    <a href="#">
+
+       <div class="image-information">
+          <img src="/themes/custom/cevtheme/comisionados/img/lucia.jpg" alt="">
+          <img src="/themes/custom/cevtheme/comisionados/img/lucia-1.jpg" alt="">
+      </div>
+      <div class="name-comisionado">
+          <h3 class="section-subtitle"> Lucía  <span> González</span> </h3>
+          <div class="text-information">
+            <p> Arquitecta, exdirectora del Museo Casa de la Memoria de Medellín. Tiene amplia experiencia en la formulación de proyectos relacionados con la cultura y la transformación social. Ha dirigido entidades culturales y sociales públicas y privadas.</p>
+        </div>
+
+    </div>
+
+</a>
+</div>
+
+<div class="portfolio-2 card-dark-blue">
+
+    <p class="item-text"> Enseñemos a perdonar; pero <b>enseñemos también a no ofender </b> . Sería más eficiente</p>
+</div>
+
+<div class="portfolio-1 comisionado-1 modal_cev" data-nid="989">
+    <a href="#">
+        <div class="image-information">
+          <img src="/themes/custom/cevtheme/comisionados/img/alejandra.jpg" alt="">
+          <img src="/themes/custom/cevtheme/comisionados/img/alejandra-1.jpg" alt="">
+      </div>
+
+      <div class="name-comisionado">
+          <h3 class="section-subtitle"> Alejandra  <span> Miller</span> </h3>
+          <div class="text-information">
+            <p>Líder del movimiento feminista en Colombia. Economista y magíster en estudios políticos; investigadora y profesora universitaria, exsecretaria de gobierno del Cauca e integrante de la Ruta Pacífica de las mujeres</p>
+        </div>
+
+    </div>
+
+</a>
+</div>
+
+<div class="portfolio-2 card-dark-blue">
+
+    <p class="item-text"> Enseñemos a perdonar; pero <b>enseñemos también a no ofender </b> . Sería más eficiente</p>
+</div>
+
+</div>
+
+<div class="img-fit item-1"> 
+    <div class="portfolio-2 card-blue">
+       <p class="item-text"><b> La voz de la verdad</b>  es el silencio de la guerra.  </p>
+   </div>
+
+   <div class="portfolio-1 comisionado-1 modal_cev" data-nid="990" >
+    <a href="#">
+      <div class="image-information">
+        <img src="/themes/custom/cevtheme/comisionados/img/alejandro.jpg" alt="">
+        <img src="/themes/custom/cevtheme/comisionados/img/alejandro-2.jpg" alt="">
+    </div>
+
+    <div class="name-comisionado">
+        <h3 class="section-subtitle">Alejandro <span>Valencia</span></h3>
+        <div class="text-information">
+          <p>Abogado con cerca de treinta años de experiencia en la promoción y defensa de los derechos humanos, con una vasta experiencia en temas de verdad histórica. Ha sido asesor de múltiples comisiones de la verdad en el mundo.</p>
+      </div>
+
+  </div>
+
+
+
+</a>
+</div>
+<div class="portfolio-2 card-blue">
+    <p class="item-text"><b> La voz de la verdad</b>  es el silencio de la guerra.</p>
+
+</div>
+<div class="portfolio-1 comisionado-1 modal_cev" data-nid="992">
+    <a href="#">
+      <div class="image-information">
+        <img src="/themes/custom/cevtheme/comisionados/img/alejandro-1.jpg" alt="">
+        <img src="/themes/custom/cevtheme/comisionados/img/alejandro-3.jpg" alt="">
+    </div>
+
+    <div class="name-comisionado">
+        <h3 class="section-subtitle">Alejandro <span> Castillejo</span></h3>
+        <div class="text-information">
+          <p>Antropólogo de la Universidad Nacional de Colombia, especialista en Desarrollo y Paz de la Universidad de Jaume I, magister en Paz y Estudio de Conflictos de la European University Center for Peace Studies, magister y doctor en antropología de The New School for Social Research.</p>
+      </div>
+
+  </div>
+
+</a>
+</div>
+<div class="portfolio-2 card-blue">
+    <p class="item-text"><b> La voz de la verdad</b>  es el silencio de la guerra.</p>
+
+</div>
+<div class="portfolio-1 comisionado-1 modal_cev" data-nid="994">
+   <a href="#">
+      <div class="image-information">
+        <img src="/themes/custom/cevtheme/comisionados/img/layner.jpg" alt="">
+        <img src="/themes/custom/cevtheme/comisionados/img/layner-1.jpg" alt="">
+    </div>
+
+    <div class="name-comisionado">
+        <h3 class="section-subtitle">Leyner <span> Palacios</span></h3>
+        <div class="text-information">
+          <p>Cuenta con más de 20 años de trabajo regional en Chocó y el Pacífico colombiano. Ha trabajado directamente con las comunidades afrodescendientes víctimas del conflicto con la Pastoral Social y la Comisión Interétnica por la Verdad del Pacífico.</p>
+      </div>
+
+  </div>
+
+</a>
+</div>
+
+
+
+
+</div>
+
+<div class="img-fit item-1"> 
+    <div class="portfolio-1 comisionado-1 modal_cev" data-nid="993" >              
+      <a href="#">
+        <div class="image-information">
+          <img src="/themes/custom/cevtheme/comisionados/img/marta.jpg" alt="">
+          <img src="/themes/custom/cevtheme/comisionados/img/marta-1.jpg" alt="">
+      </div>
+
+      <div class="name-comisionado">
+          <h3 class="section-subtitle">Marta <span>Ruiz</span></h3>
+          <div class="text-information">
+            <p> Periodista con una experiencia de más de quince años cubriendo el conflicto armado interno, tanto en prensa como en televisión. Su trabajo ha profundizado en el análisis de temas de desarrollo rural, las dinámicas de la guerra, la defensa de la libertad de expresión y el derecho a la información.</p>
+        </div>
+
+    </div>
+
+</a>
+</div>
+
+<div class="portfolio-2 card-blue" >
+    <p class="item-text"> El hombre crece <b> cuando se arrodilla </b>   </p>
+
+</div>
+<div class="portfolio-1 comisionado-1 modal_cev" data-nid="997">
+    <a href="#">
+      <div class="image-information">
+        <img src="/themes/custom/cevtheme/comisionados/img/patricia-tobon.jpg" alt="">
+        <img src="/themes/custom/cevtheme/comisionados/img/patricia-tobon-1.jpg" alt="">
+    </div>
+
+    <div class="name-comisionado">
+        <h3 class="section-subtitle">Patricia <span>Tobón</span></h3>
+        <div class="text-information">
+          <p>Indígena emberá, abogada, especializada en derecho constitucional. Ha documentado la vulneración de los derechos humanos en los territorios indígenas del país que han sido afectados por el conflicto armado, así como los esquemas de discriminación contra los pueblos étnicos.</p>
+      </div>
+
+  </div>
+
+</a>
+</div>
+<div class="portfolio-2 card-blue">
+    <p class="item-text">  El hombre crece <b> cuando se arrodilla </b></p>
+</a>
+</div>
+
+<div class="portfolio-1 comisionado-1 modal_cev" data-nid="999">
+    <a href="#">
+      <div class="image-information">
+        <img src="/themes/custom/cevtheme/comisionados/img/alfredo.jpg" alt="">
+        <img src="/themes/custom/cevtheme/comisionados/img/alfredo-1.jpg" alt="">
+    </div>
+
+    <div class="name-comisionado">
+        <h3 class="section-subtitle"> Alfredo <span>   Molano</span>  Q.E.P.D.  </h3>
+        <div class="text-information">
+          <p>Sociólogo, doctorado honoris causa, columnista, cronista y escritor de cerca de una veintena de libros sobre los orígenes y el impacto del conflicto armado en Colombia.</p>
+      </div>
+
+  </div>
+
+</a>
+
+</div>
+<div class="portfolio-2 card-blue">
+    <p class="item-text">  El hombre crece <b> cuando se arrodilla </b></p>
+</a>
+</div>
+
+
+
+
+</div>
+
+<div class="img-fit item-1"> 
+    <div class="portfolio-2 card-purple" >
+      <p class="item-text">Quedar en paz con alguien que nos hizo daño <b> puede llegar a ser un arte. </b>  </p>
+
+  </div>
+
+  <div class="portfolio-1 comisionado-1 modal_cev" data-nid="998" >
+    <a href="#">
+      <div class="image-information">
+        <img src="/themes/custom/cevtheme/comisionados/img/saul-franco.jpg" alt="">
+        <img src="/themes/custom/cevtheme/comisionados/img/saul-franco-1.jpg" alt="">
+    </div>
+
+    <div class="name-comisionado">
+        <h3 class="section-subtitle">Saúl <span>  Franco</span></h3>
+        <div class="text-information">
+          <p>Médico con doctorado en salud pública, con cuarenta años de experiencia como docente universitario e investigador de la violencia y del conflicto armado y su impacto en la vida y la salud de las personas y las comunidades.</p>
+      </div>
+
+  </div>
+
+</a>
+</div>
+<div class="portfolio-2 card-purple">
+
+    <p class="item-text">Quedar en paz con alguien que nos hizo daño <b> puede llegar a ser un arte. </b>  </p>
+</div>
+<div class="portfolio-1 comisionado-1 modal_cev" data-nid="995">
+    <a href="#">
+      <div class="image-information">
+        <img src="/themes/custom/cevtheme/comisionados/img/carlos-Martin.jpg" alt="">
+        <img src="/themes/custom/cevtheme/comisionados/img/Carlos-Martin-1.jpg" alt="">
+    </div>
+
+    <div class="name-comisionado">
+        <h3 class="section-subtitle"> Carlos <span> Beristain</span> </h3>
+        <div class="text-information">
+          <p>Médico y psicólogo español con vasta experiencia en atención psicosocial de víctimas en el mundo y como asesor de varias comisiones de la verdad en diversos países. Coordinó el informe Recuperación de la Memoria Histórica – REMHI, de Guatemala.</p>
+      </div>
+
+  </div>
+
+</a>
+</div>
+<div class="portfolio-2 card-purple">
+
+    <p class="item-text">Quedar en paz con alguien que nos hizo daño <b> puede llegar a ser un arte. </b>  </p>
+</div>
+<div class="portfolio-1 comisionado-1 modal_cev" data-nid="991">
+    <a href="#">
+      <div class="image-information angela">
+        <img src="/themes/custom/cevtheme/comisionados/img/angela.jpg" alt="">
+        <img src="/themes/custom/cevtheme/comisionados/img/angela-1.jpg" alt="">
+    </div>
+
+    <div class="name-comisionado">
+        <h3 class="section-subtitle"> Angela <span> Salazar</span>  Q.E.P.D. </h3>
+        <div class="text-information">
+          <p>Conciliadora en equidad y defensora de los derechos de las mujeres. Nacida en Tadó, Chocó, y radicada en Apartadó, Antioquia, allí desarrolló su liderazgo comunitario. </p>
+      </div>
+
+  </div>
+
+</a>
+</div>
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</div>

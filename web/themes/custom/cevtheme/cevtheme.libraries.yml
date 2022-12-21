@@ -1,0 +1,512 @@
+global-styling:
+  version: VERSION
+  js:
+    js/global.js: {}
+    js/dibujo.js: {}
+    js/pop.js: {}
+    //cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js: {}
+    modal/js/modalcev.js: {}
+    modal/js/share-button.js: {}
+    modal/js/lyricer.js: {}
+    modal/js/audio-rt.js: {}
+    botonera/js/arreglos.js: {}
+    atlas/js/tour.js: {}
+    modal/js/fullscreenImg.js: {}
+    js/driver.min.js: {}
+    modal/js/player-audio-diccionario-sonoro.js: {}  
+  css:
+    component:
+      css/header-footer.css: {}
+      css/dibujo.css: {}
+      botonera/css/style.css: {}
+      css/iconmood.css: {}
+      modal/css/modalcev.css: {}
+      modal/css/share-button.css: {}
+      modal/css/audio-rt.css: {}
+      modal/css/lyricer.css: {}
+      modal/css/timeline.css: {}
+      atlas/css/tour.css: {} 
+      css/driver.min.css: {}
+      css/buscador.css: {}
+player_audio_modal:
+  js:
+    modal/js/player-audio-modal.js: {}
+playlist_audio_modal:
+  js:
+    modal/js/audio-playlist.js: {}
+diccionarioSonoro:
+  js:
+    modal/js/player-audio-diccionario-sonoro.js: {}
+  css:
+    component:
+      modal/css/style-avivavoz.css: {}
+bootstrap_cdn:
+  js:
+    //cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js: {}
+    //unpkg.com/mdbootstrap@4.19.2/js/mdb.min.js: {}
+  css:
+    component:
+      //cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css: {}
+      //cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css: {}
+fontawesome:
+  css:
+    component:
+      //stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css: {}
+googlefonts:
+  css:
+    component:
+      //fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap: {}
+      //use.typekit.net/wnl6hvg.css: {}
+admin_css:
+  css:
+    component:
+      css/admin.css: {}
+home_library:
+  js:
+    js/ScrollToPlugin.min.js: {}
+    js/ScrollTrigger.min.js: {}
+    js/gsap.min.js: {}
+    js/script-home.js: {}
+    js/dibujo.js: {}
+  css:
+    component:
+      home/style.css: {media: "only screen and (min-device-width : 992px)"}
+      home/home-moviles.css: {media: "only screen and (max-device-width : 992px)"}
+      home/dibujo.css: {}
+      css/iconmood.css: {}
+genero_library:
+  js:
+    genero/js/script-genero.js: {}
+    genero/js/lib/three.js: {}
+    genero/js/lib/Tween.min.js: {}
+    genero/js/lib/TrackballControls.js: {}
+    genero/js/lib/CSS3DRenderer.js: {}
+    //unpkg.com/axios/dist/axios.min.js: {}
+    genero/js/main.js: {}
+  css:
+    component:
+      //use.typekit.net/wnl6hvg.css: {}
+      mdb/mdb.min.css: {}
+      genero/style-genero.css: {}
+      genero/customize-modal.css: {}
+material_design:
+  js:
+    mdb/jquery.min.js: {}
+    mdb/popper.min.js: {}
+    mdb/bootstrap.min.js: {}
+    mdb/mdb.min.js: {}
+    //mdbootstrap.com/wp-content/themes/mdbootstrap4/js/bundles/4.20.0/compiled-addons.min.js: {}
+    //mdbootstrap.com/wp-content/themes/mdbootstrap4/js/plugins/mdb-plugins-gathered.min.js: {}
+iar_library:
+  js:
+    js/interact.min.js: {}
+    iar/js/script-iar.js: {}
+  css:
+    component:
+      iar/style-iar.css: {}
+iarInterno_library:
+  js:
+    //unpkg.com/swiper/swiper-bundle.min.js: {}
+    iar/iar-interno/js/custom.js: {}
+    iar/iar-interno/js/slick.min.js: {}
+  css:
+    component:
+      iar/iar-interno/css/slick.css: {}
+      iar/iar-interno/css/slick-theme.css: {}
+      iar/iar-interno/css/main.css: {}
+      iar/iar-interno/css/aside.css: {}
+      iar/iar-interno/css/lyricer.css: {}
+      //cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css: {}
+dialogosocial_library:
+  js:
+    dialogo-social/js/script-ds.js: {}
+    dialogo-social/js/sections-ds.js: {}
+  css:
+    component:
+      dialogo-social/style-ds.css: {}
+prensa_library:
+  js:
+    prensa/js/script-prensa.js: {}
+  css:
+    component:
+      prensa/style-prensa.css: {}
+busqueda_library:
+  js:
+    //cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js: {}
+atlas_home_library:
+  js:
+    atlas/js/js-home-atlas.js: {}
+  css:
+    component:
+      atlas/css/style-atlas-carrusell.css: {}
+      atlas/css/modales-atlas.css: {}
+atlas_library:
+  js:
+    //unpkg.com/axios/dist/axios.min.js: {}
+    //cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js: {}
+    //cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js: {}
+    atlas/js/script-atlas.js: {}
+  css:
+    component:
+      atlas/css/style-atlas.css: {}
+      atlas/css/dinamicas-atlas.css: {}
+      atlas/css/modales-atlas.css: {}
+      atlas/css/casos.css: {}
+derechoshumanosInterno_library:
+  js:
+    derechos-humanos/js/modernizr.custom.js: {}
+    derechos-humanos/js/cbpGridGallery.js: {}
+    derechos-humanos/js/classie.js: {}
+    derechos-humanos/js/imagesloaded.pkgd.min.js: {}
+    derechos-humanos/js/masonry.pkgd.min.js: {}
+    //cdn.knightlab.com/libs/soundcite/latest/js/soundcite.min.js: {}
+    derechos-humanos/js/custom.js: {}
+  css: 
+    component:
+      derechos-humanos/css/dih.css: {}
+      derechos-humanos/css/mobile.css: { media: "only screen and (min-device-width : 320px) and (max-device-width : 667px)"}
+      derechos-humanos/css/mp3-player-button.css: {}
+      derechos-humanos/css/player-soundcite.css: {}
+      derechos-humanos/css/grid-gallery.css: {}
+      derechos-humanos/css/set2.css: {}
+      derechos-humanos/css/tooltip-line.css: {}
+      iar/iar-interno/css/aside.css: {}
+derechoshumanos_library:
+  js:
+    derechos-humanos/js/script.js: {}
+    derechos-humanos/js/custom.js: {}
+  css:
+    component:
+      derechos-humanos/css/style.css: {}
+      derechos-humanos/css/human-rights.css: {}
+categoriaherramientas_library:
+  js:
+    //unpkg.com/swiper/swiper-bundle.min.js: {}
+    herramientas-pedagogicas/js/script-h-pedagogicas.js: {}
+    herramientas-pedagogicas/js/script-h-pedagogicas-carrusel.js: {}
+  css:
+    component:
+      herramientas-pedagogicas/css/styles-h-pedagogicas.css: {}
+      herramientas-pedagogicas/css/styles-h-pedagogicas-carrusel.css: {}
+herramientaspedagogicas_library:
+  js:
+    herramientas-pedagogicas/js/script.js: {}
+  css:
+    component:
+      herramientas-pedagogicas/css/style-herramientas.css: {}
+volumen_library:
+  js:
+    volumen-testimonial/js/share-button.js: {}
+    volumen-testimonial/js/fullscreenImg.js: {}
+    volumen-testimonial/js/audio-rt.js: {}
+    volumen-testimonial/js/lyricer.js: {}
+    volumen-testimonial/js/modals.js: {}
+    volumen-testimonial/js/utils.js: {}
+    volumen-testimonial/js/dots.js: {}
+    volumen-testimonial/js/index.js: {}
+  css:
+    component:
+      volumen-testimonial/css/modals.css: {}
+      volumen-testimonial/css/share-button.css: {}
+      volumen-testimonial/css/audio-rt.css: {}
+      volumen-testimonial/css/lyricer.css: {}
+      volumen-testimonial/css/style.css: {}
+      volumen-testimonial/css/vol-testimonial-modal.css: {}
+      //cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css: {}
+exilio_library:
+  js:
+    js/interact.min.js: {}
+    js/jquery-3.6.0.min.js: {}
+    exilio/js/script-exilio.js: {}
+    exilio/modales/js/audio-rt.js: {}
+    exilio/modales/js/fullscreenImg.js: {}
+    exilio/modales/js/lyricer.js: {}
+    exilio/modales/js/share-button.js: {}
+  css:
+    component:
+      exilio/style-exilio.css: {}
+      exilio/modales/css/audio-rt.css: {}
+      exilio/modales/css/customize-modalex.css: {}
+      exilio/modales/css/lyricer.css: {}    
+      exilio/modales/css/share-button.css: {}
+      exilio/modales/css/style.css: {}
+      exilio/modales/css/timeline.css: {}     
+exilio_libraryarq:
+  js:
+    js/interact.min.js: {}
+    js/jquery-3.6.0.min.js: {}
+    exilio/js/script-exilioarq.js: {}
+    exilio/modales/js/audio-rt.js: {}
+    exilio/modales/js/fullscreenImg.js: {}
+    exilio/modales/js/lyricer.js: {}
+    exilio/modales/js/share-button.js: {}
+  css:
+    component:
+      exilio/style-exilioarq.css: {}
+      exilio/modales/css/audio-rt.css: {}
+      exilio/modales/css/customize-modalex.css: {}
+      exilio/modales/css/lyricer.css: {}    
+      exilio/modales/css/share-button.css: {}
+      exilio/modales/css/style.css: {}
+      exilio/modales/css/timeline.css: {}     
+nnaHome_library:
+  js:
+    nna/js/script-nna.js: {}
+  css:
+    component:
+      nna/css/style.css: {}
+      nna/css/style-nna.css: {}
+      nna/css/customize-modal.css: {}
+nnaEscuelas_library:
+  js:
+    nna/js/script-nnaEscuelas.js: {}
+    js/jquery-3.6.0.min.js: {}
+    js/pop.js: {}
+  css:
+    component:
+      nna/css/style.css: {}
+      nna/css/style-nnaEscuelas.css: {}
+      nna/css/customize-modal.css: {}
+nnaGeneracion_library:
+  js:
+    nna/js/script-nnaGeneraciones.js: {}
+    js/jquery-3.6.0.min.js: {}
+    //cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js: {}
+    js/ScrollToPlugin.min.js: {}
+    js/ScrollTrigger.min.js: {}   
+  css:
+    component:
+      nna/css/style.css: {}
+      nna/css/style-nnaGeneraciones.css: {}  
+      nna/css/share-button.css: {}  
+      nna/css/lyricer.css: {}
+      nna/css/customize-modal.css: {}
+comoyconquien_library:
+  js:
+    //cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js: {}
+    comoyconquien/js/script.js: {}
+  css:
+    component:
+      //cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css: {}
+      comoyconquien/css/style.css: {}
+conquien_library:
+  js:
+    //cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js: {} 
+    conquien/js/anime/anime.js: {}
+    //cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js: {}         
+    //cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js: {}      
+    conquien/js/select2/select2-4.1.0.min.js: {}    
+    conquien/js/conquien.js: {}
+  css:
+    component:
+      //cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css: {}
+      //stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css: {}
+      conquien/css/ajax/3.6.0.mdb.min.css: {}
+      conquien/css/style.css: {}
+      //cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css: {}
+      conquien/css/select2/select2-4.1.0.min.css: {}
+      conquien/css/conquien.css: {}
+      conquien/css/detalle_conquien.css: {}
+conquien_detalle_library:
+  js: 
+    //cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js: {}         
+    //cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js: {}   
+    //cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js: {} 
+    conquien/js/tippy/tippy-bundle.umd.min.js: {}    
+    conquien/js/detalle/detalle_conquien.js: {}
+  css:
+    component:
+      //cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css: {}
+      //stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css: {}
+      conquien/css/ajax/3.6.0.mdb.min.css: {}
+      //cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css: {}
+      conquien/css/select2/select2-4.1.0.min.css: {}
+      conquien/css/conquien.css: {}
+      conquien/css/detalle_conquien.css: {}
+      conquien/css/tippy/tippy.css: {}
+conquien_home_library:
+  js:
+    //cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js: {} 
+    conquien/js/anime/anime.js: {}
+    //cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js: {}         
+    //cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js: {}      
+    conquien/js/select2/select2-4.1.0.min.js: {}    
+    conquien/js/conquien_home.js: {}
+    conquien/js/script.js: {}
+  css:
+    component:
+      //cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css: {}
+      //stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css: {}
+      conquien/css/ajax/3.6.0.mdb.min.css: {}
+      conquien/css/style.css: {}
+      //cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css: {}
+      conquien/css/select2/select2-4.1.0.min.css: {}
+      conquien/css/conquien.css: {}
+      conquien/css/conquien_home.css: {}
+narrativa_library:
+  js:
+    narrativa/js/script_narrativa.js: {}
+    narrativa/js/share-button.js:  {}
+  css:
+    component:
+      narrativa/style_narrativa.css: {}
+      narrativa/share-button.css: {}
+narrativa_hitos_library:
+  js:
+    narrativa/hitos/js/custom.js: {}
+    //unpkg.com/swiper@8.3.0/swiper-bundle.min.js: {}
+  css:
+    component:
+      narrativa/hitos/css/style.css: {}
+dialogosocial_timeline_library:
+  js:
+    dialogo-social-timeline/js/timeline-ds.js: {}
+  css:
+    component:
+      dialogo-social-timeline/style-timeline-ds.css: {}
+      dialogo-social-timeline/iconos/icons-ds.css: {}
+manifiesto_library:
+  js:
+    manifiesto/js/index.js: {}
+  css:
+    component:
+      manifiesto/css/main.css: {}
+versiondiginforme_library:
+  css:
+    component:
+      version-digital/css/styles-version-digital.css: {}
+  js:
+    version-digital/js/script-vd.js: {}
+acontecimiento_library:
+  css:
+    component:
+      acontecimiento/css/style-acontecimiento.css: {}
+comisionados_library:
+  css:
+    component:
+      comisionados/css/commissioners.css: {}
+pueblos_etnicos_library:
+  js: 
+    pueblos-etnicos/js/backstretch.min.js: {}
+    pueblos-etnicos/js/pe.js: {}
+  css:
+    component:
+      pueblos-etnicos/css/style-pe.css: {}
+      css/iconmood.css: {}
+mapas_modalidades_pueblos_etnicos_library:
+  js: 
+    js/interact.min.js: {}
+    pueblos-etnicos/map-modalidades-violencia/pe-map-modalidades.js: {}
+  css:
+    component:
+      pueblos-etnicos/map-modalidades-violencia/style-map-modalidades.css: {}
+      css/iconmood.css: {}
+      //cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css: {}
+antecedentes_pueblos_etnicos_library:
+  js: 
+    pueblos-etnicos/antecedentes-timeline/js/antecedentes-PE.js: {}
+  css:
+    component:
+       pueblos-etnicos/antecedentes-timeline/css/antecedentes-PE.css: {}
+       css/iconmood.css: {}
+mujeres_y_territorio_pueblos_etnicos_library:
+  js: 
+    js/interact.min.js: {}
+    pueblos-etnicos/map-mujeres-territorio/mujeres-territorio-pe.js: {}
+  css:
+    component:
+       pueblos-etnicos/map-mujeres-territorio/mujeres-territorio-pe.css: {}
+       css/iconmood.css: {}
+corredores_pueblos_etnicos_library:
+  js: 
+    js/interact.min.js: {}
+    pueblos-etnicos/map-corredores-estrategicos/corredores-estrategicos-pe.js: {}
+  css:
+    component:
+       pueblos-etnicos/map-corredores-estrategicos/corredores-estrategicos-pe.css: {}
+       css/iconmood.css: {}
+       //cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css: {}
+resistencia_pueblos_etnicos_library:
+  js: 
+    js/interact.min.js: {}
+    pueblos-etnicos/map-resistencia/resistencia-pe.js: {}
+  css:
+    component:
+       pueblos-etnicos/map-resistencia/resistencia-pe.css: {}
+       css/iconmood.css: {}
+paginas_error_library:
+  css:
+    component:
+      paginas-error/css/style-error.css: {}
+hallazgos_recomendaciones_library:
+  css:
+    component:
+      hallazgos-recomendaciones/css/style.css: {}
+      hallazgos-recomendaciones/css/stream.css: {}
+hallazgos_recomendaciones_interna_library:
+  js:
+    hallazgos-recomendaciones/js/jquery-ui.min.js: {}
+    hallazgos-recomendaciones/js/jquery.tinysort.min.js: {}
+    hallazgos-recomendaciones/js/filter.min.js: {}
+    hallazgos-recomendaciones/js/recomendaciones.js: {}
+    hallazgos-recomendaciones/js/pagination.js: {}
+  css:
+    component:
+      hallazgos-recomendaciones/css/jquery-ui.min.css: {}
+      hallazgos-recomendaciones/css/stream.css: {}
+loquesigue_library:
+  js:
+    lo-que-sigue/js/script-lqs.js: {}
+  css:
+    component:
+      lo-que-sigue/css/style-lqs.css: {}
+comite_de_seguimiento_library:
+  js:
+    comite-de-seguimiento/js/script-cds.js: {}
+  css:
+    component:
+      comite-de-seguimiento/css/style-cds.css: {}
+recomendaciones_sociedad_library:
+  js:
+    como-lo-hicimos/recomendaciones-sociedad/js/jquery-ui.min.js: {}
+    como-lo-hicimos/recomendaciones-sociedad/js/jquery.tinysort.min.js: {}
+    como-lo-hicimos/recomendaciones-sociedad/js/filter.min.js: {}
+    como-lo-hicimos/recomendaciones-sociedad/js/filter.js: {}
+    como-lo-hicimos/recomendaciones-sociedad/js/recomendaciones.js: {}
+    como-lo-hicimos/recomendaciones-sociedad/js/pagination.js: {}
+  css:
+    component:
+      como-lo-hicimos/recomendaciones-sociedad/css/jquery-ui.min.css: {}
+      como-lo-hicimos/recomendaciones-sociedad/css/stream.css: {}
+caja_herramientas_library:
+  js:
+    como-lo-hicimos/caja-de-herramientas/js/jquery-ui.min.js: {}
+    como-lo-hicimos/caja-de-herramientas/js/jquery.tinysort.min.js: {}
+    como-lo-hicimos/caja-de-herramientas/js/filter.min.js: {}
+    como-lo-hicimos/caja-de-herramientas/js/herramientas.js: {}
+    como-lo-hicimos/caja-de-herramientas/js/pagination.js: {}
+  css:
+    component:
+      como-lo-hicimos/caja-de-herramientas/css/jquery-ui.min.css: {}
+      como-lo-hicimos/caja-de-herramientas/css/stream.css: {}
+huellas_library:
+  js:
+    derechos-humanos/huellas/js/script.js: {}
+  css:
+    component:
+      derechos-humanos/huellas/css/style.css: {}
+ruta_library:
+  js:
+    ruta/js/custom.js: {}
+    ruta/js/locomotive-scroll.min.js: {}
+  css:
+    component:
+      ruta/css/custom.min.css: {}
+      ruta/css/locomotive-scroll.css: {}
+      mdb/mdb.min.css: {}
+      //cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css: {}
+      css/iconmood.css: {}
+modalDespliegue_library:
+  css:
+    component:
+      modal/css/despliegue.css: {}

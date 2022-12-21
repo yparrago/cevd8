@@ -1,0 +1,38 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for cvconfiguration module.
+ *
+ * @DCG
+ * This file is no longer required in Drupal 8.
+ * @see https://www.drupal.org/node/2217931
+ */
+use Drupal\taxonomy\Entity\Term;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Url;
+use Drupal\views\ViewExecutable;
+use Drupal\views\Views;
+use \Drupal\views\Plugin\views\cache\CachePluginBase;
+
+function cvconfiguration_theme($existing, $type, $theme, $path) {
+	return
+    array(
+        'porquepaso_seccion' => [
+				'variables' => [
+				  'title' => 'Bloque de por que paso en derechos humanos',
+				  'nodes' => '',
+				  'selectors' => [],
+				],
+				'template' => 'porquepaso-seccion'
+			  ],
+		'quepaso_seccion' => [
+				'variables' => [
+				  'title' => 'Bloque de por que paso en derechos humanos',
+				  'nodes' => '',
+				  'selectors' => [],
+				],
+				'template' => 'quepaso-seccion'
+			  ],
+        );
+}

@@ -1,0 +1,117 @@
+{#
+/**
+* @file
+* Default theme implementation to present a media item.
+*
+* Available variables:
+* - media: The media item, with limited access to object properties and
+* methods. Only method names starting with "get", "has", or "is" and
+* a few common methods such as "id", "label", and "bundle" are available.
+* For example:
+* - entity.getEntityTypeId() will return the entity type ID.
+* - entity.hasField('field_example') returns TRUE if the entity includes
+* field_example. (This does not indicate the presence of a value in this
+* field.)
+* Calling other methods, such as entity.delete(), will result in
+* an exception.
+* See \Drupal\Core\Entity\EntityInterface for a full list of methods.
+* - name: Name of the media item.
+* - content: Media content.
+* - title_prefix: Additional output populated by modules, intended to be
+* displayed in front of the main title tag that appears in the template.
+* - title_suffix: Additional output populated by modules, intended to be
+* displayed after the main title tag that appears in the template.
+* - view_mode: View mode; for example, "teaser" or "full".
+* - attributes: HTML attributes for the containing element.
+* - title_attributes: Same as attributes, except applied to the main title
+* tag that appears in the template.
+*
+* @see template_preprocess_media()
+*
+* @ingroup themeable
+*/
+#}
+{{ attach_library('cevtheme/diccionarioSonoro') }}
+<div class="controlModalesDS" data-nombremodal="{{name}}">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <h4 id="tituloPista">Haga clic sobre los colores para escuchar</h4>
+            <div class="d-flex justify-content-center" id="botonesMarimbula">
+            </div>
+            <div class="controles mx-auto" id="reproductor">
+            </div>
+            <canvas id="contenedorCanvas" style="display: none;"></canvas>
+            <div class="d-flex justify-content-center" id="contenedorImagen" style="">
+                {% for item in image_url %}
+                <div id="imgMarimbula"><img alt="Haga clic sobre los colores para escuchar"
+                    src={{item}}></div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="mt-2">
+        <div class="rt-player" id="player-audio-playlist-static">
+            <div id="rt-audio">
+            </div>
+            <div class="rt-time-indicartors row">
+                <div class="d-flex align-items-center">
+                    <div class="mx-2">
+                        <span class="rt-timer" data-role="start">00:00</span>
+                    </div>
+                    <div class="progress flex-fill">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
+                            data-role="player-progress-bar">
+                        </div>
+                    </div>
+                    <div class="mx-2">
+                        <span class="rt-timer" data-role="end">00:00</span>
+                    </div>
+                </div>
+            </div>
+           <div class="rt-player__buttons">
+                <button class="btn mx-md-1" data-role="play" ><i class="bi bi-play-circle"></i></button>
+                <button class="btn mx-md-1 d-none" data-role="pause"><i class="bi bi-pause-circle"></i></button>
+                <button class="btn mx-1" data-role="volUp"><i class="bi bi-volume-up"></i></button>
+                <button class="btn mx-1" data-role="volDown"><i class="bi bi-volume-down"></i></button>
+                <button class="btn mx-1" data-role="mute"><i class="bi bi-volume-mute"></i></button>
+            </div> 
+             {# <div class="rt-player__buttons">
+                <button class="btn mx-md-1"  id="playBotton"><i class="bi bi-play-circle"></i></button>
+                <button class="btn mx-md-1"  id="pausaBoton"><i class="bi bi-pause-circle"></i></button>
+                <button class="btn mx-1" data-role="volUp"><i class="bi bi-volume-up"></i></button>
+                <button class="btn mx-1" data-role="volDown"><i class="bi bi-volume-down"></i></button>
+                <button class="btn mx-1" data-role="mute"><i class="bi bi-volume-mute"></i></button>
+            </div>#}
+        </div>
+    </div>
+
+    <div class="lyricer mb-2" id="audio-playlist-static-transcription"></div>
+    <div class="mb-2">
+        <ul id="playlist-modal-playlist-static" class="list-group list-group-flush list-group-numbered"
+            style="max-height: 204px; overflow-y: scroll">
+        </ul>
+    </div>
+
+
+        <!-- selector -->
+    <div class="hidden" id="language-selector" style="text-align: center;">
+        <select name="select" id="seleccion">
+            <option value="first">--Seleccionar un idioma--</option>
+            {% for item in playlist_traduccion %}
+                <option class="controlSeleccion cs{{ item["numeroItem"]}} hidden" data-transcription="{{ item["texto"] }}"
+                value="{{ item["numeroIdioma"]}}">{{ item["nombre"] }}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <div class="hidden">
+        {% for item in playlist_audio %}
+        <div class="audio-track" data-track="{{ item["audio"] }}" data-title="{{ item["titulo"] }}" data-color="{{ item["color"]}}" data-nombremodal="{{name}}"></div>
+        {% endfor %}
+    </div>
+</div>
+
+<script type="text/javascript"> 
+    cargarBotones(); 
+</script>
+

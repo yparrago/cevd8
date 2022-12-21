@@ -1,0 +1,139 @@
+{#
+  /**
+  * @file
+  * Default theme implementation to display a node.
+  *
+  * Available variables:
+  * - node: The node entity with limited access to object properties and methods.
+  *   Only method names starting with "get", "has", or "is" and a few common
+  *   methods such as "id", "label", and "bundle" are available. For example:
+  *   - node.getCreatedTime() will return the node creation timestamp.
+  *   - node.hasField('field_example') returns TRUE if the node bundle includes
+  *     field_example. (This does not indicate the presence of a value in this
+  *     field.)
+  *   - node.isPublished() will return whether the node is published or not.
+  *   Calling other methods, such as node.delete(), will result in an exception.
+  *   See \Drupal\node\Entity\Node for a full list of public properties and
+  *   methods for the node object.
+  * - label: (optional) The title of the node.
+  * - content: All node items. Use {{ content }} to print them all,
+  *   or print a subset such as {{ content.field_example }}. Use
+  *   {{ content|without('field_example') }} to temporarily suppress the printing
+  *   of a given child element.
+  * - author_picture: The node author user entity, rendered using the "compact"
+  *   view mode.
+  * - metadata: Metadata for this node.
+  * - date: (optional) Themed creation date field.
+  * - author_name: (optional) Themed author name field.
+  * - url: Direct URL of the current node.
+  * - display_submitted: Whether submission information should be displayed.
+  * - attributes: HTML attributes for the containing element.
+  *   The attributes.class element may contain one or more of the following
+  *   classes:
+  *   - node: The current template type (also known as a "theming hook").
+  *   - node--type-[type]: The current node type. For example, if the node is an
+  *     "Article" it would result in "node--type-article". Note that the machine
+  *     name will often be in a short form of the human readable label.
+  *   - node--view-mode-[view_mode]: The View Mode of the node; for example, a
+  *     teaser would result in: "node--view-mode-teaser", and
+  *     full: "node--view-mode-full".
+  *   The following are controlled through the node publishing options.
+  *   - node--promoted: Appears on nodes promoted to the front page.
+  *   - node--sticky: Appears on nodes ordered above other non-sticky nodes in
+  *     teaser listings.
+  *   - node--unpublished: Appears on unpublished nodes visible only to site
+  *     admins.
+  * - title_attributes: Same as attributes, except applied to the main title
+  *   tag that appears in the template.
+  * - content_attributes: Same as attributes, except applied to the main
+  *   content tag that appears in the template.
+  * - author_attributes: Same as attributes, except applied to the author of
+  *   the node tag that appears in the template.
+  * - title_prefix: Additional output populated by modules, intended to be
+  *   displayed in front of the main title tag that appears in the template.
+  * - title_suffix: Additional output populated by modules, intended to be
+  *   displayed after the main title tag that appears in the template.
+  * - view_mode: View mode; for example, "teaser" or "full".
+  * - teaser: Flag for the teaser state. Will be true if view_mode is 'teaser'.
+  * - page: Flag for the full page state. Will be true if view_mode is 'full'.
+  * - readmore: Flag for more state. Will be true if the teaser content of the
+  *   node cannot hold the main body content.
+  * - logged_in: Flag for authenticated user status. Will be true when the
+  *   current user is a logged-in member.
+  * - is_admin: Flag for admin user status. Will be true when the current user
+  *   is an administrator.
+  *
+  * @see template_preprocess_node()
+  *
+  * @todo Remove the id attribute (or make it a class), because if that gets
+  *   rendered twice on a page this is invalid CSS for example: two lists
+  *   in different view modes.
+  *
+  * @ingroup themeable
+  * 2368-1664
+*/
+#}
+
+{# Plantilla Huellas de desaparición #}
+
+{{ attach_library('cevtheme/huellas_library') }}
+
+
+<div class="container-fluid">
+    <div class="row contenedorppal">
+        <div class="col-12 col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 col-xxl-8 item item1">
+            <img src="/themes/custom/cevtheme/derechos-humanos/huellas/img/huellas-desaparicion.jpg" alt="">                
+            <a href="/violacion-derechos-humanos-y-derecho-internacional-humanitario" id="linkAtras"><span class="icon icon-flecha-iqz"></span>
+                <h4>Violaciones de derechos humanos, infracciones al DIH y responsabilidades colectivas</h4>
+            </a>
+            <h1>Huellas de desaparición</h1>
+            <h3>Los casos de Urabá, Palacio de Justicia y territorio Nukak</h3>
+            <p>El proyecto “Huellas de Desaparición” es el resultado de una colaboración entre la Comisión de la Verdad de Colombia y la agencia de investigación Forensic Architecture. Utilizando el análisis geoespacial, de datos y de imágenes aéreas y satelitales, estudiamos tres casos en la historia del conflicto armado, cada uno de los cuales explora aspectos específicos de la desaparición.--></p>
+            <a href="#" class="btn btnModal modal_cev" data-nid="2091">Sobre la investigación</a>
+            <a href="#" class="btn btnModal modal_cev" data-nid="2092">Agradecimientos</a>
+        </div>
+        <div class="col-12 col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 item item2">            
+            <div class="item-interno" style="background-image: url(/themes/custom/cevtheme/derechos-humanos/huellas/img/selva-detectada.jpg);filter: brightness(0.9);">
+                <a href="https://www.comisiondelaverdad.co/violacion-derechos-humanos-y-derecho-internacional-humanitario/la-selva-detectada">
+                    <div class="col-12">
+                        <h3 class="titulo">La selva detectada</h3>
+                        <p class="texto"><!--
+                            Reconocemos que el territorio en el que se desarrollaron estas historias, incluyendo la constelación de seres que lo habitan, rocas, agua, tierra, vegetación, animales, cielos y nubes, están en un territorio colonizado.
+                        --></p>
+                    </div>
+                </a>
+            </div>
+            <div class="item-interno" style="background-image: url(/themes/custom/cevtheme/derechos-humanos/huellas/img/palacio-entrada.png);    filter: brightness(0.99);">
+                <a href="https://www.comisiondelaverdad.co/violacion-derechos-humanos-y-derecho-internacional-humanitario/las-cajas-negras-de-la-desaparicion">
+                    <div class="col-12">
+                        <h3 class="titulo">Las cajas negras de la desaparición forzada</h3>
+                        <p class="texto"><!--
+                            En lugar de enfocarnos en el combate entre la guerrilla y las fuerzas armadas en el Palacio, nos concentramos en lo que le sucede a un grupo de rehenes -trabajadores de la cafetería, visitantes, guerrilleros y jueces- que fueron clasificados como “especiales” o “sospechosos”.
+                        --></p>
+                    </div>
+                </a>
+            </div>
+            <div class="item-interno" style="background-image: url(/themes/custom/cevtheme/derechos-humanos/huellas/img/landingpagebanner.jpg);filter: brightness(0.99);">
+                <a href="https://www.comisiondelaverdad.co/violacion-derechos-humanos-y-derecho-internacional-humanitario/despojo-y-memoria-de-la-tierra">
+                    <div class="col-12">
+                        <h3 class="titulo">Despojo y memoria de la tierra</h3>
+                        <p class="texto"><!--
+                            En esta investigación la violencia contra las personas y la violencia contra la tierra van de la mano. Analizamos los mecanismos del despojo en el corregimiento de Nueva Colonia, municipio de Turbo, en el Urabá antioqueño. 
+                        --></p>
+                    </div>
+                </a>
+            </div>
+            <div class="item-interno">
+                <a href="https://www.comisiondelaverdad.co/violacion-derechos-humanos-y-derecho-internacional-humanitario/experiencias-de-la-exposicion">
+                    <div class="col-12">
+                        <img src="/themes/custom/cevtheme/derechos-humanos/huellas/img/DSC_0651.JPG" alt="">
+                        <h3 class="titulo">Experiencias de la exposición</h3>
+                        <p class="texto"><!--
+                            Desde su inauguración al público nacional e internacional, Huellas de Desaparición ha sido un laboratorio para la creación e implementación de espacios pedagógicos y académicos, que sirven para facilitar la enseñanza, el aprendizaje, la comprensión y el diálogo de los diferentes hallazgos y resultados de la investigación.
+                        --></p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

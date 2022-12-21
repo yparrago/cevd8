@@ -1,0 +1,134 @@
+{#
+/**
+ * @file
+ * Default theme implementation to present a media item.
+ *
+ * Available variables:
+ * - media: The media item, with limited access to object properties and
+ *   methods. Only method names starting with "get", "has", or "is" and
+ *   a few common methods such as "id", "label", and "bundle" are available.
+ *   For example:
+ *   - entity.getEntityTypeId() will return the entity type ID.
+ *   - entity.hasField('field_example') returns TRUE if the entity includes
+ *     field_example. (This does not indicate the presence of a value in this
+ *     field.)
+ *   Calling other methods, such as entity.delete(), will result in
+ *   an exception.
+ *   See \Drupal\Core\Entity\EntityInterface for a full list of methods.
+ * - name: Name of the media item.
+ * - content: Media content.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ * - view_mode: View mode; for example, "teaser" or "full".
+ * - attributes: HTML attributes for the containing element.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ *
+ * @see template_preprocess_media()
+ *
+ * @ingroup themeable
+ */
+#}
+ {{ attach_library('cevtheme/player_audio_modal') }}
+  <div class="rt-player" id="player-audio-modal">
+      <div id="rt-audio">
+      </div>
+      <div class="rt-time-indicartors row">
+          <div class="d-flex align-items-center">
+              <div class="mx-2">
+                  <span class="rt-timer" data-role="start">00:00</span>
+              </div>
+              <div class="progress flex-fill">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                      aria-valuemax="100" data-role="player-progress-bar"></div>
+              </div>
+              <div class="mx-2">
+                  <span class="rt-timer" data-role="end">00:00</span>
+              </div>
+          </div>
+      </div>
+      <div class="rt-player__buttons">
+          <button class="btn mx-md-1" data-role="play"><i class="bi bi-play-circle"></i></button>
+          <button class="btn mx-md-1 d-none" data-role="pause"><i
+                  class="bi bi-pause-circle"></i></button>
+         <!-- <button class="btn mx-1" data-role="prev"><i class="bi bi-skip-backward-circle"></i></button>
+          <button class="btn mx-1" data-role="next"><i class="bi bi-skip-forward-circle"></i></button>-->
+          <button class="btn mx-1" data-role="volUp"><i class="bi bi-volume-up"></i></button>
+          <button class="btn mx-1" data-role="volDown"><i class="bi bi-volume-down"></i></button>
+          <button class="btn mx-1" data-role="mute"><i class="bi bi-volume-mute"></i></button>
+      </div>
+  </div>
+  <div class="lyricer mb-2" id="basic-audio-transcription"></div>
+
+<div class="hidden" id="language-selector" style="text-align: center;">
+    <div class="hidden">
+  {% for item in audio_url %}
+    <div id="audio-track" data-track="{{ item }}"></div>
+  {% endfor %}
+  </div>
+
+    <select name="select" id="seleccion">
+        {% for item in playlist_traduccion %}
+            <option class="controlSeleccion cs " data-transcription="{{ item["texto"] }}"
+            value="{{ item["numeroIdioma"]}}" data-track="{{ item["audio"] }}">{{ item["nombre"] }}</option>
+        {% endfor %}
+    </select>
+</div>
+
+<script type="text/javascript">
+// Basic Audio Modal
+jQuery(function ($) {
+    const playerAudioModal = setupPlayerRT("player-audio-modal");
+    audioTrack = $('#audio-track').data('track');
+    playerAudioModal.addTracks([audioTrack])
+    $('#modalInfoCev').on('hide.bs.modal', (e) => playerAudioModal.pause());
+
+    let transcripcion = [];
+    const elecciones2 = Array.from(document.querySelectorAll('.cs'))
+    elecciones2.forEach(eleccion2 => {
+        transcripcion.push($(eleccion2).data('transcription'));
+    });
+
+    if (transcripcion[0] == null) {
+        document.getElementById('language-selector').classList.add('hidden');
+        document.getElementById('basic-audio-transcription').style.display = 'none';
+    } else {
+        document.getElementById('language-selector').classList.remove('hidden');
+        document.getElementById('basic-audio-transcription').style.display = '';
+        $("#seleccion").prop("selectedIndex", 0);
+        $("[data-role=play]").click();
+        setupLrc(transcripcion[0]);
+        $(document).ready(function() {
+            $("[data-role=pause]").click();
+            document.querySelector("[data-role=play]").classList.remove('d-none');
+            document.querySelector("[data-role=pause]").classList.add('d-none');
+        }); 
+    }
+
+
+    const select = document.getElementById('seleccion');
+    select.addEventListener('change', (event) => {
+        setupLrc(transcripcion[event.target.value]);
+    })
+
+    function setupLrc(transcription) {
+        $("#player-audio-modal audio").off("timeupdate"); // Clean event
+
+        let lrc = new Lyricer({
+            "divID": "basic-audio-transcription",
+            "showLines": 1,
+            "lineidPrefix": 'lyric-basic-modal',
+            "clickable": false
+        });
+
+        lrc.setLrc(transcription);
+
+        $("#player-audio-modal audio").on("timeupdate", function () {
+            lrc.move(this.currentTime);
+        });
+    }
+
+});
+</script>

@@ -1,0 +1,143 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a taxonomy term.
+ *
+ * Available variables:
+ * - url: URL of the current term.
+ * - name: (optional) Name of the current term.
+ * - content: Items for the content of the term (fields and description).
+ *   Use 'content' to print them all, or print a subset such as
+ *   'content.description'. Use the following code to exclude the
+ *   printing of a given child element:
+ *   @code
+ *   {{ content|without('description') }}
+ *   @endcode
+ * - attributes: HTML attributes for the wrapper.
+ * - page: Flag for the full page state.
+ * - term: The taxonomy term entity, including:
+ *   - id: The ID of the taxonomy term.
+ *   - bundle: Machine name of the current vocabulary.
+ * - view_mode: View mode, e.g. 'full', 'teaser', etc.
+ *
+ * @see template_preprocess_taxonomy_term()
+ *
+ * @ingroup themeable
+ */
+ #}
+ {{ attach_library('cevtheme/genero_library') }}
+
+
+ <div{{ attributes.addClass('gen') }}>
+    {{ title_prefix }}
+    {% if name and not page %}
+ 	  <h2><a href="{{ url }}">{{ name }}</a></h2>
+    {% endif %}
+    {{ title_suffix }}
+    <div class="row mx-auto">
+ 	  <div class="col-sm-4 md-12">
+ 		<!--  Columna izq -->
+ 		<div class="col-genero" >
+ 			<h1 style="font-weight:bold;">Vidas en<br>
+ 				Re-existencia
+ 			</h1>
+ 			{# <p id="gen-desc">{{content.description}}</p> #}
+            <div id="gen-desc">
+               <p> Las 25 historias de este capítulo son tan diversas como el territorio colombiano y la gente que lo habita, y de muchas maneras representan a miles de mujeres, personas LGBTIQ+ y hombres de masculinidades no hegemónicas que abrieron las puertas de sus vidas a la Comisión de la Verdad para compartir sus dolores, sus luchas y sus verdades. Gracias por su palabra.</p>
+            </div>
+            <div id="gen-desc-tmp" class="hidden">
+               <p> Las 25 historias de este capítulo son tan diversas como el territorio colombiano y la gente que lo habita, y de muchas maneras representan a miles de mujeres, personas LGBTIQ+ y hombres de masculinidades no hegemónicas que abrieron las puertas de sus vidas a la Comisión de la Verdad para compartir sus dolores, sus luchas y sus verdades. Gracias por su palabra.</p>
+            </div>
+            <div class="d-none d-sm-block">
+ 			<ul class="list-inline str list-serie">
+ 				{% for termino in menu_serie %}
+ 					<li>
+ 						<a class="serie tid {{ termino.color }}" data-tid="{{ termino.val }}" href="#">
+ 							<span class="check"></span> 
+ 							<span class="labelgen">{{ termino.nombre }}</span>
+                            <div class="hidden">
+                                {{ termino.desc | raw }}
+                            </div>
+ 						</a>
+ 					</li>
+                {% if loop.index0 == 2%}
+            </ul>
+            <ul class="list-inline str list-serie">
+                {% endif %}
+ 				{% endfor %}
+ 			</ul>
+            </div>
+			<div class="list-serie-mobile d-block d-sm-none">
+				<select class="classic">
+					<option value="">Selecione</option>
+					{% for termino in menu_serie %}
+ 					<option class="serieMobiles" id='{{ termino.val }}' data-tid="{{ termino.val }}" value="{{ termino.val }}">{{ termino.nombre }}</option>
+					{% endfor %}
+					</select>
+			</div>
+ 		</div>
+        <div class="row pb-2 descargables">
+            <!--pseudo-footer -->
+            <div class="mx-auto">
+                <div class="col-md-4 md-12">
+                    <div class="d-flex justify-content-center">
+                        <div class="col_desc">
+                            <div class="bot-inf">
+                                <div class="cont" style="border-radius:2px;">
+                                   <a class="bt-prod modal_cev" data-class="gen-btns" href="#" title="Asi lo hicimos" data-nid="583">Asi lo hicimos</a>
+                               </div>
+                            </div>
+                        </div>       
+                        {# <div class="col_desc">
+                            <div class="bot-inf">
+                                <div class="cont" style="border-radius:2px">
+                                   <a class="bt-prod modal_cev" data-class="gen-btns" data-nid="585" href="#" title="Resonancias">Resonancias</a>
+                               </div>
+                            </div>
+                        </div> #}
+                        <div class="col_desc">
+                            <div class="bot-inf">
+                                <div class="cont" style="border-radius:2px">
+                                   <a class="bt-prod modal_cev" data-class="gen-btns" data-nid="584" title="La despensa" href="#">La despensa</a>
+                               </div>
+                            </div>
+                        </div>
+                        {# <div class="col_desc">
+                            <div class="bot-inf">
+                                <div class="cont" style="border-radius:2px">
+                                   <a class="bt-prod modal_cev" data-class="gen-btns" data-nid="586" title="Pa' la conversa" href="#">Pa' la conversa</a>
+                               </div>
+                            </div>
+                        </div> #}
+                    </div>
+                </div>
+            </div>     
+        </div>
+
+ 		
+ 	</div>
+ 	<!-- Fin Columna izq -->
+ 	<div class="col-sm-8 md-12">
+ 		<!--Columna der -->
+ 		<div class="viewport" id="container">
+ 		</div>
+ 	</div>
+ 	<!--fin columna der -->
+ </div>
+ <!--fin row -->
+</div>
+
+{# BOTONES FLOTANTES #}
+{{ content.field_botones_menu_flotante }}
+{{ content.field_avivavoz }}
+{{ content.field_descargar_capitulo_pdf }}
+{{ content.field_descargable }}
+{{ content.field_anexos }}
+{{ content.field_enlace_anexos }}
+{{ content.field_id_frente_espejo }}
+{{ content.field_enlace_casos }}
+
+<script src="/themes/custom/cevtheme/js/driver.min.js"></script>
+<script type="text/javascript">
+{{ term.field_script_tour.value|raw }}
+</script>

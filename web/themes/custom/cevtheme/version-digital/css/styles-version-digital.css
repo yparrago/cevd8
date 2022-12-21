@@ -1,0 +1,294 @@
+h1, h2, h3, h4{
+  font-family: obliqua, sans-serif;
+  font-weight: bold;
+}
+h5, h6{
+    font-family: obliqua, sans-serif;
+  }
+  
+#linkAtras{
+    transition: all 2s ease-out;
+    color: #fff;
+    font-size: 35px;
+    text-decoration: unset;
+}
+.contenedorVersiondig{
+    background-color: #335970;
+    margin-top: 70px;
+    color: #fff;
+    overflow: hidden;
+    display: flex;
+    min-height: 10vh;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: center;
+    align-items: center;
+}
+.contenedorVersiondig> div {
+    min-height: 10vh;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.contenedorCard{
+    height: auto;
+    width: 100vw;
+    display: flex;
+    padding-bottom: 3rem;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: stretch;
+    justify-content: space-around;
+    align-items: center;
+}
+.input-group .btn{
+    color: #000;
+    background-color: #fff;
+    position: relative;
+    z-index: 2;
+    font-size: 1.2rem;
+}
+.input-group .form-control {
+    width: 100%;
+    border: 2px solid #fff;
+    border-radius: 5px 0px 0px 5px !important;
+}
+.input-group {
+    position: relative;
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    flex-direction: row;
+    align-content: center;
+}
+div#search-autocomplete {
+    width: 70%;
+    height: 40px;
+}
+#form1::placeholder{
+    color: #fff;
+    font-size: 1em;
+    font-weight: 700;
+}
+.divPrimercuerpo:nth-child(1) {
+    padding: 1.5rem 0rem 0rem 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.divPrimercuerpo:nth-child(2) {
+    padding: 0rem 2rem;
+    margin-top: 2rem;
+}
+.contenedorCard .elemento{
+    width: 20rem;
+    margin: 0.5rem 1rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px 14px -4px #000;
+}
+.contenedorCard .elemento .card-body{
+    padding: 1rem;
+}
+.contenedorCard .elemento .titulo mark,.titulo mark {
+    background-color: #335970;
+    text-transform: uppercase;
+    padding: 0rem 1.5%;
+    width: 40%; 
+    color: #fff;
+    font-weight: 700;
+}
+.titulo{
+    width: 100%;
+    color: #fff;
+}
+.contenedorCard .elemento .subtitulo{
+    color: #335970;
+    font-weight: bold;
+    font-size: 100%;
+}
+.subtitulo, .parrafo{
+    color: #fff;
+}
+.contenedorCard .elemento .subtitulo .tagLibro, .tagLibro{
+    color: #917d26;
+}
+.contenedorCard .elemento .parrafo{
+    color: #9b9b9b;
+    line-height: 0.98rem;
+    font-size: 80%;
+    font-weight: 500;
+    margin-bottom: -10px;
+}
+.contenedorCard .elemento a{
+    cursor: pointer;
+}
+.contenedorCard .elemento .card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.contenedorCard .elemento .pieCard{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    align-content: center;
+    background-color: initial;
+    border-top: none;
+    padding: 0rem 1rem;
+    padding-bottom: 0.5rem;
+}
+.contenedorCard .elemento .pieCard .btnNavegar{
+    font-size: 70%;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 3px 0.5rem;
+    border-radius: 12px;
+    position: relative;
+    transition: all 0.7s ease;
+}
+.contenedorCard .elemento .pieCard .btnNavegar:hover, .modal-icons a:hover {
+    color: #917d26;
+    background-color: #fff;
+    border-color: #917d26;
+    box-shadow: 0px 3px 7px -3px #000 !important;
+}
+.iconoCard{
+    height: 30px;
+    width: 30px;
+    background-color: #917d26;
+    color: #fff;
+    text-align: center;
+    border-radius: 100% !important;
+    text-decoration: unset;
+    display: flex;
+    align-items: center;
+    position: unset !important;
+    justify-content: center;
+}
+.iconoCard span::before{
+    font-size: 30px;
+}
+.modal-content {
+    background-color:#E0E0E0;
+}
+.modal-icons a{
+    height: 30px;
+    width: 30px;
+    margin: 3px;
+}
+
+.nav-tabs .nav-link, .modal-keywords, .modal-keywords a {
+    color: #917d26;
+    transition: all 0.7s ease;
+}
+.modal-keywords a{
+    padding: 0rem 0.2rem;
+}
+.modal-header button.btn-close span {
+    color: #917d26;
+}
+.modal-header .btn-close{
+    background: unset;
+    cursor: pointer;
+    transition: all 0.7s ease;
+}
+.tab-content .tab-pane p {
+    color: #fff;
+    font-weight: 700;
+}
+.tab-content .tab-pane ul {
+    font-weight: 400;
+    color: #fff;
+}
+.tab-content .tab-pane ul li a {
+    color: #917d26;
+    font-weight: 500;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active,.modal-keywords a:hover  {
+    color: #fff;
+    background-color: #917d26;
+    border-color: #dee2e6 #dee2e6 #fff;
+}
+.modal-body .nav-tabs {
+    border-bottom: 1px solid #dee2e6;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+/*SECCION DE MEDIAQUERYS*/
+
+@media only screen and (max-width: 768px) {
+    .divPrimercuerpo:nth-child(1){
+        padding: 0.5rem;
+    }
+    .divPrimercuerpo:nth-child(2){
+        margin-top: 0rem;
+        padding: 0rem 1rem;
+    }
+    .divPrimercuerpo:nth-child(3){
+        padding-bottom: 0.5rem;
+    }
+    .divPrimercuerpo h3{
+        font-size: 2rem;
+        line-height: 1.8rem;
+        margin-left: 1rem;
+    }
+    #linkAtras{
+        font-size: 30px;
+        position: relative;
+        left: 12px;
+        top: -10px;
+    }
+    .pPrimerCuerpo{
+        line-height: 1rem;
+        margin-bottom: 0.5rem;
+        font-size: 80%;
+    }
+    .contenedorCard {
+        height: auto;
+        width: 100vw;
+        display: flex;
+        padding-bottom: 3rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .card-img-top {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .contenedorCard .elemento {
+        width: 100%;
+        margin: 1rem 0rem;
+        border-radius: 10px;
+        box-shadow: 0px 4px 17px -3px #000;
+    }
+    .contenedorCard .elemento .pieCard {
+        justify-content: space-around;
+    }
+    .contenedorCard .elemento .pieCard .btnNavegar {
+        font-size: 80%;
+        padding: 6px 1em;
+        border-radius: 20px;
+    }
+    .contenedorCard .elemento .pieCard .btnNavegar:hover {
+        box-shadow: 0px 6px 6px -3px #000 !important;
+    }
+    .iconoCard {
+        height: 35px;
+        width: 35px;
+    }
+    .contenedorCard .elemento .parrafo {
+      
+    }
+    p.modal-description.parrafo, .modal-body .titulo {
+        line-height: 1.5rem;
+    }
+}

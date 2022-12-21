@@ -1,0 +1,29 @@
+body {background-color: #1f1f1f; 
+    color: #f1eded;}
+.flotantes span{background: #000;}
+/*TRAIDO DE LA ANTERIOR PAGINA*/
+h1, h2, h3, h4, h5, h6, .pagination>li>a, .pagination>li>span, #js-mainnav.megamenu.blackwhite ul.level0 li.megacss span.megacss, #js-mainnav.megamenu.blackwhite ul.level0 li.megacss a.megacss, #js-mainnav.megamenu.blackwhite .megaMenuToggle, #jux_memamenu120 #js-mainnav .jux-fa.jux-fa-bars {color: #000!important;}
+a {text-decoration: underline; color: #000;}
+a:focus, a:visited, a:hover, a:active, a.active, #pasos .step.activo .titulo, #accordion .panel-title a {color: #000;}
+span.required {color: #000;}
+select, input, textarea {color: #000;border: 1px solid #000000;}
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, select:focus, textarea:focus {border: 1px solid #000; box-shadow: 0 0 3px #000;}
+.verde-claro, .azul-claro, .table-bordered th {background-color: #f9f9f9;}
+.table-hover>tbody>tr:hover {background-color: #EEE;}
+.alert-warning, .alert-success, .alert-info, .alert-danger {background-color: #fff; border-color: #000; color: #000;}
+.btn, input[type="submit"], button, .btn-default:hover, .btn.btn-primary {background: #000; box-shadow: none; color: #fff; background-color: #000; border-color: #000;}
+.btn-default {background: #fff; color: #000; border: 1px solid #000;}
+.btn:hover, input[type="submit"]:hover, button:hover {background: #444; box-shadow: none; color: #fff!important;}
+.btn.btn-primary:focus, .btn.btn-primary:hover, .btn.btn-primary.focus {box-shadow: none!important; background: #444!important; border-color: #444;}
+select.form-control option, .table-striped>tbody>tr:nth-of-type(odd) {background: #fff;}
+img, .uk-cover-background, a.next-link:after, .next-link-container:after, #megamenucss .blackwhite.megamenu ul.level0 > li.megacss:hover > a.megacss:after {-webkit-filter: grayscale(100%); filter: grayscale(100%);}
+section#noticias .aspect-ratio-3-2:hover img, .aspect-ratio-3-2:hover .zx img, ul.zoo-itempro-default a:hover img, .element-imagepro a:hover img {-webkit-filter: brightness(105%) contrast(105%) grayscale(100%); filter: brightness(105%) contrast(105%) grayscale(100%);}
+.uk-overlay-panel h3 {color: #fff!important;}
+.copy-bar, .date-evento, .caja-gris .button {background: #000;}
+.gold, .breadcrumb a, #menu-toggle i, .redes i, .redes-footer li a, #megamenucss .blackwhite.megamenu ul.level0 > li.megacss:hover > a.megacss, #megamenucss #js-mainnav.megamenu.blackwhite ul.level0 li.active, #megamenucss #js-mainnav.megamenu.blackwhite ul.level0 li.active > a, #jux_memamenu120 .dropdown-menu a:hover, #jux_memamenu120 .dropdown-menu a.active, header .top-nav a:hover, header .top-mobile a:hover {color: #444!important;}
+.borde-dorado {border-left: 2px solid #444;}
+.uk-slidenav-contrast {color: rgba(255,255,255,.5)!important;}
+.uk-slidenav-contrast:focus, .uk-slidenav-contrast:hover {color: rgba(255,255,255,.7)!important;}
+#megamenucss #js-mainnav .js-megamenu .childcontent-inner {border-top: 2px solid #444;}
+#jux_memamenu120 .dropdown-menu h3 {border-bottom: 2px solid #444;}
+.title-hero mark, .title-news mark, section#slider .uk-margin p mark {background-color: rgba(0, 0, 0, 0.3);}

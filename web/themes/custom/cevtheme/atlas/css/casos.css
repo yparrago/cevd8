@@ -1,0 +1,175 @@
+/* estos son */
+.casos.modal-content .modal-icons a{
+    background-color: #3DAD95;
+    color: #fff;
+  }
+  .casos.modal-content .modal-icons a:hover{
+    background-color: #468C7C;
+  }
+.casos.modal-content{
+    background-color: #000;
+  }
+  .casos.modal-content .modal-keywords a{
+    color: #3DAD95;
+  }
+  .casos.modal-content .modal-keywords a:hover{
+    color: #3DAD95;
+  }
+  .casos.modal-content .nav-tabs, .casos .nav-link{
+    color: #fff;
+  }
+  .casos.modal-content .nav-tabs .nav-link img{
+    color: #3DAD95;
+  }
+  .casos.modal-content .nav-tabs .nav-item.show .nav-link, .casos.modal-content .nav-tabs .nav-link.active {
+    color: #F4EBE4;
+    border-color: #3DAD95;
+    background-color: #3DAD95;
+    border-top-left-radius:0px;
+    border-top-right-radius: 0px;
+  }
+  .casos.modal-content .nav-tabs .nav-item.show .nav-link img, .casos.modal-content .nav-tabs .nav-link.active img{
+    color: #223A73;
+  }
+  
+  .casos.modal-content a{
+    color: #3DAD95;
+  
+  }
+  .casos.modal-content h1{
+    font-weight: bold;
+    color: #3DAD95;
+
+  }
+  .casos.modal-content .h2, .casos.modal-content h2, .casos.modal-content h3, .casos.modal-content p{
+    color: white;
+  }
+  .casos.modal-content p.descripcion{
+    margin: 50px 0px;
+  }
+  .casos.modal-content .accordion-body p{
+    color: black;
+  }
+  .casos.modal-content .accordion-body{
+    padding: 2rem;
+  }
+  .casos.modal-content .h2,  .casos.modal-content h2{
+    font-weight: bold;
+    font-family: obliqua, sans-serif;
+    font-size: 30px;
+  }
+  
+  .casos.modal-content .modal-keywords *{
+    color: #E5DAD3;
+  }
+  .casos.modal-content .btn-close{
+    display: block;
+    color:#3DAD95;
+  }
+  .casos.modal-content .nav-tabs .nav-link:hover{
+    background-color: #EFE8E4;
+    border-bottom: 2px solid #917D26;
+  }
+  .casos.modal-content .nav-tabs .nav-link:hover img{
+    color: #917D26;
+  
+  }
+  .casos.modal-content .modal .modal-icons a {
+    background-color: #3DAD95;
+    color: white;
+    padding: 10px;
+    width: 35px;
+    height: 35px;
+  }
+  .casos.modal-content .modal .modal-icons ul ::marker{
+    color: #917D26;
+  
+  }
+  .casos.modal-content .modal-dialog-scrollable .modal-body{
+    padding: 0px;
+  }
+  .casos.modal-content .modal-body{
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: top;
+    padding: 2rem;
+    margin-bottom: 0px;
+  }
+  .casos.modal-content .accordion-button {
+    border-bottom: 2px solid #000;
+    background-color: #3DAD95;
+    padding: 2rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 0px;
+}
+  .casos.modal-content .accordion-button:not(.collapsed) {
+    color: #3DAD95;
+    background-color:  black;
+    box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
+}
+.casos.modal-content .accordion-button:not(.collapsed)::after{
+  color: #3DAD95;
+}
+.casos.modal-content .modal-header{
+  background-color: black;
+}
+.casos.modal-content .x-share-button.open {
+  background: #23876F;
+}
+.casos.modal-content a {
+  text-decoration: none;
+}
+.casos.modal-content .casos-estadisticas{
+  background-color: black;
+  color: #32CCA7;
+}
+.casos.modal-content .casos-estadisticas h3{
+  padding: 2rem 0rem 0rem 2rem;
+
+}
+.casos.modal-content .casos-estadisticas h6{
+  padding: 1rem;
+}
+.casos.modal-content .casos-est-uni{
+  border-bottom: 1px solid white;
+  padding: 2rem;
+}
+.casos.modal-content .arch-relacionados{
+  background-color: black;
+  color: white;
+}
+.casos.modal-content .nav-tabs .nav-item.show .nav-link, .casos .nav-tabs .nav-link.active {
+  color: #fff;
+  border-color: black;
+  background-color: black;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.casos.modal-content .nav-tabs .nav-link:hover, .nav-link:focus-visible{
+  color: white;
+  border-color: #468C7C;
+  background-color: #468C7C;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.casos.modal-content .tab-content{
+  text-align:center ;
+}
+.casos.modal-content .tab-content ul {
+  list-style-type: none;
+}
+.casos.modal-content .modal .nav.nav-tabs{
+  background-color: #3DAD95;
+  border-top: 2px solid white;
+}
+.casos.modal-content .accordion .accordion-item{
+  max-height: none !important;
+  overflow-y: none !important;
+}
+@media (max-width: 380.98px) { 
+  .casos.modal-content .accordion .accordion-item{
+    max-height: none !important;
+    overflow-y: none !important;
+  }
+}

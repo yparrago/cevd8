@@ -1,0 +1,4 @@
+administer jerrejerre_carousel configuration:
+  title: 'Administer jerrejerre_carousel configuration'
+  description: 'Optional description.'
+  restrict access: true

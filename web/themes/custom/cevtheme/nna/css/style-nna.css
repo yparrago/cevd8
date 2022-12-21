@@ -1,0 +1,203 @@
+:root {
+	--slider-width: 3000px;
+	--line-color: #721D2B;
+	--color-blue1: #3FC2FB;
+	--color-ocher1: #EBC44A;
+	--color-white1: #EEECED;
+}
+
+#nna-home {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	background-image: radial-gradient(circle 95vh at 50% 100%, #4596b0, #0b1449);
+	background-repeat: no-repeat;
+}
+
+.nna .contentHome {
+	width: 100%;
+	margin-left: 5vw;
+	display: flex;
+}
+
+
+.nna .contentHome p {
+	opacity: 1;
+	text-align: left;
+	display: block;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+}
+
+.nna .contentHome .content-img {
+	position: relative;
+	width: 90vw;
+	height: 90vh;
+	margin: 0 auto;
+}
+
+.nna .contentHome .silueta {
+	position: absolute;
+	top: 60%;
+	left: 40%;
+	transform: translateX(-50%) translateY(-50%);
+	background-size: 100% 100%;
+	z-index: 200;
+}
+
+.nna .contentHome .onda {
+	position: fixed;
+	top: 55%;
+	margin-left: 80px;
+	transform: translateX(-16%) translateY(-50%);
+	background-size: 100% 100%;
+	z-index: 1;
+}
+
+
+
+.nna .contentHome .generaciones {
+	position: absolute;
+	top: 37vh;
+	z-index: 10;
+}
+
+
+.nna .contentHome .escuelas {
+	position: absolute;
+	top: 50vh;
+	z-index: 11;
+}
+
+.naa .contentHome .generaciones,
+.nna .contentHome .escuelas {
+	display: flex;
+	align-items: top;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.nna .contentHome .titulo {
+	justify-content: left;
+	width: 350px;
+}
+
+.nna .contentHome .recuadro {
+	width: 350px;
+	text-align: left;
+	margin-left: 10px;
+}
+
+.nna .tags {
+	margin-top: 109px;
+	font-size: 12px;
+}
+
+
+.nna .contentHome .silueta {
+	top: 63%;
+	width: 24vw;
+	height: 39vw;
+}
+
+
+@media screen and (max-width: 770px) {
+	.nna .contentHome p {
+		margin-left: 2px !important;
+		margin-top: 9px !important;
+		margin: 0px !important;
+	}
+
+
+	.nna .contentHome .onda {
+		width: 110vw;
+		height: 57vw;
+		margin-left: 10px;
+	}
+
+
+
+	.nna .contentHome .silueta {
+		top: 63%;
+		width: 24vw;
+		height: 39vw;
+	}
+
+
+
+	.nna .contentHome .escuelas {
+		top: 70vh;
+	}
+
+	.nna .contentHome .titulo {
+		width: 80%;
+	}
+
+	.nna .contentHome .recuadro {
+		width: 80%;
+		font-size: 12px;
+	}
+
+
+	.nna .contentHome .generaciones {
+		position: absolute;
+		top: 37vh;
+		z-index: 10;
+	}
+
+
+
+}
+
+
+@media (min-width: 770px) {
+	.nna .contentHome .onda {
+		width: 100vw;
+		height: 50vw;
+		margin-left: 6%;
+	}
+
+	.nna .contentHome .silueta {
+		left: 50%;
+		width: 20vw;
+		height: 30vw;
+	}
+
+	.nna .contentHome .escuelas {
+		top: 64vh;
+		z-index: 11;
+	}
+
+
+
+}
+
+
+/* Contraste  */
+
+.contraste #nna-home {
+	background-color: white;
+	filter: grayscale(100%);
+}
+
+
+.contraste .nna .contentHome p {
+	color:black;
+}
+
+.contraste .nna .contentHome .onda {
+	filter: grayscale(100%);
+}
+
+.contraste .nna .contentHome .silueta {
+	filter: grayscale(100%);
+}
+
+.contraste .nna .contentHome .escuelas {
+	filter: grayscale(100%);
+}
+
+
+

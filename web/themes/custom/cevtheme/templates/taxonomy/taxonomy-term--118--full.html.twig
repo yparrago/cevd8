@@ -1,0 +1,97 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a taxonomy term.
+ *
+ * Available variables:
+ * - url: URL of the current term.
+ * - name: (optional) Name of the current term.
+ * - content: Items for the content of the term (fields and description).
+ *   Use 'content' to print them all, or print a subset such as
+ *   'content.description'. Use the following code to exclude the
+ *   printing of a given child element:
+ *   @code
+ *   {{ content|without('description') }}
+ *   @endcode
+ * - attributes: HTML attributes for the wrapper.
+ * - page: Flag for the full page state.
+ * - term: The taxonomy term entity, including:
+ *   - id: The ID of the taxonomy term.
+ *   - bundle: Machine name of the current vocabulary.
+ * - view_mode: View mode, e.g. 'full', 'teaser', etc.
+ *
+ * @see template_preprocess_taxonomy_term()
+ *
+ * @ingroup themeable
+ */
+#}
+
+{{ attach_library('cevtheme/googlefonts') }}
+{{ attach_library('cevtheme/material_design') }}
+{{ attach_library('cevtheme/nnaHome_library') }}
+
+ <div{{ attributes.addClass('nna') }} id="nna-home">
+ {{ title_prefix }}
+ {% if name and not page %}
+ 	<h2><a href="{{ url }}">{{ name }}</a></h2>
+ {% endif %}
+ {{ title_suffix }}
+    <div class="contentHome">
+    	<!--Titulo -->
+		<div class="divcenter">
+			<div class="nnaTitulo"><h1 id="homeTitulo"></h1></div>
+			<div class="nnaSubtitulo"><h2 id="Subtitulo"></h2></div>
+			
+
+        </div>
+		<!--Primer cuadro (generaciones) -->
+		<div class="generaciones">
+        	<h3 id="titulo" class="titulo">
+				<a target="_self" id="enlace_generaciones">
+            		<span id="prod_generaciones"> </span>
+            		<i class="bi bi-chevron-double-right"></i> 
+				</a>
+			</h3>
+          	<p id="texto-generaciones" class="recuadro"></p>  
+        </div>            
+
+		<!--grafico de fondo silueta y onda -->
+      	<div class="content-img">
+        	<div class="posicion">
+          		<div class="silueta" id="silueta"></div>
+          		<div class="onda" id="onda" ></div>
+        	</div>
+      	</div>
+	
+		<!--Segundo cuadro (escuelas)-->
+      	<div class="escuelas">
+        	<h3 id="titulo" class="titulo">
+          		<a target="_self" id="enlace_escuelas">
+            		<span id="prod_escuelas"> </span>
+            		<i class="bi bi-chevron-double-right"></i>
+          		</a>          
+        	</h3>
+        	<p id="texto-escuelas" class="recuadro"></p>  
+    	</div>
+
+	<!--cierre del content -->
+    </div>  
+
+<!--cierre attributes.addClass('nna') -->
+</div>
+
+
+{# BOTONES FLOTANTES #}
+{{ content.field_botones_menu_flotante }}
+{{ content.field_avivavoz }}
+{{ content.field_descargar_capitulo_pdf }}
+{{ content.field_descargable }}
+{{ content.field_anexos }}
+{{ content.field_enlace_anexos }}
+{{ content.field_id_frente_espejo }}
+{{ content.field_enlace_casos }}
+
+<script src="/themes/custom/cevtheme/js/driver.min.js"></script>
+<script type="text/javascript">
+{{ term.field_script_tour.value|raw }}
+</script>

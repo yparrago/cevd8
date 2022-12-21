@@ -1,0 +1,78 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a taxonomy term.
+ *
+ * Available variables:
+ * - url: URL of the current term.
+ * - name: (optional) Name of the current term.
+ * - content: Items for the content of the term (fields and description).
+ *   Use 'content' to print them all, or print a subset such as
+ *   'content.description'. Use the following code to exclude the
+ *   printing of a given child element:
+ *   @code
+ *   {{ content|without('description') }}
+ *   @endcode
+ * - attributes: HTML attributes for the wrapper.
+ * - page: Flag for the full page state.
+ * - term: The taxonomy term entity, including:
+ *   - id: The ID of the taxonomy term.
+ *   - bundle: Machine name of the current vocabulary.
+ * - view_mode: View mode, e.g. 'full', 'teaser', etc.
+ *
+ * @see template_preprocess_taxonomy_term()
+ *
+ * @ingroup themeable
+ */
+#}
+
+{{ attach_library('cevtheme/exilio_library') }}
+  
+  <div class="loaderex">
+    <div class="lds-dual-ring"> 
+    </div>
+  </div>
+
+ <div class="map-container boodyzoom">
+     <div id="map-wrapper" class="map-wrapper boodyzoom">
+        <div id="map"></div>
+
+         <div id="backgroundcirculos"></div>
+         <div id="mediaback"></div>
+         <div id="vivenciaback"></div>
+         <div id="rutasback"></div>
+         <div id="causasback"></div>
+         <div id="vocesback"></div>    
+         <!-- <div id="abrirmapa"> <a href="https://mapas.comisiondelaverdad.co/portal/apps/webappviewer/index.html?id=f6e96c9fdbc94171bbfadfff93e22bdb" target="_blank">Abrir mapa</a></div>        
+    </div>-->
+  
+         
+         <div id="vocesapoyobut">
+           <div id="togvoces" class="buttpoyo" onclick="togvoces()">
+              <img onclick="togvoces()" src="/themes/custom/cevtheme/exilio/img/v_v26.svg">
+            </div>
+            <div id="togapoyo" class="buttpoyo" onclick="togapoyo()">
+              <img onclick="togapoyo()" src="/themes/custom/cevtheme/exilio/img/v_v27.svg">
+            </div>
+        </div>
+    <div id="centroexilio" onclick="navcentro()"></div>
+    <h5 class="volver">
+    <a href="/taxonomy/term/120" target="_self">
+    <span class="icon-flecha-doble-iqz"></span> Exilio</a>
+      </h5>          
+</div>
+
+{# BOTONES FLOTANTES #}
+{{ content.field_botones_menu_flotante }}
+{{ content.field_avivavoz }}
+{{ content.field_descargar_capitulo_pdf }}
+{{ content.field_descargable }}
+{{ content.field_anexos }}
+{{ content.field_enlace_anexos }}
+{{ content.field_id_frente_espejo }}
+{{ content.field_enlace_casos }}
+
+<script src="/themes/custom/cevtheme/js/driver.min.js"></script>
+<script type="text/javascript">
+{{ term.field_script_tour.value|raw }}
+</script>

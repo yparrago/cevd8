@@ -1,0 +1,30 @@
+ .lyricer {
+  text-shadow: 0 0 1px #eee;
+  color: #666;
+  overflow: hidden;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+ .lyricer ul {
+  list-style-type: none;
+  padding: 5px;
+}
+
+ .lyricer ul li {
+  overflow: auto;
+  opacity: .4;
+  font-size: 88%;
+  transition: all .5s ease;
+}
+
+ .lyricer ul li:hover {
+  color: #428bca;
+}
+
+ .lyricer .lyricer-current-line {
+  font-size: 120%;
+  opacity: 1;
+  text-shadow: 2px 0px 17px rgb(198, 204, 202);
+}

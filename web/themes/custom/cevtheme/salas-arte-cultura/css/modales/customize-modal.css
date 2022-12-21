@@ -1,0 +1,98 @@
+/*
+  Basic Changes
+*/
+
+#custom-css-modal .modal-content {
+    background-color: #a080fb;
+}
+
+#custom-css-modal h1,
+h2,
+h3 {
+    color: white;
+}
+
+#custom-css-modal .btn-close {
+    color: orange;
+}
+
+#custom-css-modal .modal-icons a {
+   background-color: teal;
+}
+
+#custom-css-modal {
+    color: white;
+}
+
+#custom-css-modal a {
+    color: white;
+}
+
+#custom-css-modal .modal-keywords * {
+    color: white;
+}
+
+#custom-css-modal .modal-keywords a {
+    text-decoration: none;
+}
+
+#custom-css-modal .nav-tabs {
+    border-bottom: 1px solid teal;
+}
+
+#custom-css-modal .nav-tabs  .nav-link:hover, .nav-link:focus-visible {
+    border: 1px solid teal;
+}
+
+#custom-css-modal .nav-tabs .nav-link {
+    color: white;
+}
+
+#custom-css-modal .nav-tabs .nav-link.active {
+    background-color: teal;
+    border: 0;
+}
+
+#custom-css-modal .tab-content {
+    background-color: rgba(70, 64, 45, 0.37);
+}
+
+#custom-css-modal .tab-content li{
+    list-style-type: none;
+}
+
+#custom-css-modal .x-share-button.open {
+    background: #1D3E6D;
+}
+
+/* Player custom CSS */
+
+#custom-css-modal .rt-player .rt-player__buttons button{
+    color: #EFC356 ;
+}
+
+#custom-css-modal .rt-player .rt-player__buttons button:hover,
+#custom-css-modal .rt-player .rt-player__buttons button.active {
+    color: #fff !important;
+}
+    /* trasncription audio texts */
+#custom-css-modal .lyricer {
+  color: #fff;
+}
+
+#custom-css-modal .rt-player .progress {
+    background-color: #38504a;
+}
+
+#custom-css-modal .rt-player .progress .progress-bar[data-role="player-progress-bar"]{
+    background-color: #649589;
+}
+    /* List player custom CSS */
+#custom-css-modal.list-group-item{
+    color: #fff;
+    background: none !important;
+}
+
+#custom-css-modal .list-group-item.active{
+    color: #38504a;
+}

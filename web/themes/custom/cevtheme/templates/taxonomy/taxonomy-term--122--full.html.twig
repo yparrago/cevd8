@@ -1,0 +1,191 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a taxonomy term.
+ *
+ * Available variables:
+ * - url: URL of the current term.
+ * - name: (optional) Name of the current term.
+ * - content: Items for the content of the term (fields and description).
+ *   Use 'content' to print them all, or print a subset such as
+ *   'content.description'. Use the following code to exclude the
+ *   printing of a given child element:
+ *   @code
+ *   {{ content|without('description') }}
+ *   @endcode
+ * - attributes: HTML attributes for the wrapper.
+ * - page: Flag for the full page state.
+ * - term: The taxonomy term entity, including:
+ *   - id: The ID of the taxonomy term.
+ *   - bundle: Machine name of the current vocabulary.
+ * - view_mode: View mode, e.g. 'full', 'teaser', etc.
+ *
+ * @see template_preprocess_taxonomy_term()
+ *
+ * @ingroup themeable
+ */
+#}
+{{ attach_library('cevtheme/conquien_home_library') }}
+<div class="particulas fixed-top"></div>
+    <!--Rediseño Nav-->
+    <div id="wheel" class="container-fluid conquien cqhome">
+      <div class="row g-0">
+        <div class="col form-group div-menu-time-line">
+          <div class="form-group row g-0">
+            <div class="col-md-auto borde-derecha">VISUALIZACIÓN POR:
+              <select class="form-control" name="tipo_grafica" id="tipo_grafica">
+                <option  value="SeleccioneOpcion" selected>Seleccione una opción</option>
+                <option class="text-white" value="LineaTiempo">Aliados en el tiempo</option>
+                <option value="TipoAliado">Tipología de los aliados</option>
+                <option value="TemaTrabajo">Articulación de aliados por temas</option>                
+                <optgroup label="Articulación de aliados por regiones" data-select2-id="select2-data-5-ilu6">
+                  <option value="Nacional" data-select2-id="select2-data-4-4rz5">Nacional</option>
+                  <option value="Internacional" data-select2-id="select2-data-6-4046">Internacional</option>
+                </optgroup>
+                <!--<option value="RegionIncidencia">Articulación por regiones</option>-->
+               
+              </select>
+            </div>
+            <div id="select-buscar-nombre" class="col-md-auto borde-derecha">
+              <select class="form-control" name="buscar_nombre" id="buscar_nombre"></select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="index" class="row" style="overflow-x: hidden !important;">
+        <div class="col-12 div-content-time-line">
+          <div class="div-title-text-time-line d-flex flex-nowrap">
+            <div id="desc-index-conquien" class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 desc-index-conquien">
+              <h1 class="title-time-line">
+                ¿Con quién lo hicimos?
+              </h1>
+              
+              <div style="margin-top: 1rem;" id="txt_principal_index" class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                <p>
+                  En primer lugar con las víctimas y organizaciones de víctimas, 
+                  comunidades y colectivos. Además de las instituciones públicas, 
+                  organizaciones sociales y privadas, autoridades étnico-territoriales, 
+                  comunidad internacional y personas provenientes de distintos sectores,
+                   profesiones y lugares; fueron casi 3.000 que de manera 
+                   diferenciada y según su mandato, capacidad y convicción 
+                   trabajaron de la mano con la Comisión y contribuyeron al 
+                   desarrollo de su mandato. Un universo de actores diverso y 
+                   plural, que hemos denominado ALIADOS DE LA COMISIÓN DE LA VERDAD
+                </p>
+                <p>
+                  <strong>
+                    SIN USTEDES TODO LO LOGRADO NO HUBIERA SIDO POSIBLE
+                  </strong>
+                </p>
+                <p>
+                  Escuchar más de 30.000 testimonios y realizar 
+                  casi 2.000 procesos de diálogo público en todo 
+                  el territorio nacional y en 23 países del mundo, 
+                  para comprender qué nos ha pasado, el porqué del 
+                  conflicto armado interno y su persistencia, reconocer 
+                  lo vivido por las víctimas y definir recomendaciones 
+                  para la convivencia y la no repetición, sólo fue posible 
+                  gracias al compromiso colectivo en torno a la verdad. 
+                </p>
+                <p>
+                  El Informe Final y el legado que entrega la Comisión 
+                  son también el resultado de su compromiso, conocimientos, 
+                  experiencias, apoyos y relaciones, que recogemos y reconocemos en esta pieza
+                </p>
+              </div>
+              <div id="contenedor_divs_index_conquien" class="row justify-content-around col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                <div class="div_index_conquien">
+                  <h2><strong>Aliados en el tiempo</strong></h2>
+                  <p id="p_lineaTiempo">
+                    Esta categoría permite ver qué aliados han trabajado de la mano 
+                    con la Comisión durante los años:</p>
+                    <ul>
+                      <li class="texto_cuadros">2017: Creación de la Comisión de la Verdad mediante 
+                        el Decreto 588 de 2017. En noviembre el Comité de 
+                        escogencia elige a 11 Comisionados/as y realizan su primera reunión.</li>
+                        <li class="texto_cuadros">2018: Fase de alistamiento, asignación de presupuesto
+                           general de la nación para su funcionamiento 
+                           y el 28 de noviembre, inicio formal del desarrollo del mandato.</li>
+                        <li class="texto_cuadros">2019 – 2021: Fase de desarrollo del mandato. 
+                          Desde marzo del 2020, en coyuntura de pandemia.</li>
+                        <li class="texto_cuadros">2022: extensión del mandato (7 meses) por fallo 
+                          de la Corte Constitucional y adición de 2 meses de julio y agosto 
+                          para la amplia difusión del informe final. Agosto 27, inicia la 
+                          liquidación de la Comisión.</li>
+                    </ul>
+                    
+
+                  
+                  <button type="button" class="btn" id="btn_LineaTiempo">Ver aliados en el tiempo</button>
+                </div>
+                <div class="div_index_conquien">
+                  <h2><strong>Tipología de los aliados</strong></h2>
+                  <p id="p_tipoAliado">
+                    Esta categoría permite conocer a los aliados que acompañaron
+                     a la Comisión de acuerdo a una tipología. Los clasificamos 
+                     en 8 tipos de aliados: </p>
+                     <ol>
+                      <li class="texto_cuadros">Organizaciones, plataformas sociales 
+                      y territoriales</li>
+                      <li class="texto_cuadros">Institucionalidad pública e instancias nacionales y territoriales </li>
+                      <li class="texto_cuadros">Comunidad académica </li>
+                      <li class="texto_cuadros">Comunidad internacional</li>
+                      <li class="texto_cuadros">Medios de comunicación –públicos, privados y comunitarios </li>
+                      <li class="texto_cuadros">Sector empresarial</li>
+                      <li class="texto_cuadros">Sociedad Política </li>
+                      <li class="texto_cuadros">Consejo Asesor de la Comisión de la Verdad </li>                       
+                      </li>
+                    </ol>
+
+                  <button type="button" class="btn" id="btn_TipoAliado">Ver aliados por tipo</button>
+                </div>
+                <div class="div_index_conquien">
+                  <h2><strong>Articulación de aliados por regiones</strong></h2>
+                  <p id="p_Region" style="margin-bottom: 7pt;">
+                    Esta categoría permite compartir el lugar en el 
+                    que la Comisión trabajó de la mano con ese aliado en 
+                    particular, según el enfoque territorial que tuvo 
+                    la Comisión en su mandato. A través de mapas compartimos 
+                    si la cooperación se dio en Colombia, según las diez
+                     Macroterritoriales nacionales que cubrieron todo el 
+                     territorio nacional, o en la Macro Internacional, 
+                     con presencia en 23 países del mundo. 
+                  </p>
+                  <button type="button" class="btn" id="btn_Nacional" style="width: 49%;">Nacional</button>
+                  <button type="button" class="btn text-center" id="btn_Internacional" style="width: 49%;">Internacional</button>
+                </div>
+                <div class="div_index_conquien">
+                  <h2><strong>Articulación de aliados por temas</strong></h2>
+                  <p id="p_TemaTrabajo" style="margin-bottom: 7pt;">
+                    Esta categoría permite compartir los temas en los que 
+                    la Comisión trabajó de la mano con ese aliado en particular, 
+                    según el mandato que la Comisión tuvo asignado. Al ser un 
+                    mandato tan amplio, las diversas estrategias y procesos 
+                    desarrollados con los aliados se encuentran agrupadas en 5 
+                    grandes temáticas: La escucha amplia y diversa; el diálogo 
+                    social y público; los enfoques poblacionales y diferenciales; el 
+                    fortalecimiento institucional y el reconocimiento ético y político.
+                  </p>
+                  <button type="button" class="btn" id="btn_TemaTrabajo">Ver aliados por tema</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+{# BOTONES FLOTANTES #}
+{{ content.field_botones_menu_flotante }}
+{{ content.field_avivavoz }}
+{{ content.field_descargar_capitulo_pdf }}
+{{ content.field_descargable }}
+{{ content.field_anexos }}
+{{ content.field_enlace_anexos }}
+{{ content.field_id_frente_espejo }}
+{{ content.field_enlace_casos }}
+
+<script src="/themes/custom/cevtheme/js/driver.min.js"></script>
+<script type="text/javascript">
+{{ term.field_script_tour.value|raw }}
+</script>

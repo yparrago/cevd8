@@ -1,0 +1,61 @@
+{#
+/**
+* @file
+* Default theme implementation to present a media item.
+*
+* Available variables:
+* - media: The media item, with limited access to object properties and
+* methods. Only method names starting with "get", "has", or "is" and
+* a few common methods such as "id", "label", and "bundle" are available.
+* For example:
+* - entity.getEntityTypeId() will return the entity type ID.
+* - entity.hasField('field_example') returns TRUE if the entity includes
+* field_example. (This does not indicate the presence of a value in this
+* field.)
+* Calling other methods, such as entity.delete(), will result in
+* an exception.
+* See \Drupal\Core\Entity\EntityInterface for a full list of methods.
+* - name: Name of the media item.
+* - content: Media content.
+* - title_prefix: Additional output populated by modules, intended to be
+* displayed in front of the main title tag that appears in the template.
+* - title_suffix: Additional output populated by modules, intended to be
+* displayed after the main title tag that appears in the template.
+* - view_mode: View mode; for example, "teaser" or "full".
+* - attributes: HTML attributes for the containing element.
+* - title_attributes: Same as attributes, except applied to the main title
+* tag that appears in the template.
+*
+* @see template_preprocess_media()
+*
+* @ingroup themeable
+*/
+#}
+<div class="contenedor {{media.id}}">
+<div class="pp-slider swiper" id="galeria-back-{{media.id}}" data-galeria-id={{media.id}}>
+    <div class="swiper-wrapper">
+        {{ content.field_imagenes }}
+    </div>
+</div>
+<div class="pp-controls" id="galeria-control-{{media.id}}">
+    <button class="prev"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+            stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <polyline points="15 6 9 12 15 18" />
+        </svg> Anterior</button>
+    <div class="min-info-slider swiper" id="galeria-info-{{media.id}}">
+        <div class="swiper-wrapper galeriaCopia">
+        </div>
+    </div>
+    <button class="next">Siguiente<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+            stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <polyline points="9 6 15 12 9 18" />
+        </svg> 
+    </button>
+</div>
+
+<div class="slides-info" id="slides-info">
+</div>
+
+</div>

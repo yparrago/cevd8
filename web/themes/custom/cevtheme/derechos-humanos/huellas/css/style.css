@@ -1,0 +1,234 @@
+html, body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+h1, h2, h3, h4 {
+    font-family: obliqua, sans-serif;
+    font-weight: bold;
+}
+
+.contenedorppal{
+    display: flex;
+    flex-direction: row;
+    height: calc(100vh - 106px);
+    margin-top: 70px;
+}
+div.item1{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+    color: #fff;
+    position: relative;
+    height: 99.5%;
+    margin-top: 5px;
+    padding: 2em;
+    margin-bottom: 3px;
+    border: 4px solid #fff;
+    background-color: rgba(0,0,0,0.80);
+}
+.item1 img {
+    position: fixed;
+    z-index: -1;
+    top: 76px;
+    left: 0;
+    object-position: center center;
+    height: 90%;
+    width: 50%;
+    filter: brightness(0.5);
+}
+.item1 p,
+.item1 h3{
+    width: 100%;
+    line-height: 1.5rem;
+}
+
+div.item2{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+    height: 100%;
+    padding-bottom: 0rem;
+    border: 3px solid #fff;
+}
+.item,
+.item-interno{
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 150% 100%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 2px;
+}
+
+.item-interno{
+    height: 50%;
+    width: 50%;
+    border: 0px solid #fff;
+    border-left-width: 0px;
+    border-right-width: 4px;
+    border-bottom-width: 0px;
+    border-top-width: 5px;
+}
+.item-interno .col-12 {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-end;
+    align-items: center;
+}
+.item-interno .col-12 img {
+    position: fixed;
+    z-index: -1;
+    object-position: center center;
+    -o-object-fit: cover;
+    -o-object-position: center;
+    height: 45%;
+    width: 45%;
+    filter: brightness(0.5);
+}
+
+.item-interno .col-12 .titulo{
+    font-size: 25px;
+    color: #ffff;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 2em;
+    border-bottom: 2px solid #fff;
+    margin: 0 2em 2em;
+    padding: 0 0 0.5em;
+}
+.item-interno .col-12 .link{
+    color: #ffa847;
+    text-decoration: unset;
+    font-weight: 900;
+    font-size: 25px;
+    text-align: center;
+}
+.item-interno .col-12 .texto{
+    color: #fff;
+    padding: 5px 0px;
+    text-align: center;
+    width: 95%;
+    margin-bottom: 0.5rem;
+    line-height: 1rem;
+    font-size: 80%;
+}
+#linkAtras {
+    color: #ffff;
+    font-weight: 700;
+    padding-bottom: 4px;
+    margin-bottom: 0;
+    text-decoration: unset;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+#linkAtras h4 {
+    font-size: 17px;
+    margin: 8px 1px;
+}
+a.btn.btnModal.modal_cev {
+    background-color: #ffa847;
+    margin: 0.2rem 0rem;
+    font-size: 12px;
+    width: 150px;
+    border: 2px solid #d5d4d4;
+    transition: all .7s ease;
+}
+a.btn.btnModal.modal_cev:hover{
+    background-color: #d5d4d4;
+    border-color: #ffa847;
+}
+@media all and (max-width:765px){
+    .contenedorppal{
+        height: auto;
+    }
+    div.item1,
+    div.item2,
+    .item-interno{
+        width: 100%;
+    }
+    div.item1{
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 2em;
+    }
+    .item1 img{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+    }
+    div.item2{
+        flex-wrap: nowrap;
+        height: auto;
+        margin-bottom: 2.5rem;
+        border-right-width: 0px;
+    }   
+    .item-interno{
+        height: 40vh;
+        border-top-width: 0px;
+        border-bottom-width: 5px;
+    }
+    .item-interno .col-12{
+        padding-top: 3rem;
+    }
+    #linkAtras {
+        font-size: 100%;
+    }
+    .item1 p, .item1 h3 {
+        width: 100%;
+    }
+    .item1 p{
+        color: #fff;
+        padding: 10px 0px;
+        width: 95%;
+        margin-bottom: 0.5rem;
+        border-top: 1px solid #fff;
+        line-height: 1rem;
+        font-size: 90%;
+    }
+    a.btn.btnModal.modal_cev{
+        margin: 0.1rem auto;
+        font-size: 11px;
+        width: 133px;
+    }
+    .item1 h1,
+    .item1 h3{
+        text-align: center;
+        line-height: 1.5rem;
+    }
+    .item1 h1 {
+        margin-top: 1rem;
+        font-size: calc(2rem + 2vw);
+        line-height: 2rem;
+    }
+    .item1 h3{
+        font-size: 90%;
+        line-height: 1.2rem;
+        text-align: inherit;   
+    }
+    .item-interno .col-12 img {
+        position: absolute;
+        z-index: -1;
+        height: 57%;
+        width: 100%;
+    }
+
+}
+
+div.item1 h3 {
+    line-height: 1.6rem;
+}

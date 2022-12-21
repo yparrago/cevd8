@@ -1,0 +1,100 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a taxonomy term.
+ *
+ * Available variables:
+ * - url: URL of the current term.
+ * - name: (optional) Name of the current term.
+ * - content: Items for the content of the term (fields and description).
+ *   Use 'content' to print them all, or print a subset such as
+ *   'content.description'. Use the following code to exclude the
+ *   printing of a given child element:
+ *   @code
+ *   {{ content|without('description') }}
+ *   @endcode
+ * - attributes: HTML attributes for the wrapper.
+ * - page: Flag for the full page state.
+ * - term: The taxonomy term entity, including:
+ *   - id: The ID of the taxonomy term.
+ *   - bundle: Machine name of the current vocabulary.
+ * - view_mode: View mode, e.g. 'full', 'teaser', etc.
+ *
+ * @see template_preprocess_taxonomy_term()
+ *
+ * @ingroup themeable
+ */
+ #}
+
+ {# Plantilla IAR #}
+ {{ attach_library('cevtheme/iar_library') }}
+
+ <div class="map-container">
+    <div class="map-title">
+        <div class="map-title">
+            <h1>Impactos<br>Afrontamientos<br>y Resistencias</h1>
+            <h4> "Sufrir la guerra y rehacer la vida"</h4>
+        <!--<p class="col-11">
+                
+                Un colibrí acompañará nuestro viaje por 
+                <span class="collapse d-md-inline multi-collapse" id="text-collapsed">
+                    
+                   historias que nos confrontan con la magnitud del sufrimiento generado por el conflicto armado interno y nos conectan con la fuerza de la gente para seguir adelante y aportar a la paz.
+                </span>
+
+                <br>
+                <a class="d-md-none" data-bs-toggle="collapse" data-bs-target=".multi-collapse" href="#text-collapsed" role="button" aria-expanded="false" aria-controls="show-less show-more text-collapsed">(Ver 
+                    <span class="collapse show multi-collapse transition-none" id="show-more">más)</span>
+                    <span class="collapse multi-collapse transition-none" id="show-less">menos)</span>
+                </a>
+            </p>-->
+        </div>
+    </div>
+    <div id="map-wrapper" class="map-wrapper">
+        <div id="map"></div>
+
+        <div class="clouds">
+            <img class="cloud cloud-1x" src="/themes/custom/cevtheme/iar/img/clouds/cloud_1.png" width="600" style="top: 300px; left: 600px">
+            <img class="cloud cloud-2x" src="/themes/custom/cevtheme/iar/img/clouds/cloud_2.png" width="400" style="top: 700px; left: 300px">
+            <img class="cloud cloud-4x" src="/themes/custom/cevtheme/iar/img/clouds/cloud_3.png" width="400" style="top: 1100px">
+            <img class="cloud cloud-1x" src="/themes/custom/cevtheme/iar/img/clouds/cloud_4.png" width="600" style="top: 1500px; left: 1200px">
+            <img class="cloud cloud-2x" src="/themes/custom/cevtheme/iar/img/clouds/cloud_5.png" width="400" style="top: 1800px">
+            <img class="cloud cloud-1x" src="/themes/custom/cevtheme/iar/img/clouds/cloud_6.png" width="400" style="top: 2000px">
+            <img class="cloud cloud-3x" src="/themes/custom/cevtheme/iar/img/clouds/cloud_7.png" width="400" style="top: 2100px">
+        </div>
+        <div id="bird" class="bird">
+            <img class="pe-none" src="/themes/custom/cevtheme/iar/img/bird.gif" alt="Bird" srcset="">
+        </div>
+    </div>
+</div>
+<div class="overlay"></div>
+<div class="overlay-clouds">
+        <div class="pe-none overlay-cloud">
+            <img src="/themes/custom/cevtheme/iar/img/overlay-cloud-1.png">
+        </div>
+        <div class="pe-none overlay-cloud">
+            <img src="/themes/custom/cevtheme/iar/img/overlay-cloud-2.png">
+        </div>
+        <div class="pe-none overlay-cloud">
+            <img src="/themes/custom/cevtheme/iar/img/overlay-cloud-3.png">
+        </div>
+    </div>
+    <div id="minimap">
+        <div id="minimap-viewport"></div>
+    </div>
+
+
+{# BOTONES FLOTANTES #}
+{{ content.field_botones_menu_flotante }}
+{{ content.field_avivavoz }}
+{{ content.field_descargar_capitulo_pdf }}
+{{ content.field_descargable }}
+{{ content.field_anexos }}
+{{ content.field_enlace_anexos }}
+{{ content.field_id_frente_espejo }}
+{{ content.field_enlace_casos }}
+
+<script src="/themes/custom/cevtheme/js/driver.min.js"></script>
+<script type="text/javascript">
+{{ term.field_script_tour.value|raw }}
+</script>

@@ -1,0 +1,52 @@
+{#
+/**
+* @file
+* Theme override for a main view template.
+*
+* Available variables:
+* - attributes: Remaining HTML attributes for the element.
+* - css_name: A css-safe version of the view name.
+* - css_class: The user-specified classes names, if any.
+* - header: The optional header.
+* - footer: The optional footer.
+* - rows: The results of the view query, if any.
+* - empty: The content to display if there are no rows.
+* - pager: The optional pager next/prev links to display.
+* - exposed: Exposed widget form/info to display.
+* - feed_icons: Optional feed icons to display.
+* - more: An optional link to the next page of results.
+* - title: Title of the view, only used when displaying in the admin preview.
+* - title_prefix: Additional output populated by modules, intended to be
+* displayed in front of the view title.
+* - title_suffix: Additional output populated by modules, intended to be
+* displayed after the view title.
+* - attachment_before: An optional attachment view to be displayed before the
+* view content.
+* - attachment_after: An optional attachment view to be displayed after the
+* view content.
+* - dom_id: Unique id for every view being printed to give unique class for
+* Javascript.
+*
+* @see template_preprocess_views_view()
+*/
+#}
+<div class="row carrusel">
+  <div id="carruselPPal" class="carousel slide" data-bs-interval="false">
+    <div class="carousel-inner">
+      {% for key,row in rows %}
+      <div class="carousel-item  {% if key == 0 %} active {% endif %}" data-bs-interval="false">
+        <div class="col-md-4">
+          {{ row.content }}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carruselPPal" data-bs-slide="prev">
+      <span class="icono icon-flecha-iqz" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carruselPPal" data-bs-slide="next">
+      <span class="icono icon-flecha-der" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>  
+</div>

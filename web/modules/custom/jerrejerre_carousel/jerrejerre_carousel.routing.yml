@@ -1,0 +1,15 @@
+jerrejerre_carousel.example:
+  path: '/jerrejerre-carousel/example'
+  defaults:
+    _title: 'Example'
+    _controller: '\Drupal\jerrejerre_carousel\Controller\JerrejerreCarouselController::build'
+  requirements:
+    _permission: 'access content'
+
+jerrejerre_carousel.settings_form:
+  path: '/admin/config/system/jerrejerre-carousel'
+  defaults:
+    _title: 'Jerrejerre carousel settings'
+    _form: 'Drupal\jerrejerre_carousel\Form\SettingsForm'
+  requirements:
+    _permission: 'administer jerrejerre_carousel configuration'

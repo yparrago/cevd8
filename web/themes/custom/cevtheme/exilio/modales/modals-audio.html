@@ -1,0 +1,1636 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modals</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Oblicua -->
+    <link href='https://use.typekit.net/wnl6hvg.css' rel='stylesheet' type='text/css'>
+
+    <!-- Source Sans Pro -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link href="./css/audio-rt.css" rel="stylesheet" type="text/css">
+    <link href="./css/share-button.css" rel="stylesheet" type="text/css">
+    <link href="./css/lyricer.css" rel="stylesheet" type="text/css">
+    <link href="./css/style.css" rel="stylesheet" type="text/css">
+    <!-- iconos hechos fuente -->
+    <link href='./css/iconmood.css' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <!-- <script>
+        setTimeout(() => {
+            document.querySelector('button[data-bs-target="#audio-transcription-modal"]').click()
+        }, 500)
+    </script> -->
+    <div class="container pt-4">
+        <div class="buttons">
+            <div class="mb-2">
+                <button data-bs-target="#audio-modal">Audio</button>
+                <button data-bs-target="#audio-imagen-modal">Audio + Imagen</button>
+                <button data-bs-target="#audio-gallery-modal">Audio + Gallery</button>
+                <button data-bs-target="#audio-playlist-modal">Audio + Playlist</button>
+                <button data-bs-target="#audio-playlist-static-modal">Audio + Playlist Static</button>
+                <button data-bs-target="#audio-transcription-modal">Audio + Transcription</button>
+            </div>
+        </div>
+
+        <label class="mt-4">
+            <input type="checkbox" name="fullscreen" id="fullscreen">
+            Convert Modals to Fullscreen (use ESC to close the modal)
+        </label>
+    </div>
+
+    <!-- Audio Modal -->
+    <div class="modal fade" id="audio-modal" tabindex="-1" aria-labelledby="audio-modal-label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header px-4 pb-0 border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <span class="icon-ico-x"></span>
+                    </button>
+                </div>
+                <div class="modal-body p-4">
+                    <h1 class="h2">TÍTULO DEL MODAL DE AUDIO</h1>
+                    <div class="modal-keywords mb-2">
+                        <div>
+                            <a href="#">Phasellus</a> |
+                            <a href="#">Consectetur</a> |
+                            <a href="#">Consequat</a> |
+                            <a href="#">Malesuada</a>
+                        </div>
+                    </div>
+                    <p class="modal-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa illum soluta debitis corrupti?
+                        Pariatur, dignissimos vero eius dolore perspiciatis blanditiis temporibus quam ipsam magnam
+                        sint, optio culpa? Omnis, consequuntur rerum!
+                    </p>
+                    <div class="modal-icons mb-2">
+                        <div class="d-flex justify-content-end position-relative">
+                            <a href="#">
+                                 <span class="icon icon-ico-like"></span>
+                            </a>
+                            <a href="">
+                                <span class="icon icon-ico-access"></span>
+                            </a>
+                            <a href="#">
+                                <span class="icon icon-ico-download"></span>
+                            </a>
+                            <span class="social-share">
+                                <a href="#" data-share-menu>
+                                    <span class="icon-ico-share"></span>
+                                </a>
+                                <div class="x-share-button">
+                                    <div class="share-items-wrapper">
+                                        <div class="share-items">
+                                            <a href="https://facebook.com" target="_blank" class="share-item">
+                                                <i class="bi bi-facebook"></i>
+                                            </a>
+                                            <a href="https://instagram.com" target="_blank" class="share-item">
+                                                <i class="bi bi-instagram"></i>
+                                            </a>
+                                            <a href="#" target="_blank" class="share-item">
+                                                <i class="bi bi-link-45deg"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="modal-media mb-4 mt-4">
+                        <div class="rt-player" id="player-audio-modal">
+                            <div id="rt-audio-basic-modal">
+                                <audio></audio>
+                            </div>
+                            <div class="rt-time-indicartors row">
+                                <div class="d-flex align-items-center">
+                                    <div class="mx-2">
+                                        <span class="rt-timer" data-role="start">00:00</span>
+                                    </div>
+                                    <div class="progress flex-fill">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                                            aria-valuemax="100" data-role="player-progress-bar"></div>
+                                    </div>
+                                    <div class="mx-2">
+                                        <span class="rt-timer" data-role="end">00:00</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rt-player__buttons">
+                                <button class="btn mx-md-1" data-role="play"><i class="bi bi-play-circle"></i></button>
+                                <button class="btn mx-md-1 d-none" data-role="pause"><i
+                                        class="bi bi-pause-circle"></i></button>
+                                <button class="btn mx-1" data-role="prev"><i
+                                        class="bi bi-skip-backward-circle"></i></button>
+                                <button class="btn mx-1" data-role="next"><i
+                                        class="bi bi-skip-forward-circle"></i></button>
+                                <button class="btn mx-1" data-role="volUp"><i class="bi bi-volume-up"></i></button>
+                                <button class="btn mx-1" data-role="volDown"><i class="bi bi-volume-down"></i></button>
+                                <button class="btn mx-1" data-role="mute"><i class="bi bi-volume-mute"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lyricer mb-2" id="basic-audio-transcription"></div>
+                    <div>
+                        <nav>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <button class="nav-link active" id="related-tab-012" data-bs-toggle="tab"
+                                    data-bs-target="#related-012" type="button" role="tab" aria-controls="related-012"
+                                    aria-selected="true">
+                                    <span class="d-flex">
+                                        <span class="icon icon-ico-related me-1"></span>
+                                        <span class="nav-link-text">Archivos Relacionados</span>
+                                    </span>
+                                </button>
+                                <button class="nav-link" id="collection-tab-012" data-bs-toggle="tab"
+                                    data-bs-target="#collection-012" type="button" role="tab"
+                                    aria-controls="collection-012" aria-selected="false">
+                                    <span class="d-flex">
+                                        <span class="icon icon-ico-collections me-1"></span>
+                                        <span class="nav-link-text">Colecciones</span>
+                                    </span>
+                                </button>
+                                <button class="nav-link" id="native-tab-012" data-bs-toggle="tab"
+                                    data-bs-target="#native-012" type="button" role="tab" aria-controls="native-012"
+                                    aria-selected="false">
+                                    <span class="d-flex">
+                                        <span class="icon icon-ico-files me-1"></span>
+                                        <span class="nav-link-text">Archivos Nativos</span>
+                                    </span>
+                                </button>
+                            </div>
+                        </nav>
+                        <div class="tab-content p-2" id="nav-tabContent-1">
+                            <div class="tab-pane fade show active" id="related-012" role="tabpanel"
+                                aria-labelledby="related-tab-012">
+                                <p class="mb-1">Titulo listado</p>
+                                <ul>
+                                    <li><a href="#">Link 1</a></li>
+                                    <li><a href="#">Link 2</a></li>
+                                </ul>
+                            </div>
+                            <div class="tab-pane fade" id="collection-012" role="tabpanel"
+                                aria-labelledby="collection-tab-012">
+                                <p class="mb-1">Titulo listado</p>
+                                <ul>
+                                    <li><a href="#">Link 3</a></li>
+                                    <li><a href="#">Link 4</a></li>
+                                </ul>
+                            </div>
+                            <div class="tab-pane fade" id="native-012" role="tabpanel" aria-labelledby="native-tab-012">
+                                <p class="mb-1">Titulo listado</p>
+                                <ul>
+                                    <li><a href="#">Link 5</a></li>
+                                    <li><a href="#">Link 6</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio + Imagen Modal -->
+    <div class="modal fade" id="audio-imagen-modal" tabindex="-1" aria-labelledby="audio-imagen-modal-label"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header px-4 pb-0 border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <span class="icon-ico-x"></span>
+                    </button>
+                </div>
+                <div class="modal-body p-4">
+                    <h1 class="h2">TÍTULO DEL MODAL DE AUDIO + IMAGEN</h1>
+                    <div class="modal-keywords mb-2">
+                        <div>
+                            <a href="#">Phasellus</a> |
+                            <a href="#">Consectetur</a> |
+                            <a href="#">Consequat</a> |
+                            <a href="#">Malesuada</a>
+                        </div>
+                    </div>
+                    <p class="modal-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa illum soluta debitis corrupti?
+                        Pariatur, dignissimos vero eius dolore perspiciatis blanditiis temporibus quam ipsam magnam
+                        sint, optio culpa? Omnis, consequuntur rerum!
+                    </p>
+                    <div class="modal-icons mb-2">
+                        <div class="d-flex justify-content-end position-relative">
+                            <a href="#">
+                                 <span class="icon icon-ico-like"></span>
+                            </a>
+                            <a href="">
+                                <span class="icon icon-ico-access"></span>
+                            </a>
+                            <a href="#">
+                                <span class="icon icon-ico-download"></span>
+                            </a>
+                            <span class="social-share">
+                                <a href="#" data-share-menu>
+                                    <span class="icon-ico-share"></span>
+                                </a>
+                                <div class="x-share-button">
+                                    <div class="share-items-wrapper">
+                                        <div class="share-items">
+                                            <a href="https://facebook.com" target="_blank" class="share-item">
+                                                <i class="bi bi-facebook"></i>
+                                            </a>
+                                            <a href="https://instagram.com" target="_blank" class="share-item">
+                                                <i class="bi bi-instagram"></i>
+                                            </a>
+                                            <a href="#" target="_blank" class="share-item">
+                                                <i class="bi bi-link-45deg"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="modal-media mb-4 mt-4">
+                        <figure>
+                            <img src="https://picsum.photos/600/300" class="w-100" data-zoomable data-zoomable alt>
+                        </figure>
+                        <div>
+                            <div class="rt-player" id="player-audio-imagen">
+                                <div>
+                                    <audio></audio>
+                                </div>
+                                <div class="rt-time-indicartors row">
+                                    <div class="d-flex align-items-center">
+                                        <div class="mx-2">
+                                            <span class="rt-timer" data-role="start">00:00</span>
+                                        </div>
+                                        <div class="progress flex-fill">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="0"
+                                                aria-valuemin="0" aria-valuemax="100" data-role="player-progress-bar">
+                                            </div>
+                                        </div>
+                                        <div class="mx-2">
+                                            <span class="rt-timer" data-role="end">00:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rt-player__buttons">
+                                    <button class="btn mx-md-1" data-role="play"><i
+                                            class="bi bi-play-circle"></i></button>
+                                    <button class="btn mx-md-1 d-none" data-role="pause"><i
+                                            class="bi bi-pause-circle"></i></button>
+                                    <button class="btn mx-1" data-role="prev"><i
+                                            class="bi bi-skip-backward-circle"></i></button>
+                                    <button class="btn mx-1" data-role="next"><i
+                                            class="bi bi-skip-forward-circle"></i></button>
+                                    <button class="btn mx-1" data-role="volUp"><i class="bi bi-volume-up"></i></button>
+                                    <button class="btn mx-1" data-role="volDown"><i
+                                            class="bi bi-volume-down"></i></button>
+                                    <button class="btn mx-1" data-role="mute"><i class="bi bi-volume-mute"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lyricer mb-2" id="audio-imagen-transcription"></div>
+                        <div>
+                            <nav>
+                                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                    <button class="nav-link active" id="related-tab-013" data-bs-toggle="tab"
+                                        data-bs-target="#related-013" type="button" role="tab"
+                                        aria-controls="related-013" aria-selected="true">
+                                        <span class="d-flex">
+                                            <span class="icon icon-ico-related me-1"></span>
+                                            <span class="nav-link-text">Archivos Relacionados</span>
+                                        </span>
+                                    </button>
+                                    <button class="nav-link" id="collection-tab-013" data-bs-toggle="tab"
+                                        data-bs-target="#collection-013" type="button" role="tab"
+                                        aria-controls="collection-013" aria-selected="false">
+                                        <span class="d-flex">
+                                            <span class="icon icon-ico-collections me-1"></span>
+                                            <span class="nav-link-text">Colecciones</span>
+                                        </span>
+                                    </button>
+                                    <button class="nav-link" id="native-tab-013" data-bs-toggle="tab"
+                                        data-bs-target="#native-013" type="button" role="tab" aria-controls="native-013"
+                                        aria-selected="false">
+                                        <span class="d-flex">
+                                            <span class="icon icon-ico-files me-1"></span>
+                                            <span class="nav-link-text">Archivos Nativos</span>
+                                        </span>
+                                    </button>
+                                </div>
+                            </nav>
+                            <div class="tab-content p-2" id="nav-tabContent-1">
+                                <div class="tab-pane fade show active" id="related-013" role="tabpanel"
+                                    aria-labelledby="related-tab-013">
+                                    <p class="mb-1">Titulo listado</p>
+                                    <ul>
+                                        <li><a href="#">Link 1</a></li>
+                                        <li><a href="#">Link 2</a></li>
+                                    </ul>
+                                </div>
+                                <div class="tab-pane fade" id="collection-013" role="tabpanel"
+                                    aria-labelledby="collection-tab-013">
+                                    <p class="mb-1">Titulo listado</p>
+                                    <ul>
+                                        <li><a href="#">Link 3</a></li>
+                                        <li><a href="#">Link 4</a></li>
+                                    </ul>
+                                </div>
+                                <div class="tab-pane fade" id="native-013" role="tabpanel"
+                                    aria-labelledby="native-tab-013">
+                                    <p class="mb-1">Titulo listado</p>
+                                    <ul>
+                                        <li><a href="#">Link 5</a></li>
+                                        <li><a href="#">Link 6</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio + Gallery Modal -->
+    <div class="modal fade" id="audio-gallery-modal" tabindex="-1" aria-labelledby="audio-gallery-modal-label"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header px-4 pb-0 border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <span class="icon-ico-x"></span>
+                    </button>
+                </div>
+                <div class="modal-body p-4">
+                    <h1 class="h2">TÍTULO DEL MODAL DE AUDIO + GALLERY</h1>
+                    <div class="modal-keywords mb-2">
+                        <div>
+                            <a href="#">Phasellus</a> |
+                            <a href="#">Consectetur</a> |
+                            <a href="#">Consequat</a> |
+                            <a href="#">Malesuada</a>
+                        </div>
+                    </div>
+                    <p class="modal-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa illum soluta debitis corrupti?
+                        Pariatur, dignissimos vero eius dolore perspiciatis blanditiis temporibus quam ipsam magnam
+                        sint, optio culpa? Omnis, consequuntur rerum!
+                    </p>
+                    <div class="modal-icons mb-2">
+                        <div class="d-flex justify-content-end position-relative">
+                            <a href="#">
+                                 <span class="icon icon-ico-like"></span>
+                            </a>
+                            <a href="">
+                                <span class="icon icon-ico-access"></span>
+                            </a>
+                            <a href="#">
+                                <span class="icon icon-ico-download"></span>
+                            </a>
+                            <span class="social-share">
+                                <a href="#" data-share-menu>
+                                    <span class="icon-ico-share"></span>
+                                </a>
+                                <div class="x-share-button">
+                                    <div class="share-items-wrapper">
+                                        <div class="share-items">
+                                            <a href="https://facebook.com" target="_blank" class="share-item">
+                                                <i class="bi bi-facebook"></i>
+                                            </a>
+                                            <a href="https://instagram.com" target="_blank" class="share-item">
+                                                <i class="bi bi-instagram"></i>
+                                            </a>
+                                            <a href="#" target="_blank" class="share-item">
+                                                <i class="bi bi-link-45deg"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="modal-media mb-4 mt-4">
+                        <div id="carousel-audio-gallery-modal" class="carousel slide" data-bs-interval="false">
+                            <div class="carousel-indicators" style="bottom: 100px;">
+                                <button type="button" data-bs-target="#carousel-audio-gallery-modal"
+                                    data-bs-slide-to="0" class="active pe-none" aria-current="true" aria-label="Slide 1"
+                                    style="width: 8px; height: 8px;border-radius: 100%"></button>
+                                <button class="pe-none" type="button" data-bs-target="#carousel-audio-gallery-modal"
+                                    data-bs-slide-to="1" aria-label="Slide 2"
+                                    style="width: 8px; height: 8px;border-radius: 100%"></button>
+                                <button class="pe-none" type="button" data-bs-target="#carousel-audio-gallery-modal"
+                                    data-bs-slide-to="2" aria-label="Slide 3"
+                                    style="width: 8px; height: 8px;border-radius: 100%"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="border rounded">
+                                        <figure class="mb-1">
+                                            <img src="https://picsum.photos/600/300" class="d-block w-100" data-zoomable
+                                                data-zoomable alt>
+                                        </figure>
+                                        <div class="d-md-block p-3" style="font-size: 12px;">
+                                            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe in quo,
+                                                quisquam perferendis illum rem nam eligendi minus, consequatur
+                                                distinctio accusantium deserunt harum error culpa omnis vel assumenda
+                                                corporis recusandae.
+                                            </p>
+                                            <a href="#">Fuente</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="border rounded">
+                                        <figure class="mb-1">
+                                            <img src="https://picsum.photos/600/300" class="d-block w-100" data-zoomable
+                                                data-zoomable alt>
+                                        </figure>
+                                        <div class="d-md-block p-3" style="font-size: 12px;">
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe in quo,
+                                                quisquam perferendis illum rem nam eligendi minus, consequatur
+                                                distinctio accusantium deserunt harum error culpa omnis vel assumenda
+                                                corporis recusandae.
+                                            </p>
+                                            <a href="#">Fuente</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="border rounded">
+                                        <figure class="mb-1">
+                                            <img src="https://picsum.photos/600/300" class="d-block w-100" data-zoomable
+                                                data-zoomable alt>
+                                        </figure>
+                                        <div class="d-md-block p-3" style="font-size: 12px;">
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe in quo,
+                                                quisquam perferendis illum rem nam eligendi minus, consequatur
+                                                distinctio accusantium deserunt harum error culpa omnis vel assumenda
+                                                corporis recusandae.
+                                            </p>
+                                            <a href="#">Fuente</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carousel-audio-gallery-modal" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#carousel-audio-gallery-modal" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <div class="mt-2">
+                            <div class="rt-player" id="player-audio-gallery">
+                                <div id="rt-audio">
+                                    <audio></audio>
+                                </div>
+                                <div class="rt-time-indicartors row">
+                                    <div class="d-flex align-items-center">
+                                        <div class="mx-2">
+                                            <span class="rt-timer" data-role="start">00:00</span>
+                                        </div>
+                                        <div class="progress flex-fill">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="0"
+                                                aria-valuemin="0" aria-valuemax="100" data-role="player-progress-bar">
+                                            </div>
+                                        </div>
+                                        <div class="mx-2">
+                                            <span class="rt-timer" data-role="end">00:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rt-player__buttons">
+                                    <button class="btn mx-md-1" data-role="play"><i
+                                            class="bi bi-play-circle"></i></button>
+                                    <button class="btn mx-md-1 d-none" data-role="pause"><i
+                                            class="bi bi-pause-circle"></i></button>
+                                    <button class="btn mx-1" data-role="prev"><i
+                                            class="bi bi-skip-backward-circle"></i></button>
+                                    <button class="btn mx-1" data-role="next"><i
+                                            class="bi bi-skip-forward-circle"></i></button>
+                                    <button class="btn mx-1" data-role="volUp"><i class="bi bi-volume-up"></i></button>
+                                    <button class="btn mx-1" data-role="volDown"><i
+                                            class="bi bi-volume-down"></i></button>
+                                    <button class="btn mx-1" data-role="mute"><i class="bi bi-volume-mute"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lyricer mb-2" id="gallery-audio-transcription"></div>
+                        <div>
+                            <nav>
+                                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                    <button class="nav-link active" id="related-tab-014" data-bs-toggle="tab"
+                                        data-bs-target="#related-014" type="button" role="tab"
+                                        aria-controls="related-014" aria-selected="true">
+                                        <span class="d-flex">
+                                            <span class="icon icon-ico-related me-1"></span>
+                                            <span class="nav-link-text">Archivos Relacionados</span>
+                                        </span>
+                                    </button>
+                                    <button class="nav-link" id="collection-tab-014" data-bs-toggle="tab"
+                                        data-bs-target="#collection-014" type="button" role="tab"
+                                        aria-controls="collection-014" aria-selected="false">
+                                        <span class="d-flex">
+                                            <span class="icon icon-ico-collections me-1"></span>
+                                            <span class="nav-link-text">Colecciones</span>
+                                        </span>
+                                    </button>
+                                    <button class="nav-link" id="native-tab-014" data-bs-toggle="tab"
+                                        data-bs-target="#native-014" type="button" role="tab" aria-controls="native-014"
+                                        aria-selected="false">
+                                        <span class="d-flex">
+                                            <span class="icon icon-ico-files me-1"></span>
+                                            <span class="nav-link-text">Archivos Nativos</span>
+                                        </span>
+                                    </button>
+                                </div>
+                            </nav>
+                            <div class="tab-content p-2" id="nav-tabContent-1">
+                                <div class="tab-pane fade show active" id="related-014" role="tabpanel"
+                                    aria-labelledby="related-tab-014">
+                                    <p class="mb-1">Titulo listado</p>
+                                    <ul>
+                                        <li><a href="#">Link 1</a></li>
+                                        <li><a href="#">Link 2</a></li>
+                                    </ul>
+                                </div>
+                                <div class="tab-pane fade" id="collection-014" role="tabpanel"
+                                    aria-labelledby="collection-tab-014">
+                                    <p class="mb-1">Titulo listado</p>
+                                    <ul>
+                                        <li><a href="#">Link 3</a></li>
+                                        <li><a href="#">Link 4</a></li>
+                                    </ul>
+                                </div>
+                                <div class="tab-pane fade" id="native-014" role="tabpanel"
+                                    aria-labelledby="native-tab-014">
+                                    <p class="mb-1">Titulo listado</p>
+                                    <ul>
+                                        <li><a href="#">Link 5</a></li>
+                                        <li><a href="#">Link 6</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio + Playlist -->
+    <div class="modal fade" id="audio-playlist-modal" tabindex="-1" aria-labelledby="audio-playlist-modal-label"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header px-4 pb-0 border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <span class="icon-ico-x"></span>
+                    </button>
+                </div>
+                <div class="modal-body p-4">
+                    <h1 class="h2">TÍTULO DEL MODAL DE AUDIO + PLAYLIST</h1>
+                    <div class="modal-keywords mb-2">
+                        <div>
+                            <a href="#">Phasellus</a> |
+                            <a href="#">Consectetur</a> |
+                            <a href="#">Consequat</a> |
+                            <a href="#">Malesuada</a>
+                        </div>
+                    </div>
+                    <p class="modal-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa illum soluta debitis corrupti?
+                        Pariatur, dignissimos vero eius dolore perspiciatis blanditiis temporibus quam ipsam magnam
+                        sint, optio culpa? Omnis, consequuntur rerum!
+                    </p>
+                    <div class="modal-icons mb-2">
+                        <div class="d-flex justify-content-end position-relative">
+                            <a href="#">
+                                 <span class="icon icon-ico-like"></span>
+                            </a>
+                            <a href="">
+                                <span class="icon icon-ico-access"></span>
+                            </a>
+                            <a href="#">
+                                <span class="icon icon-ico-download"></span>
+                            </a>
+                            <span class="social-share">
+                                <a href="#" data-share-menu>
+                                    <span class="icon-ico-share"></span>
+                                </a>
+                                <div class="x-share-button">
+                                    <div class="share-items-wrapper">
+                                        <div class="share-items">
+                                            <a href="https://facebook.com" target="_blank" class="share-item">
+                                                <i class="bi bi-facebook"></i>
+                                            </a>
+                                            <a href="https://instagram.com" target="_blank" class="share-item">
+                                                <i class="bi bi-instagram"></i>
+                                            </a>
+                                            <a href="#" target="_blank" class="share-item">
+                                                <i class="bi bi-link-45deg"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="modal-media mb-4 mt-4">
+                        <div id="carousel-audio-playlist-modal" class="carousel slide" data-bs-interval="false">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carousel-audio-playlist-modal"
+                                    data-bs-slide-to="0" class="active pe-none" aria-current="true" aria-label="Slide 1"
+                                    style="width: 8px; height: 8px;border-radius: 100%"></button>
+                                <button class="pe-none" type="button" data-bs-target="#carousel-audio-playlist-modal"
+                                    data-bs-slide-to="1" aria-label="Slide 2"
+                                    style="width: 8px; height: 8px;border-radius: 100%"></button>
+                                <button class="pe-none" type="button" data-bs-target="#carousel-audio-playlist-modal"
+                                    data-bs-slide-to="2" aria-label="Slide 3"
+                                    style="width: 8px; height: 8px;border-radius: 100%"></button>
+                                <button class="pe-none" type="button" data-bs-target="#carousel-audio-playlist-modal"
+                                    data-bs-slide-to="3" aria-label="Slide 3"
+                                    style="width: 8px; height: 8px;border-radius: 100%"></button>
+                                <button class="pe-none" type="button" data-bs-target="#carousel-audio-playlist-modal"
+                                    data-bs-slide-to="4" aria-label="Slide 3"
+                                    style="width: 8px; height: 8px;border-radius: 100%"></button>
+                                <button class="pe-none" type="button" data-bs-target="#carousel-audio-playlist-modal"
+                                    data-bs-slide-to="5" aria-label="Slide 3"
+                                    style="width: 8px; height: 8px;border-radius: 100%"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <figure class="mb-1">
+                                        <img src="https://picsum.photos/600/300" class="d-block w-100" data-zoomable
+                                            alt>
+                                    </figure>
+                                </div>
+                                <div class="carousel-item">
+                                    <figure class="mb-1">
+                                        <img src="https://picsum.photos/600/300" class="d-block w-100" data-zoomable
+                                            alt>
+                                    </figure>
+                                </div>
+                                <div class="carousel-item">
+                                    <figure class="mb-1">
+                                        <img src="https://picsum.photos/600/300" class="d-block w-100" data-zoomable
+                                            alt>
+                                    </figure>
+                                </div>
+                                <div class="carousel-item">
+                                    <figure class="mb-1">
+                                        <img src="https://picsum.photos/600/300" class="d-block w-100" data-zoomable
+                                            alt>
+                                    </figure>
+                                </div>
+                                <div class="carousel-item">
+                                    <figure class="mb-1">
+                                        <img src="https://picsum.photos/600/300" class="d-block w-100" data-zoomable
+                                            alt>
+                                    </figure>
+                                </div>
+                                <div class="carousel-item">
+                                    <figure class="mb-1">
+                                        <img src="https://picsum.photos/600/300" class="d-block w-100" data-zoomable
+                                            alt>
+                                    </figure>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carousel-audio-playlist-modal" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#carousel-audio-playlist-modal" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <div class="mt-2">
+                            <div class="rt-player" id="player-audio-playlist">
+                                <div id="rt-audio">
+                                    <audio></audio>
+                                </div>
+                                <div class="rt-time-indicartors row">
+                                    <div class="d-flex align-items-center">
+                                        <div class="mx-2">
+                                            <span class="rt-timer" data-role="start">00:00</span>
+                                        </div>
+                                        <div class="progress flex-fill">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="0"
+                                                aria-valuemin="0" aria-valuemax="100" data-role="player-progress-bar">
+                                            </div>
+                                        </div>
+                                        <div class="mx-2">
+                                            <span class="rt-timer" data-role="end">00:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rt-player__buttons">
+                                    <button class="btn mx-md-1" data-role="play"><i
+                                            class="bi bi-play-circle"></i></button>
+                                    <button class="btn mx-md-1 d-none" data-role="pause"><i
+                                            class="bi bi-pause-circle"></i></button>
+                                    <!-- <button class="btn mx-1" data-role="prev"><i class="bi bi-skip-backward-circle"></i></button> -->
+                                    <!-- <button class="btn mx-1" data-role="next"><i class="bi bi-skip-forward-circle"></i></button> -->
+                                    <button class="btn mx-1" data-role="volUp"><i class="bi bi-volume-up"></i></button>
+                                    <button class="btn mx-1" data-role="volDown"><i
+                                            class="bi bi-volume-down"></i></button>
+                                    <button class="btn mx-1" data-role="mute"><i class="bi bi-volume-mute"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lyricer mb-2" id="audio-playlist-transcription"></div>
+                        <div class="mb-2">
+                            <ul id="playlist-modal-playlist" class="list-group list-group-flush list-group-numbered"
+                                style="max-height: 204px; overflow-y: scroll">
+                            </ul>
+                        </div>
+
+                        <div>
+                            <nav>
+                                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                    <button class="nav-link active" id="related-tab-015" data-bs-toggle="tab"
+                                        data-bs-target="#related-015" type="button" role="tab"
+                                        aria-controls="related-015" aria-selected="true">
+                                        <span class="d-flex">
+                                            <span class="icon icon-ico-related me-1"></span>
+                                            <span class="nav-link-text">Archivos Relacionados</span>
+                                        </span>
+                                    </button>
+                                    <button class="nav-link" id="collection-tab-015" data-bs-toggle="tab"
+                                        data-bs-target="#collection-015" type="button" role="tab"
+                                        aria-controls="collection-015" aria-selected="false">
+                                        <span class="d-flex">
+                                            <span class="icon icon-ico-collections me-1"></span>
+                                            <span class="nav-link-text">Colecciones</span>
+                                        </span>
+                                    </button>
+                                    <button class="nav-link" id="native-tab-015" data-bs-toggle="tab"
+                                        data-bs-target="#native-015" type="button" role="tab" aria-controls="native-015"
+                                        aria-selected="false">
+                                        <span class="d-flex">
+                                            <span class="icon icon-ico-files me-1"></span>
+                                            <span class="nav-link-text">Archivos Nativos</span>
+                                        </span>
+                                    </button>
+                                </div>
+                            </nav>
+                            <div class="tab-content p-2" id="nav-tabContent-1">
+                                <div class="tab-pane fade show active" id="related-015" role="tabpanel"
+                                    aria-labelledby="related-tab-015">
+                                    <p class="mb-1">Titulo listado</p>
+                                    <ul>
+                                        <li><a href="#">Link 1</a></li>
+                                        <li><a href="#">Link 2</a></li>
+                                    </ul>
+                                </div>
+                                <div class="tab-pane fade" id="collection-015" role="tabpanel"
+                                    aria-labelledby="collection-tab-015">
+                                    <p class="mb-1">Titulo listado</p>
+                                    <ul>
+                                        <li><a href="#">Link 3</a></li>
+                                        <li><a href="#">Link 4</a></li>
+                                    </ul>
+                                </div>
+                                <div class="tab-pane fade" id="native-015" role="tabpanel"
+                                    aria-labelledby="native-tab-015">
+                                    <p class="mb-1">Titulo listado</p>
+                                    <ul>
+                                        <li><a href="#">Link 5</a></li>
+                                        <li><a href="#">Link 6</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio + Playlist estática -->
+    <div class="modal fade" id="audio-playlist-static-modal" tabindex="-1"
+        aria-labelledby="audio-playlist-static-modal-label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header px-4 pb-0 border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <span class="icon-ico-x"></span>
+                    </button>
+                </div>
+                <div class="modal-body p-4">
+                    <h1 class="h2">TÍTULO DEL MODAL DE AUDIO + PLAYLIST STATIC</h1>
+                    <div class="modal-keywords mb-2">
+                        <div>
+                            <a href="#">Phasellus</a> |
+                            <a href="#">Consectetur</a> |
+                            <a href="#">Consequat</a> |
+                            <a href="#">Malesuada</a>
+                        </div>
+                    </div>
+                    <p class="modal-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa illum soluta debitis corrupti?
+                        Pariatur, dignissimos vero eius dolore perspiciatis blanditiis temporibus quam ipsam magnam
+                        sint, optio culpa? Omnis, consequuntur rerum!
+                    </p>
+                    <div class="modal-icons mb-2">
+                        <div class="d-flex justify-content-end position-relative">
+                            <a href="#">
+                                 <span class="icon icon-ico-like"></span>
+                            </a>
+                            <a href="">
+                                <span class="icon icon-ico-access"></span>
+                            </a>
+                            <a href="#">
+                                <span class="icon icon-ico-download"></span>
+                            </a>
+                            <span class="social-share">
+                                <a href="#" data-share-menu>
+                                    <span class="icon-ico-share"></span>
+                                </a>
+                                <div class="x-share-button">
+                                    <div class="share-items-wrapper">
+                                        <div class="share-items">
+                                            <a href="https://facebook.com" target="_blank" class="share-item">
+                                                <i class="bi bi-facebook"></i>
+                                            </a>
+                                            <a href="https://instagram.com" target="_blank" class="share-item">
+                                                <i class="bi bi-instagram"></i>
+                                            </a>
+                                            <a href="#" target="_blank" class="share-item">
+                                                <i class="bi bi-link-45deg"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="modal-media mb-4 mt-4">
+                        <div id="carousel-audio-playlist-static-modal" class="carousel slide" data-bs-interval="false">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carousel-audio-playlist-static-modal"
+                                    data-bs-slide-to="0" class="active pe-none" aria-current="true" aria-label="Slide 1"
+                                    style="width: 8px; height: 8px;border-radius: 100%"></button>
+                                <button class="pe-none" type="button"
+                                    data-bs-target="#carousel-audio-playlist-static-modal" data-bs-slide-to="1"
+                                    aria-label="Slide 2" style="width: 8px; height: 8px;border-radius: 100%"></button>
+                                <button class="pe-none" type="button"
+                                    data-bs-target="#carousel-audio-playlist-static-modal" data-bs-slide-to="2"
+                                    aria-label="Slide 3" style="width: 8px; height: 8px;border-radius: 100%"></button>
+                                <button class="pe-none" type="button"
+                                    data-bs-target="#carousel-audio-playlist-static-modal" data-bs-slide-to="3"
+                                    aria-label="Slide 3" style="width: 8px; height: 8px;border-radius: 100%"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <figure class="mb-1">
+                                        <img src="https://picsum.photos/600/300" class="d-block w-100" data-zoomable
+                                            alt>
+                                    </figure>
+                                </div>
+                                <div class="carousel-item">
+                                    <figure class="mb-1">
+                                        <img src="https://picsum.photos/600/300" class="d-block w-100" data-zoomable
+                                            alt>
+                                    </figure>
+                                </div>
+                                <div class="carousel-item">
+                                    <figure class="mb-1">
+                                        <img src="https://picsum.photos/600/300" class="d-block w-100" data-zoomable
+                                            alt>
+                                    </figure>
+                                </div>
+                                <div class="carousel-item">
+                                    <figure class="mb-1">
+                                        <img src="https://picsum.photos/600/300" class="d-block w-100" data-zoomable
+                                            alt>
+                                    </figure>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carousel-audio-playlist-static-modal" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#carousel-audio-playlist-static-modal" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <div class="mt-2">
+                            <div class="rt-player" id="player-audio-playlist-static">
+                                <div id="rt-audio">
+                                    <audio></audio>
+                                </div>
+                                <div class="rt-time-indicartors row">
+                                    <div class="d-flex align-items-center">
+                                        <div class="mx-2">
+                                            <span class="rt-timer" data-role="start">00:00</span>
+                                        </div>
+                                        <div class="progress flex-fill">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="0"
+                                                aria-valuemin="0" aria-valuemax="100" data-role="player-progress-bar">
+                                            </div>
+                                        </div>
+                                        <div class="mx-2">
+                                            <span class="rt-timer" data-role="end">00:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rt-player__buttons">
+                                    <button class="btn mx-md-1" data-role="play"><i
+                                            class="bi bi-play-circle"></i></button>
+                                    <button class="btn mx-md-1 d-none" data-role="pause"><i
+                                            class="bi bi-pause-circle"></i></button>
+                                    <!-- <button class="btn mx-1" data-role="prev"><i class="bi bi-skip-backward-circle"></i></button> -->
+                                    <!-- <button class="btn mx-1" data-role="next"><i class="bi bi-skip-forward-circle"></i></button> -->
+                                    <button class="btn mx-1" data-role="volUp"><i class="bi bi-volume-up"></i></button>
+                                    <button class="btn mx-1" data-role="volDown"><i
+                                            class="bi bi-volume-down"></i></button>
+                                    <button class="btn mx-1" data-role="mute"><i class="bi bi-volume-mute"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lyricer mb-2" id="audio-playlist-static-transcription"></div>
+                        <div class="mb-2">
+                            <ul id="playlist-modal-playlist-static"
+                                class="list-group list-group-flush list-group-numbered"
+                                style="max-height: 204px; overflow-y: scroll">
+                            </ul>
+                        </div>
+                        <div>
+                            <nav>
+                                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                    <button class="nav-link active" id="related-tab-016" data-bs-toggle="tab"
+                                        data-bs-target="#related-016" type="button" role="tab"
+                                        aria-controls="related-016" aria-selected="true">
+                                        <span class="d-flex">
+                                            <span class="icon icon-ico-related me-1"></span>
+                                            <span class="nav-link-text">Archivos Relacionados</span>
+                                        </span>
+                                    </button>
+                                    <button class="nav-link" id="collection-tab-016" data-bs-toggle="tab"
+                                        data-bs-target="#collection-016" type="button" role="tab"
+                                        aria-controls="collection-016" aria-selected="false">
+                                        <span class="d-flex">
+                                            <span class="icon icon-ico-collections me-1"></span>
+                                            <span class="nav-link-text">Colecciones</span>
+                                        </span>
+                                    </button>
+                                    <button class="nav-link" id="native-tab-016" data-bs-toggle="tab"
+                                        data-bs-target="#native-016" type="button" role="tab" aria-controls="native-016"
+                                        aria-selected="false">
+                                        <span class="d-flex">
+                                            <span class="icon icon-ico-files me-1"></span>
+                                            <span class="nav-link-text">Archivos Nativos</span>
+                                        </span>
+                                    </button>
+                                </div>
+                            </nav>
+                            <div class="tab-content p-2" id="nav-tabContent-1">
+                                <div class="tab-pane fade show active" id="related-016" role="tabpanel"
+                                    aria-labelledby="related-tab-016">
+                                    <p class="mb-1">Titulo listado</p>
+                                    <ul>
+                                        <li><a href="#">Link 1</a></li>
+                                        <li><a href="#">Link 2</a></li>
+                                    </ul>
+                                </div>
+                                <div class="tab-pane fade" id="collection-016" role="tabpanel"
+                                    aria-labelledby="collection-tab-016">
+                                    <p class="mb-1">Titulo listado</p>
+                                    <ul>
+                                        <li><a href="#">Link 3</a></li>
+                                        <li><a href="#">Link 4</a></li>
+                                    </ul>
+                                </div>
+                                <div class="tab-pane fade" id="native-016" role="tabpanel"
+                                    aria-labelledby="native-tab-016">
+                                    <p class="mb-1">Titulo listado</p>
+                                    <ul>
+                                        <li><a href="#">Link 5</a></li>
+                                        <li><a href="#">Link 6</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio + Transcription -->
+    <div class="modal fade" id="audio-transcription-modal" tabindex="-1"
+        aria-labelledby="audio-transcription-modal-label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header px-4 pb-0 border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <span class="icon-ico-x"></span>
+                    </button>
+                </div>
+                <div class="modal-body p-4">
+                    <h1 class="h2">TÍTULO DEL MODAL DE AUDIO + TRANSCRIPCION</h1>
+                    <div class="modal-keywords mb-2">
+                        <div>
+                            <a href="#">Phasellus</a> |
+                            <a href="#">Consectetur</a> |
+                            <a href="#">Consequat</a> |
+                            <a href="#">Malesuada</a>
+                        </div>
+                    </div>
+                    <div class="modal-media mb-4">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <button data-toggler="audio-transcription-1" class="btn link">Imagen</button> |
+                            <button data-toggler="audio-transcription-2" class="btn link">Transcripción</button>
+                        </div>
+                        <div id="audio-transcription-toggler-view" class="mb-2">
+                            <div id="audio-transcription-1">
+                                <p class="modal-description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa illum soluta debitis
+                                    corrupti?
+                                    Pariatur, dignissimos vero eius dolore perspiciatis blanditiis temporibus quam ipsam
+                                    magnam
+                                    sint, optio culpa? Omnis, consequuntur rerum!
+                                </p>
+                                <div class="modal-icons mb-2">
+                                    <div class="d-flex justify-content-end position-relative">
+                                        <a href="#">
+                                             <span class="icon icon-ico-like"></span>
+                                        </a>
+                                        <a href="">
+                                            <span class="icon icon-ico-access"></span>
+                                        </a>
+                                        <a href="#">
+                                            <span class="icon icon-ico-download"></span>
+                                        </a>
+                                        <span class="social-share">
+                                            <a href="#" data-share-menu>
+                                                <span class="icon-ico-share"></span>
+                                            </a>
+                                            <div class="x-share-button">
+                                                <div class="share-items-wrapper">
+                                                    <div class="share-items">
+                                                        <a href="https://facebook.com" target="_blank"
+                                                            class="share-item">
+                                                            <i class="bi bi-facebook"></i>
+                                                        </a>
+                                                        <a href="https://instagram.com" target="_blank" class="share-item">
+                                                            <i class="bi bi-instagram"></i>
+                                                        </a>
+                                                        <a href="#" target="_blank" class="share-item">
+                                                            <i class="bi bi-link-45deg"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </div>
+                                </div>
+                                <figure>
+                                    <img src="https://picsum.photos/600/300" class="w-100" data-zoomable alt>
+                                </figure>
+                            </div>
+                            <div id="audio-transcription-2" class="d-none"
+                                style="max-height: 510px; overflow-y: scroll">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta temporibus quos
+                                    ducimus iste quam fugit nisi, tenetur doloribus eos nemo eius, sequi natus
+                                    laudantium et ratione nihil, quis explicabo debitis!</p>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta temporibus quos
+                                    ducimus iste quam fugit nisi, tenetur doloribus eos nemo eius, sequi natus
+                                    laudantium et ratione nihil, quis explicabo debitis!</p>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta temporibus quos
+                                    ducimus iste quam fugit nisi, tenetur doloribus eos nemo eius, sequi natus
+                                    laudantium et ratione nihil, quis explicabo debitis!</p>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta temporibus quos
+                                    ducimus iste quam fugit nisi, tenetur doloribus eos nemo eius, sequi natus
+                                    laudantium et ratione nihil, quis explicabo debitis!</p>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta temporibus quos
+                                    ducimus iste quam fugit nisi, tenetur doloribus eos nemo eius, sequi natus
+                                    laudantium et ratione nihil, quis explicabo debitis!</p>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta temporibus quos
+                                    ducimus iste quam fugit nisi, tenetur doloribus eos nemo eius, sequi natus
+                                    laudantium et ratione nihil, quis explicabo debitis!</p>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta temporibus quos
+                                    ducimus iste quam fugit nisi, tenetur doloribus eos nemo eius, sequi natus
+                                    laudantium et ratione nihil, quis explicabo debitis!</p>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta temporibus quos
+                                    ducimus iste quam fugit nisi, tenetur doloribus eos nemo eius, sequi natus
+                                    laudantium et ratione nihil, quis explicabo debitis!</p>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta temporibus quos
+                                    ducimus iste quam fugit nisi, tenetur doloribus eos nemo eius, sequi natus
+                                    laudantium et ratione nihil, quis explicabo debitis!</p>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta temporibus quos
+                                    ducimus iste quam fugit nisi, tenetur doloribus eos nemo eius, sequi natus
+                                    laudantium et ratione nihil, quis explicabo debitis!</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="rt-player" id="player-audio-transcription">
+                                <div id="rt-audio">
+                                    <audio></audio>
+                                </div>
+                                <div class="rt-time-indicartors row">
+                                    <div class="d-flex align-items-center">
+                                        <div class="mx-2">
+                                            <span class="rt-timer" data-role="start">00:00</span>
+                                        </div>
+                                        <div class="progress flex-fill">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="0"
+                                                aria-valuemin="0" aria-valuemax="100" data-role="player-progress-bar">
+                                            </div>
+                                        </div>
+                                        <div class="mx-2">
+                                            <span class="rt-timer" data-role="end">00:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rt-player__buttons">
+                                    <button class="btn mx-md-1" data-role="play"><i
+                                            class="bi bi-play-circle"></i></button>
+                                    <button class="btn mx-md-1 d-none" data-role="pause"><i
+                                            class="bi bi-pause-circle"></i></button>
+                                    <button class="btn mx-1" data-role="prev"><i
+                                            class="bi bi-skip-backward-circle"></i></button>
+                                    <button class="btn mx-1" data-role="next"><i
+                                            class="bi bi-skip-forward-circle"></i></button>
+                                    <button class="btn mx-1" data-role="volUp"><i class="bi bi-volume-up"></i></button>
+                                    <button class="btn mx-1" data-role="volDown"><i
+                                            class="bi bi-volume-down"></i></button>
+                                    <button class="btn mx-1" data-role="mute"><i class="bi bi-volume-mute"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lyricer mb-2" id="audio-modal-double-transcription"></div>
+                    <div>
+                        <div id="language-selector">
+                            <select name="select" id="test">
+                                <option value="espanol">Español</option>
+                                <option value="ingles">Inglés</option>
+                                <option value="frances">Francés</option>
+                            </select>
+                        </div>
+                        <nav>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <button class="nav-link active" id="related-tab-017" data-bs-toggle="tab"
+                                    data-bs-target="#related-017" type="button" role="tab" aria-controls="related-017"
+                                    aria-selected="true">
+                                    <span class="d-flex">
+                                        <span class="icon icon-ico-related me-1"></span>
+                                        <span class="nav-link-text">Archivos Relacionados</span>
+                                    </span>
+                                </button>
+                                <button class="nav-link" id="collection-tab-017" data-bs-toggle="tab"
+                                    data-bs-target="#collection-017" type="button" role="tab"
+                                    aria-controls="collection-017" aria-selected="false">
+                                    <span class="d-flex">
+                                        <span class="icon icon-ico-collections me-1"></span>
+                                        <span class="nav-link-text">Colecciones</span>
+                                    </span>
+                                </button>
+                                <button class="nav-link" id="native-tab-017" data-bs-toggle="tab"
+                                    data-bs-target="#native-017" type="button" role="tab" aria-controls="native-017"
+                                    aria-selected="false">
+                                    <span class="d-flex">
+                                        <span class="icon icon-ico-files me-1"></span>
+                                        <span class="nav-link-text">Archivos Nativos</span>
+                                    </span>
+                                </button>
+                            </div>
+                        </nav>
+                        <div class="tab-content p-2" id="nav-tabContent-1">
+                            <div class="tab-pane fade show active" id="related-017" role="tabpanel"
+                                aria-labelledby="related-tab-017">
+                                <p class="mb-1">Titulo listado</p>
+                                <ul>
+                                    <li><a href="#">Link 1</a></li>
+                                    <li><a href="#">Link 2</a></li>
+                                </ul>
+                            </div>
+                            <div class="tab-pane fade" id="collection-017" role="tabpanel"
+                                aria-labelledby="collection-tab-017">
+                                <p class="mb-1">Titulo listado</p>
+                                <ul>
+                                    <li><a href="#">Link 3</a></li>
+                                    <li><a href="#">Link 4</a></li>
+                                </ul>
+                            </div>
+                            <div class="tab-pane fade" id="native-017" role="tabpanel" aria-labelledby="native-tab-017">
+                                <p class="mb-1">Titulo listado</p>
+                                <ul>
+                                    <li><a href="#">Link 5</a></li>
+                                    <li><a href="#">Link 6</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+
+    <script src="./js/lyricer.js"></script>
+    <script src="./js/audio-rt.js"></script>
+    <script src="./js/share-button.js"></script>
+    <script src="./js/fullscreenImg.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function (event) {
+            // Add Common attributes with a for
+            $(".buttons button").each((i, btn) => {
+                $(btn).attr("type", "button")
+                $(btn).attr("class", "btn btn-primary")
+                $(btn).attr("data-bs-toggle", "modal")
+            })
+
+            // Fullscreen toggler
+            $("#fullscreen").change(e => {
+                let modalsDialogs = $(".modal .modal-dialog");
+
+                modalsDialogs.each((i, modal) => {
+                    $(modal).toggleClass("modal-fullscreen")
+                    $($(modal).find(".modal-body")).toggleClass("container")
+                })
+            })
+        });
+    </script>
+
+    <!-- Audio Scripts -->
+    <script>
+        // Basic Audio Modal
+        const playerAudioModal = setupPlayerRT("player-audio-modal");
+        playerAudioModal.addTracks(['audios/audio1.mp3'])
+        $('#audio-modal').on('hide.bs.modal', (e) => playerAudioModal.pause());
+
+        let basicTranscription =`
+            [00:01.00]Hola este texto esta en español
+            [00:03.21]Línea de texto 2
+            [00:07.72]Línea de texto 3 
+            [00:12.76]Línea de texto 4
+            [00:17.48]Línea de texto 5
+            [00:22.92]Línea de texto 6
+            [00:27.78]Línea de texto 7
+            [00:32.67]Línea de texto 8
+            [00:36.00]Línea de texto 9
+        `
+        let espanol=`
+            [00:01.00]Hola este texto esta en español
+            [00:03.21]Linea de texto 2
+            [00:07.72]Linea de texto 3 
+            [00:12.76]Linea de texto 4
+            [00:17.48]Linea de texto 5
+            [00:22.92]Linea de texto 6
+            [00:27.78]Linea de texto 7
+            [00:32.67]Linea de texto 8
+            [00:36.00]Linea de texto 9
+        `;
+
+        let ingles = `
+            [00:01.00]HI, this text is in english
+            [00:03.21]Text line 2
+            [00:07.72]Text line 3 
+            [00:12.76]Text line 4
+            [00:17.48]Text line 5
+            [00:22.92]Text line 6
+            [00:27.78]Text line 7
+            [00:32.67]Text line 8
+            [00:36.00]Text line 9
+        `;
+        let frances = `
+            [00:01.00]Bonjour, ce texte est en français
+            [00:03.21]Ligne de texte 2
+            [00:07.72]Ligne de texte 3 
+            [00:12.76]Ligne de texte 4
+            [00:17.48]Ligne de texte 5
+            [00:22.92]Ligne de texte 6
+            [00:27.78]Ligne de texte 7
+            [00:32.67]Ligne de texte 8
+            [00:36.00]Ligne de texte 9
+        `;
+
+        // let basicTranscription = `
+        //     [00:01.00]Linea de texto 1
+        //     [00:03.21]Linea de texto 2
+        //     [00:07.72]Linea de texto 3 
+        //     [00:12.76]Linea de texto 4
+        //     [00:17.48]Linea de texto 5
+        //     [00:22.92]Linea de texto 6
+        //     [00:27.78]Linea de texto 7
+        //     [00:32.67]Linea de texto 8
+        //     [00:36.00]Linea de texto 9
+        // `;
+
+        let lrc = new Lyricer({
+            "divID": "basic-audio-transcription",
+            "showLines": 1,
+            "lineidPrefix": 'lyric-basic-modal',
+            "clickable": false
+        });
+
+        lrc.setLrc(basicTranscription)
+
+        $("#player-audio-modal audio").on("timeupdate", function () {
+            lrc.move(this.currentTime);
+        });
+
+        // Audio Image Modal
+        const playerAudioImageModal = setupPlayerRT("player-audio-imagen");
+        playerAudioImageModal.addTracks(['audios/audio5.mp3']);
+        $('#audio-imagen-modal').on('hide.bs.modal', (e) => playerAudioImageModal.pause());
+
+        let audioImagenlrc = new Lyricer({
+            "divID": "audio-imagen-transcription",
+            "showLines": 1,
+            "lineidPrefix": 'lyric-image-modal',
+            "clickable": false
+        });
+        audioImagenlrc.setLrc(basicTranscription)
+
+        $("#player-audio-imagen audio").on("timeupdate", function () {
+            audioImagenlrc.move(this.currentTime);
+        });
+
+        const select= document.getElementById('test');
+        select.addEventListener('change',(event)=>{
+            
+         switch (event.target.value) {
+             case 'espanol':
+             doubleTransLrc.setLrc(basicTranscription)
+             break;
+             case 'ingles':
+             doubleTransLrc.setLrc(ingles)
+             break;
+             case 'frances':
+             doubleTransLrc.setLrc(frances)
+             break;
+             default:
+                 break;
+         }
+        })
+        // Audio Gallery
+        const playerAudioGallery = setupPlayerRT("player-audio-gallery");
+        playerAudioGallery.addTracks(['audios/audio9.mp3'])
+        $('#audio-gallery-modal').on('hide.bs.modal', (e) => playerAudioGallery.pause());
+
+        let galleryLrc = new Lyricer({
+            "divID": "gallery-audio-transcription",
+            "showLines": 1,
+            "lineidPrefix": 'lyric-basic-modal',
+            "clickable": false
+        });
+
+        galleryLrc.setLrc(basicTranscription)
+
+        $("#player-audio-gallery audio").on("timeupdate", function () {
+            galleryLrc.move(this.currentTime);
+        });
+
+
+        // Audio Playlist
+        let playListAudios = [{
+                name: 'Audio 1',
+                src: './audios/audio1.mp3',
+                duration: '03:01',
+                transcription: `
+                    [00:01.00] Audio 1 Linea de texto 1
+                    [00:05.21] Audio 1 Linea de texto 2
+                    [00:09.72] Audio 1 Linea de texto 3 
+                `,
+            },
+            {
+                name: 'Audio 2',
+                src: './audios/audio2.mp3',
+                duration: '02:55',
+                transcription: `
+                    [00:01.00] Audio 2 Linea de texto 1
+                    [00:05.21] Audio 2 Linea de texto 2
+                    [00:12.72] Audio 2 Linea de texto 3 
+                `,
+            },
+            {
+                name: 'Audio 3',
+                src: './audios/audio3.mp3',
+                duration: '03:00',
+                transcription: `
+                    [00:01.00] Audio 3 Linea de texto 1
+                    [00:05.21] Audio 3 Linea de texto 2
+                    [00:08.72] Audio 3 Linea de texto 3 
+                `,
+            },
+            {
+                name: 'Audio 4',
+                src: './audios/audio4.mp3',
+                duration: '00:25',
+                transcription: `
+                    [00:01.00] Audio 4 Linea de texto 1
+                    [00:05.21] Audio 4 Linea de texto 2
+                    [00:08.72] Audio 4 Linea de texto 3 
+                `,
+            },
+            {
+                name: 'Audio 5',
+                src: './audios/audio5.mp3',
+                duration: '02:51',
+                transcription: `
+                    [00:01.00] Audio 5 Linea de texto 1
+                    [00:05.21] Audio 5 Linea de texto 2
+                    [00:08.72] Audio 5 Linea de texto 3 
+                `,
+            },
+            {
+                name: 'Audio 6',
+                src: './audios/audio6.mp3',
+                duration: '02:01',
+                transcription: `
+                    [00:01.00] Audio 6 Linea de texto 1
+                    [00:05.21] Audio 6 Linea de texto 2
+                    [00:08.72] Audio 6 Linea de texto 3 
+                `,
+            },
+        ]
+        let playlistCurrentPlaying = null
+
+        let modalAudioPlaylist = $('#audio-playlist-modal')
+        const itemsLength = modalAudioPlaylist.find('.carousel-item').length
+        const nextBtn = modalAudioPlaylist.find('.carousel-control-next');
+        const prevBtn = modalAudioPlaylist.find('.carousel-control-prev');
+        prevBtn.hide();
+
+        const playerAudioPlaylist = setupPlayerRT("player-audio-playlist");
+
+        modalAudioPlaylist.on('hide.bs.modal', () => playerAudioPlaylist.pause());
+        modalAudioPlaylist.on('slide.bs.carousel', function (e) {
+            prevBtn.show();
+
+            if (e.to === itemsLength - 1) {
+                nextBtn.hide()
+                prevBtn.show()
+            } else if (e.to === 0) {
+                prevBtn.hide()
+                nextBtn.show()
+            }
+
+            playAudioPlaylist(playListAudios[e.to].src, e.to)
+
+        });
+
+        let playlistHTML = '';
+        let modalPlaylist = $('#playlist-modal-playlist');
+
+        function setupPlaylistLrc(transcription) {
+            $("#player-audio-playlist audio").off("timeupdate"); // Clean event
+            const playlistLrc = new Lyricer({
+                "divID": "audio-playlist-transcription",
+                "showLines": 1,
+                "lineidPrefix": 'lyric-audio-playlist-modal',
+                "clickable": false
+            });
+
+            playlistLrc.setLrc(transcription)
+
+            $("#player-audio-playlist audio").on("timeupdate", function () {
+                playlistLrc.move(this.currentTime);
+            });
+        }
+
+        function playAudioPlaylist(src, index) {
+            if (playlistCurrentPlaying === index) return
+            playerAudioPlaylist.stop()
+            playerAudioPlaylist.play(src)
+            modalPlaylist.find('li').each((i, e) => $(e).removeClass('active'))
+            modalPlaylist.find(`li:nth-child(${index+1})`).addClass('active')
+            playlistCurrentPlaying = index;
+            setupPlaylistLrc(playListAudios[index].transcription);
+        }
+
+        for (let [index, p] of playListAudios.entries()) {
+            playlistHTML += `
+                <li onclick="playAudioPlaylist('${p.src}', ${index})" 
+                    class="list-group-item list-group-item-action d-flex"
+                    data-bs-target="#carousel-audio-playlist-modal"
+                    data-bs-slide-to="${index}"
+                    style="cursor: pointer"
+                >
+                    <span class="d-flex justify-content-between align-items-center flex-fill">
+                        ${p.name}
+                        <span>${p.duration}</span>
+                    </span>
+                </li>
+            `
+        }
+        setupPlaylistLrc(playListAudios[0].transcription);
+        modalPlaylist.html(playlistHTML)
+
+        // Audio Playlist Static
+        const playerAudioplaylistStatic = setupPlayerRT("player-audio-playlist-static");
+
+        let playlistStaticCurrentPlaying = null
+        let playlistStaticHTML = '';
+        let modalPlaylistStatic = $('#playlist-modal-playlist-static');
+
+        $('#audio-playlist-static-modal').on('hide.bs.modal', () => playerAudioplaylistStatic.pause());
+
+        function setupPlaylistLrcStatic(transcription) {
+            $("#player-audio-playlist-static audio").off("timeupdate"); // Clean event
+            const playlistLrc = new Lyricer({
+                "divID": "audio-playlist-static-transcription",
+                "showLines": 1,
+                "lineidPrefix": 'lyric-audio-playlist-static',
+                "clickable": false
+            });
+
+            playlistLrc.setLrc(transcription)
+
+            $("#player-audio-playlist-static audio").on("timeupdate", function () {
+                playlistLrc.move(this.currentTime);
+            });
+        }
+
+        function playAudioPlaylistStatic(src, index) {
+            if (playlistStaticCurrentPlaying === index) return
+            playerAudioplaylistStatic.stop()
+            playerAudioplaylistStatic.play(src)
+            modalPlaylistStatic.find('li').each((i, e) => $(e).removeClass('active'))
+            modalPlaylistStatic.find(`li:nth-child(${index+1})`).addClass('active')
+            playlistStaticCurrentPlaying = index;
+            setupPlaylistLrcStatic(playListAudios[index].transcription)
+        }
+
+        for (let [index, p] of playListAudios.entries()) {
+            playlistStaticHTML += `
+                <li onclick="playAudioPlaylistStatic('${p.src}', ${index})" 
+                    class="list-group-item list-group-item-action d-flex"
+                    style="cursor: pointer"
+                >
+                    <span class="d-flex justify-content-between align-items-center flex-fill">
+                        ${p.name}
+                        <span>${p.duration}</span>
+                    </span>
+                </li>
+            `
+        }
+
+        setupPlaylistLrcStatic(playListAudios[0].transcription)
+        modalPlaylistStatic.html(playlistStaticHTML)
+
+        // Audio Transcription
+        const playerAudioTranscription = setupPlayerRT("player-audio-transcription");
+        playerAudioTranscription.addTracks(['audios/audio8.mp3']);
+        $('#audio-transcription-modal').on('hide.bs.modal', (e) => playerAudioTranscription.pause());
+
+        const btn1 = $('button[data-toggler="audio-transcription-1"]');
+        const btn2 = $('button[data-toggler="audio-transcription-2"]');
+        btn2.click((e) => {
+            $("div#audio-transcription-2").removeClass('d-none')
+            $("div#audio-transcription-1").addClass('d-none')
+        })
+
+        btn1.click((e) => {
+            $("div#audio-transcription-2").addClass('d-none')
+            $("div#audio-transcription-1").removeClass('d-none')
+        })
+
+        const doubleTransLrc = new Lyricer({
+            "divID": "audio-modal-double-transcription",
+            "showLines": 1,
+            "lineidPrefix": 'lyric-double-transcription',
+            "clickable": false
+        });
+        doubleTransLrc.setLrc(basicTranscription)
+
+        $("#player-audio-transcription audio").on("timeupdate", function () {
+            doubleTransLrc.move(this.currentTime);
+        });
+    </script>
+</body>
+
+</html>

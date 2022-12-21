@@ -1,0 +1,59 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a taxonomy term.
+ *
+ * Available variables:
+ * - url: URL of the current term.
+ * - name: (optional) Name of the current term.
+ * - content: Items for the content of the term (fields and description).
+ *   Use 'content' to print them all, or print a subset such as
+ *   'content.description'. Use the following code to exclude the
+ *   printing of a given child element:
+ *   @code
+ *   {{ content|without('description') }}
+ *   @endcode
+ * - attributes: HTML attributes for the wrapper.
+ * - page: Flag for the full page state.
+ * - term: The taxonomy term entity, including:
+ *   - id: The ID of the taxonomy term.
+ *   - bundle: Machine name of the current vocabulary.
+ * - view_mode: View mode, e.g. 'full', 'teaser', etc.
+ *
+ * @see template_preprocess_taxonomy_term()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes }}>
+  {{ content }}
+  {{ drupal_view('secciones_home', 'home') }}
+  {{ drupal_view('secciones_home', 'mobile') }}
+</div>
+  <!--ICONOS ANIMADOS-->
+  <div class="contenedor-dibujo">
+    <div class="dibujo mano">
+      <div class="dibujo-wrapper">
+        <div class="hand-dibujo">
+          <div class="hand">
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dibujo raton">
+      <div class="dibujo-wrapper">
+        <div class="mouse-dibujo">
+          <div class="mouse"></div>
+          <span class="arrow arrow-01"></span>
+          <span class="arrow arrow-02"></span>
+          <span class="arrow arrow-03"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/themes/custom/cevtheme/js/driver.min.js"></script>
+  <script type="text/javascript">
+    {{ term.field_script_tour.value|raw }}
+  </script>

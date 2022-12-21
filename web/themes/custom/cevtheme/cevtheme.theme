@@ -1,0 +1,234 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the SASS Starterkit subtheme.
+ */
+
+/**
+ * Implements hook_theme_suggestions_taxonomy_term_alter().
+ */
+function cevtheme_theme_suggestions_taxonomy_term_alter(array &$suggestions, array $variables)
+{
+  /** @var \Drupal\taxonomy\TermInterface $term */
+  $term = $variables['elements']['#taxonomy_term'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+  // Add view mode theme suggestions.
+  $suggestions[] = 'taxonomy_term__' . $sanitized_view_mode;
+  $suggestions[] = 'taxonomy_term__' . $term->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'taxonomy_term__' . $term->id() . '__' . $sanitized_view_mode;
+}
+
+function cevtheme_preprocess_page(&$variables) {
+  if (\Drupal\user\Entity\User::load(\Drupal::currentUser()->id())->hasRole('administrator')) {
+    $variables['#attached']['library'][] = 'cevtheme/admin_css';
+  } 
+  
+}
+
+function cevtheme_preprocess_menu(&$variables){
+    
+    $node = \Drupal::routeMatch()->getParameter('node');
+    if ($node instanceof \Drupal\node\NodeInterface) {
+      $variables['nid'] = $node->id();
+    }
+    if (\Drupal::routeMatch()->getRouteName() == 'entity.taxonomy_term.canonical') {
+      $variables['tid'] = \Drupal::routeMatch()->getRawParameter('taxonomy_term');
+    }
+}
+
+function cevtheme_preprocess_node(&$variables) {
+  if(isset($variables['node']->body->summary))
+    $variables['node_teaser'] = ['#markup' => $variables['node']->body->summary];
+  
+}
+function cevtheme_preprocess_taxonomy_term(&$variables) {
+  \Drupal::service("cache.render")->invalidateAll();
+  $currentTerm = $variables['term'];
+  $viewMode = $variables['view_mode'];
+
+  if($currentTerm->id()==110 && $viewMode == 'full') { // Si es género
+    //Carga series
+    $vid = 'serie';
+    $terms =\Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadTree($vid);
+    foreach ($terms as $term) {
+     $term_obj = Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($term->tid);
+     $term_data[] = (object)array(
+      "val" => $term_obj->id(),
+      "nombre" => $term_obj->getName(),
+      "color" => $term_obj->get('field_color_letra')->value,
+      "desc" => $term_obj->getDescription()
+     );
+    }
+    $variables['menu_serie'] = $term_data;
+    $term_data = [];
+    //Carga Qué
+    $vid = 'que';
+    $terms =\Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadTree($vid);
+    foreach ($terms as $term) {
+     $term_obj = Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($term->tid);
+     $term_data[] = (object)array(
+      "val" => $term_obj->id(),
+      "nombre" => $term_obj->getName()
+     );
+    }
+
+    $variables['menu_que'] = $term_data;
+    $term_data = [];
+    //Carga quién
+    $vid = 'quien';
+    $terms =\Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadTree($vid);
+    foreach ($terms as $term) {
+     $term_obj = Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($term->tid);
+     $term_data[] = (object)array(
+      "val" => $term_obj->id(),
+      "nombre" => $term_obj->getName()
+     );
+    }
+
+    $variables['menu_quien'] = $term_data;
+    $term_data = [];
+    //Carga cuándo
+    $vid = 'cuando';
+    $terms =\Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadTree($vid);
+    foreach ($terms as $term) {
+     $term_obj = Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($term->tid);
+     $term_data[] = (object)array(
+      "val" => $term_obj->id(),
+      "nombre" => $term_obj->getName()
+     );
+    }
+
+    $variables['menu_cuando'] = $term_data;
+    $term_data = [];
+    //Carga Dónde
+    $vid = 'donde';
+    $terms =\Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadTree($vid);
+    foreach ($terms as $term) {
+     $term_obj = Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($term->tid);
+     $term_data[] = (object)array(
+      "val" => $term_obj->id(),
+      "nombre" => $term_obj->getName()
+     );
+    }
+    $variables['menu_donde'] = $term_data;
+  }
+
+}
+
+
+function cevtheme_preprocess_media(array &$variables) {
+  $variables['media'] = $variables['elements']['#media'];
+  $media =  $variables['media'];
+  $variables['image_url'] = [];
+  if(isset($media->field_background_audio)) {
+    foreach ($media->field_background_audio as $key => $value) {
+      $variables['image_url'][] = file_create_url($value->entity->getFileUri());
+    }
+  }
+
+  $variables['audio_url'] = [];
+  if(isset($media->field_media_audio_file)){
+    foreach ($media->field_media_audio_file as $key => $value) {
+      $variables['audio_url'][] = file_create_url($value->entity->getFileUri());
+      foreach ($media->field_transcription as $index => $clave) {
+        $datos = [
+          "nombre" => $clave->summary,
+          "texto" => $clave->value,
+          "numeroItem" => $key,
+          "numeroIdioma" => $index,
+          "audio" => file_create_url($value->entity->getFileUri()),
+        ];
+      }
+    }
+  }
+
+
+  $variables['playlist_traduccion'] = [];
+  if(isset($media->field_media_audio_file)){
+    foreach ($media->field_media_audio_file as $key => $value) {
+      foreach ($media->field_transcription as $index => $clave) {
+        $datos = [
+          "nombre" => $clave->summary,
+          "texto" => $clave->value,
+          "numeroIdioma" => $index,
+          "audio" => file_create_url($value->entity->getFileUri())
+        ];
+        $variables['playlist_traduccion'][] = $datos;
+      }
+    }
+  }
+  $variables['image_galeria_url'] = [];
+  if(isset($media->field_media_image)) {
+    foreach ($media->field_media_image as $key => $value) {
+      $variables['image_galeria_url'][] = file_create_url($value->entity->getFileUri());
+    }
+  }
+  $variables['playlist_image_url'] = [];
+  $variables['playlist_audio'] = [];
+  if(isset($media->field_audio_item)) {
+    foreach ($media->field_audio_item as $key => $value) {
+      $imagen = $value->entity->get('field_background_audio');
+      $audio =  $value->entity->field_media_audio_file;
+      if($imagen->entity != null){
+        $imagenCaption = [
+          "url" => file_create_url($imagen->entity->getFileUri()),
+          "caption" => $imagen->caption
+        ];
+        $variables['playlist_image_url'][] = $imagenCaption;  
+      }
+      foreach ($value->entity->field_transcription as $index => $clave) {
+        $datos = [
+          "nombre" => $clave->summary,
+          "texto" => $clave->value,
+          "numeroItem" => $key,
+          "numeroIdioma" => $index
+        ];
+        $variables['playlist_traduccion'][] = $datos;
+      }
+      $array = [
+        "titulo" => $value->entity->get('field_titulo_audio')->getString(),
+        "audio" => file_create_url($audio->entity->getFileUri()),
+        "duracion" => $value->entity->get('field_duracion')->getString()
+      ];
+      $variables['playlist_audio'][] = $array;
+    }
+  }
+  if(isset($media->field_eleccion)) {
+    $variables['eleccion'] = $media->field_eleccion->getString();
+  }
+  if(isset($media->field_audios)) {
+    foreach ($media->field_audios as $key => $value) {
+      $audio =  $value->entity->field_media_audio_file;
+      $variables['playlist_audio_url'][] = file_create_url($audio->entity->getFileUri());
+      foreach ($value->entity->field_transcription as $index => $clave) {
+        $datos = [
+          "nombre" => $clave->summary,
+          "texto" => $clave->value,
+          "numeroItem" => $key,
+          "numeroIdioma" => $index
+        ];
+        $variables['playlist_traduccion'][] = $datos;
+      }
+      $array = [
+        "titulo" => $value->entity->getName(),
+        "audio" => file_create_url($audio->entity->getFileUri()),
+        "color" => $value->entity->get('field_color')->getString()
+      ];
+      $variables['playlist_audio'][] = $array;
+    }
+  }
+  // Busca id de youtube cuando es video remoto
+  if(isset($media->field_media_oembed_video)){
+    // Derive a thumbnail image + alt text.
+    $url = $media->get('field_media_oembed_video')->getString();
+    // youtube.com vs youtu.be -- both are valid.
+    $needle = strpos($url, 'youtube.com') !== FALSE ? '?v=' : 'youtu.be/';
+    $embed_code = substr($url, strpos($url, $needle) + strlen($needle));
+    $embed_code = str_replace('&list', '?list', $embed_code);
+
+    $variables['media_thumbnail'] = "//i.ytimg.com/vi_webp/$embed_code/maxresdefault.webp";
+    $variables['media_thumbnail_legacy'] = "//i.ytimg.com/vi/$embed_code/maxresdefault.jpg";
+    $variables['embed_id'] = $embed_code;
+  }
+}

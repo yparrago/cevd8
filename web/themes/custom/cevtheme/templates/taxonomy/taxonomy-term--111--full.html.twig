@@ -1,0 +1,478 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a taxonomy term.
+ *
+ * Available variables:
+ * - url: URL of the current term.
+ * - name: (optional) Name of the current term.
+ * - content: Items for the content of the term (fields and description).
+ *   Use 'content' to print them all, or print a subset such as
+ *   'content.description'. Use the following code to exclude the
+ *   printing of a given child element:
+ *   @code
+ *   {{ content|without('description') }}
+ *   @endcode
+ * - attributes: HTML attributes for the wrapper.
+ * - page: Flag for the full page state.
+ * - term: The taxonomy term entity, including:
+ *   - id: The ID of the taxonomy term.
+ *   - bundle: Machine name of the current vocabulary.
+ * - view_mode: View mode, e.g. 'full', 'teaser', etc.
+ *
+ * @see template_preprocess_taxonomy_term()
+ *
+ * @ingroup themeable
+ */
+#}
+
+
+ {# Plantilla Narrativa Historica #}
+ {{ attach_library('cevtheme/narrativa_library') }}
+
+
+  <!-- d-flex-column justify-content-center align-items-center -->
+  <div class="c_nh_iconos_flotantes d-flex-column ">
+    <ul class="justify-content-center align-items-center">
+      
+      <li>
+        <span class="icon_btn">
+          <i id="id_nh_icono_audio" class="icon-paisaje-sonoro c_nh_icono_audio_on "></i>
+        </span>
+      </li>
+      
+      <li>
+        <span id="id_nh_modal_carteles" class="modal_cev icon_btn" data-nid="177">
+          <!-- <i class=" icon-hp-c5-carteles c_nh_boton_carteles" data-bs-toggle="modal"
+          data-bs-target="#modalnarrativacarteles"></i> -->
+          <i class="icon-carteles-hp c_nh_boton_carteles"></i>
+        </span>
+
+      </li>
+
+    </ul>
+  </div>
+
+  <!-- Audio del home  de la espiral -->
+  <audio id="id_nh_audio">
+    <source id="id_nh_source_audio_home_espiral" type="audio/mp3" src="/themes/custom/cevtheme/narrativa/assets/nhhhomeaudiopaisajesonorocollagede24hitos.mp3">
+    <span> tu navegador no soporta HTML5 audio.</span>
+  </audio>
+  <!--REPRODUCTOR DE AUDIO-->
+  <!--
+    <div class="container presentacion audios" id="reproductor">
+       
+        <audio id="id_nh_audio_home_espiral">
+          <source id="id_nh_source_audio_home_espiral" type="audio/mp3" src="/themes/custom/cevtheme/narrativa/assets/nhhhomeaudiopaisajesonorocollagede24hitos.mp3">
+          <span> tu navegador no soporta HTML5 audio.</span>
+        </audio>
+        <div class="progreso d-flex align-items-center" id="audios">
+            <div class="col-1 col-sm-2">
+                <div class="botones">
+                    <button class="btn mx-1" id="reproducir" onclick="tocar()"><i class="bi bi-play-circle"></i></button>
+                    <button class="btn mx-1" id="pausar" onclick="pausa()" style="display: none;"><i
+                            class="bi bi-pause-circle"></i></button>
+                </div>
+            </div>
+            <div class="col-1 col-sm-2">
+                <span class="timer" id="inicio">00:00</span>
+            </div>
+            <div class="col-6 col-sm-5">
+                <div class="progress">
+                    <div id="progreso" class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0"
+                        aria-valuemax="100"></div>
+                </div>
+            </div>
+            <div class="col-2">
+                <span class="timer" id="fin">00:00</span>
+            </div>
+        </div>
+    </div>
+
+  -->
+
+
+  <!-- Inicio Espiral Narrativa Historica  -->
+  <div class="container-fluid ps-0 pe-0 c_nh_general">
+    <!-- inicio  titulo estatico -->
+    <div class="row">
+      <div id="id_nh_seccion_titulo_estatico" class="c_nh_seccion_titulo_estatico ps-0 pe-0">
+
+        <span>
+          <i id="id_nh_flecha" class="icon-flecha-doble-izq c_nh_div_img">
+
+          </i>
+        </span>
+        <div class="c_nh_div_ancla_titulo_estatico">
+          <a href="#">
+            <h1 id="id_nh_titulo_estatico" class="c_nh_titulo_estatico">
+            </h1>
+          </a>
+        </div>
+
+      </div>
+    </div>
+    <!-- fin titulo estatico -->
+
+    <div class="row">
+      <!-- Titulos y Descripciones -->
+      <div class="c_nh_titulos_descripciones col-10 col-sm-10 col-md-10 col-lg-3  col-xl-3  col-xxl-3">
+        <h6 class="volver icon-chevron-left mx-auto icon-flecha-doble-iqz hidden">
+            <a href="#" onclick="configurarEstadoNatural();regresarEstadoNatural();">Volver al inicio</a>
+        </h6>
+        <h1 id="id_titulo_periodo"> </h1>
+        <h4 id="id_fecha_periodo"></h4>
+        <h5 id="id_descripcion_periodo"></h5>
+        <h4>
+          <span id="id_nh_modal_descripciones" class="modal_cev">Más...</span>
+        </h4>
+          <!-- <a href="#" id="id_nh_modal" data-bs-toggle="modal" data-bs-target="#modalnarrativa"></a> -->
+
+      </div>
+
+      <!-- inicio semicirculos -->
+      <div class="c_contenedor_circulos col-12 col-sm-12 col-md-12  col-lg-6  col-xl-6  col-xxl-6 ms-3">
+        <div id="id_contenedor_circulos" class="c_contenedor_circulos_interno">
+
+        </div>
+      </div>
+
+      <!-- fin semicirculos -->
+
+      <!-- inicio menu mobile -->
+      <div id="id_nh_filtros" class="fixed-bottom">
+
+        </button>
+        <div class="tab-content" id="pills-tabContent">
+          <!--<div class="tab-pane fade container-fluid ms-4 c_nh_tab_content" id="pills-ciclos" role="tabpanel"
+            aria-labelledby="pills-ciclos-tab">
+            <div class="row">
+              <div class="form-check col-4">
+                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                  id="id_nh_flexRadio_ciclo_uno_mobile">
+                <label class="form-check-label c_nh_boton_acordeon" for="id_nh_flexRadio_ciclo_uno_mobile">
+                  Desarrollo
+                </label>
+              </div>
+              <div class="form-check col-4">
+                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                  id="id_nh_flexRadio_ciclo_dos_mobile">
+                <label class="form-check-label c_nh_boton_acordeon" for="id_nh_flexRadio_ciclo_dos_mobile">
+                  Escalamiento
+                </label>
+              </div>
+
+              <div class="form-check col-4">
+                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                  id="id_nh_flexRadio_ciclo_tres_mobile">
+                <label class="form-check-label c_nh_boton_acordeon" for="id_nh_flexRadio_ciclo_tres_mobile">
+                  Degradación
+                </label>
+              </div>
+
+              <div class="form-check col-4">
+                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                  id="id_nh_flexRadio_ciclo_cuatro_mobile">
+                <label class="form-check-label c_nh_boton_acordeon" for="id_nh_flexRadio_ciclo_cuatro_mobile">
+                  Pto de Quiebre
+                </label>
+              </div>
+
+              <div class="form-check col-4">
+                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                  id="id_nh_flexRadio_ciclo_cinco_mobile">
+                <label class="form-check-label c_nh_boton_acordeon" for="id_nh_flexRadio_ciclo_cinco_mobile">
+                  Pto de Transición
+                </label>
+              </div>
+
+            </div>
+
+
+          </div>-->
+          <div class="tab-pane fade container-fluid c_nh_tab_content" id="pills-democracia" role="tabpanel"
+            aria-labelledby="pills-democracia-tab">
+            <div class="row">
+
+              <div class="form-check col-4 mx-auto">
+                <input class="form-check-input cmenu_nh_apertura" type="radio" name="flexRadioDefault"
+                  id="id_nh_flexRadioApertura_mobile">
+                <label class="form-check-labe c_nh_boton_acordeon" for="id_nh_flexRadioApertura_mobile">
+                  Apertura
+                </label>
+              </div>
+
+              <div class="form-check col-4 mx-auto">
+                <input class="form-check-input cmenu_nh_cierre" type="radio" name="flexRadioDefault" id="id_nh_flexRadioCierre_mobile">
+                <label class="form-check-label c_nh_boton_acordeon" for="id_nh_flexRadioCierre_mobile">
+                  Cierre
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade container-fluid ms-3 c_nh_tab_content" id="pills-esclarecimiento" role="tabpanel"
+            aria-labelledby="pills-esclarecimiento-tab">
+            <div class="row">
+
+              <div class="form-check col-4">
+                <input class="form-check-input cmenu_nh_esclarecimiento_1" type="radio" name="flexRadioDefault"
+                  id="id_nh_flexRadio_esclarecimiento_uno_mobile">
+                <label class="form-check-label c_nh_boton_acordeon" for="id_nh_flexRadio_esclarecimiento_uno_mobile">
+                  La guerra
+                </label>
+              </div>
+
+              <div class="form-check col-4">
+                <input class="form-check-input cmenu_nh_esclarecimiento_2" type="radio" name="flexRadioDefault"
+                  id="id_nh_flexRadio_esclarecimiento_dos_mobile" >
+                <label class="form-check-label c_nh_boton_acordeon" for="id_nh_flexRadio_esclarecimiento_dos_mobile">
+                  Las víctimas
+                </label>
+              </div>
+
+              <div class="form-check col-4">
+                <input class="form-check-input cmenu_nh_esclarecimiento_3" type="radio" name="flexRadioDefault"
+                  id="id_nh_flexRadio_esclarecimiento_tres_mobile" >
+                <label class="form-check-label c_nh_boton_acordeon" for="id_nh_flexRadio_esclarecimiento_tres_mobile">
+                  Los actores
+                </label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-check  col-4 ">
+                <input class="form-check-input cmenu_nh_esclarecimiento_4" type="radio" name="flexRadioDefault"
+                  id="id_nh_flexRadio_esclarecimiento_cuatro_mobile" >
+                <label class="form-check-label c_nh_boton_acordeon" for="id_nh_flexRadio_esclarecimiento_cuatro_mobile">
+                  El modelo de <br>seguridad y defensa
+                </label>
+              </div>
+
+              <div class="form-check  col-4">
+                <input class="form-check-input cmenu_nh_esclarecimiento_5" type="radio" name="flexRadioDefault"
+                  id="id_nh_flexRadio_esclarecimiento_cinco_mobile" >
+                <label class="form-check-label c_nh_boton_acordeon" for="id_nh_flexRadio_esclarecimiento_cinco_mobile">
+                  La tierra y <br>el territorio
+                </label>
+              </div>
+
+              <div class="form-check  col-4">
+                <input class="form-check-input cmenu_nh_esclarecimiento_6" type="radio" name="flexRadioDefault"
+                  id="id_nh_flexRadio_esclarecimiento_seis_mobile" >
+                <label class="form-check-label c_nh_boton_acordeon" for="id_nh_flexRadio_esclarecimiento_seis_mobile">
+                  La paz
+                </label>
+              </div>
+
+            </div>
+            
+          </div>
+        </div>
+
+        <ul id="id_nh_lista" class="nav nav-pills" id="pills-tab" role="tablist">
+
+          <li class="nav-item " role="presentation">
+            <button class="nav-link c_nh_boton_mobile p-1" id="pills-democracia-tab" data-bs-toggle="pill"
+              data-bs-target="#pills-democracia" type="button" role="tab" aria-controls="pills-democracia"
+              aria-selected="false"> Democracia</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link c_nh_boton_mobile p-1" id="pills-esclarecimiento-tab" data-bs-toggle="pill"
+              data-bs-target="#pills-esclarecimiento" type="button" role="tab" aria-controls="pills-esclarecimiento"
+              aria-selected="false">Conclusiones</button>
+          </li>
+          <li class="nav-item " role="presentation">
+            <button class="nav-link ps-1 pe-1 c_nh_boton_mobile p-1" id="pills-flecha-tab" data-bs-toggle="pill"
+              data-bs-target="#pills-flecha" type="button" role="tab" aria-controls="pills-flecha"
+              aria-selected="false">
+              <i class="ico icon-flecha-doble-abajo"></i>
+            </button>
+          </li>
+
+        </ul>
+
+
+
+      </div>
+      <!-- fin menu mobile  -->
+
+      <!-- inicio desktop -->
+      <div id="id_nh_filtros" class="c_nh_filtros c_nh_contenedor_acordeon d-none d-md-block">
+
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="container-fluid c_nh_contenedor_acordeon">
+            <div class="row">
+
+              <!-- opcion uno menu -->
+              
+
+              <!-- opcion dos menu -->
+              <div class="accordion-item c_nh_contenedor_acordeon  col-6 col-lg-12  col-xl-12  col-xxl-12">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                  <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                    aria-controls="flush-collapseTwo">
+                    Democracia
+                  </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse c_item_menu"
+                  aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+
+                    <div class="container-fluid">
+                      <div class="row">
+                        <div class="form-check col-12 col-md-6 col-lg-12">
+                          <input class="form-check-input cmenu_nh_apertura" type="radio" name="flexRadioDefault"
+                            id="id_nh_flexRadioApertura_desktop">
+                          <label class="form-check-labe c_nh_boton_acordeon" for="id_nh_flexRadioApertura_desktop">
+                            Apertura
+                          </label>
+                        </div>
+
+                        <div class="form-check col-12 col-md-6 col-lg-12">
+                          <input class="form-check-input cmenu_nh_cierre" type="radio" name="flexRadioDefault"
+                            id="id_nh_flexRadioCierre_desktop">
+                          <label class="form-check-label c_nh_boton_acordeon" for="id_nh_flexRadioCierre_desktop">
+                            Cierre
+                          </label>
+                        </div>
+
+                      </div>
+                    </div>
+
+
+                  </div>
+                </div>
+              </div>
+              <!-- opcion tres menu -->
+
+              <div class="accordion-item c_nh_contenedor_acordeonaa  col-12 col-lg-12  col-xl-12  col-xxl-12">
+                <h2 class="accordion-header" id="flush-headingThree">
+                  <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false"
+                    aria-controls="flush-collapseThree">
+                    Conclusiones
+                  </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse c_item_menu"
+                  aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+
+                    <div class="container-fluid">
+                      <div class="row">
+
+                        <div class="form-check col-6 col-md-4 col-lg-12  col-xl-12  col-xxl-12">
+                          <input class="form-check-input cmenu_nh_esclarecimiento_1" type="radio" name="flexRadioDefault"
+                            id="id_nh_flexRadio_esclarecimiento_uno_desktop">
+                          <label class="form-check-label c_nh_boton_acordeon"
+                            for="id_nh_flexRadio_esclarecimiento_uno_desktop">
+                            La guerra
+                          </label>
+                        </div>
+
+                        <div class="form-check col-6  col-md-4 col-lg-12  col-xl-12  col-xxl-12">
+                          <input class="form-check-input cmenu_nh_esclarecimiento_2" type="radio" name="flexRadioDefault"
+                            id="id_nh_flexRadio_esclarecimiento_dos_desktop" >
+                          <label class="form-check-label c_nh_boton_acordeon"
+                            for="id_nh_flexRadio_esclarecimiento_dos_desktop">
+                            Las víctimas
+                          </label>
+                        </div>
+
+                        <div class="form-check  col-6 col-md-4 col-lg-12  col-xl-12  col-xxl-12">
+                          <input class="form-check-input cmenu_nh_esclarecimiento_3" type="radio" name="flexRadioDefault"
+                            id="id_nh_flexRadio_esclarecimiento_tres_desktop" >
+                          <label class="form-check-label c_nh_boton_acordeon"
+                            for="id_nh_flexRadio_esclarecimiento_tres_desktop">
+                            Los actores
+                          </label>
+                        </div>
+
+                        <div class="form-check  col-6  col-md-4 col-lg-12  col-xl-12  col-xxl-12">
+                          <input class="form-check-input cmenu_nh_esclarecimiento_4" type="radio" name="flexRadioDefault"
+                            id="id_nh_flexRadio_esclarecimiento_cuatro_desktop" >
+                          <label class="form-check-label c_nh_boton_acordeon"
+                            for="id_nh_flexRadio_esclarecimiento_cuatro_desktop">
+                            El modelo de seguridad y defensa
+                          </label>
+                        </div>
+
+                        <div class="form-check  col-6  col-md-4 col-lg-12  col-xl-12  col-xxl-12">
+                          <input class="form-check-input cmenu_nh_esclarecimiento_5" type="radio" name="flexRadioDefault"
+                            id="id_nh_flexRadio_esclarecimiento_cinco_desktop" >
+                          <label class="form-check-label c_nh_boton_acordeon"
+                            for="id_nh_flexRadio_esclarecimiento_cinco_desktop">
+                            La tierra y el territorio
+                          </label>
+                        </div>
+
+                        <div class="form-check  col-6  col-md-4 col-lg-12  col-xl-12  col-xxl-12">
+                          <input class="form-check-input cmenu_nh_esclarecimiento_6" type="radio" name="flexRadioDefault"
+                            id="id_nh_flexRadio_esclarecimiento_seis_desktop" >
+                          <label class="form-check-label c_nh_boton_acordeon"
+                            for="id_nh_flexRadio_esclarecimiento_seis_desktop">
+                            La paz
+                          </label>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <!-- fin opcion tres menu -->
+
+          </div>
+        </div>
+      </div>
+
+      <!-- fin desktop -->
+
+    </div>
+
+  </div>
+
+  </div>
+  <!-- Fin Espíral narrativa historica-->
+
+   <!-- Modal instruction -->
+  <div id="how-to-use-modal" data-bs-backdrop="static" data-bs-keyboard="false"
+    aria-labelledby="Cómo funciona la linea de tiempo" class="modal" tabindex="-1" role="alertdialog">
+    <div class="modal-dialog modal-dialog-centered mx-auto modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+        <h4>¿Cómo navegar este contenido?</h4>
+          <button type="button" class="btn-close fs-3 icon-ico-x" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="d-flex flex-column align-items-center">
+            <!-- Mobile -->
+            <h4 class="d-md-none">Se recomienda navegar este contenido desde un computador para acceder a la experiencia completa</h4>
+            <img class="d-md-none" style="max-width:320px;" src="/themes/custom/cevtheme/narrativa/img/plano-de-navegacion-de-contenido-moviles.svg" alt="plano de como navegar el contenido">
+            <!-- Desktop -->
+            <img class="d-none d-md-block" src="/themes/custom/cevtheme/narrativa/img/plano-de-navegacion-de-contenido.svg" alt="plano de como navegar el contenido">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+{# BOTONES FLOTANTES #}
+{{ content.field_botones_menu_flotante }}
+{{ content.field_avivavoz }}
+{{ content.field_descargar_capitulo_pdf }}
+{{ content.field_descargable }}
+{{ content.field_anexos }}
+{{ content.field_enlace_anexos }}
+{{ content.field_id_frente_espejo }}
+{{ content.field_enlace_casos }}
+
+<script src="/themes/custom/cevtheme/js/driver.min.js"></script>
+<script type="text/javascript">
+{{ term.field_script_tour.value|raw }}
+</script>

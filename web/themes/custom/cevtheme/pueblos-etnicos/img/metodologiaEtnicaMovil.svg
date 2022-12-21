@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.78;fill:#0B0C0C;}
+	.st1{fill:#0A9797;}
+	.st2{fill:#075957;}
+	.st3{opacity:0.3;fill:#EA6B63;enable-background:new    ;}
+	.st4{opacity:0.6;fill:#08AFB7;enable-background:new    ;}
+	.st5{opacity:0.8;fill:#F5AF5A;enable-background:new    ;}
+	.st6{fill:#E4DECD;}
+</style>
+<circle class="st0" cx="51.25" cy="51.25" r="48.75"/>
+<g>
+	<g>
+		<circle class="st1" cx="49.25" cy="49.25" r="48.75"/>
+		<g>
+			<path class="st2" d="M49.25,1C75.86,1,97.5,22.64,97.5,49.25S75.86,97.5,49.25,97.5S1,75.86,1,49.25S22.64,1,49.25,1 M49.25,0
+				C22.05,0,0,22.05,0,49.25S22.05,98.5,49.25,98.5S98.5,76.45,98.5,49.25S76.45,0,49.25,0L49.25,0z"/>
+		</g>
+	</g>
+	<circle class="st3" cx="49.25" cy="49.25" r="36.59"/>
+	<circle class="st4" cx="49.25" cy="49.25" r="31.91"/>
+	<circle class="st5" cx="49.25" cy="49.25" r="27.24"/>
+	<circle class="st6" cx="49.25" cy="49.25" r="22.56"/>
+</g>
+</svg>

@@ -1,0 +1,326 @@
+:root {
+	--line-color: #721D2B;
+	--color-blue1: #3FC2FB;
+	--color-ocher1:#EBC44A;
+	--color-white1:#EEECED;	
+}
+
+
+#nna-escuelas {
+    width: 100%;
+	height: 100vh;
+    background-color: #000;
+    background-image: radial-gradient(circle 95vh at 50% 100%, #00ffed, #06225e);
+    background-repeat: no-repeat;
+}
+
+.nna .tags{
+margin-bottom:20px;
+ margin-top:20px;
+}
+
+.nna .contentEscuelas  {
+	width: 100%;
+	margin-left: 0vw;
+	display: flex;
+}
+
+.nna .contentEscuelas .tituloHistoria:hover{
+    color: #88d9ff;   
+    font-weight: bold;
+    cursor: pointer;
+}
+.nna .contentEscuelas .tituloHistoria a:hover{
+    text-decoration: none;
+	color: #88d9ff;
+}
+
+.nna .contentEscuelas .tituloHistoria{
+	 color: #3FC2FB;
+	 font-size : calc(0,8em + 1vw);
+	 font-weight: bold;
+	 cursor: pointer; 
+}
+.nna .contentEscuelas .btn-download {
+    margin: 0px 0px 10px 0px;
+    border-radius: 30px;
+    color: rgba(25, 49, 70, 0.8);
+    background-color: #39c0ed;
+    border-color: #39c0ed;
+    width: 30px;
+    height: 30px;
+    padding: 0px;
+}
+.nna .contentEscuelas .btn-download a{
+    color: rgba(25, 49, 70, 0.8) !important;
+}
+.nna .contentEscuelas .btn-download:hover{
+	background-color: #88d9ff;
+    border-color: #88d9ff;
+}
+
+.nna .contentEscuelas .content-escuela{
+	height: 100vh;
+	width: 100vw;
+	margin-left: 30%;	
+	margin-top: -20px;
+}
+
+.nna .contentEscuelas .content-escuela .contenidoHistoria{  
+	border-radius: 25px;
+    background-color: rgba(25, 49, 70, 0.8);
+    border-style: solid;
+    border-color: transparent;
+	display: block;		
+	width: 40%;	
+	text-align: center;	 
+	font-family: Source Sans Pro;
+    font-size: 16px;
+    color: #EEECED;
+	padding: 20px 20px 20px;
+
+}
+
+.nna .contentEscuelas .imagenFinal{  
+	margin-top: 30px;
+	height: 100vh;
+}
+
+   
+.nna .contentEscuelas .col-nna {  
+	 width: 33.33%;  	
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;	 
+}
+
+.nna .contentEscuelas .contentImag{
+	justify-content: center;
+	padding: 2vh 0;	
+}
+   
+[class*="col-"] {
+   float: left;
+   padding: 1px 0 ;
+}
+
+   
+.nna .contentEscuelas .acordeon .accordion {
+	 display: block;  
+	 cursor: pointer;
+	 position: relative;
+	 justify-content: center;
+}
+
+.nna .contentEscuelas .acordeon {
+	overflow: hidden;
+	top: 35vh;	
+	position: absolute;
+	width: 100%;		
+}
+  
+.nna .contentEscuelas .acordeon .accordion {
+	 position: relative;
+	 height: 150px;
+	 transition: all 0.8s;
+}
+
+.nna .contentEscuelas .item{	
+	align-items: center;
+	position: relative;	
+}
+
+
+.nna .contentEscuelas .item.active .accordion {
+	display: block;
+}
+
+.nna .contentEscuelas .accordion__header {
+
+	margin-top: 100px;
+	display: flex;	 
+	justify-content: center;
+	padding: 1vh 1vw;	
+	background-color: rgba(25, 49, 70, 0.8);
+    border-radius: 5px;
+	z-index:100;
+}
+
+
+
+.nna .contentEscuelas .accordion__icon {
+  margin-right: .63rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: all .5s ease; 
+  display: inline-block;
+}
+.nna .contentEscuelas  .tituloHeader{
+	display: inline-block;
+}
+
+.nna .contentEscuelas .video-responsive {
+	position: relative;
+	padding-bottom: 56.25%; /* 16/9 ratio */
+	overflow: hidden;	
+}
+	
+.nna .contentEscuelas .video-responsive iframe,
+.nna .contentEscuelas .video-responsive object,
+.nna .contentEscuelas .video-responsive embed {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* clases de las escuelas */
+.nna .contentEscuelas .escuela0{ 
+	width: 400px;
+}
+
+.nna .contentEscuelas .escuela1{  
+	width: 250px;
+	margin-top:-50px;
+}
+
+.nna .contentEscuelas .escuela2{  
+	width: 360px;
+}
+
+
+.nna .contentEscuelas .escuela3 {
+    width: 317px;
+    margin-top: -29px;
+    margin-left: -170px;
+}
+
+.nna .contentEscuelas .escuela4{  
+	width: 360px;	
+}
+
+.nna .contentEscuelas .escuela5{  
+	width: 360px;
+}
+
+.nna .contentEscuelas .escuela6 {
+    width: 360px;
+}
+
+
+@media screen and (max-width: 1024px) {
+
+	.nna .contentEscuelas .contentImag{
+		padding: 5vh 0;	
+	}
+	.nna .contentEscuelas  .accordion__header {
+		z-index:100;
+		padding: 1vh 0;	
+		z-index:100;
+	}
+	
+	.nna .contentEscuelas  .tituloHistoria{
+		font-size : 12px;	
+		text-align: center;		
+	}
+/*espacio de despliegue de la montaña(video)
+	.nna .contentEscuelas  .accordion.open {
+		padding-bottom: 60vh; 
+	}
+*/
+	.nna .contentEscuelas  .content-escuela .contenidoHistoria{  
+		margin-top: 10px;
+		font-size: 12px;
+		height: 55vh;
+		width:80vw;
+		margin-left:-20vw;
+	}	
+
+	.nna .contentEscuelas  .video-responsive iframe,
+	.nna .contentEscuelas  .video-responsive object,
+	.nna .contentEscuelas  .video-responsive embed {
+	width: 100%;
+	height: 100%;
+	position:absolute;
+
+	}
+/*	clases de las escuelas  */
+	.nna .contentEscuelas .escuela0{  
+		width: 200px;
+	}
+	
+	.nna .contentEscuelas .escuela1{  
+		width: 150px;
+	}
+	
+	.nna .contentEscuelas .escuela2{  
+		width: 180px;
+	}
+	
+	.nna .contentEscuelas .escuela3{  
+		width: 170px;
+	}
+	
+	.nna .contentEscuelas .escuela4{  
+		width: 180px;
+	}
+		
+	.nna .contentEscuelas .escuela5{  
+		width: 200px;
+	}
+
+	.nna .contentEscuelas .escuela6{  
+		width: 160px;
+	}
+	
+}
+
+
+/* Contraste  */
+
+.contraste #mont {
+	filter: grayscale(100%);	
+	}
+
+
+.contraste #nna-escuelas {
+	filter:grayscale(100%);
+    background-color: white;  
+}
+
+.contraste .nna .contentEscuelas .tituloHistoria{
+	color:black;
+}
+
+.contraste .nna .contentEscuelas .tituloHistoria:hover{
+	text-decoration: underline;
+	color: black;   
+}
+
+.contraste .nna .contentEscuelas .tituloHistoria{
+	color: black;   
+}
+
+.contraste .nna .contentEscuelas .content-escuela .contenidoHistoria{  
+    background-color: white;
+    color: black;
+}
+
+.contraste .nna .contentEscuelas .accordion__header {
+	background-color: white;
+}
+
+.contraste .nna .contentEscuelas .escuela0,
+.contraste .nna .contentEscuelas .escuela1,
+.contraste .nna .contentEscuelas .escuela2,
+.contraste .nna .contentEscuelas .escuela3,
+.contraste .nna .contentEscuelas .escuela4,
+.contraste .nna .contentEscuelas .escuela5,
+.contraste .nna .contentEscuelas .escuela6
+{  
+	filter:grayscale(100%);
+}
+
+
+
+

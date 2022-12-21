@@ -1,0 +1,490 @@
+/* ------ EAO 09/11/1984 ------- */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
+
+:root {
+    /* Use Resolution according to image size, for example 8k (7680 x 4320) */
+    --map-w-size: 3840px;
+    --map-h-size: 2160px;
+    --default-font-weight: 400;
+
+    /* Initial map position, same in js */
+    --map-px: -1100px;
+    --map-py: -600px;
+
+    --map-z: 0;
+    --map-sec-z: 5;
+    --clouds-z: 30;
+    --bird-z: 10;
+
+    --bird-size: 200px;
+
+    --minimap-var: 0.065;
+}
+
+html * {
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: var(--default-font-weight);
+}
+
+html,
+body {
+    position: relative;
+    overflow: hidden;
+    background-color: #9b927e;
+}
+
+.map-container {
+    height: 100vh;
+    max-height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+
+.map-container .map-title {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    z-index: 1;
+    user-select: none;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.55);
+}
+
+/*
+.map-container .map-title:hover {
+    background-color: rgba(255, 255, 255, 0.35);
+    transition: all .5s ease;
+}*/
+
+.map-container .map-title h1 {
+    font-family: obliqua, sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    user-select: none;
+    color: #223a73;
+    text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
+    font-style: italic;
+}
+.map-container .map-title h4 {
+    color: #223a73;
+    user-select: none;
+    font-weight: 600;
+    text-shadow: 4px 4px 62px rgba(0, 0, 0, 0.2);
+    font-style: italic;
+}
+.map-container .map-title p {
+    color: #223a73;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+    font-weight: 500;
+}
+
+.map-wrapper {
+    width: var(--map-w-size);
+    height: var(--map-h-size);
+    position: relative;
+    z-index: var(--map-z);
+    will-change: transform;
+    transform: translate(var(--map-px), var(--map-py));
+}
+
+#map {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url('/themes/custom/cevtheme/iar/img/bg_map.png');
+    background-size: cover;
+}
+
+.map-sec {
+    position: absolute;
+    z-index: var(--map-sec-z);
+    width: 300px;
+    text-align: center;
+    color: white;
+}
+
+.map-sec .title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.2;
+    margin-bottom: 8px;
+    /*border: 1px solid white;
+    border-width: 4px 0px;*/
+    text-shadow: 2px 2px 4px #00000077;
+    /*padding: 2px 0px;*/
+}
+
+.map-sec p {
+    text-shadow: 1px 2px 0px #00000077;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.map-sec .contenido{
+    padding: 5px;
+    border-radius: 2px;
+}
+
+.map-sec:hover> .contenido {
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: all .5s ease;
+}
+
+.map-sec .desc {
+    font-size: 1.25rem;
+    margin-bottom: 16px;
+    text-align: justify;
+}
+
+.map-sec .button {
+    font-size: 1rem;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    background: none;
+    padding: 4px 16px;
+    vertical-align: top;
+    color: white;
+    border: 1px solid white;
+}
+
+.map-sec .button:hover {
+    background: white;
+    color: #9D9582;
+    transition: color 100ms linear;
+}
+
+
+.map-sec-image {
+    position: absolute;
+    transition: all .2s ease;
+}
+
+.map-sec-container:hover .map-sec-image {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.clouds {
+    width: var(--map-w-size);
+    height: var(--map-h-size);
+    position: absolute;
+    pointer-events: none;
+    z-index: var(--clouds-z);
+    top: 0;
+}
+
+.cloud {
+    position: absolute;
+    pointer-events: none;
+}
+
+.cloud-4x {
+    animation: moveclouds 90s linear infinite;
+}
+
+.cloud-3x {
+    animation: moveclouds 130s linear infinite;
+}
+
+.cloud-2x {
+    animation: moveclouds 160s linear infinite;
+}
+
+.cloud-1x {
+    animation: moveclouds 200s linear infinite;
+}
+
+@keyframes moveclouds {
+    0% {
+        transform: translateX(-300px);
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(4200px)
+    }
+}
+
+.bird {
+    position: absolute;
+    z-index: var(--bird-z);
+    width: 100px;
+    height: 100px;
+    transform: translateX(- calc(var(--bird-size) / 2));
+    pointer-events: none;
+}
+
+.bird img {
+    width: var(--bird-size);
+    margin: -50px 0 0 -50px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    background: url('/themes/custom/cevtheme/iar/img/overlay-l.png') no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.overlay-clouds .overlay-cloud {
+    width: 1200px;
+    position: absolute;
+    top: 0;
+    opacity: 1;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+
+.overlay-clouds .overlay-cloud:nth-child(1) {
+    animation-name: OverlayFirstCloud;
+    left: -100px;
+}
+
+.overlay-clouds .overlay-cloud:nth-child(2) {
+    right: -100px;
+    animation-name: OverlaySecondCloud;
+}
+
+.overlay-clouds .overlay-cloud:nth-child(3) {
+    bottom: -100px;
+    left: 0;
+    top: auto;
+    animation-name: OverlayThirdCloud;
+}
+
+#minimap {
+    width: calc(var(--map-w-size) * var(--minimap-var));
+    height: calc(var(--map-h-size) * var(--minimap-var));
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
+    z-index: 2;
+    background: url('/themes/custom/cevtheme/iar/img/mini_mapa.png') no-repeat;
+    background-size: cover;
+    pointer-events: none;
+}
+
+#minimap-viewport {
+    width: 35%;
+    height: 35%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, .5);
+    border: 1px solid;
+}
+
+.transition-none {
+    transition: none;
+}
+
+.map-title p {
+    color: #223a73;
+    user-select: none;
+}
+
+.map-title p a[data-bs-toggle] {
+    color: rgb(255, 253, 253);
+}
+
+.map-title p a[data-bs-toggle] span.collapsing {
+    display: none;
+}
+
+@keyframes OverlayFirstCloud {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        display: none;
+        top: -400px;
+        left: -500px;
+    }
+}
+
+@keyframes OverlaySecondCloud {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        display: none;
+        top: -400px;
+        right: -500px;
+    }
+}
+
+@keyframes OverlayThirdCloud {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        display: none;
+        bottom: -400px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    :root {
+        --minimap-var: 0.035;
+    }
+
+    .bird img{
+        width: 150px;
+    }
+
+    .overlay {
+        background: url('/themes/custom/cevtheme/iar/img/overlay-s.png') no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .map-container .map-title {
+        left: 15px;
+        top: 37px;
+        background-color: rgba(255, 255, 255, 0.55) !important;
+    }
+    .map-container .map-title h1 {
+        font-size: 20px;
+    }
+
+    .map-container .map-title h4 {
+        font-size: 14px;
+        color: #223a73;
+    }
+    .map-container .map-title p {
+        font-size: 12px;
+        color: #223a73;
+        text-shadow: 2px 2px 4px rgba(34, 58, 114, 0.5);
+    }
+
+    .map-container .map-title a {
+        font-size: 14px;
+        color: #223a73 !important;
+        font-weight: 600;
+        text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.5);
+    }
+
+    .map-container .map-title a span{
+        font-size: 14px;
+        color: #223a73 !important;
+        font-weight: 600;
+        text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.5);
+    }
+
+    .map-container .map-title:hover {
+        background-color: rgba(255, 255, 255, 0.0);
+        transition: all .5s ease;
+    }
+
+    #minimap {
+        left: 10px;
+        bottom: 50px;
+    }
+
+    .map-sec .contenido{
+       background-color: rgba(0, 0, 0, 0.3); 
+    }
+}
+
+@media screen and (max-width: 960px) and (min-width: 800px){
+    :root {
+        --minimap-var: 0.045;
+    }
+    .overlay {
+        background: url('/themes/custom/cevtheme/iar/img/overlay-m.png') no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .map-container .map-title {
+        left: 20px;
+        top: 40px;
+    }
+
+    .map-container .map-title:hover {
+        background-color: rgba(255, 255, 255, 0.0);
+        transition: all .5s ease;
+    }
+
+    .map-container .map-title h4 {
+        font-size: 18px;
+        color: #223a73;
+        text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+    }
+    .map-container .map-title p {
+        font-size: 14px;
+        color: #223a73;
+        text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+    }
+
+    #minimap {
+        left: 10px;
+        bottom: 70px;
+    }
+    .map-sec .contenido{
+        background-color: rgba(0, 0, 0, 0.3); 
+     }
+    
+}
+
+
+@media screen and (max-width: 1367px) and (min-width: 1024px){
+    :root {
+        --minimap-var: 0.045;
+    }
+    
+    .overlay {
+        background: url('/themes/custom/cevtheme/iar/img/overlay-l.png') no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    #minimap {
+        left: 25px;
+        bottom: 45px;
+    }
+
+    .map-container .map-title {
+        left: 10px;
+        top: 40px;
+    }
+
+    .map-container .map-title h4 {
+        font-size: 16px;
+        color: #223a73;
+        text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+    }
+    .map-container .map-title p {
+        font-size: 12px;
+        color: #223a73;
+        text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+    }
+    .map-container .map-title h1 {
+        font-size: 20px;
+    }
+}

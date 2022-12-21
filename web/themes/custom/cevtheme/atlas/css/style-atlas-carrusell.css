@@ -1,0 +1,332 @@
+body {
+  background-color: #FEF2E1;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  font-family: 'Source Sans Pro', sans-serif;
+  background-position: top;
+  color: #293171;
+}
+
+h2,
+h3,
+h1,
+h5,
+h6 {
+  font-family: obliqua, sans-serif !important;
+  font-weight: bold;
+}
+
+.presentacion {
+    margin-top: 90px;
+    height: calc(100vh - 90px);
+    min-height: 600px;
+    background-color: #FEF2E1;
+}
+
+.cabecera {
+  display: flex;
+  justify-content: space-between;
+  height: 30%;
+}
+
+.carrusel {
+  height: 70%;
+}
+
+div#carruselPPal,
+.carousel-inner {
+  margin-top: 20px;
+  height: 90%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.carousel-inner {
+  display: flex;
+}
+
+.carrusel a img.card-img-bottom,
+img.imagenCarr {
+  width: 100% !important;
+  height: 100%;
+}
+
+.divmapa {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  margin-top: -5px;
+  padding: 0px;
+}
+
+.mapaDinamicas,
+a.link {
+  width: 50%;
+  text-align: end;
+  margin-left: 1rem;
+}
+
+#carruselPPal .icono {
+  font-size: 1.5rem;
+  position: relative;
+  background-color: #E25B00;
+  border-radius: 50%;
+  padding: 0.5rem;
+  transition: all 0.7s ease;
+}
+
+#carruselPPal .icono:hover {
+  background-color: #FF6700;
+  font-size: 1.5rem;
+}
+
+#carruselPPal .carousel-control-next {
+  justify-content: flex-start;
+  display: flex;
+  align-items: center;
+  align-content: flex-start;
+  width: 3%;
+  height: 50%;
+}
+
+#carruselPPal .carousel-control-prev {
+  display: flex;
+  justify-content: flex-end;
+  width: 3%;
+  align-content: center;
+  align-items: center;
+  height: 50%;
+}
+
+#carruselPPal .carousel-control-next, #carruselPPal .carousel-control-prev {
+background-color: transparent;
+}
+
+.elemento {
+  display: block;
+}
+
+.card {
+  height: 100%;
+  background-color: transparent;
+  border: unset;
+  margin-left: 1px;
+  margin-right: 1px;
+}
+
+.card-title {
+  text-align: center;
+}
+
+.card-text {
+  text-align: center;
+}
+
+.enlaceLink {
+  text-decoration: unset;
+  color: #e25b00;
+  font-weight: 900;
+  transition: all 0.7s ease;
+}
+
+.enlaceLink:hover {
+  text-decoration: unset;
+  color: #FF6700;
+}
+
+.enlaceLink .card-title {
+  padding: 0px 4rem;
+  color: #e25b00;
+  transition: all 0.7s ease;
+}
+
+.enlaceLink .card-title:hover {
+  color: #ff6700;
+}
+
+.enlaceLink .card-text,
+.divPresentacion p {
+  color: #373062;
+  font-size: 0.8rem !important;
+  padding: 0rem 2rem;
+  transition: all 0.7s ease;
+}
+
+.enlaceLink .card-text:hover {
+  font-weight: 400;
+}
+
+.divPresentacion {
+  padding: 0 0 0 80px;
+}
+
+.divPresentacion p {
+  padding: 0px;
+}
+
+.divPresentacion h3 {
+  color: #373062;
+  font-weight: bolder;
+}
+
+.divPresentacion a {
+  background-color: #e25b00;
+  color: #ffffff;
+  transition: all 0.7s ease;
+  margin-bottom: 10px;
+  line-height: 1rem;
+}
+
+.divPresentacion a:hover {
+  background-color: #FF6700;
+  color: #ffffff;
+}
+
+.mapaDinamicas {
+  background-color: #45745885;
+  border-radius: 10px 0PX 0PX 10PX;
+  padding: 1rem;
+}
+
+.st2 {
+  fill: #ffffff;
+}
+
+.region .st1,
+.region .st0 {
+  fill: transparent;
+  transition: all 0.7s ease;
+}
+
+.region1 .st0,
+.region1 .st1 {
+  fill: #ffffff50;
+  z-index: 999;
+}
+
+@media all and (max-width:768px) {
+  .divPresentacion {
+    padding: 0 0 0 30px;
+  }
+
+  .carousel-item-next,
+  .carousel-item-prev,
+  .carousel-item.active {
+    display: block;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 12%;
+    height: 30%;
+    align-items: flex-end;
+  }
+  .carousel-control-prev{
+    left: 25px;
+  }
+  .carousel-control-next{
+    right: 25px;
+  }
+
+  .card {
+    height: auto;
+  }
+
+  div#carruselPPal,
+  .carousel-inner {
+    margin-top: 4.5vh;
+  }
+
+  .divmapa {
+    justify-content: flex-end;
+  }
+
+  .mapaDinamicas,
+  a.link {
+    width: 27%;
+  }
+
+  a.link {
+    text-align: end;
+    margin-right: 1rem;
+    line-height: 1rem;
+    font-size: 70%;
+  }
+
+  .mapaDinamicas {
+    padding: 0.3rem;
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+
+  .presentacion p {
+    font-size: 80%;
+    padding: 0rem 1.5rem 0rem 0rem;
+  }
+
+  #carruselPPal .icono {
+    font-size: 1rem;
+    top: 0;
+  }
+
+  #carruselPPal .icono:hover {
+    font-size: 1.1rem;
+  }
+
+  .enlaceLink .card-title {
+    padding: 0px 2rem;
+  }
+}
+
+@media (max-width: 767px) {
+     #carruselPPal .carousel-inner .carousel-item > div {
+        display: none;
+    }
+     #carruselPPal .carousel-inner .carousel-item > div:first-child {
+        display: block;
+    }
+}
+
+ #carruselPPal .carousel-inner .carousel-item.active,
+ #carruselPPal .carousel-inner .carousel-item-next,
+ #carruselPPal .carousel-inner .carousel-item-prev {
+    display: flex;
+}
+#carruselPPal .carousel-inner .carousel-item.active{
+  opacity: 1;
+  transition: all 1s ease !important;
+}
+.active.carousel-item-start, .carousel-item-prev:not(.carousel-item-end) {
+  transform: translateX(-100%) !important;
+  opacity: 0 !important;
+}
+.active.carousel-item-end, .carousel-item-next:not(.carousel-item-start){
+  transform: translateX(100%) !important;
+  opacity: 0 !important;
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+    
+     #carruselPPal .carousel-inner .carousel-item-end.active,
+     #carruselPPal .carousel-inner .carousel-item-next {
+      transform: translateX(33%);
+    }
+    
+     #carruselPPal .carousel-inner .carousel-item-start.active, 
+     #carruselPPal .carousel-inner .carousel-item-prev {
+      transform: translateX(-33%);
+    }
+}
+
+ #carruselPPal .carousel-inner .carousel-item-end,
+ #carruselPPal .carousel-inner .carousel-item-start { 
+  transform: translateX(0);
+}
+
+.bg-body {
+  background-repeat: no-repeat;
+  background-size: 100%;
+}

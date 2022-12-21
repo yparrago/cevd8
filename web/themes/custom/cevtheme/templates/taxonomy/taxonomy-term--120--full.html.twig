@@ -1,0 +1,78 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a taxonomy term.
+ *
+ * Available variables:
+ * - url: URL of the current term.
+ * - name: (optional) Name of the current term.
+ * - content: Items for the content of the term (fields and description).
+ *   Use 'content' to print them all, or print a subset such as
+ *   'content.description'. Use the following code to exclude the
+ *   printing of a given child element:
+ *   @code
+ *   {{ content|without('description') }}
+ *   @endcode
+ * - attributes: HTML attributes for the wrapper.
+ * - page: Flag for the full page state.
+ * - term: The taxonomy term entity, including:
+ *   - id: The ID of the taxonomy term.
+ *   - bundle: Machine name of the current vocabulary.
+ * - view_mode: View mode, e.g. 'full', 'teaser', etc.
+ *
+ * @see template_preprocess_taxonomy_term()
+ *
+ * @ingroup themeable
+ */
+#}
+{{ attach_library('cevtheme/exilio_library') }}
+<div class="container-fluid scrollablex">
+    <div class="row scrollablex">
+        <div class="col-sm-6 exiliointro">
+
+            <a class="titexi" href="/colombia-fuera-de-colombia">Exilio:</br>Colombia fuera de Colombia</a>
+            <a class="descexi" href="/colombia-fuera-de-colombia">Dar la palabra al exilio es una forma de abrir un camino para que su experiencia sea reconocida, y la voz de sus protagonistas sea escuchada y tenida en cuenta. El exilio fue casi siempre el último recurso después de la violencia sufrida. Parte sus vidas en un antes y un después.</a>
+
+        </div>
+        <div class="col-sm-6 colartintro ">
+            
+                <p class="titarq"> Arte desde el exilio </p>
+            <a class="linkexihom" href="/colecciones-desde-el-exilio">
+            <div class="row vertalign">
+                <div class="col-lg-6 ">
+                    <p class="titart1" >Arqueologías vivas</br> del exilio</p>
+                </div>
+                <div class="col-lg-6 ">
+                    <p class="desart1" >Las maletas del exilio están llenas de miedo e incertidumbre, pero también de objetos que conservan el vínculo con su país, su gente y sus recuerdos. Esta exposición muestra estos objetos que son testimonios de sobrevivencia, cuentan una historia y, a su vez, son la evidencia material del exilio colombiano.</br></p>         
+                </div>
+               
+            </div> </a>
+            <a class="linkexihom" href="https://especiales.comisiondelaverdad.co/vocesdesdelaotraorilla/" target="_blank">
+            <div class="row vertalign">
+                <div class="col-lg-6 ">
+                    <p class="titart1">Voces desde </br>la otra orilla</p>
+                </div>
+                <div class="col-lg-6 ">
+                    <p class="desart1" >"La exposición intenta, a través de la vida que surge de la creación artística, aliviar la carga mortífera que pesa sobre las historias que desembocan en el exilio y ataviar con un manto poético el dolor, el horror, la resistencia y la dignidad que tejen estos relatos”. </br>Iniciativa del Nodo París con colaboración del Nodo Alemania y Segunda y Tercera Generación.</p>
+                </div>
+
+            </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+{# BOTONES FLOTANTES #}
+{{ content.field_botones_menu_flotante }}
+{{ content.field_avivavoz }}
+{{ content.field_descargar_capitulo_pdf }}
+{{ content.field_descargable }}
+{{ content.field_anexos }}
+{{ content.field_enlace_anexos }}
+{{ content.field_id_frente_espejo }}
+{{ content.field_enlace_casos }}
+
+<script src="/themes/custom/cevtheme/js/driver.min.js"></script>
+<script type="text/javascript">
+{{ term.field_script_tour.value|raw }}
+</script>

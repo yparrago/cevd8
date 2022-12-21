@@ -1,0 +1,257 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a taxonomy term.
+ *
+ * Available variables:
+ * - url: URL of the current term.
+ * - name: (optional) Name of the current term.
+ * - content: Items for the content of the term (fields and description).
+ *   Use 'content' to print them all, or print a subset such as
+ *   'content.description'. Use the following code to exclude the
+ *   printing of a given child element:
+ *   @code
+ *   {{ content|without('description') }}
+ *   @endcode
+ * - attributes: HTML attributes for the wrapper.
+ * - page: Flag for the full page state.
+ * - term: The taxonomy term entity, including:
+ *   - id: The ID of the taxonomy term.
+ *   - bundle: Machine name of the current vocabulary.
+ * - view_mode: View mode, e.g. 'full', 'teaser', etc.
+ *
+ * @see template_preprocess_taxonomy_term()
+ *
+ * @ingroup themeable
+ */
+#}
+{# <div{{ attributes }}>
+  {{ title_prefix }}
+  {% if name and not page %}
+    <h2><a href="{{ url }}">{{ name }}</a></h2>
+  {% endif %}
+  {{ title_suffix }}
+  {{ content }}
+</div> #}
+ <!--ESTILOS GENERALES DE LA PAGINA -->
+   <!--CSS DE ICONOS DE FUENTE-->
+    <link rel="stylesheet" href="themes/custom/cevtheme/salas-arte-cultura/css/style.css">
+    <link rel="stylesheet" href="themes/custom/cevtheme/salas-arte-cultura/css/estilos-salas-arte.css">
+  <!--PRESENTACIÓN-->
+  <div class="container fixed-top presentacion">
+    <div class="row">
+      <div class="col-4">
+        <h5>Activaciones</h5>
+        <h1>Artísticas y Culturales</h1>
+          <div id="contenedorParrafo" class="parrafoppal">
+             <p>Este espacio reúne una selección de piezas del enorme corpus de proyectos culturales y artísticos realizados por la Comisión de la Verdad junto a artistas, comunidades y procesos sociales y comunitarios, quienes han propuesto, desde sus quehaceres y experiencias, relatos simbólicos del conflicto armado interno.<a id="lmas" class="" data-bs-toggle="collapse" data-bs-target="#bloquemas"> Seguir leyendo.</a></p>
+
+    <div id="bloquemas" class="collapse">
+     <a id="xCerrar" class="" data-bs-toggle="collapse" data-bs-target="#bloquemas">
+      <i class="bi bi-x-circle-fill"></i>
+     </a>
+    <p>Las distintas piezas revelan que el arte y la cultura pueden ser una forma de resistencia, denuncia, testimonio y expresión individual y colectiva, que permiten visibilizar hechos concretos o realidades complejas de nuestro país; incluso, pueden establecer y recomponer lazos y vínculos humanos en medio o a raíz de la violencia. </p>
+    
+    
+    
+    <p>Las obras y proyectos culturales aquí contenidos abarcan temas transversales como la importancia de posicionar la verdad; la necesidad de revisar la historia y traerla a nuestro presente para acceder a esa verdad; hacernos la pregunta sobre cómo recordar el pasado doloroso, y resituar el valor de los pueblos étnicos y sus saberes culturales.</p>
+    
+    
+    <p>De Igual forma, incluyen los conceptos de territorio y arraigo para comprender nuestra diversidad cultural, la infancia y la guerra, la resistencia y la búsqueda de caminos para sanar, comprender y resignificar el dolor. Al hacer clic en cada uno de estos temas, el usuario podrá acceder al conjunto de obras que hace referencia a estos conceptos.</p>
+    
+    <p>Por otro lado, este espacio también propone un recorrido sensorial desde los distintos formatos que los artistas y comunidades usaron en cada uno de los proyectos.</p>
+    
+    <p>Por ello, en esta arquitectura digital, el usuario podrá encontrar una diversidad de piezas audiovisuales, sonoras, gráficas y proyectos multiformato; y desde esas categorías, podrá hacer búsquedas, crear rutas propias, descargar y compartir contenidos.</p>
+    
+    <p>En el marco del Legado de la Comisión de la Verdad, la creación artística se ha revelado como una forma de pensamiento y acción; quizás, ha sido la herramienta más poderosa para tejer puentes de diálogo y hacer crecer nuevas esperanzas. </p>
+     
+     
+     
+    <p style=”font-style:italic;”>Trazamos algunas líneas de interpretación, entre muchas otras asociaciones posibles, estas ofrecen un paisaje tan diverso como complejo, en el que los relatos, los lugares y las voces hacen eco entre sí, recordándonos que la historia es compartida, así como el deseo de cambiarla. </p>
+     
+       
+     
+    <p>Para la Comisión, <a href='/buscar?query="A+contracorriente"+y+"+Que+haiga+paz"+y+"Alianzas+de+verdad"+y+"Alborada"+y+"Cantos+de+verdad"+y+"Nombrar+lo+innombrable"' target="_blank">posicionar la verdad</a> como un tema permanente de reflexión ha involucrado la activación de escenarios y espacios donde el encuentro, la conversación y el debate pudieran tener lugar, más allá del miedo, los estereotipos o la polaridad.</p>
+     
+    <p>Reconocer una voz, sentarse frente a frente, hablar de lo silenciado, entender el conflicto desde otras perspectivas, decir con el canto, con poemas y versos son acciones posibles en un país dispuesto a escuchar.</p>
+     
+    
+    
+    <p>Con el pasar de los años y las décadas, el conflicto en Colombia adquirió tal complejidad que tal vez tendríamos que retroceder más de una centuria para desentrañar sus inicios.</p>
+    
+    <p>Mientras más facetas del 
+    
+    <a href='/buscar?query="Huellas+de+desaparición"+y+"Época:+reportajes+historia+vetada"+y+"Escuche+verdad"+y+"Cantos,+tambores+raíces+resistencia"+y+"Luz+noche"' target="_blank">prisma de la historia</a>
+ 
+ se revelan, a través de testimonios, archivos y hallazgos, es posible alcanzar una mejor comprensión sobre un fenómeno que a veces parece unidimensional. Adentrarse en él es el reto para afrontar el futuro.</p>
+     
+    
+    
+    
+    <p>En Colombia son muchas las generaciones que han nacido y crecido en medio del conflicto armado. 
+    
+<a href='/buscar?query="historias+adultos+narradas+niños"+y+"cosechando+verdad"+y+"arte+contar+nuestra+historia"+y+"rompiendo+muros"' target="_blank"> La voz de la infancia</a>
+    
+    narra vívidamente las experiencias sobre el reclutamiento infantil, el abandono y la fractura familiar durante la guerra, que afectaron las vidas de muchos, hasta su adultez.</p>
+     
+     
+    <p>El conflicto armado marcó de manera radical los caminos de Colombia; acercarse a las historias de vida de quiénes han comenzado de nuevo, crea el tejido para comprender a todo un territorio.</p>
+     
+    <p>La Comisión, con sus once regionales, incluyendo a los pueblos étnicos y un eje macro internacional, emprendió junto con las comunidades la construcción de 
+    
+ <a href='/buscar?query="Cantos+tambores+raíces+resistencia"+y+"Pueblos+resistencia+vida+paz"+y+"Reconóceme+Colombia+Euskadi"+y+"Salirle+paso"' target="_blank">Caminos de diálogos y escucha</a>
+    
+    , un proceso colectivo de reconocimiento que resignifica el territorio para una nueva siembra.</p>
+     
+     
+    
+    
+    <p><a href='/buscar?query="Lapükat"+y+"Recuerdo+mi+origen:+indígena"+y+"Salirle+al+paso"+y+"Lienzos+de+memoria"' target="_blank">Reconocer las identidades culturales </a> 
+    
+    
+    y dar cabida a la participación de los pueblos étnicos de Colombia, contribuye al proceso de reparación de estas comunidades.</p>
+    <p>El conflicto atravesó con fuerza territorios originarios, trajo consigo migración y despojo, mientras valles y serranías sagradas se convertían en centros de operación, abastecimiento y enfrentamiento.</p>
+    <p>El restablecimiento de una paz duradera es vital para que las comunidades indígenas, rom, palenqueras y negras, puedan regresar a sus tierras y salvaguardar sus saberes, tradiciones y cultura.</p>
+    
+    
+    <p>Quizás muchas preguntas atravesaron la mente de quienes, tras décadas de guardar silencio, compartían por primera vez sus testimonios con la Comisión de la Verdad; sin embargo, una de ellas: 
+    
+<a href='/buscar?query="16+Mayo"+y+"Huellas+que+persisten+caminos"+y+"Mitú+1998"+y+"Dolor+en+Yurumanguí"+y+"Los+doce”+y+"Altavoces"+y+"Salida+al+sol”' target="_blank">¿Cómo recordar? </a>
+    
+     es quizás la que perdura.</p>
+    
+    <p>Volver sobre el pasado, tramitar el dolor y rehacer la vida, requiere de grandes esfuerzos y de un acompañamiento que abrace, acoja y sustente el camino que apenas se emprende.</p>
+     
+    
+    
+    <p>Tras el Acuerdo de Paz, para algunos fue posible retornar a sus tierras y al lugar de origen, para otros, el comienzo ocurrió lejos de casa, en una gran ciudad o en el exilio.</p>
+     
+    <p>Articular pasado, presente y futuro es un paso necesario para quienes han vivido el conflicto y un proceso en el que la familia, la comunidad, la tierra, las creencias o los saberes, son los 
+    
+<a href='/buscar?query="Verdad+poética"+y+"Juntanza+gráfica+de+verdad"+y+"Develaciones"+y+"Hacer+visible+lo+invisible"+y+"Mujeres+en+resistencia+cultural”' target="_blank">lazos vitales</a>
+
+    
+    necesarios para resignificar la pérdida y la deriva.</p>
+     
+    <p>Los testimonios de resistencia, muestran el gran poder de la juntanza, lo colectivo y las tradiciones para transformar el entorno cotidiano y lograr rehacer el hogar en cualquier lugar.</p>
+     
+     
+    <p>En esta oportunidad histórica y en su encuentro con la reconciliación, Colombia empieza a soñar una paz duradera.</p>
+     
+    <p>La sanación es un reto para comunidades enteras, las cuales, a través de la reunión, sus tradiciones ancestrales, el arte y muchas veces, tan simple como parece, con su presencia han logrado resignificar sus experiencias, promoviendo una cultura que privilegia la salida pacífica al conflicto.</p>
+     
+    <p>La voluntad y el deseo de reconstrucción son poderosos motores para sobrepasar las huellas de dolor, el rencor, la ira o el miedo que deja la guerra.</p>
+     
+    <p>
+    Serán las nuevas generaciones las que con su compromiso ayudarán a sostener dicho proceso. Para muchos, la búsqueda de formas para sanar, comprender y resignificar el dolor toma
+    
+   <a href='/buscar?query="Territorio+sagrado"+y+"¡Si+el+río+hablara!"+y+"resurrección+de+los+condenados"+y+"Caminar:+una+práctica+cultural+de+resistencia"' target="_blank"> toda una vida.</a>
+     
+    <a id="lmenos" class="" data-bs-toggle="collapse" data-bs-target="#bloquemas">Cerrar</a></p></div>
+          </div>
+      </div>
+    </div>
+  </div>
+  <!-- FILTROS -->
+  <div class="container fixed-top chekeadores">
+    <div class="row">
+        <div class="col-12">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input btn-check" type="radio" name="inlineRadioOptions" id="opcion1" value="option1" checked>
+            <label class="form-check-label btn btnInicio" for="opcion1">Inicio</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input btn-check btnAudiovisual" type="radio" name="inlineRadioOptions" id="opcion2" value="option2">
+            <label class="form-check-label btn btnAudiovisual" for="opcion2">Audiovisual</label>
+          </div>
+
+          <div class="form-check form-check-inline">
+            <input class="form-check-input btn-check" type="radio" name="inlineRadioOptions" id="opcion3" value="option3">
+            <label class="form-check-label btn btnGrafica" for="opcion3">Gráfica</label>
+          </div>
+
+          <div class="form-check form-check-inline">
+            <input class="form-check-input btn-check" type="radio" name="inlineRadioOptions" id="opcion4" value="option4">
+            <label class="form-check-label btn btnMultiformato" for="opcion4">Multiformato</label>
+          </div>
+
+          <div class="form-check form-check-inline">
+            <input class="form-check-input btn-check" type="radio" name="inlineRadioOptions" id="opcion5" value="option5">
+            <label class="form-check-label btn btnSonora" for="opcion5">Sonora</label>
+          </div>
+          
+          <div class="form-check form-check-inline">
+            <input class="form-check-input btn-check" type="radio" name="inlineRadioOptions" id="opcion6" value="option6">
+            <label class="form-check-label btn btnAcontecimientos" for="opcion6">Acontecimiento</label>
+          </div>
+          <!-- <div class="form-check form-check-inline opcion7 nover">
+            <input class="form-check-input btn-check" type="radio" name="inlineRadioOptions" id="opcion7" value="option7">
+            <label class="form-check-label btn" for="opcion7">KIT</label>
+          </div> -->
+          <div class="form-check form-check-inline" data-bs-toggle="tooltip" data-bs-placement="left" title="Aquí puede descargar los acontecimientos marcados con “me gusta”. Espere unos segundos a que se genere el pdf descargable.">
+            <a class="btn position-relative fijo" onclick="verPDF();">
+              <span class="icon icon-ico-like"></span>
+              <span class="position-absolute translate-middle badge rounded-pill bg-danger fijobadge">0
+                <span class="visually-hidden">Rutas seleccionadas</span>
+              </span>
+            </a>
+          </div>
+          
+        </div>
+    </div>
+  </div>
+
+  <!--VIEPORT ELEMENTOS CARDS-->
+  <div class="viewport">
+    <div class="scene3D-container">
+      <div class="scene3D"></div>
+    </div>
+  </div>
+  <!--LUGAR DE CREACIÓN MODALES-->
+  <div class="espacio"></div>
+  <!--REGION DE CREACIÓN HTML PARA EL PDF-->
+  <div class="container" id="PDF">
+    <div class="row" id="likestexto">
+      <div class="col-6">
+        <div class="logo img-fluid">
+          {# <img src="themes/custom/cevtheme/salas-arte-cultura/img/salas/logo-informe-mb.svg" alt="imagen logo" style="width: 200px;"/> #}
+        </div>
+        <h5 class="text-mutted" style="font-weight: 900;margin-top: 50px;">Activaciones</h5>
+        <h1 class="text-mutted" style="font-weight: 900; margin-bottom: 50px;">Artísticas y Culturales</h1>
+        <div class="text-pdf" style="    margin-bottom: 50px;
+              padding-bottom: 70px;
+             padding-right: 23px;
+            color: #585858;
+            line-height: 10pt;
+            font-weight: 500;">
+            <p>Este espacio reúne una selección de piezas del enorme corpus de proyectos culturales y artísticos realizados por la Comisión de la Verdad junto a artistas, comunidades y procesos sociales y comunitarios, quienes han propuesto, desde sus quehaceres y experiencias, relatos simbólicos del conflicto armado interno.</p>
+            <p>Las distintas piezas revelan que el arte y la cultura pueden ser una forma de resistencia, denuncia, testimonio y expresión individual y colectiva, que permiten visibilizar hechos concretos o realidades complejas de nuestro país; incluso, pueden establecer y recomponer lazos y vínculos humanos en medio o a raíz de la violencia</p>
+            <p>Las obras y proyectos culturales aquí contenidos abarcan temas transversales como la importancia de posicionar la verdad; la necesidad de revisar la historia y traerla a nuestro presente para acceder a esa verdad; hacernos la pregunta sobre cómo recordar el pasado doloroso, y resituar el valor de los pueblos étnicos y sus saberes culturales.</p>
+            <p>De Igual forma, incluyen los conceptos de territorio y arraigo para comprender nuestra diversidad cultural, la infancia y la guerra, la resistencia y la búsqueda de caminos para sanar, comprender y resignificar el dolor. Al hacer clic en cada uno de estos temas, el usuario podrá acceder al conjunto de obras que hace referencia a estos conceptos.</p>
+            <p>Por otro lado, este espacio también propone un recorrido sensorial desde los distintos formatos que los artistas y comunidades usaron en cada uno de los proyectos.</p>
+            <p>Por ello, en esta arquitectura digital, el usuario podrá encontrar una diversidad de piezas audiovisuales, sonoras, gráficas y proyectos multiformato; y desde esas categorías, podrá hacer búsquedas, crear rutas propias, descargar y compartir contenidos.</p>
+            <p>En el marco del Legado de la Comisión de la Verdad, la creación artística se ha revelado como una forma de pensamiento y acción; quizás, ha sido la herramienta más poderosa para tejer puentes de diálogo y hacer crecer nuevas esperanzas. </p>
+        </div>
+        <img src="themes/custom/cevtheme/salas-arte-cultura/img/salas/vermasQR.png" alt="imagen logo" style="margin-top: 110px;width: 80px;"/>
+      </div>
+    </div>
+  </div>
+  <div id="miruta"></div>
+   <script src="themes/custom/cevtheme/salas-arte-cultura/script/jquery-3.6.0.min.js" defer></script>
+  <script src="themes/custom/cevtheme/salas-arte-cultura/script/html2pdf.bundle.min.js" defer></script>
+  <script src="themes/custom/cevtheme/salas-arte-cultura/script/index.js" defer></script>
+
+{# BOTONES FLOTANTES #}
+{{ content.field_botones_menu_flotante }}
+{{ content.field_avivavoz }}
+{{ content.field_descargar_capitulo_pdf }}
+{{ content.field_descargable }}
+{{ content.field_anexos }}
+{{ content.field_enlace_anexos }}
+{{ content.field_id_frente_espejo }}
+{{ content.field_enlace_casos }}
+
+<script src="/themes/custom/cevtheme/js/driver.min.js"></script>
+<script type="text/javascript">
+{{ term.field_script_tour.value|raw }}
+</script>

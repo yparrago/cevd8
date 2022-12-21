@@ -1,0 +1,103 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a taxonomy term.
+ *
+ * Available variables:
+ * - url: URL of the current term.
+ * - name: (optional) Name of the current term.
+ * - content: Items for the content of the term (fields and description).
+ *   Use 'content' to print them all, or print a subset such as
+ *   'content.description'. Use the following code to exclude the
+ *   printing of a given child element:
+ *   @code
+ *   {{ content|without('description') }}
+ *   @endcode
+ * - attributes: HTML attributes for the wrapper.
+ * - page: Flag for the full page state.
+ * - term: The taxonomy term entity, including:
+ *   - id: The ID of the taxonomy term.
+ *   - bundle: Machine name of the current vocabulary.
+ * - view_mode: View mode, e.g. 'full', 'teaser', etc.
+ *
+ * @see template_preprocess_taxonomy_term()
+ *
+ * @ingroup themeable
+ */
+#}
+{# Plantilla Mapa Modalidades Pueblos Etnicos #}
+ {{ attach_library('cevtheme/mapas_modalidades_pueblos_etnicos_library') }}
+
+<div class="map-container">
+        <div class="map-title text-white">
+            <p class="pe-breadcrumb mb-2 ">
+              <a href="/pueblos-etnicos"><span class="icon-flecha-doble-iqz"></span> Pueblos étnicos </a>
+            </p>
+          <h1>Modalidades de violencia <br> en territorios étnicos</h1>
+        </div>
+        <div class="map-menu-buttons">
+            <div id="map-menu-button" class="map-menu-button">
+                <i class="bi bi-plus-lg"></i>
+            </div>
+            <!--<a href="https://mapas.comisiondelaverdad.co/portal/home/webmap/viewer.html?webmap=f7c321160cb4495588185cf060a4d404&extent=-84.9788,1.5188,-59.073,10.2312 " target="_blank" class="map-menu-button" data-bs-container="body" data-bs-toggle="popover"
+        data-bs-placement="right" data-bs-content="Profundizar mapa de modalidades" data-bs-trigger="hover"
+        data-bs-custom-class="map-menu-popover">
+                <i class="icon-sihayverdad-hp"></i>
+            </a> -->
+        </div>
+        <div id="map-menu-text" class="map-menu-text" style="display: none;">
+            <p>
+                El trato colonial y el racismo han generado contra los pueblos étnicos violencias históricas que son previas a las que se documentan en el marco del conflicto armado. Los esquemas de exclusión y marginación que afectan a los pueblos étnicos, han conllevado a que las violencias y daños en el conflicto armado sean desproporcionados, y derivan en el riesgo de exterminio físico y cultural de los pueblos indígenas; la desterritorialización, profundización del racismo, y negación del ser del pueblo negro; la asimilación cultural, eterno exilio y afectación a las rutas de itinerancia del pueblo Rrom, los cuales se configuran a partir del acumulado e interconexión entre las diferentes violencias y daños. 
+            </p>
+            <div class="map-menu-text-keywords">
+                <a href="https://www.comisiondelaverdad.co/etiquetas/esclarecimiento">Esclarecimiento</a> |
+                <a href="https://www.comisiondelaverdad.co/etiquetas/convivencia">Convivencia</a> |
+                <a href="https://www.comisiondelaverdad.co/etiquetas/no-repeticion">No repetición</a> |
+                <a href="https://www.comisiondelaverdad.co/etiquetas/violacion-ddhh-e-infraccion-dih">Violación DDHH e Infracción DIH</a> |
+                <a href="https://www.comisiondelaverdad.co/etiquetas/degradacion-de-la-guerra">Degradación de la guerra</a> |
+                <a href="https://www.comisiondelaverdad.co/etiquetas/territorio">Territorio</a> |
+                <a href="https://www.comisiondelaverdad.co/etiquetas/hechos-victimizantes">Hechos victimizantes</a> |
+                <a href="https://www.comisiondelaverdad.co/etiquetas/persistencia-del-conflicto">Persistencia del conflicto</a> |
+                <a href="https://www.comisiondelaverdad.co/etiquetas/pueblos-indigenas">Pueblos indígenas</a> |
+                <a href="https://www.comisiondelaverdad.co/etiquetas/pueblo-negro">Pueblo Negro</a> |
+                <a href="https://www.comisiondelaverdad.co/etiquetas/pueblo-afrocolombiano">Pueblo Afrocolombiano</a> |
+                <a href="https://www.comisiondelaverdad.co/etiquetas/pueblo-raizal">Pueblo Raizal</a> |
+                <a href="https://www.comisiondelaverdad.co/etiquetas/pueblo-palenquero">Pueblo Palenquero</a> |
+                <a href="https://www.comisiondelaverdad.co/etiquetas/Pueblo-rrom">Pueblo Rrom</a> |
+                <a href="https://www.comisiondelaverdad.co/etiquetas/abandono-estatal">Abandono estatal</a> |
+                <a href="https://www.comisiondelaverdad.co/etiquetas/estado">Estado</a> |
+                <a href="https://www.comisiondelaverdad.co/etiquetas/empresarios">Empresarios</a> |
+                <a href="https://www.comisiondelaverdad.co/etiquetas/elites-regionales">Élites regionales</a> |
+                <a href="https://www.comisiondelaverdad.co/etiquetas/fuerzas-armadas">Fuerzas Armadas</a> |
+                <a href="https://www.comisiondelaverdad.co/etiquetas/guerrillas">Guerrillas</a> |
+                <a href="https://www.comisiondelaverdad.co/etiquetas/paramilitarismo">Paramilitarismo</a> |
+                <a href="https://www.comisiondelaverdad.co/etiquetas/resistencias-organizadas">Resistencias organizadas</a> |
+                <a href="https://www.comisiondelaverdad.co/etiquetas/racismo-estructural">Racismo estructural</a> |
+                <a href="https://www.comisiondelaverdad.co/etiquetas/megaproyectos">Megaproyectos</a> |
+                <a href="https://www.comisiondelaverdad.co/etiquetas/impactos-culturales">Impactos culturales</a> |
+                <a href="https://www.comisiondelaverdad.co/etiquetas/trato-colonial">Trato colonial</a> |
+                <a href="https://www.comisiondelaverdad.co/etiquetas/continuum-de-violencia">Continuum de violencia</a>
+            </div>
+        </div>
+        <div id="map-wrapper" class="map-wrapper">
+            <div id="map" aria-label="Mapa de Colombia"></div>
+        </div>
+    </div>
+    <div id="minimap">
+        <div id="minimap-viewport"></div>
+    </div>
+
+
+{{ content.field_botones_menu_flotante }}
+{{ content.field_avivavoz }}
+{{ content.field_descargar_capitulo_pdf }}
+{{ content.field_descargable }}
+{{ content.field_anexos }}
+{{ content.field_enlace_anexos }}
+{{ content.field_enlace_casos }}
+{{ content.field_id_frente_espejo }}
+
+<script src="/themes/custom/cevtheme/js/driver.min.js"></script>
+<script type="text/javascript">
+{{ term.field_script_tour.value|raw }}
+</script>

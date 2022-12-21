@@ -1,0 +1,117 @@
+.modal-media.home-movil{
+    margin-top: 70px;
+    margin-bottom: 57px;
+}
+.modal-media.home-movil .btnCap {
+    margin: 0px 0px;
+    width: auto;
+    padding: 4px 10px;
+
+ /* ESTO ES IGUAL AL BOTON DEL HOME */
+    background-color: #917d26;
+    color: #fff;
+    font-weight: bold;
+    box-shadow: -5px 8px 8px -5px rgb(34 33 33);
+    display: inline-block;
+    text-align: center;
+    border-radius: 2px;
+    vertical-align: middle;
+    font-size: 13px;
+    line-height: 1.5;
+    text-decoration: none;
+    user-select: none;
+    border: 1px solid transparent;
+    font-family: inherit;
+    cursor: pointer !important;
+    z-index: 3;
+}
+.modal-media.home-movil .accordion-button{
+    box-shadow: inset 0px 5px 5px 0px #222121;
+    padding: 1.15rem 2.5rem;
+    font-style: italic;
+    display: block;
+    font-size: 1.2rem;
+}
+.modal-media.home-movil .accordion-button p.card-subtitle{
+    font-size: 1rem;
+    line-height: 1.8rem;
+}
+.modal-media.home-movil .accordion-body {
+    padding: 0rem 8rem 1.15rem 2.5rem;
+}
+.modal-media.home-movil .accordion-body p{
+    font-size: 0.9rem;
+    line-height: 1rem;
+}
+.modal-media.home-movil .accordion-item{
+    background-color: #14394C;
+    color: #fff;
+    background-image: url(/img/moviles/1.png);
+    background-repeat: no-repeat;
+    background-position: 100% 0%;
+}
+.modal-media.home-movil .accordion-button{
+    background-color: transparent;
+    color: #fff;
+    height: 150px;
+}
+.accordion-button:after{
+    display: none;
+}
+
+.modal-media.home-movil .accordion-item:nth-child(2){
+    background-color: #1C465F;
+    background-image: url(/img/moviles/2.png);
+}
+.modal-media.home-movil .accordion-item:nth-child(3){
+    background-color: #194E6A;
+    background-image: url(/img/moviles/3.png);
+}
+.modal-media.home-movil .accordion-item:nth-child(4){
+    background-color: #155677;
+    background-image: url(/img/moviles/4.png);
+}
+.modal-media.home-movil .accordion-item:nth-child(5){
+    background-color: #106084;
+    background-image: url(/img/moviles/5.png);
+}
+.modal-media.home-movil .accordion-item:nth-child(6){
+    background-color: #0D6992;
+    background-image: url(/img/moviles/6.png);
+}
+.modal-media.home-movil .accordion-item:nth-child(7){
+    background-color: #176189;
+    background-image: url(/img/moviles/7.png);
+}
+.modal-media.home-movil .accordion-item:nth-child(8){
+    background-color: #24587E;
+    background-image: url(/img/moviles/8.png);
+}
+.modal-media.home-movil .accordion-item:nth-child(9){
+    background-color: #2E5076;
+    background-image: url(/img/moviles/9.png);
+}
+.modal-media.home-movil .accordion-item:nth-child(10){
+    background-color: #39486D;
+    background-image: url(/img/moviles/10.png);
+}
+.modal-media.home-movil .accordion-item:nth-child(11){
+    background-color: #3D4F71;
+    background-image: url(/img/moviles/11.png);
+}
+.modal-media.home-movil .accordion-item:nth-child(12){
+    background-color: #415674;
+    background-image: url(/img/moviles/12.png);
+}
+.modal-media.home-movil .accordion-item:nth-child(13){
+    background-color: #455D78;
+    background-image: url(/img/moviles/13.png);
+}
+.modal-media.home-movil .accordion-item:nth-child(14){
+    background-color: #49657C;
+    background-image: url(/img/moviles/14.png);
+}
+.modal-media.home-movil .accordion-item:nth-child(15){
+    background-color: #4C6C7F;
+    background-image: url(/img/moviles/15.png);
+}

@@ -1,0 +1,99 @@
+[
+  {
+    "nombre": "Antioquia y eje cafetero",
+    "departamentos": [
+      "Antioquia",
+      "Eje Cafetero",
+      "Urabá"
+    ],
+    "link_mapa": "/taxonomy/term/122"
+  },
+  {
+    "nombre": "Amazonía",
+    "departamentos": [
+      "Amazonas",
+      "Guainia",
+      "Vaupés"
+    ],
+    "link_mapa": "/taxonomy/term/122"
+  },
+  {
+    "nombre": "Bogotá y soacha",
+    "departamentos": [
+      "Bogotá Soacha",
+      "Sumapaz"
+    ],
+    "link_mapa": "/taxonomy/term/122"
+  },
+  {
+    "nombre": "Caribe e insular",
+    "departamentos": [
+      "Atlántico",
+      "Cesar",
+      "La Guajira",
+      "Magdalena",
+      "Montes de María",
+      "Sucre"
+    ],
+    "link_mapa": "/taxonomy/term/122"
+  },
+  {
+    "nombre": "Centroandina",
+    "departamentos": [
+      "Centroandina",
+      "Cundinamarca",
+      "Boyacá",
+      "Huila",
+      "Tolima"
+    ],
+    "link_mapa": "/node/982"
+  },
+  {
+    "nombre": "Magdalena medio",
+    "departamentos": [
+      "Aguachica",
+      "Barrancabermeja",
+      "La Dorada"
+    ],
+    "link_mapa": "/taxonomy/term/122"
+  },
+  {
+    "nombre": "Nororiente",
+    "departamentos": [
+      "Arauca",
+      "Casanare",
+      "Cúcuta",
+      "Santander"
+    ],
+    "link_mapa": "/taxonomy/term/122"
+  },
+  {
+    "nombre": "Orinoquia",
+    "departamentos": [
+      "Caquetá",
+      "Guaviare",
+      "Meta"
+    ],
+    "link_mapa": "/taxonomy/term/122"
+  },
+  {
+    "nombre": "Pacifico",
+    "departamentos": [
+      "Buenaventura",
+      "Chocó",
+      "Costa Pacífica Nariño",
+      "Tumaco"
+    ],
+    "link_mapa": "/taxonomy/term/122"
+  },
+  {
+    "nombre": "Surandina",
+    "departamentos": [
+      "Cauca",
+      "Nariño",
+      "Putumayo",
+      "Valle del Cauca"
+    ],
+    "link_mapa": "/taxonomy/term/122"
+  }
+]

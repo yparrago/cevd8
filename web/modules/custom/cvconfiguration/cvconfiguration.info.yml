@@ -1,0 +1,6 @@
+name: Configuracion de derechos humanos
+type: module
+description: modulo de contenidos de derechos humanos
+package: Custom
+core: 8.x
+core_version_requirement: ^8 || ^9

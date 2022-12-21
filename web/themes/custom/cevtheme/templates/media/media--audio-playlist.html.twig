@@ -1,0 +1,458 @@
+{#
+/**
+* @file
+* Default theme implementation to present a media item.
+*
+* Available variables:
+* - media: The media item, with limited access to object properties and
+* methods. Only method names starting with "get", "has", or "is" and
+* a few common methods such as "id", "label", and "bundle" are available.
+* For example:
+* - entity.getEntityTypeId() will return the entity type ID.
+* - entity.hasField('field_example') returns TRUE if the entity includes
+* field_example. (This does not indicate the presence of a value in this
+* field.)
+* Calling other methods, such as entity.delete(), will result in
+* an exception.
+* See \Drupal\Core\Entity\EntityInterface for a full list of methods.
+* - name: Name of the media item.
+* - content: Media content.
+* - title_prefix: Additional output populated by modules, intended to be
+* displayed in front of the main title tag that appears in the template.
+* - title_suffix: Additional output populated by modules, intended to be
+* displayed after the main title tag that appears in the template.
+* - view_mode: View mode; for example, "teaser" or "full".
+* - attributes: HTML attributes for the containing element.
+* - title_attributes: Same as attributes, except applied to the main title
+* tag that appears in the template.
+*
+* @see template_preprocess_media()
+*
+* @ingroup themeable
+*/
+#}
+{{ attach_library('cevtheme/playlist_audio_modal') }}
+<!-- Audio + Playlist -->
+{% if eleccion == 1 %}
+{#estatico#}
+<div id="audio-playlist-static-modal">
+    {% if playlist_image_url %}
+    <div id="carousel-audio-playlist-static-modal-{{media.id}}" class="carousel slide" data-bs-interval="false">
+        <div class="carousel-indicators">
+        {% for item in playlist_image_url %}
+            <button type="button" data-bs-target="#carousel-audio-playlist-static-modal-{{media.id}}" data-bs-slide-to="{{ loop.index0 }}"
+            class="{{ loop.index0 == 0 ? 'active' : '' }}" aria-label="Slide {{ loop.index0 }}"
+            style="width: 8px; height: 8px;border-radius: 100%" data-bs-interval="false"></button>
+        {% endfor %}
+        </div>
+        <div class="carousel-inner">
+            {% for item in playlist_image_url %}
+            <div class="carousel-item {{ loop.index0 == 0 ? 'active' : '' }}">
+                <figure class="mb-1">
+                    <img src="{{ item["url"] }}" class="d-block w-100" data-zoomable alt>
+                </figure>
+                <div class="d-md-block p-3" style="font-size: 12px;">{{ item["caption"]|raw}}</div>
+            </div>
+            {% endfor %}
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-audio-playlist-static-modal-{{media.id}}"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel-audio-playlist-static-modal-{{media.id}}"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    {% endif %}
+    <div class="mt-2">
+        <div class="rt-player" id="player-audio-playlist-static">
+            <div id="rt-audio">
+                <audio></audio>
+            </div>
+            <div class="rt-time-indicartors row">
+                <div class="d-flex align-items-center">
+                    <div class="mx-2">
+                        <span class="rt-timer" data-role="start">00:00</span>
+                    </div>
+                    <div class="progress flex-fill">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                            aria-valuemax="100" data-role="player-progress-bar">
+                        </div>
+                    </div>
+                    <div class="mx-2">
+                        <span class="rt-timer" data-role="end">00:00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="rt-player__buttons">
+                <button class="btn mx-md-1" data-role="play"><i class="bi bi-play-circle"></i></button>
+                <button class="btn mx-md-1 d-none" data-role="pause"><i class="bi bi-pause-circle"></i></button>
+                <button class="btn mx-1" data-role="volUp"><i class="bi bi-volume-up"></i></button>
+                <button class="btn mx-1" data-role="volDown"><i class="bi bi-volume-down"></i></button>
+                <button class="btn mx-1" data-role="mute"><i class="bi bi-volume-mute"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="lyricer mb-2 " id="audio-playlist-static-transcription"></div>
+        <!-- selector -->
+    <div class="hidden" id="language-selector" style="text-align: center;">
+        <select name="select" id="seleccion">
+            <option value="first">--Seleccionar un idioma--</option>
+            {% for item in playlist_traduccion %}
+                <option class="controlSeleccion cs{{ item["numeroItem"]}} hidden" data-transcription="{{ item["texto"] }}"
+                value="{{ item["numeroIdioma"]}}">{{ item["nombre"] }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="mb-2">
+        <ul id="playlist-modal-playlist-static" class="list-group list-group-flush list-group-numbered"
+            style="max-height: 204px; overflow-y: scroll">
+        </ul>
+    </div>
+</div>
+{% elseif eleccion == 2 %}
+{#automatico#}
+<div id="audio-playlist-modal">
+    {% if playlist_image_url %}
+    <div id="carousel-audio-playlist-modal-{{media.id}}" class="carousel slide" data-bs-interval="false">
+        <div class="carousel-indicators">
+        {% for item in playlist_image_url %}
+            <button type="button" data-bs-target="#carousel-audio-playlist-modal-{{media.id}}" data-bs-slide-to="{{ loop.index0 }}"
+            class="{{ loop.index0 == 0 ? 'active' : '' }}" aria-label="Slide {{ loop.index0 }}"
+            style="width: 8px; height: 8px;border-radius: 100%" data-bs-interval="false"></button>
+        {% endfor %}
+        </div>
+        <div class="carousel-inner">
+            {% for item in playlist_image_url %}
+            <div class="carousel-item {{ loop.index0 == 0 ? 'active' : '' }}" data-bs-interval="false">
+                <figure class="mb-1">
+                    <img src="{{ item["url"] }}" class="d-block w-100" data-zoomable alt>
+                </figure>
+                <div class="d-md-block p-3" style="font-size: 12px;">{{ item["caption"]|raw}}</div>
+            </div>
+            {% endfor %}
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-audio-playlist-modal-{{media.id}}"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel-audio-playlist-modal-{{media.id}}"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    {% endif %}
+    <div class="mt-2">
+        <div class="rt-player" id="player-audio-playlist">
+            <div id="rt-audio">
+                <audio></audio>
+            </div>
+            <div class="rt-time-indicartors row">
+                <div class="d-flex align-items-center">
+                    <div class="mx-2">
+                        <span class="rt-timer" data-role="start">00:00</span>
+                    </div>
+                    <div class="progress flex-fill">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                            aria-valuemax="100" data-role="player-progress-bar">
+                        </div>
+                    </div>
+                    <div class="mx-2">
+                        <span class="rt-timer" data-role="end">00:00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="rt-player__buttons">
+                <button class="btn mx-md-1" data-role="play"><i class="bi bi-play-circle"></i></button>
+                <button class="btn mx-md-1 d-none" data-role="pause"><i class="bi bi-pause-circle"></i></button>
+                <!-- <button class="btn mx-1" data-role="prev"><i class="bi bi-skip-backward-circle"></i></button> -->
+                <!-- <button class="btn mx-1" data-role="next"><i class="bi bi-skip-forward-circle"></i></button> -->
+                <button class="btn mx-1" data-role="volUp"><i class="bi bi-volume-up"></i></button>
+                <button class="btn mx-1" data-role="volDown"><i class="bi bi-volume-down"></i></button>
+                <button class="btn mx-1" data-role="mute"><i class="bi bi-volume-mute"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="lyricer mb-2" id="audio-playlist-transcription"></div>
+        <!-- selector -->
+    <div class="hidden" id="language-selector" style="text-align: center;">
+        <select name="select" id="seleccion">
+            <option value="first">--Seleccionar un idioma--</option>
+            {% for item in playlist_traduccion %}
+                <option class="controlSeleccion cs{{ item["numeroItem"]}} hidden" data-transcription="{{ item["texto"] }}"
+                value="{{ item["numeroIdioma"]}}">{{ item["nombre"] }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="mb-2">
+        <ul id="playlist-modal-playlist" class="list-group list-group-flush list-group-numbered"
+            style="max-height: 204px; overflow-y: scroll">
+        </ul>
+    </div>
+</div>
+{% endif %}
+
+
+
+<div class="hidden">
+    {% for item in playlist_audio %}
+    <div id="audio-track" data-track="{{ item["audio"] }}" data-title="{{ item["titulo"] }}" data-duration="{{ item["duracion"] }}" data-id="{{media.id}}"></div>
+    {% endfor %}
+</div>
+<script type="text/javascript">
+
+jQuery(function ($) {
+    // Audio Playlist
+    var audios = document.querySelectorAll('#audio-track');
+    let playListAudios = [];
+    let transcripcion = [];
+    for (var i = 0; i < audios.length; i++) {
+        transcripcion = [];
+        const elecciones2 = Array.from(document.querySelectorAll('.cs' + i))
+        elecciones2.forEach(eleccion2 => {
+            transcripcion.push($(eleccion2).data('transcription'));
+        });
+        audioTrack = $(audios[i]).data('track');
+        audioName = $(audios[i]).data('title');
+        audioDuration = $(audios[i]).data('duration');
+        audioId = $(audios[i]).data('id');
+        playListAudios.push({
+            name: audioName,
+            src: audioTrack,
+            duration: audioDuration,
+            transcription: transcripcion,
+            id: audioId,
+        });
+    }
+    let modal = $('#modalInfoCev')
+    //Audio automatico
+    var comprobacion = document.getElementById("audio-playlist-modal");
+    if (comprobacion) {
+        let playlistCurrentPlaying = null
+
+        let modalAudioPlaylist = $('#audio-playlist-modal')
+        const itemsLength = modalAudioPlaylist.find('.carousel-item').length
+        const nextBtn = modalAudioPlaylist.find('.carousel-control-next');
+        const prevBtn = modalAudioPlaylist.find('.carousel-control-prev');
+        prevBtn.hide();
+
+        const playerAudioPlaylist = setupPlayerRT("player-audio-playlist");
+        playerAudioPlaylist.addTracks([playListAudios[0].src])
+
+        modalAudioPlaylist.on('hide.bs.modal', () => playerAudioPlaylist.pause());
+        modal.on('hide.bs.modal', () => playerAudioPlaylist.pause());
+        modalAudioPlaylist.on('slide.bs.carousel', function (e) {
+            prevBtn.show();
+
+            if (e.to === itemsLength - 1) {
+                nextBtn.hide()
+                prevBtn.show()
+            } else if (e.to === 0) {
+                prevBtn.hide()
+                nextBtn.show()
+            }
+
+            playAudioPlaylist(playListAudios[e.to].src, e.to)
+
+        });
+
+        let playlistHTML = '';
+        let modalPlaylist = $('#playlist-modal-playlist');
+
+        function setupPlaylistLrc(transcription) {
+            $("#player-audio-playlist audio").off("timeupdate"); // Clean event
+
+            const playlistLrc = new Lyricer({
+                "divID": "audio-playlist-transcription",
+                "showLines": 1,
+                "lineidPrefix": 'lyric-audio-playlist-modal',
+                "clickable": false
+            });
+
+            playlistLrc.setLrc(transcription)
+
+            $("#player-audio-playlist audio").on("timeupdate", function () {
+                playlistLrc.move(this.currentTime);
+            });
+        }
+
+        function playAudioPlaylist(src, index) {
+            if (playlistCurrentPlaying === index) return
+            if (playListAudios[index].transcription[0] == null) {
+                document.getElementById('language-selector').classList.add('hidden');
+                document.getElementById('audio-playlist-transcription').style.display = 'none';
+            } else {
+                document.getElementById('language-selector').classList.remove('hidden');
+                document.getElementById('audio-playlist-transcription').style.display = '';
+                setupPlaylistLrc(playListAudios[index].transcription[0])
+                const elecciones1 = Array.from(document.querySelectorAll('.controlSeleccion'))
+                elecciones1.forEach(eleccion1 => {
+                    eleccion1.classList.add('hidden');
+                });
+                $("#seleccion").val($("#seleccion option:first").val());
+            }
+            playerAudioPlaylist.stop()
+            playerAudioPlaylist.play(src)
+            modalPlaylist.find('li').each((i, e) => $(e).removeClass('active'))
+            modalPlaylist.find(`li:nth-child(${index + 1})`).addClass('active')
+            playlistCurrentPlaying = index;
+            if (playListAudios[index].transcription[0] != null) {
+                const elecciones = Array.from(document.querySelectorAll('.cs' + index))
+                elecciones.forEach(eleccion => {
+                    eleccion.classList.remove('hidden');
+                });
+                const select = document.getElementById('seleccion');
+                select.addEventListener('change', (event) => {
+                    setupPlaylistLrc(playListAudios[index].transcription[event.target.value]);
+                })
+            }
+        }
+
+        for (let [index, p] of playListAudios.entries()) {
+            playlistHTML += `
+                <li onclick="playAudioPlaylist('${p.src}', ${index})" 
+                    class="list-group-item list-group-item-action d-flex"
+                    data-bs-target="#carousel-audio-playlist-modal-${p.id}"
+                    data-bs-slide-to="${index}"
+                    style="cursor: pointer"
+                    data-bs-interval="false"
+                >
+                    <span class="d-flex justify-content-between align-items-center flex-fill">
+                    &nbsp; ${p.name}
+                        <span>${p.duration}</span>
+                    </span>
+                </li>
+            `
+        }
+        
+        if (playListAudios[0].transcription[0] != null) {
+            setupPlaylistLrc(playListAudios[0].transcription[0]);
+            document.getElementById('language-selector').classList.remove('hidden');
+            document.getElementById('audio-playlist-transcription').style.display = '';
+            const elecciones = Array.from(document.querySelectorAll('.cs' + 0))
+            elecciones.forEach(eleccion => {
+                eleccion.classList.remove('hidden');
+            });
+            const select = document.getElementById('seleccion');
+            select.addEventListener('change', (event) => {
+                setupPlaylistLrc(playListAudios[0].transcription[event.target.value]);
+            })
+        }
+        modalPlaylist.html(playlistHTML)
+        var btnClose = document.querySelectorAll('.btn-close');
+        for (var i = 0; i < btnClose.length; i++) {
+            btnClose[i].addEventListener('click', function () {
+                playerAudioPlaylist.pause();
+                playlistCurrentPlaying = 0;
+                playlistHTML = '';
+                deteIntervalo();
+            })
+        }
+    }
+
+
+    var comprobacionstatic = document.getElementById("audio-playlist-static-modal");
+    // Audio Playlist Static
+    if (comprobacionstatic) {
+
+        const playerAudioplaylistStatic = setupPlayerRT("player-audio-playlist-static");
+
+        let playlistStaticCurrentPlaying = null
+        let playlistStaticHTML = '';
+        let modalPlaylistStatic = $('#playlist-modal-playlist-static');
+
+        $('#audio-playlist-static-modal').on('hide.bs.modal', () => playerAudioplaylistStatic.pause());
+        modal.on('hide.bs.modal', () => playerAudioplaylistStatic.pause());
+        playerAudioplaylistStatic.addTracks([playListAudios[0].src])
+
+        function setupPlaylistLrcStatic(transcription) {
+            $("#player-audio-playlist-static audio").off("timeupdate"); // Clean event
+
+            const playlistLrc = new Lyricer({
+                "divID": "audio-playlist-static-transcription",
+                "showLines": 1,
+                "lineidPrefix": 'lyric-audio-playlist-static',
+                "clickable": false
+            });
+
+            playlistLrc.setLrc(transcription)
+
+            $("#player-audio-playlist-static audio").on("timeupdate", function () {
+                playlistLrc.move(this.currentTime);
+            });
+        }
+
+        function playAudioPlaylistStatic(src, index) {
+            if (playlistStaticCurrentPlaying === index) return
+
+            if (playListAudios[index].transcription[0] == null) {
+                document.getElementById('language-selector').classList.add('hidden');
+                document.getElementById('audio-playlist-static-transcription').style.display = 'none';
+            } else {
+                document.getElementById('language-selector').classList.remove('hidden');
+                document.getElementById('audio-playlist-static-transcription').style.display = '';
+                setupPlaylistLrcStatic(playListAudios[index].transcription[0])
+                const elecciones1 = Array.from(document.querySelectorAll('.controlSeleccion'))
+                elecciones1.forEach(eleccion1 => {
+                    eleccion1.classList.add('hidden');
+                });
+                $("#seleccion").val($("#seleccion option:first").val());
+            }
+            playerAudioplaylistStatic.stop()
+            playerAudioplaylistStatic.play(src)
+            modalPlaylistStatic.find('li').each((i, e) => $(e).removeClass('active'))
+            modalPlaylistStatic.find(`li:nth-child(${index + 1})`).addClass('active')
+            playlistStaticCurrentPlaying = index;
+            if (playListAudios[index].transcription[0] != null) {
+                const elecciones = Array.from(document.querySelectorAll('.cs' + index))
+                elecciones.forEach(eleccion => {
+                    eleccion.classList.remove('hidden');
+                });
+                const select = document.getElementById('seleccion');
+                select.addEventListener('change', (event) => {
+                    setupPlaylistLrcStatic(playListAudios[index].transcription[event.target.value]);
+                })
+            }
+        }
+        for (let [index, p] of playListAudios.entries()) {
+            playlistStaticHTML += `
+                <li class="list-group-item list-group-item-action d-flex control_audio"
+                    style="cursor: pointer" data-src="${p.src}" data-ind="${index}">
+                    <span class="d-flex justify-content-between align-items-center flex-fill">
+                        &nbsp;  ${p.name}
+                        <span>${p.duration}</span>
+                    </span>
+                </li>
+                `
+        }
+
+        jQuery("body").on("click", '.control_audio', function (e) { playAudioPlaylistStatic($(this).data('src'), $(this).data('ind')); });
+
+
+        if (playListAudios[0].transcription[0] != null) {
+            setupPlaylistLrcStatic(playListAudios[0].transcription[0]);
+            document.getElementById('language-selector').classList.remove('hidden');
+            document.getElementById('audio-playlist-static-transcription').style.display = '';
+            const elecciones = Array.from(document.querySelectorAll('.cs' + 0))
+            elecciones.forEach(eleccion => {
+                eleccion.classList.remove('hidden');
+            });
+            const select = document.getElementById('seleccion');
+            select.addEventListener('change', (event) => {
+                setupPlaylistLrcStatic(playListAudios[0].transcription[event.target.value]);
+            })
+        }
+        modalPlaylistStatic.html(playlistStaticHTML)
+        
+
+    }
+
+});
+
+
+</script>

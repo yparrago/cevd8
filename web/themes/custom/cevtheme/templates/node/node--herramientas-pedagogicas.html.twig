@@ -1,0 +1,107 @@
+{#
+/**
+* @file
+* Bootstrap Barrio's theme implementation to display a node.
+*
+* Available variables:
+* - node: The node entity with limited access to object properties and methods.
+Only "getter" methods (method names starting with "get", "has", or "is")
+and a few common methods such as "id" and "label" are available. Calling
+other methods (such as node.delete) will result in an exception.
+* - label: The title of the node.
+* - content: All node items. Use {{ content }} to print them all,
+* or print a subset such as {{ content.field_example }}. Use
+* {{ content|without('field_example') }} to temporarily suppress the printing
+* of a given child element.
+* - author_picture: The node author user entity, rendered using the "compact"
+* view mode.
+* - metadata: Metadata for this node.
+* - date: Themed creation date field.
+* - author_name: Themed author name field.
+* - url: Direct URL of the current node.
+* - display_submitted: Whether submission information should be displayed.
+* - attributes: HTML attributes for the containing element.
+* The attributes.class element may contain one or more of the following
+* classes:
+* - node: The current template type (also known as a "theming hook").
+* - node--type-[type]: The current node type. For example, if the node is an
+* "Article" it would result in "node--type-article". Note that the machine
+* name will often be in a short form of the human readable label.
+* - node--view-mode-[view_mode]: The View Mode of the node; for example, a
+* teaser would result in: "node--view-mode-teaser", and
+* full: "node--view-mode-full".
+* The following are controlled through the node publishing options.
+* - node--promoted: Appears on nodes promoted to the front page.
+* - node--sticky: Appears on nodes ordered above other non-sticky nodes in
+* teaser listings.
+* - node--unpublished: Appears on unpublished nodes visible only to site
+* admins.
+* - title_attributes: Same as attributes, except applied to the main title
+* tag that appears in the template.
+* - content_attributes: Same as attributes, except applied to the main
+* content tag that appears in the template.
+* - author_attributes: Same as attributes, except applied to the author of
+* the node tag that appears in the template.
+* - title_prefix: Additional output populated by modules, intended to be
+* displayed in front of the main title tag that appears in the template.
+* - title_suffix: Additional output populated by modules, intended to be
+* displayed after the main title tag that appears in the template.
+* - view_mode: View mode; for example, "teaser" or "full".
+* - teaser: Flag for the teaser state. Will be true if view_mode is 'teaser'.
+* - page: Flag for the full page state. Will be true if view_mode is 'full'.
+* - readmore: Flag for more state. Will be true if the teaser content of the
+* node cannot hold the main body content.
+* - logged_in: Flag for authenticated user status. Will be true when the
+* current user is a logged-in member.
+* - is_admin: Flag for admin user status. Will be true when the current user
+* is an administrator.
+*
+* @see template_preprocess_node()
+*/
+#}
+{{ attach_library('cevtheme/herramientaspedagogicas_library') }}
+<main class="{{ content.field_clase.0}} col-md-12 col-sm-12">
+  <div class="voltar">
+  <a href="/taxonomy/term/123" >
+    <svg id="breadcrumb" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="#25BF84">
+      <path
+        d="M10.5928 17.1851C10.815 16.8888 10.815 16.5185 10.5928 16.2963L6.96318 12C6.88911 11.9259 6.07429 10.9629 6.07429 10.074C6.07429 9.11107 6.88911 8.22218 6.96318 8.07403L10.5928 3.77774C10.815 3.48144 10.815 3.11107 10.5928 2.88885C10.2965 2.59255 9.85207 2.59255 9.55577 2.88885L3.40762 9.40737C3.25948 9.62959 3.11133 9.85181 3.11133 10.074C3.11133 10.2963 3.1854 10.5926 3.40762 10.7407L9.55577 17.2592C9.77799 17.4814 10.2965 17.4814 10.5928 17.1851Z" />
+      <path
+        d="M16.7408 17.1851C16.963 16.8888 16.963 16.5185 16.7408 16.2963L13.1111 12C13.0371 11.9259 12.2222 10.9629 12.2222 10.074C12.2222 9.11107 13.0371 8.22218 13.1111 8.07403L16.7408 3.77774C16.963 3.48144 16.963 3.11107 16.7408 2.88885C16.4445 2.59255 16 2.59255 15.7037 2.88885L9.55557 9.40737C9.40743 9.62959 9.25928 9.85181 9.25928 10.074C9.25928 10.2963 9.33335 10.5926 9.55557 10.7407L15.7037 17.2592C16 17.4814 16.4445 17.4814 16.7408 17.1851Z" />
+    </svg> Pedagogía</a> <a href="/taxonomy/term/123#{{node.field_categoria_herramientas.entity.field_clase.value}}">
+    <svg id="breadcrumb" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="#25BF84">
+      <path
+        d="M10.5928 17.1851C10.815 16.8888 10.815 16.5185 10.5928 16.2963L6.96318 12C6.88911 11.9259 6.07429 10.9629 6.07429 10.074C6.07429 9.11107 6.88911 8.22218 6.96318 8.07403L10.5928 3.77774C10.815 3.48144 10.815 3.11107 10.5928 2.88885C10.2965 2.59255 9.85207 2.59255 9.55577 2.88885L3.40762 9.40737C3.25948 9.62959 3.11133 9.85181 3.11133 10.074C3.11133 10.2963 3.1854 10.5926 3.40762 10.7407L9.55577 17.2592C9.77799 17.4814 10.2965 17.4814 10.5928 17.1851Z" />
+      <path
+        d="M16.7408 17.1851C16.963 16.8888 16.963 16.5185 16.7408 16.2963L13.1111 12C13.0371 11.9259 12.2222 10.9629 12.2222 10.074C12.2222 9.11107 13.0371 8.22218 13.1111 8.07403L16.7408 3.77774C16.963 3.48144 16.963 3.11107 16.7408 2.88885C16.4445 2.59255 16 2.59255 15.7037 2.88885L9.55557 9.40737C9.40743 9.62959 9.25928 9.85181 9.25928 10.074C9.25928 10.2963 9.33335 10.5926 9.55557 10.7407L15.7037 17.2592C16 17.4814 16.4445 17.4814 16.7408 17.1851Z" />
+    </svg> 
+     {{ node.field_categoria_herramientas.entity.label}} </a>
+  </div>
+  <div class="cabecalho">
+    <div class="titulos">
+      <h4>
+        <span>Sobre {{ node.field_categoria_herramientas.entity.label}}</span>
+      </h4>
+      <h1 class="titulo"><span>{{ node.label}}</span></h1>
+      <h2 class="subtitulo"><span>{{ content.field_subtitulo}}</span></h2>
+      <hr class="divisor">
+      <div class="palavras-chave">{{ content.field_tags}}</div>
+    </div>
+   
+    
+    <a href="{{ file_url(node.field_archivo_descargable.entity.fileuri) }}" target="_blank"><img id="img-download" alt="descargar herramienta en pdf" src="{{file_url(node.field_descargable.entity.fileuri)}}" /></a>
+    {#<a href="https://drive.google.com/file/d/1wC9EQDM3Zqr3zTEcRDBDcCuuaFM8FDCU/view" target="_blank">{{ content.field_descargable}}</a>
+  #}</div>
+
+  <div class="texto" id="texto">
+    <p>{{ content.body}}</p>
+
+  </div>
+  <div class="titulo-thumbs">
+    <div class="otras-herramientas col-sm-6">
+      <h3 class="nuestro-texto titulo-div">Otras Herramientas Pedagógicas de esta categoría:</h3>
+      {#<div class="link-thumbs" style="display:flex;flex-wrap:wrap">{{ content.field_contenidos_relacionados}}</div>#}
+      <div class="link-thumbs" style="display:flex;flex-wrap:wrap">{{ drupal_view('herramientas_por_categorias', 'block_hr') }}</div>
+    </div>
+  </div>
+</main>

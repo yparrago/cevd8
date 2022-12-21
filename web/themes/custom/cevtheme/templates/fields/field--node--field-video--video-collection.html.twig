@@ -1,0 +1,23 @@
+
+<p class="mb-0" style="font-size: 12px;">Colecciones:</p>
+<div class="mb-2">
+  {% for item in items %}
+
+    <button type="button" class="btn btn-link {{ loop.index0 == 0 ? 'active' : '' }}"
+        data-collection="#collection-{{ item['content']['#media'].id() }}"
+        data-frame="#frame-col">
+          Collección- {{ loop.index0 + 1 }}
+    </button>
+  {% endfor %}
+</div>
+
+{% for item in items %}
+  <div id="collection-{{ item['content']['#media'].id() }}"
+        class="row mb-4 {{ loop.index0 > 0 ? 'd-none' : '' }}"
+        data-collection-group="group-1">
+      <div class="group-video">
+        {{item.content}}
+      </div>
+  </div>
+{% endfor %}
+

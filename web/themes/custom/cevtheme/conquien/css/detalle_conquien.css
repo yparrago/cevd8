@@ -1,0 +1,496 @@
+/*Linea de tiempo*/
+.wrapper {
+    position: relative;
+    color: #fff;
+    text-align: center;
+    margin: 5% auto 10%;
+    display: block;
+    width: 100%;
+}
+
+.line-area {
+    display: block;
+    width: 95%;
+    height: 3px;
+    background: #377985;
+    position: absolute;
+}
+
+.wrapper .timeline-area {
+    height: 100%;
+}
+
+.single-item {
+    width: 6%;
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    margin-right: 8%;
+    transition: width .5s;
+    z-index: 1;
+}
+
+.single-item > span {
+    height: 32px;
+    display: block;
+    position: absolute;
+    margin-top: -17px;
+    width: 100%;
+    font-size: 0.7em;
+    color: #E3AD54;
+}
+
+.single-item > span:before {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    background: #A8D3C7;
+    margin: 0 auto 8px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.single-item.active > span:before {
+    background: #E3AD54;
+}
+
+.poligono {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: #E3AD54;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* Tema tippy mapa nacional con subregiones */
+.tippy-box[data-theme~='gris_mapa_subregion'] {
+    background-color: #485860;
+    color: white;
+    border-radius: 1px;
+    font-size: 12px;
+    padding: 4px;
+    width: 100%;
+}
+
+.tippy-box[data-theme~='gris_mapa_subregion'][data-placement^='top'] > .tippy-arrow::before {
+    border-top-color: #485860;
+}
+
+.tippy-box[data-theme~='gris_mapa_subregion'][data-placement^='bottom'] > .tippy-arrow::before {
+    border-bottom-color: #485860;
+}
+
+.tippy-box[data-theme~='gris_mapa_subregion'][data-placement^='left'] > .tippy-arrow::before {
+    border-left-color: #485860;
+}
+
+.tippy-box[data-theme~='gris_mapa_subregion'][data-placement^='right'] > .tippy-arrow::before {
+    border-right-color: #485860;
+}
+
+/* Tema tippy temas de articulación */
+.tippy-box[data-animation=fade][data-state=hidden] {
+	opacity: 1;	
+}
+
+.tippy-box[data-theme~='gris'] {
+    background-color: #485860;
+    color: white;
+    border-radius: 1px;
+    font-size: 12px;
+    padding: 4px;
+    width: 65%;
+}
+
+.tippy-box[data-theme~='gris'][data-placement^='top'] > .tippy-arrow::before {
+    border-top-color: #485860;
+}
+
+.tippy-box[data-theme~='gris'][data-placement^='bottom'] > .tippy-arrow::before {
+    border-bottom-color: #485860;
+}
+
+.tippy-box[data-theme~='gris'][data-placement^='left'] > .tippy-arrow::before {
+    border-left-color: #485860;
+}
+
+.tippy-box[data-theme~='gris'][data-placement^='right'] > .tippy-arrow::before {
+    border-right-color: #485860;
+}
+
+/* Link Tooltip*/
+.link_tooltip {
+    color: #A65D5D;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+/* Link Tooltip*/
+.link_tooltip:hover {
+    color: #A65D5D;
+}
+
+/* Boton Tooltip*/
+.btn_tooltip {
+    color: #EE7B58;
+    font-size: 14px;
+    margin-left: 6px;
+    cursor: pointer
+}
+
+/*Parrafo Tooltip*/
+.parrafo_tooltip {
+    margin: 0px 0px 5px 0px;
+}
+
+/*Label tipo articulación*/
+.region_articulacion {
+    color: #AEBCC5;
+    font-size: 15px !important;
+}
+
+/*
+  Menu tipo de mapa
+*/
+.tipo_mapa_menu {
+    margin: 0px;
+    margin-left: 30%;
+    padding: 0px;
+    /*float: right;*/
+}
+
+/* Estilo div_mapa_y_regiones en Firefox*/
+@-moz-document url-prefix() {
+    .div_mapa_y_regiones {
+        width: 100%;
+    } 
+}
+
+.linea_menu_tipo_mapa {
+    width:92%;
+    margin: 0px;
+    margin-left: 1px;
+    border-top: 1px solid #4A5D64;
+    padding: 0px;
+    float: left;
+}
+
+.opcion_tipo_mapa {
+    background: #2D4247;
+    font-size: 12px;
+    height: 18px;
+    color: #D2D6D9;
+    padding: 1px;
+    margin: 0px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#opcion_internacional {
+    width: 60%;
+    
+}
+
+#opcion_nacional {
+    width: 30%;
+    margin-right: 1%;
+}
+
+.opcion_tipo_mapa.active {
+    color: #BF6071;
+}
+
+.opcion_tipo_mapa:hover {
+    color: #D2D6D9;
+}
+
+.opcion_tipo_mapa.active:hover {
+    color: #BF6071;
+}
+
+.opcion_tipo_mapa.opcion_mapa_none {
+    display: none;
+}
+
+.menu_tipo_mapa_none {
+    display: none;
+}
+
+.opcion_tipo_mapa_none {
+    display: none;
+}
+
+.region-other {
+    display: block;
+}
+
+.region_internacional_none {
+    display: none;
+}
+
+.region_nacional_none {
+    display: none;
+}
+
+.region:hover {
+    color: #BF6071 !important;
+    cursor: pointer;
+}
+
+.column-4 .svg-world path {
+  /*fill: #85a6a5 !important;
+  stroke: black !important;*/
+  fill: none;
+  stroke: black;
+  animation: interlineado_mapamundi 5s ease-in;
+  animation-fill-mode: forwards;
+  stroke-dasharray: 320;
+}
+
+.column-4 .svg-world .incidence-country {
+  /*fill: #276e7b !important;
+  stroke: black !important;*/
+  animation: interlineado_seleccion_internacional 5s ease-in;
+  animation-fill-mode: forwards;
+}
+
+.column-4 .svg-world .selected-country {
+    fill: #d06c60 !important;
+    stroke: black !important;
+    filter: drop-shadow(0 0 0.75rem crimson);
+}
+
+.column-4 .svg-colombia .st11 {
+  fill: none;
+  stroke: #1C303A;
+  stroke-width: 0.25;
+  animation: interlineado_municipios 5s ease-in;
+}
+
+.column-4 .svg-colombia .st10 {
+  fill: none;
+  stroke: #1C303A;
+  stroke-width: 0.75;
+  animation: interlineado_colombia 5s ease-in;
+  animation-fill-mode: forwards;
+}
+
+.column-4 .svg-colombia .incidence-country {
+  /*fill: #276e7b !important;*/
+  /*stroke: black !important;*/
+  animation: interlineado_seleccion_nacional 5s ease-in;
+  animation-fill-mode: forwards;
+}
+
+/*.column-4 .svg-colombia path{
+  fill: #85a6a5 !important;
+  stroke: black !important;
+}*/
+
+.column-4 .svg-colombia .selected-country {
+    fill: #d06c60 !important;
+    stroke: black !important;
+    filter: drop-shadow(0 0 0.75rem crimson) !important;
+}
+
+/*@keyframes movimiento_linea_mapamundi {
+  from {
+    stroke: #84A6A5;
+    stroke-dashoffset: 320;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}*/
+
+@keyframes interlineado_mapamundi {
+  0% {
+    stroke: #84A6A5;
+    stroke-width: 2px;
+    stroke-dasharray: 320;
+    stroke-dashoffset: 320;
+  }
+  65% {
+    fill: rgba(132, 166, 165, 0);
+  }
+  100% {
+    stroke: #1C303A;
+    fill: rgba(132, 166, 165, 1);
+    stroke-width: 0.75;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes interlineado_seleccion_internacional {
+  0% {
+    stroke: #84A6A5;
+    stroke-width: 4px;
+    stroke-dasharray: 320;
+    stroke-dashoffset: 320;
+  }
+  65% {
+    fill: rgba(39, 110, 123, 0);
+  }
+  100% {
+    stroke: black;
+    fill: rgba(39, 110, 123, 1);
+    stroke-width: 0.75;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes interlineado_seleccion_nacional {
+  0% {
+    stroke: #84A6A5;
+    stroke-width: 3px;
+    stroke-dasharray: 320;
+    stroke-dashoffset: 320;
+  }
+  35% {
+    fill: rgba(39, 110, 123, 0);
+    stroke-width: 0.75px;
+  }
+  100% {
+    stroke: black;
+    fill: rgba(39, 110, 123, 1);
+    stroke-width: 0.75;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes interlineado_colombia {
+    0% {
+    stroke: #84A6A5;
+    stroke-width: 3px;
+    stroke-dasharray: 320;
+    stroke-dashoffset: 320;
+  }
+  50% {
+    fill: rgba(132, 166, 165, 0);
+    stroke-width: 0.75px;
+  }
+  76% {
+    stroke: #1C303A;
+  }
+  100% {
+    stroke: #1C303A;
+    stroke-width: 0.75;
+    stroke-dashoffset: 0;
+    fill: rgba(132, 166, 165, 1);
+  }
+}
+
+@keyframes interlineado_municipios {
+  0% {
+    stroke: #84A6A5;
+    stroke-width: 2px;
+    stroke-dasharray: 320;
+    stroke-dashoffset: 320;
+  }
+  76% {
+    stroke: #1C303A;
+    stroke-width: 0.25px;
+  }
+  100% {
+    stroke: #1C303A;
+    stroke-width: 0.25;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes color_regiones {
+    from {
+      fill: none;
+    }
+    to {
+      fill: #84A6A5;
+    }
+}
+
+@keyframes color_mapamundi {
+  from {
+    fill: none;
+  }
+  to {
+    fill: #85a6a5;
+  }
+}
+
+@keyframes color_regiones_seleccionadas {
+  from {
+    fill: none;
+    stroke: #84A6A5;
+  }
+  to {
+    fill: #276e7b;
+    stroke: black;
+  }
+}
+
+@keyframes color_paises_seleccionadas {
+  from {
+    fill: none;
+    stroke: #85a6a5;
+  }
+  to {
+    fill: #276e7b;
+    stroke: black;
+  }
+}
+
+.body__preloader {
+    position: fixed;
+    z-index: 999999999999999999999;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: var(--color-fondo);
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+    opacity: 1;
+    visibility: visible
+}
+
+.body__preloader.loaded {
+    opacity: 0;
+    visibility: hidden;
+    z-index: -2
+}
+
+#loading {
+    display: block;
+    position: relative;
+    z-index: 1001;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    background: url("../assets/loader/loader.gif") no-repeat center center;
+    background-size: 60%;
+}
+
+.pais_hover:hover {
+  cursor: pointer;
+}
+
+.hover-pais{
+  fill: #d06c60 !important;
+  filter: drop-shadow(0 0 0.75rem crimson) !important;
+}
+
+.macroregion_hover:hover {
+  cursor: pointer;
+  fill: #d06c60 !important;
+  filter: drop-shadow(0 0 0.75rem crimson) !important;
+}

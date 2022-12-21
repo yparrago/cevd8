@@ -1,0 +1,7 @@
+cev_rest.external_modal:
+  path: '/externalmodal/{node}'
+  defaults:
+    _title: 'External modal'
+    _controller: '\Drupal\cev_rest\Controller\CevRestController::build'
+  requirements:
+    _permission: 'access content'
