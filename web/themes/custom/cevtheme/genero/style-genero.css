@@ -1158,4 +1158,8 @@ h4.fw-bold a {
     .gen select.classic{
         width: 100%;
     }
+
+    body {
+        padding-left: 2rem;
+    }
 }

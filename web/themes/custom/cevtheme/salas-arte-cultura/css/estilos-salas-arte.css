@@ -705,6 +705,9 @@ div.text-pdf {
 
 
 @media all and (max-width: 768px) {
+  body {
+    margin-left: 2rem;
+  }
  
   .tituloCard {
     font-family: obliqua, sans-serif!important;
@@ -793,6 +796,9 @@ div.text-pdf {
   }
   .accordion-body{
     background-color: #083d59;
+  }
+  .contenidoMenuMovil .accordion-body {
+    background-color: transparent;
   }
   p.politica {
     font-size: 70% !important;

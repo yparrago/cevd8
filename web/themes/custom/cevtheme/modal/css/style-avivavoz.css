@@ -305,6 +305,7 @@ border-color: transparent;
     .textoParrafo{
         text-align: left;
         line-height: 17px;
+        padding-left: 2.5rem;
     }
     p.politica {
         font-size: 70% !important;

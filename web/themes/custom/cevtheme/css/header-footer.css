@@ -78,6 +78,11 @@
     padding: 2px 5px;
 }
 
+#idiomas {
+    margin: 3px 0px;
+    padding: 2px 5px;
+}
+
 .navbar-toggler:focus {
     box-shadow: 0px 0px 0px 0px;
 }
@@ -782,6 +787,7 @@ footer {
     }
     .navbar-brand .logo {
         background-image: url('../img/logo-informe-mb.svg');
+        background-repeat: no-repeat;
         max-width: 350px;
     }
     .fixed-bottom {
@@ -1015,7 +1021,7 @@ a {
 .page-link:hover {
     color: #fff;
     border: 1px solid #85782F;
-        background-color: #ccc;
+        background-color: #293171;
 }
 
 .creative-commons-block p.mb-0 {

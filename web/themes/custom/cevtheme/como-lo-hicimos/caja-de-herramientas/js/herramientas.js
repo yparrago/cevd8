@@ -1579,7 +1579,7 @@ var herramientas = [
     "id_modal": "2883",
     "objetivo": "Esclarecimiento"
   },
-  /* {
+   {
     "ID": 101,
     "Procedimiento": "Procesamiento ",
     "Nombre": "El tesauro de la  Comisión de la Verdad",
@@ -1594,7 +1594,7 @@ var herramientas = [
     "clasificacion_pedagogica": "Guía metodológica",
     "id_modal": "2885",
     "objetivo": "Esclarecimiento"
-  }, */
+  }, 
   {
     "ID": 102,
     "Procedimiento": "Procesamiento ",

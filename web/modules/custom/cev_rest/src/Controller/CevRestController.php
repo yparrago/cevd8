@@ -13,7 +13,7 @@ class CevRestController extends ControllerBase {
    * Builds the response.
    */
   public function build($node) {
-    $output = $this->loadRecord($node, 'full');
+    $output = $this->loadRecord($node, 'modal_externo');
     $renderable = [
       '#theme' => 'externalnode',
       '#output' => $output,

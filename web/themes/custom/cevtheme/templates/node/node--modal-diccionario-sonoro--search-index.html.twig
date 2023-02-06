@@ -79,8 +79,13 @@
     <img src="/themes/custom/cevtheme/img/portada-avivavoz.jpg" alt="Voces del Exilio" loading="lazy" typeof="foaf:Image" class="w-100 img-zoomable" data-zoomable="">
 
     <div class="card-body">
+      <div class="col-12">
+          <h5 class="volver icon-chevron-left mx-auto icon-flecha-doble-iqz p-0">
+              {{ content.field_seccion }}
+          </h5>
+      </div>
       <a href="{{url}}"><h5 class="card-title">{{ node.label }}</h5></a>
-      <p class="card-text">{{ content.field_resumen_corto }}</p>
+      <p class="card-text">El conflicto ha conducido al uso cotidiano de una serie de palabras que encarnan experiencias diversas y cuyo significado varía según la carga emocional que tiene para quien la pronuncia. Así se oyen cuando sus dueños las llenan de significado</p>
     </div>
   </div>
 </div>

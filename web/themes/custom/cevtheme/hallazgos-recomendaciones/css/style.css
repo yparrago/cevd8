@@ -181,3 +181,7 @@ h2{
 	padding: 0px;
 	margin: 0px 0px 1px 0px;
 }
+
+ul.visibles {
+	padding-left: 0;
+}

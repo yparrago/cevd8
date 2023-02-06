@@ -85,8 +85,13 @@
 }
 
 .x-share-button {
-    width: 110px;
+    width: 140px;
     height: 38px;
+    right: 0px;
+}
+
+.share-items-wrapper {
+    width: 240px;
 }
 
 .modal-content-cev .list-group-item.active {

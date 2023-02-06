@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
       setSceneHeight();
     })
     .catch(function(error) {
-      console.log(error);
+      // console.log(error);
     });
 });
 
@@ -55,7 +55,7 @@ function appendFilms(films) {
 }
 
 function elementClickHandler(i){
-  console.log('Elemento', i);
+  // console.log('Elemento', i);
 }
 
 function moveCamera() {

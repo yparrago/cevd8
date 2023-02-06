@@ -45,11 +45,11 @@ function tocar() {
 function playPista() {
     player.load();
     player.volume = 1;
-    console.log('ReproduciendoPlay');
+    // console.log('ReproduciendoPlay');
 }
 
 function reproducir() {
-    console.log('Reproduciendo');
+    // console.log('Reproduciendo');
     panel = jQuery('.panel.activo');
     if (panel.length != 0) {
         src = jQuery(panel).find('.audiosrc source').attr('src');
@@ -442,12 +442,12 @@ function init() {
     });
 
 
-    console.log('Iniciando');
+    // console.log('Iniciando');
 
 
         var panel = document.querySelectorAll('.panel');
         for (var i = 0; i < panel.length; i++) {
-            console.log('Iniciando desktop', panel[i].id);
+            // console.log('Iniciando desktop', panel[i].id);
             ScrollTrigger.create({
                 trigger: "#" + panel[i].id,
                 start: '20px 30px',
@@ -545,12 +545,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     jQuery('#modalInfoCev').on('show.bs.modal', function () {
         document.getElementById('pausar').click();
-        console.log('mostrando modal')
+        // console.log('mostrando modal')
     });
 
     jQuery('#modalInfoCev').on('hidden.bs.modal', function () {
         document.getElementById('reproducir').click();
-        console.log('modal cerrado');
+        // console.log('modal cerrado');
     });
     currentChap = jQuery('.contenedorPPal').data('nid');
     jQuery('#radio'+currentChap).prop('checked', true);

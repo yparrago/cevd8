@@ -5,11 +5,11 @@ jQuery(document).ready(function () {
 
     var id_aliado = sessionStorage.getItem("id_aliado");
     if (id_aliado > 0) {
-        console.log("Id: " + id_aliado);
+        //console.log("Id: " + id_aliado);
         jQuery.getJSON("/themes/custom/cevtheme/conquien/json/jsondb.json", function (data) {
             /*data.forEach(function(aliado, index) {
-                //console.log(aliado.nombre + " - "+ aliado.id+" vs id get "+id_aliado);
-                //console.log("Persona " + index + " | Nombre: " + aliado.nombre + " id: " + aliado.id)
+                ////console.log(aliado.nombre + " - "+ aliado.id+" vs id get "+id_aliado);
+                ////console.log("Persona " + index + " | Nombre: " + aliado.nombre + " id: " + aliado.id)
                 if (aliado.id === id_aliado) {
                     jQuery("#nombre_aliado").text(aliado.nombre);
                 }
@@ -99,7 +99,7 @@ jQuery(document).ready(function () {
                 if (obj[0].internacional === "si") {
                     if (obj[0]["territorializacion"][0]["internacional"].length-1 > 0) {
                         obj[0]["territorializacion"][0]["internacional"].forEach(function (region, index) {
-                            //console.log(tema);
+                            ////console.log(tema);
                             if (index != 0) {
                                 regiones = regiones + "<label class='control-label descripcion region region-other region_internacional'>" + region + "</label>";
                                 jQuery(
@@ -162,11 +162,11 @@ jQuery(document).ready(function () {
                 //fin
 
             } else {
-                console.log("Error al encontrar el aliado.");
+                //console.log("Error al encontrar el aliado.");
             }
-            console.log(obj[0].internacional);
+            //console.log(obj[0].internacional);
         }).fail(function () {
-            console.log("Error al leer los registros del json.");
+            //console.log("Error al leer los registros del json.");
         });
     } else {
         window.location.href = "/con-quien-index";
@@ -264,7 +264,7 @@ $(document).on("click", ".pais_hover", function(){
         });
     })
     .fail(function () {
-        console.log("Error al leer los registros del json.");
+        //console.log("Error al leer los registros del json.");
     });
 });
 
@@ -279,7 +279,7 @@ $(document).on("click", ".macroregion_hover", function(){
         });
     })
     .fail(function () {
-        console.log("Error al leer los registros del json.");
+        //console.log("Error al leer los registros del json.");
     });
 });
 
@@ -293,13 +293,13 @@ $(document).on("click", ".macroregion_hover", function(){
     }
     if (!jQuery(this).hasClass("region-selected")) {
         //Agregar clase seleccionada y seleccionar lugar mapa
-        console.log(clase_mapa+" Region seleccionada. "+region_selected);
+        //console.log(clase_mapa+" Region seleccionada. "+region_selected);
         jQuery(this).removeClass("descripcion").addClass("region-selected text-detalle");
         jQuery(".column-4 ."+clase_mapa+" path[name='"+region_selected+"'],.column-4 ."+clase_mapa+" path[class='"+region_selected+"']").removeClass("incidence-country").addClass("selected-country");
 
     } else {
         //Quitar clase seleccionada y des-seleccionar lugar mapa
-        console.log(clase_mapa+" Region NO seleccionada. "+region_selected);
+        //console.log(clase_mapa+" Region NO seleccionada. "+region_selected);
         jQuery(this).removeClass("region-selected text-detalle").addClass("descripcion");
         jQuery(".column-4 ."+clase_mapa+" path[name='"+region_selected+"'],.column-4 ."+clase_mapa+" path[class='"+region_selected+"']").removeClass("selected-country").addClass("incidence-country");
     }

@@ -75,7 +75,11 @@
 
     <div class="col-sm-6 col-lg-4 mb-4">
       <div class="card">
+      {% if node.field_imagen_portada is not empty %}
         {{ content.field_imagen_portada }}
+      {% else %}
+        <img src="/themes/custom/cevtheme/img/portada-generica.jpg">
+      {% endif %}
 
         <div class="card-body">
           <a href="{{url}}"><h5 class="card-title">{{ node.label }}</h5></a>

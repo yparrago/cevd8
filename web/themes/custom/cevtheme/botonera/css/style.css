@@ -1,7 +1,7 @@
 .flotantes {
     position: fixed;
     height: auto;
-    width: 45px;
+    width: 30px;
     top: 30%;
     left: 0px;
     z-index: 99999999999;
@@ -54,8 +54,9 @@ li.texto i.icono, li.texto img {
     color: #fff;
     display: flex;
     position: relative;
-    transition: all 300ms ease 0s;
+    transition: all 1000ms ease 0s;
     cursor: pointer;
+    border-radius: 0px 30px 30px 0px;
 }
 
 .flotantes .texto:hover span {
@@ -85,7 +86,7 @@ li.texto i.icono, li.texto img {
 
 .flotantes .leyenda {
     width: max-content;
-    margin: 0px 5px;
+    margin: 2px 8px 0px 0px;
     line-height: 125%;
 }
 .flotantes .texto i.icono:before {
@@ -104,14 +105,20 @@ li.texto i.icono, li.texto img {
     overflow: hidden;
     user-select: none;
     top: 0px;
-    width: 210px;
+    width: 190px;
     height: 30px;
-    border-radius: 30px;
+    border-radius: 0px 30px 30px 0px;
     padding: 0px;
     transition: all .2s ease-in-out;
     margin: 0px;
-    background: #edf0f2;
+    /* background: #edf0f2; */
+    background: #223a73;
 }
+
+.leyenda .x-share-button.botones-compartir {
+    width: 170px;
+}
+
 .leyenda .x-share-button.open, .leyenda .x-share-button-btn.open {
     background: #223a73;
 }

@@ -42,7 +42,7 @@ function onSubmitSearchForm() {
     if(opcion.value == '/archivo-del-esclarecimiento-de-la-verdad'){
       window.location = 'https://archivo.comisiondelaverdad.co'; 
     } else if(opcion.value == '/como-lo-hicimos'){
-      window.location = 'https://www.comisiondelaverdad.co/recorridos/como-lo-hicimos'; 
+      window.location = 'https://comisiondelaverdad.co/recorridos/como-lo-hicimos'; 
     } else {
       window.location = opcion.value;
     }

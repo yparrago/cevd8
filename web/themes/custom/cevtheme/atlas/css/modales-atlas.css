@@ -105,7 +105,7 @@
     color: #e25b00;
     background-color: #FFE9D7;
 }
-].accordion-button:hover  {
+.accordion-button:hover  {
   color: #FF6700
 }
 .accordion-item{
@@ -115,9 +115,12 @@
   background-color: #FF6700;
   color:#fff;
 }
+.contenidoMenuMovil .accordion-item, .contenidoMenuMovil .accordion-button{
+  background-color: transparent;
+}
 .list-group-item.active {
   background-color: #e25b00;
-  border-color: ##e25b00;
+  border-color: #e25b00;
   color: #fff;
 }
 .rt-player .progress .progress-bar[data-role="player-progress-bar"] {

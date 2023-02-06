@@ -308,7 +308,26 @@ const nna3Data  = [
       'basicTranscription' : `[00:00.00]`
     },
     {
-      'id': 8, 'etapa': 5, 'top': 630, 'left': 150, 'topcaja': 580, 'leftcaja':1760,'modal':186,      
+      'id': 8, 'etapa': 4, 'top': 630, 'left': 150, 'topcaja': 580, 'leftcaja':1760,'modal':187,    
+      'img': { 'url': '/themes/custom/cevtheme/nna/img/nna3g-n10.png',  'h': 270 },
+      'titulo':['La memoria como resistencia'],
+      'historia':'Mirella decidió quedarse en su territorio y reconstruir la memoria histórica de la guerra que  afectó a su comunidad  durante décadas.',
+      'link':'/themes/custom/cevtheme/nna/audios/nna/nnj-tg18a28-mirella.mp3',
+      'contexto':'Los jóvenes tienen preocupaciones sobre los lugares en los que viven y algunos se transforman en líderes. En zonas que el conflicto ha devastado, las y los jóvenes hacen memoria e intentan resignificar su territorio para superar los estragos de la guerra. Este es el caso de Mirella, quien a sus 27 años se propuso recuperar la memoria histórica de su comunidad, en Santa Lucía, corregimiento de Simití, Bolívar, para que la violencia que vivieron sus padres no se repita.',
+      'etiquetas':[ {'texto':'conflicto', 'url':'#'},{'texto': 'juventud', 'url':'#'},{'texto': 'memoria' ,'url':'#'}],
+      'transcripcion':[
+        '0:08 - 0:28 Soy una joven del corregimiento a la cual le preocupa mucho la situación de los jóvenes en esta época y que quiere hacer un cambio o anhela hacer un cambio tratando de unirlos para que realicen actividades más sanas, o que se encaminen más a la educación o al estudio. ',
+        '0:30 - 0:37 Tengo 17 años y llevamos un año haciendo el proceso de recolección de memoria por medio de entrevistas.',
+        '0:40 - 1:34 La historia de Santa Lucía está llena de personas admirables, y de un gran desastre que hubo porque no hay otra palabra, hubo mucha violencia, asesinatos, pero también cosas de las que poco hablamos y es que los campesinos se aguantaron mucho, muchos se fueron, es lógico, muchos abandonaron su tierra, su hogar, sus fincas, sus casas. Pero muchos se aguantaron. En esa época, por lo que nos han dicho, ellos abrían sus carreteras a pico, a pala, solos, sin ayuda de ningún ente público, ni de las alcaldías, ni de nada, y cuando llegaban a sus casas los estaban esperando los paramilitares o la guerrilla, para quitarles lo poquito que tenían. Les quitaban vacas, les quitaban gallinas, cerdos.',
+        '1:35 - 1:53 En la época de mis padres fueron muy amedrentados, en muchas ocasiones se los llevaban y los desaparecían. A las mujeres sobre todo, les endulzaban el oído y se las llevaban, supuestamente que allá iban a ganar mucha plata. ',
+        '1:55 - 2:11 En Santa Lucía hubo presencia de dos o tres grupos armados, depende de las épocas, cuando salía uno entraba el otro. Estaban los paramilitares, estaban las Farc, y había otro, la mano negra, me parece. ',
+        '2:13 - 2:34 Ellos al campesino le decían: nosotros llegamos a su casa y necesitamos que nos colabore, nosotros los cuidamos a ustedes, ustedes nos cuidan a nosotros. Y en qué necesitan que les colaboren. Y ellos respondían: nosotros necesitamos plata, nosotros necesitamos reses, cositas así, y ellos no se atrevían a decirle que no. ',
+        '2:39 - 2:58 Estoy estudiando administración pública, espero que en un futuro terminar, y acceder a un cargo público en mi corregimiento, de mi municipio. Aspiro llegar a la Alcaldía, quiero ser alcaldesa, y sé que lo voy a lograr, esto lo voy a hacer trabajando mucho y de la mano de los jóvenes de mi comunidad.'
+      ],
+      'basicTranscription' : `[00:00.00]`            
+    },
+    {
+      'id': 9, 'etapa': 5, 'top': 630, 'left': 140, 'topcaja': 580, 'leftcaja':2050,'modal':186,      
       'img': { 'url': '/themes/custom/cevtheme/nna/img/nna3g-n9.png',  'h': 270 },
       'titulo':['Dejar el territorio para salvar la vida'],
       'historia':'Sebastián tuvo que exiliarse después del asesinato de uno de sus compañeros y de recibir amenazas de muerte contra él y miembros de su colectivo.',
@@ -326,25 +345,6 @@ const nna3Data  = [
         '3:10 - 3:14 O sea, digamos que era muy natural. ¿Si ves como la misma vaina lo va volviendo a uno como insensible? ',
         '3:16 - 3:37 Este país no puede seguir permitiendo que más jóvenes, ni que yo, sigamos viendo cadáveres como si fueran un montón de animales tirados en un hueco. Y esos reflejos y esas imágenes que le quedan a uno en la cabeza, yo quisiera que nunca en la vida, nadie, ninguna persona las tuviera que vivir. ',
         '3:38 - 4:02 Y creo que esa es mi verdad. O sea, creo que lo único que me motiva hoy en día pa´ camellar en estas dinámicas en las que estoy metido, es que a mí no me gustaría que más niñas o más niños de este país, de ningún rincón, tuvieran que presenciar una muerte violenta de alguien, o tuvieran que cruzar por lugares en donde es imposible pasar, o el miedo es tan grande, que ni siquiera se puede conocer algún lugar.'
-      ],
-      'basicTranscription' : `[00:00.00]`            
-    },
-    {
-      'id': 9, 'etapa': 5, 'top': 630, 'left': 140, 'topcaja': 580, 'leftcaja':2050,'modal':187,    
-      'img': { 'url': '/themes/custom/cevtheme/nna/img/nna3g-n10.png',  'h': 270 },
-      'titulo':['La memoria como resistencia'],
-      'historia':'Mirella decidió quedarse en su territorio y reconstruir la memoria histórica de la guerra que  afectó a su comunidad  durante décadas.',
-      'link':'/themes/custom/cevtheme/nna/audios/nna/nnj-tg18a28-mirella.mp3',
-      'contexto':'Los jóvenes tienen preocupaciones sobre los lugares en los que viven y algunos se transforman en líderes. En zonas que el conflicto ha devastado, las y los jóvenes hacen memoria e intentan resignificar su territorio para superar los estragos de la guerra. Este es el caso de Mirella, quien a sus 27 años se propuso recuperar la memoria histórica de su comunidad, en Santa Lucía, corregimiento de Simití, Bolívar, para que la violencia que vivieron sus padres no se repita.',
-      'etiquetas':[ {'texto':'conflicto', 'url':'#'},{'texto': 'juventud', 'url':'#'},{'texto': 'memoria' ,'url':'#'}],
-      'transcripcion':[
-        '0:08 - 0:28 Soy una joven del corregimiento a la cual le preocupa mucho la situación de los jóvenes en esta época y que quiere hacer un cambio o anhela hacer un cambio tratando de unirlos para que realicen actividades más sanas, o que se encaminen más a la educación o al estudio. ',
-        '0:30 - 0:37 Tengo 17 años y llevamos un año haciendo el proceso de recolección de memoria por medio de entrevistas.',
-        '0:40 - 1:34 La historia de Santa Lucía está llena de personas admirables, y de un gran desastre que hubo porque no hay otra palabra, hubo mucha violencia, asesinatos, pero también cosas de las que poco hablamos y es que los campesinos se aguantaron mucho, muchos se fueron, es lógico, muchos abandonaron su tierra, su hogar, sus fincas, sus casas. Pero muchos se aguantaron. En esa época, por lo que nos han dicho, ellos abrían sus carreteras a pico, a pala, solos, sin ayuda de ningún ente público, ni de las alcaldías, ni de nada, y cuando llegaban a sus casas los estaban esperando los paramilitares o la guerrilla, para quitarles lo poquito que tenían. Les quitaban vacas, les quitaban gallinas, cerdos.',
-        '1:35 - 1:53 En la época de mis padres fueron muy amedrentados, en muchas ocasiones se los llevaban y los desaparecían. A las mujeres sobre todo, les endulzaban el oído y se las llevaban, supuestamente que allá iban a ganar mucha plata. ',
-        '1:55 - 2:11 En Santa Lucía hubo presencia de dos o tres grupos armados, depende de las épocas, cuando salía uno entraba el otro. Estaban los paramilitares, estaban las Farc, y había otro, la mano negra, me parece. ',
-        '2:13 - 2:34 Ellos al campesino le decían: nosotros llegamos a su casa y necesitamos que nos colabore, nosotros los cuidamos a ustedes, ustedes nos cuidan a nosotros. Y en qué necesitan que les colaboren. Y ellos respondían: nosotros necesitamos plata, nosotros necesitamos reses, cositas así, y ellos no se atrevían a decirle que no. ',
-        '2:39 - 2:58 Estoy estudiando administración pública, espero que en un futuro terminar, y acceder a un cargo público en mi corregimiento, de mi municipio. Aspiro llegar a la Alcaldía, quiero ser alcaldesa, y sé que lo voy a lograr, esto lo voy a hacer trabajando mucho y de la mano de los jóvenes de mi comunidad.'
       ],
       'basicTranscription' : `[00:00.00]`            
     }

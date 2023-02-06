@@ -209,6 +209,10 @@ border: 2px solid #85782F;
 color: #fff;
 background-color: #85782F;
 }
+.cc_container .cc_btn:hover{
+    color: #fff;
+    background-color: #293171;
+}
 .cc_container {
     padding: 20px 18px 80px;
 }

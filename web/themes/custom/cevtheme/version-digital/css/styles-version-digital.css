@@ -230,7 +230,7 @@ div#search-autocomplete {
     }
     .divPrimercuerpo:nth-child(2){
         margin-top: 0rem;
-        padding: 0rem 1rem;
+        padding: 0rem 1rem 1rem 2.5rem;
     }
     .divPrimercuerpo:nth-child(3){
         padding-bottom: 0.5rem;
@@ -238,7 +238,8 @@ div#search-autocomplete {
     .divPrimercuerpo h3{
         font-size: 2rem;
         line-height: 1.8rem;
-        margin-left: 1rem;
+        margin-left: 2rem;
+        margin-top: 1.5rem;
     }
     #linkAtras{
         font-size: 30px;
@@ -255,7 +256,7 @@ div#search-autocomplete {
         height: auto;
         width: 100vw;
         display: flex;
-        padding-bottom: 3rem;
+        padding: 0 2.5rem 3rem 2.5rem;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
@@ -291,4 +292,12 @@ div#search-autocomplete {
     p.modal-description.parrafo, .modal-body .titulo {
         line-height: 1.5rem;
     }
+}
+
+body {
+    background-color: #e2e2e2;
+}
+
+.elemento.card img {
+    border-radius: 10px 10px 0px 0px;
 }

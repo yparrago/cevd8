@@ -564,6 +564,7 @@ footer {
     .divPrimercuerpo{
         padding-top: 0.5rem;
         justify-content: flex-start;
+        padding-left: 2.5rem;
     }
     .divPrimercuerpo .icon-chevron-left::before {
         top: 0;        

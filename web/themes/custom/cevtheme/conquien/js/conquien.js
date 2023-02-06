@@ -25,8 +25,8 @@ jQuery(document).ready(function () {
     .getJSON("/themes/custom/cevtheme/conquien/json/jsondb.json", function (data) {
       //Consulto los tipos
       var tipos = [...new Set(data.flatMap((item) => item.tipo))];
-      //console.log("Tipos");
-      //console.log(tipos);
+      ////console.log("Tipos");
+      ////console.log(tipos);
 
       tipos = [
         ...new Set(
@@ -46,8 +46,8 @@ jQuery(document).ready(function () {
           )
         ),
       ];
-      //console.log("tipos con numero de aliados en cada uno");
-      //console.log(tipos);
+      ////console.log("tipos con numero de aliados en cada uno");
+      ////console.log(tipos);
 
       tipos.sort(function (a, b) {
         if (a.count < b.count) {
@@ -59,8 +59,8 @@ jQuery(document).ready(function () {
         // a must be equal to b
         return 0;
       });
-      //console.log("tipos ordenados");
-      //console.log(tipos);
+      ////console.log("tipos ordenados");
+      ////console.log(tipos);
 
       tipo_aliado.empty();
       tipo_aliado_dos.empty();
@@ -127,7 +127,7 @@ jQuery(document).ready(function () {
       buscar_nombre.append(option_buscar_nombre);
 
       data.forEach(function (aliado, index) {
-        //console.log("Persona " + index + " | Nombre: " + aliado.nombre + " id: " + aliado.id)
+        ////console.log("Persona " + index + " | Nombre: " + aliado.nombre + " id: " + aliado.id)
         option_buscar_nombre =
           " <option value='" +
           aliado.id +
@@ -146,7 +146,7 @@ jQuery(document).ready(function () {
       //fin
     })
     .fail(function () {
-      console.log("Error al leer los registros del json.");
+      // //console.log("Error al leer los registros del json.");
     });
 
   lista_asesores.empty();
@@ -170,7 +170,7 @@ jQuery(document).ready(function () {
   
     })
     .fail(function () {
-      console.log("Error al leer los registros del json.");
+      // //console.log("Error al leer los registros del json.");
     });
 
     lista_asesores.select2({
@@ -263,8 +263,8 @@ jQuery(document).ready(function () {
             ...new Set(data.flatMap((item) => item.anios_reporte_comision)),
           ];
 
-          console.log("Años");
-          console.log(years);
+          // //console.log("Años");
+          // //console.log(years);
 
           //Relaciono los registros al año
 
@@ -291,8 +291,8 @@ jQuery(document).ready(function () {
             ),
           ];
 
-          console.log("Registros");
-          console.log(items);
+          // //console.log("Registros");
+          // //console.log(items);
 
           years = [
             ...new Set(
@@ -317,8 +317,8 @@ jQuery(document).ready(function () {
             ),
           ];
 
-          // console.log("Años");
-          // console.log(years);
+          // //console.log("Años");
+          // //console.log(years);
 
           //Itero los años
           var num_columna_anyo;
@@ -484,8 +484,8 @@ jQuery(document).ready(function () {
           //Consulto los tipos
           var types = [{ type: "Todos" }];
 
-          console.log("Tipos");
-          console.log(types);
+          //console.log("Tipos");
+          //console.log(types);
 
           //Relaciono los registros al tipo
 
@@ -506,11 +506,11 @@ jQuery(document).ready(function () {
             ),
           ];
 
-          console.log("Registros");
-          console.log(items);
+          //console.log("Registros");
+          //console.log(items);
 
-          console.log("Tipos");
-          console.log(types);
+          //console.log("Tipos");
+          //console.log(types);
 
           //Itero los tipos
           types
@@ -612,8 +612,8 @@ jQuery(document).ready(function () {
           //Consulto los temas
           var topics = [...new Set(data.flatMap((item) => item.temas))];
 
-          console.log("Temas");
-          console.log(topics);
+          //console.log("Temas");
+          //console.log(topics);
 
           //Relaciono los registros al tema
 
@@ -640,8 +640,8 @@ jQuery(document).ready(function () {
             ),
           ];
 
-          console.log("Registros");
-          console.log(items);
+          //console.log("Registros");
+          //console.log(items);
 
           topics = [
             ...new Set(
@@ -666,8 +666,8 @@ jQuery(document).ready(function () {
             ),
           ];
 
-          console.log("Temas");
-          console.log(topics);
+          //console.log("Temas");
+          //console.log(topics);
 
           //Itero los temas
           var num_columna_topic;
@@ -856,8 +856,8 @@ jQuery(document).ready(function () {
             ]),
           ];
 
-          console.log("Regiones");
-          console.log(regions);
+          //console.log("Regiones");
+          //console.log(regions);
 
           //Relaciono los registros a la region
 
@@ -900,8 +900,8 @@ jQuery(document).ready(function () {
             ),
           ];
 
-          console.log("Registros");
-          console.log(items);
+          //console.log("Registros");
+          //console.log(items);
 
           regions = [
             ...new Set(
@@ -927,8 +927,8 @@ jQuery(document).ready(function () {
             ),
           ];
 
-          console.log("Regiones");
-          console.log(regions);
+          //console.log("Regiones");
+          //console.log(regions);
 
           //Itero las regiones
           [
@@ -1189,7 +1189,7 @@ jQuery(document).ready(function () {
         //fin
       })
       .fail(function () {
-        console.log("Error al leer los registros del json.");
+        //console.log("Error al leer los registros del json.");
       });
   }
 
@@ -1335,8 +1335,8 @@ jQuery(document).ready(function () {
                 }
               });
 
-              console.log("Elementos");
-              console.log(elementos.length);
+              //console.log("Elementos");
+              //console.log(elementos.length);
               jQuery("#num_aliados").text(elementos.length + " aliados");
               var ColYearTimeLine = jQuery(
                 "<div class='col-sm-12 col-md-12 col-year-time-line col-year-time-line-sm col-year-time-line-md col-year-time-line-lg col-year-time-line-xl' id = 'col-year-time-line-" +
@@ -1388,7 +1388,7 @@ jQuery(document).ready(function () {
               //fin
             })
             .fail(function () {
-              console.log("Error al leer los registros del json.");
+              //console.log("Error al leer los registros del json.");
             });
         } else {
           jQuery(".conquien .row-time-line-1").empty();
@@ -1463,8 +1463,8 @@ jQuery(document).ready(function () {
                 }
               });
 
-              console.log("Elementos");
-              console.log(elementos.length);
+              //console.log("Elementos");
+              //console.log(elementos.length);
               jQuery("#inter_num_aliados").text(elementos.length + " aliados");
               var ColYearTimeLine = jQuery(
                 "<div class='col-sm-12 col-md-12 col-year-time-line col-year-time-line-sm col-year-time-line-md col-year-time-line-lg col-year-time-line-xl' id = 'col-year-time-line-" +
@@ -1509,7 +1509,7 @@ jQuery(document).ready(function () {
               //fin
             })
             .fail(function () {
-              console.log("Error al leer los registros del json.");
+              //console.log("Error al leer los registros del json.");
             });
         } else {
           jQuery(".conquien .row-time-line-2").empty();
@@ -1548,7 +1548,7 @@ jQuery(document).ready(function () {
   
       })
       .fail(function () {
-        console.log("Error al leer los registros del json.");
+        //console.log("Error al leer los registros del json.");
       });
 
       progressLineIndicator.style.width = "99%";
@@ -1592,7 +1592,7 @@ jQuery(document).ready(function () {
 
     }
     intervalo2();
-    console.log('intervalo2');
+    //console.log('intervalo2');
   });
 
   tipo_aliado_tres.change(function () {
@@ -1714,7 +1714,7 @@ jQuery(document).ready(function () {
         //fin
       })
       .fail(function () {
-        console.log("Error al leer los registros del json.");
+        //console.log("Error al leer los registros del json.");
       });
     } else {
       jQuery(".conquien .row-time-line-2").empty();
@@ -1789,8 +1789,8 @@ jQuery(document).ready(function () {
           }
         });
 
-        console.log("Elementos");
-        console.log(elementos.length);
+        //console.log("Elementos");
+        //console.log(elementos.length);
         jQuery("#num_aliados").text(elementos.length + " aliados");
         var ColYearTimeLine = jQuery(
           "<div class='col-sm-12 col-md-12 col-year-time-line col-year-time-line-sm col-year-time-line-md col-year-time-line-lg col-year-time-line-xl' id = 'col-year-time-line-" +
@@ -1842,7 +1842,7 @@ jQuery(document).ready(function () {
         //fin
       })
       .fail(function () {
-        console.log("Error al leer los registros del json.");
+        //console.log("Error al leer los registros del json.");
       });
     } else {
       jQuery(".conquien .row-time-line-1").empty();
@@ -1855,7 +1855,7 @@ jQuery(document).ready(function () {
     var TipoAliado = jQuery(this).val();
     LoadTimeLine(TipoGrafica, TipoAliado);
     intervalo2();
-    console.log('intervalo2');
+    //console.log('intervalo2');
   });
   
   jQuery(".conquien .image-clik").click(function (e) {
@@ -1986,7 +1986,7 @@ jQuery(document).ready(function () {
         }
 
         var TipoGrafica = jQuery("#tipo_grafica").val();
-        console.log(TipoGrafica);
+        //console.log(TipoGrafica);
         if(TipoGrafica=="Nacional"){
           if((jQuery(".conquien #row-time-line-info-nacional").offset().top-circuloclick.offset().top-25)>=AlertAliado.height()){
             top_alert = parseInt(circuloclick.offset().top + 25);
@@ -2325,7 +2325,7 @@ jQuery(document).ready(function () {
               ".conquien #row-time-line-info-" +
                 index
             ).attr("anyo");
-            console.log(year_iteracion);
+            //console.log(year_iteracion);
             if (year_iteracion == "2017") {
               jQuery(this).width(180);
             } else if (year_iteracion == "2018") {
@@ -2365,7 +2365,7 @@ jQuery(document).ready(function () {
               jQuery(this).width(width_inicial);
             }
           }
-          //console.log(totalitems);
+          ////console.log(totalitems);
         } //else {var width_inicial = parseInt(24 * 10);}// Igual a 240
       });
     }
@@ -2658,7 +2658,7 @@ jQuery(document).ready(function () {
           //fin
         })
         .fail(function () {
-          console.log("Error al leer los registros del json.");
+          //console.log("Error al leer los registros del json.");
         });
       }
       marcar_mapa(svg_mapa, region_seleccionada, clase_contenedora);
@@ -2871,7 +2871,7 @@ jQuery(document).ready(function () {
           //fin
         })
         .fail(function () {
-          console.log("Error al leer los registros del json.");
+          //console.log("Error al leer los registros del json.");
         });
       }
       marcar_mapa(svg_mapa, region_seleccionada, clase_contenedora);
@@ -2960,7 +2960,7 @@ jQuery(document).on("click", ".region", function () {
   var region_seleccionada = jQuery(this).text();
   var clase_contenedora = "column-4";
   //var nombre_region_seleccionada = $(".region .region-other .region_nacional").text();
-  console.log(region_seleccionada);
+  //console.log(region_seleccionada);
   var svg_mapa = "";
   let tipo_aliado = jQuery(".conquien #tipo_aliado");
   var TipoAliado = tipo_aliado.val();
@@ -2988,7 +2988,7 @@ jQuery(document).on("click", ".region", function () {
         .addClass("descripcion");
 
       sessionStorage.setItem("region_seleccionada_sesion", region_seleccionada);
-      console.log(jQuery(this));
+      //console.log(jQuery(this));
       if (jQuery("#puntos-internacional").hasClass("d-none")) {
         jQuery("#puntos-internacional").addClass("d-block");
         jQuery("#puntos-internacional").removeClass("d-none");
@@ -3064,8 +3064,8 @@ jQuery(document).on("click", ".region", function () {
             }
           });
 
-          console.log("Elementos");
-          console.log(elementos.length);
+          //console.log("Elementos");
+          //console.log(elementos.length);
           jQuery("#inter_num_aliados").text(elementos.length + " aliados");
           var ColYearTimeLine = jQuery(
             "<div class='col-sm-12 col-md-12 col-year-time-line col-year-time-line-sm col-year-time-line-md col-year-time-line-lg col-year-time-line-xl' id = 'col-year-time-line-" +
@@ -3163,7 +3163,7 @@ jQuery(document).on("click", ".region", function () {
           //fin
         })
         .fail(function () {
-          console.log("Error al leer los registros del json.");
+          //console.log("Error al leer los registros del json.");
         });
     }
   } else {
@@ -3246,7 +3246,7 @@ jQuery(document).on("click", ".region", function () {
                 region,
                 index
               ) {
-                console.log(TipoAliado);
+                //console.log(TipoAliado);
                 if (region == region_seleccionada && TipoAliado == "Todos") {
                   elementos.push(aliado);
                 } else {
@@ -3262,8 +3262,8 @@ jQuery(document).on("click", ".region", function () {
             }
           });
 
-          console.log("Elementos");
-          console.log(elementos.length);
+          //console.log("Elementos");
+          //console.log(elementos.length);
           jQuery("#num_aliados").text(elementos.length + " aliados");
           var ColYearTimeLine = jQuery(
             "<div class='col-sm-12 col-md-12 col-year-time-line col-year-time-line-sm col-year-time-line-md col-year-time-line-lg col-year-time-line-xl' id = 'col-year-time-line-" +
@@ -3361,7 +3361,7 @@ jQuery(document).on("click", ".region", function () {
           //fin
         })
         .fail(function () {
-          console.log("Error al leer los registros del json.");
+          //console.log("Error al leer los registros del json.");
         });
     }
   }
@@ -3383,7 +3383,7 @@ jQuery(document).on("click", ".region", function () {
 
 jQuery(document).on("click", ".colombia", function () {
   var region_seleccionada = jQuery(this).attr("name");
-  console.log("region mapa: " + region_seleccionada);
+  //console.log("region mapa: " + region_seleccionada);
   var svg_mapa = ".svg-colombia";
   jQuery("#row-time-line-info-nacional")
       .removeClass("d-none");
@@ -3477,8 +3477,8 @@ jQuery(document).on("click", ".colombia", function () {
           }
         });
 
-        console.log("Elementos");
-        console.log(elementos.length);
+        //console.log("Elementos");
+        //console.log(elementos.length);
         jQuery("#num_aliados").text(elementos.length + " aliados");
         var ColYearTimeLine = jQuery(
           "<div class='col-sm-12 col-md-12 col-year-time-line col-year-time-line-sm col-year-time-line-md col-year-time-line-lg col-year-time-line-xl' id = 'col-year-time-line-" +
@@ -3575,7 +3575,7 @@ jQuery(document).on("click", ".colombia", function () {
         //fin
       })
       .fail(function () {
-        console.log("Error al leer los registros del json.");
+        //console.log("Error al leer los registros del json.");
       });*/
   }
   marcar_mapa(svg_mapa, region_seleccionada);
@@ -3583,7 +3583,7 @@ jQuery(document).on("click", ".colombia", function () {
 
 /*jQuery(document).on("mouseleave", ".colombia", function(){
     var region_seleccionada = jQuery(this).attr('name');
-    //console.log("region mapa: "+region_seleccionada);
+    ////console.log("region mapa: "+region_seleccionada);
     var svg_mapa = ".svg-colombia";
     desmarcar_mapa(svg_mapa, region_seleccionada);
 });*/
@@ -3641,7 +3641,7 @@ function rest_seleted_mapa(svg_mapa, clase_contenedora = "column-4") {
 jQuery(document).on("click", ".mapa-resumen", function () {
   var region_seleccionada = jQuery(this).attr("name");
   var clase_contenedora = "mapamundi";
-  console.log("region mapa internacional: " + region_seleccionada);
+  //console.log("region mapa internacional: " + region_seleccionada);
   var svg_mapa = ".svg-internacional";
   jQuery("#row-time-line-info-internacional")
       .removeClass("d-none");
@@ -3736,8 +3736,8 @@ jQuery(document).on("click", ".mapa-resumen", function () {
           }
         });
 
-        console.log("Elementos");
-        console.log(elementos.length);
+        //console.log("Elementos");
+        //console.log(elementos.length);
         jQuery("#inter_num_aliados").text(elementos.length + " aliados");
         var ColYearTimeLine = jQuery(
           "<div class='col-sm-12 col-md-12 col-year-time-line col-year-time-line-sm col-year-time-line-md col-year-time-line-lg col-year-time-line-xl' id = 'col-year-time-line-" +
@@ -3793,7 +3793,7 @@ jQuery(document).on("click", ".mapa-resumen", function () {
         //fin
       })
       .fail(function () {
-        console.log("Error al leer los registros del json.");
+        //console.log("Error al leer los registros del json.");
       });*/
   }
   marcar_mapa(svg_mapa, region_seleccionada, clase_contenedora);
@@ -3831,7 +3831,7 @@ jQuery(document).on("click", ".item_asesor", function () {
   
   })
   .fail(function () {
-    console.log("Error al leer los registros del json.");
+    //console.log("Error al leer los registros del json.");
   });
 
   jQuery("#img_asesor").removeClass("d-none");
@@ -3873,7 +3873,7 @@ jQuery(document).on("change", "#select_listado_asesores", function () {
   
   })
   .fail(function () {
-    console.log("Error al leer los registros del json.");
+    //console.log("Error al leer los registros del json.");
   });
 
   if(asesor=="default_asesor"){

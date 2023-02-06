@@ -45,7 +45,6 @@ function filterOptions() {
         if (jQuery(this).val() != "")
             currentOptions.push(jQuery(this).val())
     });
-    console.log(currentOptions);
     jQuery('.elemento').css('opacity', '0.2');
     jQuery.each(currentOptions, function (index, value) {
         jQuery(".elemento").each(function (index) {

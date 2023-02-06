@@ -3,7 +3,7 @@ const nnaHomeDataInicio  = [
   {
       'home':{      
         'titulo':'Niños, niñas y adolescentes',
-        'subtitulo':' No fue un mal menor',
+        'subtitulo':' No es un mal menor',
         'etiquetas':[
           {'texto':'Orfandad','url':'/etiquetas/orfandad'},
           {'texto':'Reclutamiento','url':'/etiquetas/reclutamiento'},

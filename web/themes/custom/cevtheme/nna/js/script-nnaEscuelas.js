@@ -11,7 +11,9 @@ const nnaEscuelaDataInicio  = [
         {'texto':'Reclutamiento','url':'/etiquetas/reclutamiento'},
         {'texto':'Desplazamiento','url':'/etiquetas/desplazamiento'},
         {'texto':'Reconocimiento','url':'/etiquetas/reconocimiento'},
-        {'texto':'Esclarecimiento','url':'/etiquetas/esclarecimiento'}
+        {'texto':'Esclarecimiento','url':'/etiquetas/esclarecimiento'},
+        {'texto':'English','url':'/etiquetas/english'},
+        {'texto':'Boys, Girls and Adolescents','url':'/etiquetas/boys-girls-and-adolescents'}
       ],   
       'texto':'Según la Comisión de la Verdad y Educapaz, entre 1986 y 2021 se presentaron 881 casos de afectación a comunidades educativas durante el conflicto armado. Estos hechos fueron perpetrados por todos los actores armados. Estas son algunas de esas historias.',         
       'imagenFinal':'/themes/custom/cevtheme/nna/img/nnaE-m8.png',

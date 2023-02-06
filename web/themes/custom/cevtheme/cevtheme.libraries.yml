@@ -86,7 +86,6 @@ genero_library:
   css:
     component:
       //use.typekit.net/wnl6hvg.css: {}
-      mdb/mdb.min.css: {}
       genero/style-genero.css: {}
       genero/customize-modal.css: {}
 material_design:
@@ -343,6 +342,7 @@ conquien_home_library:
       conquien/css/select2/select2-4.1.0.min.css: {}
       conquien/css/conquien.css: {}
       conquien/css/conquien_home.css: {}
+      css/header-footer.css: {}
 narrativa_library:
   js:
     narrativa/js/script_narrativa.js: {}

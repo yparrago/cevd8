@@ -975,7 +975,7 @@ function pdfInsertElemento(valor) {
     }
   }
   document.querySelector('.fijobadge').innerHTML = pdfElementos.length;
-  console.log();
+  // console.log();
 }
 //Creador de objeto PDF 
 function insertElemenPdf(id, titulo, imagen, descripcion) {

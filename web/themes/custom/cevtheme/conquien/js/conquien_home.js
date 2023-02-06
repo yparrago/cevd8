@@ -30,7 +30,7 @@ jQuery(document).ready(function () {
       //fin
     })
     .fail(function () {
-      console.log("Error al leer los registros del json.");
+      // console.log("Error al leer los registros del json.");
     });
 
   function formatState(state) {

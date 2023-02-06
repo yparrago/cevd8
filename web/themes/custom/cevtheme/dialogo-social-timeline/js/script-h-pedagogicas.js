@@ -113,12 +113,12 @@ var mltCarr2 = document.querySelector("#caruselOpcion2");
                 if (posScroll2 > ((anchoTotal2/totalItem2)*0)) {
                     posScroll2 -= (anchoTotal2/totalItem2);
                     jQuery("#carousel-inner2").animate({ scrollLeft: posScroll2 },600); 
-                    console.log('prev');
+                    // console.log('prev');
 
                 }else{
                     posScroll2 = anchoTotal2-((anchoTotal2/totalItem2));
                     jQuery("#carousel-inner2").animate({ scrollLeft: posScroll2 },600);
-                    console.log('prev');
+                    // console.log('prev');
                 }
             });
 

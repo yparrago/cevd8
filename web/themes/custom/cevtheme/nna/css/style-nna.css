@@ -104,6 +104,10 @@
 
 
 @media screen and (max-width: 770px) {
+	.nna .contentHome {
+		margin-left: 2.5rem;
+	}
+
 	.nna .contentHome p {
 		margin-left: 2px !important;
 		margin-top: 9px !important;

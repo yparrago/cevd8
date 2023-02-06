@@ -329,3 +329,9 @@ p{
 .territorio-modal .list-group-item.active{
     color: #38504a;
 }
+
+.css-custom-modal.modal-institucional, 
+.css-custom-modal.modal-institucional li,
+.css-custom-modal.modal-institucional p {
+    color: #212529;
+}

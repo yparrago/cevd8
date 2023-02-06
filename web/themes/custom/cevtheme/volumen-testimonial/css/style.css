@@ -445,6 +445,10 @@ body {
     overflow-x: hidden;
   }
 
+  .rt-dots-container .container{
+   padding-left: 2.5rem;
+  }
+
   .dots-breadcumb-side {
     line-height: 1.6;
   }

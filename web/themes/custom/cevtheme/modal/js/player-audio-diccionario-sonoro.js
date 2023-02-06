@@ -58,11 +58,11 @@ function cargarBotones() {
         function playAudioPlaylistStatic(src, index) {
 
             if (playlistStaticCurrentPlaying === index){
-                console.log('El mismo',playlistStaticCurrentPlaying);
+                // console.log('El mismo',playlistStaticCurrentPlaying);
                 return;
             }
             else {
-                console.log('Diferente',playlistStaticCurrentPlaying);
+                // console.log('Diferente',playlistStaticCurrentPlaying);
                 playerAudioplaylistStatic.stop();
                 if (playListAudios[index].transcription[0] == null) {
                     document.getElementById('language-selector').classList.add('hidden');
@@ -77,7 +77,7 @@ function cargarBotones() {
                     });
                     $("#seleccion").val($("#seleccion option:first").val());
                 }
-                console.log('Instancia player play', playerAudioplaylistStatic);
+                // console.log('Instancia player play', playerAudioplaylistStatic);
                 
                 playerAudioplaylistStatic.play(src);
                 modalPlaylistStatic.find('li').each((i, e) => $(e).removeClass('active'))
@@ -92,6 +92,8 @@ function cargarBotones() {
                     select.addEventListener('change', (event) => {
                         setupPlaylistLrcStatic(playListAudios[index].transcription[event.target.value]);
                     })
+                    setupPlaylistLrcStatic(playListAudios[index].transcription[0]);
+                    jQuery('#seleccion').find('.cs' + index + ':first').attr('selected', 'selected');
                 }
             }
         }

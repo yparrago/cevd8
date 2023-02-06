@@ -31,10 +31,10 @@
 */
 #}
 <div class="row carrusel">
-  <div id="carruselPPal" class="carousel slide" data-bs-interval="false">
+  <div id="carruselPPal" class="carousel slide multi-item-carousel" data-bs-interval="false">
     <div class="carousel-inner">
       {% for key,row in rows %}
-      <div class="carousel-item  {% if key == 0 %} active {% endif %}" data-bs-interval="false">
+      <div class="carousel-item{% if key == 0 %} active {% endif %}" data-bs-interval="false">
         <div class="col-md-4">
           {{ row.content }}
         </div>

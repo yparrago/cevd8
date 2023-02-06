@@ -115,3 +115,22 @@
     background-color: #4C6C7F;
     background-image: url(/img/moviles/15.png);
 }
+.modal-media.home-movil .accordion-item:nth-child(16){
+    /* Como lo hicimos */
+    background-color: #476172;
+}
+.modal-media.home-movil .accordion-item:nth-child(17){
+    background-color: #3F5362;
+}
+.modal-media.home-movil .accordion-item:nth-child(18){
+    background-color: #394854;
+}
+.modal-media.home-movil .accordion-item:nth-child(19){
+    background-color: #2E404C;
+}
+.modal-media.home-movil .accordion-item:nth-child(20){
+    background-color: #243138;
+}
+.modal-media.home-movil .accordion-item:nth-child(21){
+    background-color: #333f47;
+}

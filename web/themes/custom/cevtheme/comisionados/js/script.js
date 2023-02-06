@@ -24,13 +24,13 @@ $(".choice").on("click", function(){
   }
 );
 function ver(valor){
-  console.log(valor,'si');
+  // console.log(valor,'si');
   //this.children[0].childNodes[1].children[0].childNodes[3].animate([{opacity:'1'}],[{duration:'1000'}])
 }
 
 
 function boton(valor){
-  console.log(valor.id);
+  // console.log(valor.id);
 }
 
 

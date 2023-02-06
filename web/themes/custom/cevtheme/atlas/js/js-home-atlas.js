@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    car_u_sel();
+    // car_u_sel();
     var cardsRegion = document.querySelectorAll('.card');
     for (var i = 0; i < cardsRegion.length; i++) {
         cardsRegion[i].addEventListener('mouseenter', entradaCard);
@@ -112,3 +112,24 @@ function salidaCard() {
     }
 }
 
+
+
+// jQuery('.multi-item-carousel').carousel({
+//     interval: false
+//   });
+  
+// for every slide in carousel, copy the next slide's item in the slide.
+// Do the same for the next, next item.
+jQuery('.multi-item-carousel .carousel-item').each(function(){
+var next = jQuery(this).next();
+if (!next.length) {
+    next = jQuery(this).siblings(':first');
+}
+next.children(':first-child').clone().appendTo(jQuery(this));
+
+if (next.next().length>0) {
+    next.next().children(':first-child').clone().appendTo(jQuery(this));
+} else {
+    jQuery(this).siblings(':first').children(':first-child').clone().appendTo(jQuery(this));
+}
+});

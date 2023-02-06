@@ -161,13 +161,16 @@ a:hover{
 
 body {
 	width: 100%;
-	font-family: 'Source Sans Pro', sans-serif;
-    line-height: 1.2;
 	overflow-x: hidden !important;
-	font-weight: normal;
 	min-height: 75rem;
 	padding-top: 0rem !important;
 	background: linear-gradient(93deg, rgb(68 45 75),rgb(67 80 89), rgb(36 48 55));
+}
+
+body .particulas {
+	font-family: 'Source Sans Pro', sans-serif;
+    line-height: 1.2;
+	font-weight: normal;
 }
 
 .choice{    
@@ -495,7 +498,7 @@ h4.card-title.peq{
 }
 
 
-.icon::before{
+.icon:not(.icon-ico-share)::before{
 	content: '';
     background-size: cover !important;
     background-repeat-y: no-repeat !important;

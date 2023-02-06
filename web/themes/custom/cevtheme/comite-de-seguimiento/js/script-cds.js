@@ -37,7 +37,7 @@ jQuery(window).on('load resize', function(){
     jQuery('.item-container-principal-3.card-principal').on('click',function(){
 
         // red();
-        console.log('luego de que exista contenido, por favor quitar comentario a linea 39, y eliminar linea 40, del archivo de funciones');
+        // console.log('luego de que exista contenido, por favor quitar comentario a linea 39, y eliminar linea 40, del archivo de funciones');
 
     })
 
@@ -100,7 +100,7 @@ jQuery(window).on('load resize', function(){
         jQuery('.card-third .card-principal').on('click',function(){
             // jQuery('.card-principal').hide();
             // jQuery('.card-red').show();
-            console.log('luego de que exista contenido, por favor quitar comentario a linea 101 y 102, y eliminar linea 103, del archivo de funciones');
+            // console.log('luego de que exista contenido, por favor quitar comentario a linea 101 y 102, y eliminar linea 103, del archivo de funciones');
 
         })
 

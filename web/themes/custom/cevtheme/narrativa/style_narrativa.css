@@ -1398,7 +1398,7 @@ input[type=radio] {
 
 }
 .form-check:hover{
-  color:#ffff:
+  color:#ffff;
 }
 
 .form-check-input[id=id_nh_flexRadio_ciclo_uno_mobile]:after {
@@ -2143,6 +2143,7 @@ input[type=radio] {
   .c_nh_titulos_descripciones {
     top: calc(14%);
     z-index: 1000;
+    margin-left: 1rem;
   }
 
 }

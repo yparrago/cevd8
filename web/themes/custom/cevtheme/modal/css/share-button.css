@@ -3,7 +3,7 @@
     overflow: hidden;
     user-select: none;
     top: -45px;
-    width: 113px;
+    width: 150px;
     height: 36px;
     border-radius: 30px;
     padding: 8px;
@@ -23,8 +23,8 @@
     position: absolute;
     height: 100%;
     padding: 0;
-    width: 201px;
-    right: 36px;
+    width: 297px;
+    right: 0px;
 }
 
 .share-items-wrapper {
@@ -32,7 +32,7 @@
     top: 0;
     left: 0;
     height: 100%;
-    width: 240px;
+    width: 300px;
 }
 
 
@@ -44,10 +44,10 @@
     display: block;
     background: #fff;
     text-decoration: none;
-    height: 30px;
-    width: 30px;
+    height: 25px;
+    width: 25px;
     text-align: center;
-    line-height: 30px;
+    line-height: 25px;
     border-radius: 50%;
     float: left;
     margin-left: 3px;
