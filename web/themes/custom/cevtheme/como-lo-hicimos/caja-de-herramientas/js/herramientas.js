@@ -386,7 +386,7 @@ var herramientas = [
     "ID": 25,
     "Procedimiento": "Investigación sujeto colectivo",
     "Nombre": "Ficha Entrevista a Sujeto Colectivo Étnico",
-    "Descripción": "Ficha Entrevista a Sujeto Colectivo Étnico",
+    "Descripción": "Ficha Entrevista a Sujeto Colectivo Étnico (Pueblos étnicos)",
     "Nombre del archivo": "clh-ch25-ficha-entrevista-a-sujeto-colectivo-etnico.pdf",
     "Ruta": "/investigacion-sujeto-colectivo/ficha-entrevista-a-sujeto-colectivo-etnico.pdf",
     "path": "/themes/custom/cevtheme/como-lo-hicimos/caja-de-herramientas/Documentos",

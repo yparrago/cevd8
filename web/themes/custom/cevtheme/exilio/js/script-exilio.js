@@ -686,12 +686,12 @@ const sectionsapoy = [
     position: { top: 120, left: 2410 },
     image: { url: "/themes/custom/cevtheme/exilio/img/v_v25.svg", top: 383, left: 626 },
   },
-  {
+  /*{
     id: "colombia",
     datanid:313,
     position: { top: 540, left: 2410 },
     image: { url: "/themes/custom/cevtheme/exilio/img/v_v25.svg", top: 430, left: 560 },
-  },
+  },*/
   {
     id: "ecuador",
     datanid:317,

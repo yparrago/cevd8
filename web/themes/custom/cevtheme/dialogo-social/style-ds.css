@@ -829,6 +829,10 @@ body:before {
     color: #17383d !important;
 }
 
+.dg-modals .modal-content-cev .video-group a:hover p{
+    color: #17383d !important;
+}
+
 
 /* lineas entre etiquetas */
 .dg-modals .modal-keywords * {
@@ -880,12 +884,6 @@ body:before {
     box-shadow: 2px 5px 15px 12px rgba(140, 191, 140, 0.21) !important;
 }
 
-.dg-modals h1,
-.dg-modals h2,
-.dg-modals h3,
-.dg-modals p{
-    color: white !important;
-}
 
 
 .dg-modals .btn-close {
@@ -971,4 +969,10 @@ body:before {
 
 .dg-modals .rt-player .progress .progress-bar[data-role="player-progress-bar"]{
     background-color: #EFC356;
+}
+.video-group p:hover {
+    color: #17383d !important;
+}
+.video-group p.text-truncate:hover {
+    color: #85782F !important
 }

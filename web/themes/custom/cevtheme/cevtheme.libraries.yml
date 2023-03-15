@@ -28,6 +28,10 @@ global-styling:
       atlas/css/tour.css: {} 
       css/driver.min.css: {}
       css/buscador.css: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal
 player_audio_modal:
   js:
     modal/js/player-audio-modal.js: {}

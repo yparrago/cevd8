@@ -164,9 +164,18 @@ footer {
 .modal-avivavoz{
     background-color: #243138;
 }
+.modal-avivavoz .volver a{
+    color: #77bec1 !important;
+}
+.modal-avivavoz .volver a:hover{
+    color: #fff !important;
+}
+.modal-avivavoz .icon-flecha-doble-iqz:before {
+    color: #77bec1 !important;
+}
 .modal-avivavoz .modal-icons a {
-    background-color: #77bec1;
-    color: #243138;
+    background-color: #77bec1 !important;
+    color: #243138 !important;
     padding: 5px;
     margin-left: 4px;
     border-radius: 100%;
@@ -176,7 +185,8 @@ footer {
     text-decoration: none;
 }
 .modal-avivavoz .modal-icons a:hover{
-    background-color: #fff;
+    color: #243138 !important;
+    background-color: #fff !important;
 }
 .modal-avivavoz .modal-keywords *,  .modal-avivavoz .modal-content .modal-description,  .tab-pane{
     color: #ffffff50;

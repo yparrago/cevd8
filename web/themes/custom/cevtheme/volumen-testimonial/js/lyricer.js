@@ -141,7 +141,7 @@
     let endShow = line + self.showLines;
     for (let i = 0; i < self.totalLines; i++) {
       let li = document.querySelector(
-        `#jQuery{self.divID} #jQuery{self.lineidPrefix + i}`
+        `#${self.divID} #${self.lineidPrefix + i}`
       );
       if (i >= startShow && i <= endShow) {
         li.style.display = "block";

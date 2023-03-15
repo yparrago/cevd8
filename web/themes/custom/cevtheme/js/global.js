@@ -48,3 +48,14 @@ function onSubmitSearchForm() {
     }
   }
 
+
+
+  jQuery(document).ready(function () {
+    if( jQuery('#modalInfoCev').find('video').length )
+    {
+      jQuery('video').addClass('embed-responsive-item');
+      jQuery('video').attr('width', '100%');
+      jQuery('video').attr('height', 'auto');
+    }
+  });
+

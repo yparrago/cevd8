@@ -82,18 +82,27 @@
           <h5 class="card-title">{{ node.label }}</h5>
           <p class="card-text">{{ content.field_resumen_corto }}</p>
           </div>
+          {% if node.field_titulo_boton_carrusel.value %}
+            <a href="#" data-nid="{{ node.field_id_modal_boton_carrusel.value|raw }}"  class="modal_cev btn modal-region-atlas">{{ content.field_titulo_boton_carrusel }}</a>
+          {% endif %}
           <img class="card-img-bottom" src="{{ file_url(node.field_imagen_portada.entity.fileuri) }}" alt="">
         </a>
         {% else %}
           <h5 class="card-title">{{ node.label }}</h5>
           <p class="card-text">{{ content.field_resumen_corto }}</p>
           </div>
+          {% if node.field_titulo_boton_carrusel.value %}
+            <a href="#" data-nid="{{ node.field_id_modal_boton_carrusel.value|raw }}"  class="modal_cev btn modal-region-atlas">{{ content.field_titulo_boton_carrusel }}</a>
+          {% endif %}
           <img class="card-img-bottom" src="{{ file_url(node.field_imagen_portada.entity.fileuri) }}" alt="">
         {% endif %}
       {% else %}
           <h5 class="card-title"></h5>
           <p class="card-text"></p>
         </div>
+          {% if node.field_titulo_boton_carrusel.value %}
+            <a href="#" data-nid="{{ node.field_id_modal_boton_carrusel.value|raw }}"  class="modal_cev btn modal-region-atlas">{{ content.field_titulo_boton_carrusel }}</a>
+          {% endif %}
         <img class="card-img-bottom" src="{{ file_url(node.field_imagen_portada.entity.fileuri) }}" alt="">
       {% endif %}
 </div>

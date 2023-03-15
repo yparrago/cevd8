@@ -21,6 +21,9 @@ jQuery(function ($) {
         // if (myCarousel != null) {
         //   var carousel = new bootstrap.Carousel(myCarousel);
         // }
+        jQuery('video').addClass('embed-responsive-item');
+        jQuery('video').attr('width', '100%');
+        jQuery('video').attr('height', 'auto');
       },
     });
     $('.btn-close').click(function () {

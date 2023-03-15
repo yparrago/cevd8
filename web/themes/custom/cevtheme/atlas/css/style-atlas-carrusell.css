@@ -171,15 +171,18 @@ background-color: transparent;
   font-weight: bolder;
 }
 
-.divPresentacion a {
+.card a.btn, .divPresentacion a {
   background-color: #e25b00;
   color: #ffffff;
   transition: all 0.7s ease;
   margin-bottom: 10px;
   line-height: 1rem;
 }
+.card a.btn{
+  width: 30%;
+}
 
-.divPresentacion a:hover {
+.divPresentacion a:hover, .card a.btn:hover {
   background-color: #FF6700;
   color: #ffffff;
 }
@@ -362,4 +365,9 @@ background-color: transparent;
 
 .flotantes {
   top: 12%;
+}
+
+
+.btn.modal-region-atlas {
+  margin: 5px auto;
 }

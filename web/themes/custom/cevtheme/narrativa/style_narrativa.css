@@ -1392,7 +1392,7 @@ input[type=radio] {
   transform: scale(0.54);
 }
 
-.form-check {
+.c_nh_general .form-check {
   color: #132852;
   padding: 0;
 
@@ -2537,10 +2537,4 @@ button#reproducir, button#pausar {
 }
 #how-to-use-modal .modal-content h4{
   color: #e2ddcd !important;
-}
-.x-share-button{
-  width: 109px;
-}
-.x-share-button.open .share-item{
-  margin-top: 0px;
 }

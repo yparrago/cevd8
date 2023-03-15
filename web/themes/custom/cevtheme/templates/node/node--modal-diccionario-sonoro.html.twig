@@ -75,6 +75,7 @@
 <!-- Button trigger modal -->
 
 {{ attach_library('cevtheme/diccionarioSonoro') }}
+{{ attach_library('cevtheme/modalDespliegue_library') }}
 
 <div class="css-custom-modal gen-btns" id="despliegueDiccionarioSonoro" tabindex="-1" role="dialog"
     aria-labelledby="modalContenidos" aria-hidden="true">
@@ -86,6 +87,11 @@
                 </button>
             </div>
             <div class="modal-content-cev modal-body p-4">
+                <div class="col-12 pt-5">
+                    <h5 class="volver icon-chevron-left mx-auto icon-flecha-doble-iqz">
+                        <a href="/a-viva-voz" target="_self">A viva voz</a>
+                    </h5>
+                </div>
                 <h1 class="textoColor2"><span>A</span> <span>v</span><span>i</span><span>v</span><span>a</span>
                     <span>v</span><span>o</span><span>z</span>
                     <span id="modelo">{{ node.label }}</span>
@@ -109,6 +115,9 @@
                                         </a>
                                         <a target="_blank" type="button"  id="copy-clipboard" data-bs-toggle="popover"  data-bs-content="Copiado al portapapeles" data-bs-html="true" data-bs-placement="top" id="copy-clipboard" data-clipboard-action="copy" data-clipboard-text="https://www.comisiondelaverdad.co{{url}}" class="share-item copy-clipboard">
                                             <i class="bi bi-link-45deg"></i>
+                                        </a>
+                                        <a href="https://wa.me/?text=https://www.comisiondelaverdad.co{{url}}&text={{node.label}}" target="_blank" class="share-item" title="Compartir en Whatsapp">
+                                            <i class="bi bi-whatsapp"></i>
                                         </a>
                                     </div>
                                 </div>

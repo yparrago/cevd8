@@ -919,9 +919,10 @@ h2 {
 .x-share-button.open .share-item{
     margin-top: 2px;
 }
-.x-share-button {
-    width: 108px;
-}
+
 .video-group .col.col-md-4{
     border-color: #DDDCD8;
+}
+.modal .modal-icons [class*=" bi-"]::before {
+    vertical-align: -0.125em;
 }

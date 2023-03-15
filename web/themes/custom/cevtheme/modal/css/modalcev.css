@@ -30,6 +30,9 @@
 }
 
 .modal .modal-icons a {
+    height: 30px;
+    width: 30px;
+    margin: 3px;
     background-color:#85782F;
     color: white !important;
     padding: 5px;
@@ -40,6 +43,9 @@
     align-items: center;
     text-decoration: none;
 }
+.modal .modal-icons [class^="bi-"]::before, .modal .modal-icons [class*=" bi-"]::before {
+    vertical-align: -0.19em;
+    } 
 
 .modal .modal-icons img {
     width: 20px;
@@ -126,13 +132,13 @@
 }
 
 .modal .nav.nav-tabs {
-    overflow-x: auto;
+   /*  overflow-x: auto; */
     flex-wrap: nowrap;
 }
 
 @media screen and (min-width: 768px) {
     .modal .nav.nav-tabs {
-        overflow-x: initial;
+        /* overflow-x: initial; */
         flex-wrap: wrap;
     }
 }

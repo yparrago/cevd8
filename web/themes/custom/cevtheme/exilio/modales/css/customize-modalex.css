@@ -46,11 +46,15 @@
      color:  #70F5E7;
      overflow-wrap: break-word;
  }
- .customize-modalex.modal-content a:hover{
-     color: #fff;
- }
+ .modal-media .accordion-item:last-of-type .accordion-collapse {
+    border-bottom-right-radius: 0rem;
+    border-bottom-left-radius: 0rem;
+}
  .modal .modal-icons a{
     color: #fff;
+ }
+ .customize-modalex .video-group .col.col-md-4 a:hover, .customize-modalex .video-group .col.col-md-4 a:active{
+    color: #293171 !important;
  }
  
  .customize-modalex.modal-keywords a {

@@ -48,6 +48,14 @@ if(frenteAlEspejo){
   document.getElementById("frenteAlEspejoReferencia").setAttribute("data-nid", texto);
 }
 
+// Enlaces anímate a la verdad
+const animateVerdad = document.getElementById("animate-a-la-verdad");
+if(animateVerdad){ 
+  const nidAnimateVerdad = document.getElementById("animateVerdadId").innerHTML;
+  const texto = nidAnimateVerdad.match(regex);
+  document.getElementById("animateVerdadReferencia").setAttribute("data-nid", texto);
+}
+
 
 //descargables
 const nodedes = document.getElementById("descargablesCopia");

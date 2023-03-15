@@ -465,7 +465,11 @@ li.list-group-item.listidsMovil {
 
 
 input#edit-submit-seccion-prensa {
+    color: #FFF;
     margin: 0 0 10px 0;
+}
+input#edit-submit-seccion-prensa:hover {
+    color: #212529;
 }
 .card.cardImagen:hover {
     width: 355px;
