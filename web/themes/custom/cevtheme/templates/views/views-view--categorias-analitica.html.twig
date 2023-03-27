@@ -1,0 +1,243 @@
+{#
+/**
+* @file
+* Theme override for a main view template.
+*
+* Available variables:
+* - attributes: Remaining HTML attributes for the element.
+* - css_name: A css-safe version of the view name.
+* - css_class: The user-specified classes names, if any.
+* - header: The optional header.
+* - footer: The optional footer.
+* - rows: The results of the view query, if any.
+* - empty: The content to display if there are no rows.
+* - pager: The optional pager next/prev links to display.
+* - exposed: Exposed widget form/info to display.
+* - feed_icons: Optional feed icons to display.
+* - more: An optional link to the next page of results.
+* - title: Title of the view, only used when displaying in the admin preview.
+* - title_prefix: Additional output populated by modules, intended to be
+* displayed in front of the view title.
+* - title_suffix: Additional output populated by modules, intended to be
+* displayed after the view title.
+* - attachment_before: An optional attachment view to be displayed before the
+* view content.
+* - attachment_after: An optional attachment view to be displayed after the
+* view content.
+* - dom_id: Unique id for every view being printed to give unique class for
+* Javascript.
+*
+* @see template_preprocess_views_view()
+*/
+#}
+
+{{ attach_library('cevtheme/analitica_library') }}
+
+{# vista principal #}
+<div class="row opcion1">
+    {% if rows %}
+    {{rows}}
+    {% elseif empty %}
+    <div class="view-empty">
+        {{ empty }}
+    </div>
+    {% endif %}
+</div>
+
+{# vista c1 #}
+<div id="c1" class="inactivo">
+    <div class="row opcion2">
+        <div class="col-12 segundoCuerpo">
+            <div class="row row-cols-1 g-4">
+                <div class="col-12">
+                    <div class="card c1">
+                        <div class="card-body">
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
+                                <h5><mark id="marca1copia"></mark></h5>
+                                <h2 id="titulo1copia"></h2>
+                                <p class="card-text" id="descripcion1copia"></p>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-8 col-xl-8 col-xxl-8">
+                                <div class="container">
+                                    <div  id="caruselOpcion2"class="carousel" data-bs-ride="carousel">
+                                    <div class="carousel-indicators" id="indicatorsopcion2"></div>
+                                    <div class="carousel-inner" id="carousel-inner2">                                   
+                                            {{ drupal_view('analitica_categorias', 'block_hxc','1967') }}
+                                    </div>
+                                    <button id="carousel-control-next2"class="carousel-control-next" type="button" data-bs-target="#caruselOpcion2" data-bs-slide="next">
+                                        <span class="icon-flecha-der" aria-hidden="true"></span>
+                                    </button>
+                                    <button id="carousel-control-prev2"class="carousel-control-prev" type="button" data-bs-target="#caruselOpcion2" data-bs-slide="prev">
+                                        <span class="icon-flecha-iqz" aria-hidden="true"></span>
+                                    </button>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 tercerCuerpo">
+            {{ drupal_view('categorias_analitica_resumen', 'block_hxco' , '1967') }}
+        </div>
+    </div>
+</div>
+{# vista c2 #}
+<div id="c2" class="inactivo">
+    <div class="row opcion3">
+        <div class="col-12 segundoCuerpo">
+            <div class="row row-cols-1 g-4">
+                <div class="col-12">
+                    <div class="card c2">
+                        <div class="card-body">
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
+                                <h5><mark id="marca2copia"></mark></h5>
+                                <h2 id="titulo2copia"></h2>
+                                <p class="card-text" id="descripcion2copia"></p>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-8 col-xl-8 col-xxl-8">
+                                <div class="container">
+                                    <div  id="caruselOpcion3"class="carousel" data-bs-ride="carousel">
+                                    <div class="carousel-indicators" id="indicatorsopcion3"></div>
+                                    <div  class="carousel-inner" id="carousel-inner3">
+                                        {{ drupal_view('analitica_categorias', 'block_hxc' , '1968') }}
+                                    </div>
+                                    <button id="carousel-control-next3" class="carousel-control-next" type="button" data-bs-target="#caruselOpcion3" data-bs-slide="next">
+                                        <span class="icon-flecha-der" aria-hidden="true"></span>
+                                    </button>
+                                    <button id="carousel-control-prev3"class="carousel-control-prev" type="button" data-bs-target="#caruselOpcion3" data-bs-slide="prev">
+                                        <span class="icon-flecha-iqz" aria-hidden="true"></span>
+                                    </button>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 tercerCuerpo">
+            {{ drupal_view('categorias_analitica_resumen', 'block_hxco' , '1968') }}
+        </div>
+    </div>
+</div>
+{# vista c3s #}
+<div id="c3" class="inactivo">
+    <div class="row opcion4">
+        <div class="col-12 segundoCuerpo">
+            <div class="row row-cols-1 g-4">
+                <div class="col-12">
+                    <div class="card c3">
+                        <div class="card-body">
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
+                                <h5><mark id="marca3copia"></mark></h5>
+                                <h2 id="titulo3copia"></h2>
+                                <p class="card-text" id="descripcion3copia"></p>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-8 col-xl-8 col-xxl-8">
+                                <div class="container">
+                                    <div  id="caruselOpcion4"class="carousel" data-bs-ride="carousel">
+                                    <div class="carousel-indicators" id="indicatorsopcion4"></div>
+                                    <div  class="carousel-inner" id="carousel-inner4">
+                                        {{ drupal_view('analitica_categorias', 'block_hxc' , '1969') }}
+                                    </div>
+                                    <button id="carousel-control-next4" class="carousel-control-next" type="button" data-bs-target="#caruselOpcion4" data-bs-slide="next">
+                                        <span class="icon-flecha-der" aria-hidden="true"></span>
+                                    </button>
+                                    <button id="carousel-control-prev4" class="carousel-control-prev" type="button" data-bs-target="#caruselOpcion4" data-bs-slide="prev">
+                                        <span class="icon-flecha-iqz" aria-hidden="true"></span>
+                                    </button>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 tercerCuerpo">
+            {{ drupal_view('categorias_analitica_resumen', 'block_hxco' , '1969') }}
+        </div>
+    </div>
+</div>
+{# vista c4 #}
+<div id="c4" class="inactivo">
+    <div class="row opcion5">
+        <div class="col-12 segundoCuerpo">
+            <div class="row row-cols-1 g-4">
+                <div class="col-12">
+                    <div class="card c4">
+                        <div class="card-body">
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
+                                <h5><mark id="marca4copia"></mark></h5>
+                                <h2 id="titulo4copia"></h2>
+                                <p class="card-text" id="descripcion4copia"></p>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-8 col-xl-8 col-xxl-8">
+                            <div class="container">
+                                <div  id="caruselOpcion5"class="carousel" data-bs-ride="carousel">
+                                    <div class="carousel-indicators" id="indicatorsopcion5"></div>
+                                    <div  class="carousel-inner" id="carousel-inner5">
+                                        {{ drupal_view('analitica_categorias', 'block_hxc' , '1970') }}
+                                    </div>
+                                    <button id="carousel-control-next5" class="carousel-control-next" type="button" data-bs-target="#caruselOpcion5" data-bs-slide="next">
+                                        <span class="icon-flecha-der" aria-hidden="true"></span>
+                                    </button>
+                                    <button id="carousel-control-prev5" class="carousel-control-prev" type="button" data-bs-target="#caruselOpcion5" data-bs-slide="prev">
+                                        <span class="icon-flecha-iqz" aria-hidden="true"></span>
+                                    </button>
+                                
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 tercerCuerpo">
+            {{ drupal_view('categorias_analitica_resumen', 'block_hxco' , '1970') }}
+        </div>
+    </div>
+</div>
+{# vista c5 #}
+<div id="c5" class="inactivo">
+    <div class="row opcion6">
+        <div class="col-12 segundoCuerpo">
+            <div class="row row-cols-1 g-4">
+                <div class="col-12">
+                    <div class="card c5">
+                        <div class="card-body">
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
+                                <h2 id="titulo5copia"></h2>
+                                <h5><mark id="marca5copia"></mark></h5>
+                                <p class="card-text" id="descripcion5copia"></p>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-8 col-xl-8 col-xxl-8">
+                                <div class="container">
+                                    <div  id="caruselOpcion6"class="carousel" data-bs-ride="carousel">
+                                        <div class="carousel-indicators" id="indicatorsopcion6"></div>
+                                        <div  class="carousel-inner" id="carousel-inner6">
+                                            {{ drupal_view('analitica_categorias', 'block_hxc' , '1971') }}
+                                        </div>
+                                        <button id="carousel-control-next6"class="carousel-control-next" type="button" data-bs-target="#caruselOpcion6" data-bs-slide="next">
+                                            <span class="icon-flecha-der" aria-hidden="true"></span>
+                                        </button>
+                                        <button id="carousel-control-prev6"class="carousel-control-prev" type="button" data-bs-target="#caruselOpcion6" data-bs-slide="prev">
+                                            <span class="icon-flecha-iqz" aria-hidden="true"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 tercerCuerpo">
+            {{ drupal_view('categorias_analitica_resumen', 'block_hxco' , '1971') }}
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

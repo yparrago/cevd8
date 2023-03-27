@@ -13,8 +13,14 @@
 .customize-modalex.modal-content h5,
 .customize-modalex.modal-content h6,
 .customize-modalex.modal-content p {
-    color:  #fff !important;
+    color:  #fff ;
 }
+
+.customize-modalex.modal-content .video-group .col.col-md-4:hover p, .customize-modalex.modal-content .video-group .col.col-md-4:hover p.text-truncate{
+    color: #1E2A47 ;
+    
+} 
+
 
 .customize-modalex .btn-close {
     color: orange!important;

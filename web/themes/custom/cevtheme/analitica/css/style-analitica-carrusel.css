@@ -1,0 +1,63 @@
+@import url("https://unpkg.com/swiper/swiper-bundle.min.css");
+.container .swiper {
+    width: 80%;
+    height: 80%;
+    text-align: center;
+}
+
+.container .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+}
+
+.container .swiper-slide img {
+    width: 9rem;
+    height: 9rem;
+    font-size: 6rem;
+    border: 10px solid #394854;
+    margin: 0px auto;
+    padding: 0px;
+    color: #eff6e1;
+    transition: all 0.5s ease-in-out;
+    display: block;
+    text-align: center;
+}
+
+.container .swiper-slide img:hover {
+    border: 10px solid #eff6e1;
+    color: #394854
+}
+
+.opcion5 .container .swiper-slide img  {
+    border: 10px solid #eff6e1;
+    color: #394854;
+}
+.opcion5 .container .swiper-slide img  {
+    border: 10px solid  #394854;
+    background-color: #fff;
+}
+
+.container .swiper-slide .card-text {
+    padding: 1rem 1rem;
+}
+
+.swiper-button-next {
+    right: 23px !important;
+    color: #fff;
+}
+
+.swiper-button-prev {
+    left: 23px !important;
+    color: #fff;
+}
+.swiper-pagination {
+    --swiper-theme-color: #394854;
+    --swiper-pagination-bullet-inactive-color: #eff6e1;
+    opacity: 0.9;   
+}
+
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%; 
+}

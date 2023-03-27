@@ -66,16 +66,19 @@ function cargarBotones() {
                 playerAudioplaylistStatic.stop();
                 if (playListAudios[index].transcription[0] == null) {
                     document.getElementById('language-selector').classList.add('hidden');
+                    document.getElementById('language-selector').setAttribute('disabled', 'true');
                     document.getElementById('audio-playlist-static-transcription').style.display = 'none';
                 } else {
                     document.getElementById('language-selector').classList.remove('hidden');
+                    document.getElementById('language-selector').removeAttribute('disabled');
                     document.getElementById('audio-playlist-static-transcription').style.display = '';
                     setupPlaylistLrcStatic(playListAudios[index].transcription[0])
                     const elecciones1 = Array.from(document.querySelectorAll('.controlSeleccion'))
                     elecciones1.forEach(eleccion1 => {
                         eleccion1.classList.add('hidden');
+                        eleccion1.setAttribute('disabled', 'true');
                     });
-                    $("#seleccion").val($("#seleccion option:first").val());
+                    jQuery('#seleccion').find('.cs' + index + ':first').attr('selected', 'selected');
                 }
                 // console.log('Instancia player play', playerAudioplaylistStatic);
                 
@@ -87,6 +90,7 @@ function cargarBotones() {
                     const elecciones = Array.from(document.querySelectorAll('.cs' + index))
                     elecciones.forEach(eleccion => {
                         eleccion.classList.remove('hidden');
+                        eleccion.removeAttribute('disabled');
                     });
                     const select = document.getElementById('seleccion');
                     select.addEventListener('change', (event) => {

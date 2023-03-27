@@ -235,6 +235,10 @@ body {
   background-color: var(--color-blue);
 }
 
+#dot-main-menu .dropdown-menu li:nth-child(7) .dropdown-item {
+  background-color: var(--color-orange);
+}
+
 /* Dots */
 
 .dots .dot {

@@ -83,7 +83,11 @@
     <div class="card-body">
       <div class="col-12">
           <h5 class="volver icon-chevron-left mx-auto icon-flecha-doble-iqz p-0">
-              {{ content.field_seccion }}
+              {% if node.field_seccion.0.entity.id == 153 %}
+                  <a href="/recorridos/como-lo-hicimos" target="_self">Cómo lo hicimos</a>
+              {% else %}
+                  <a href="/taxonomy/term/{{ node.field_seccion.0.entity.id }}" target="_self">{{ node.field_seccion.0.entity.name.value }}</a>
+              {% endif %}
           </h5>
       </div>
       <a href="{{url}}"><h5 class="card-title">{{ node.label }}</h5></a>

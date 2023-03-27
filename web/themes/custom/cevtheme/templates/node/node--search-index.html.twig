@@ -82,6 +82,13 @@
       {% endif %}
 
         <div class="card-body">
+          {% if node.field_section is not empty %}
+            <div class="col-12">
+                <h5 class="volver icon-chevron-left mx-auto icon-flecha-doble-iqz p-0">
+                    <a href="/taxonomy/term/{{ node.field_section.0.entity.id }}" target="_self">{{ node.field_section.0.entity.name.value }}</a>
+                </h5>
+            </div>
+          {% endif %}
           <a href="{{url}}"><h5 class="card-title">{{ node.label }}</h5></a>
           <p class="card-text">{{ content.field_resumen_corto }}</p>
         </div>

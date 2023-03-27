@@ -464,6 +464,12 @@ loquesigue_library:
   css:
     component:
       lo-que-sigue/css/style-lqs.css: {}
+legado_library:
+  js:
+    legado/js/script-legado.js: {}
+  css:
+    component:
+      legado/css/style-legado.css: {}
 comite_de_seguimiento_library:
   js:
     comite-de-seguimiento/js/script-cds.js: {}
@@ -514,3 +520,12 @@ modalDespliegue_library:
   css:
     component:
       modal/css/despliegue.css: {}
+analitica_library:
+  js:
+    //unpkg.com/swiper/swiper-bundle.min.js: {}
+    analitica/js/script-analitica.js: {}
+    analitica/js/script-analitica-carrusel.js: {}
+  css:
+    component:
+      analitica/css/style-analitica.css: {}
+      analitica/css/style-analitica-carrusel.css: {}
