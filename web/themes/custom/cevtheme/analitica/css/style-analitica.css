@@ -482,13 +482,14 @@ footer {
     background-position: center left;
     background-size: cover;
     background-repeat: no-repeat;
-    color: #58457A;   
+    color: #58457A;
 }
 .c5{
     background-image: url(../img/fondo-categoria5.png);
     background-position: center left;
     background-size: cover;
     background-repeat: no-repeat;
+    color: #58457A;
 }
 .segundoCuerpo .carousel-indicators [data-bs-target]{
     background-color: #EFF6E2;
