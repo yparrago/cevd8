@@ -62,7 +62,7 @@ const timeline = [
           type: ITEM_TYPE.SMALL_IMAGE,
           nid: "",
           imageAlt: "Evento. dos personas se dirigen a una audiencia",
-          link: "https://archivo.comisiondelaverdad.co/promoviendo-el-reconocimiento-a-la-dignificacion-de-las-victimas-y-de-responsabilidades#section8",
+          link: "https://archivo.comisiondelaverdad.co/promoviendo-el-reconocimiento-a-la-dignificacion-de-las-victimas-y-de-responsabilidades?bloque=8",
           image:"/themes/custom/cevtheme/dialogo-social-timeline/img/4b.png",
           popover: {
             text: "Reconocimiento a la dignidad de las mujeres y personas LGBTIQ+, víctimas de violencias sexuales",
@@ -72,7 +72,7 @@ const timeline = [
           type: ITEM_TYPE.SMALL_IMAGE,
           nid: "",
           imageAlt: "Mujer mayor con libro entre las manos",
-          link: "https://archivo.comisiondelaverdad.co/promoviendo-el-reconocimiento-a-la-dignificacion-de-las-victimas-y-de-responsabilidades#section13",
+          link: "https://archivo.comisiondelaverdad.co/promoviendo-el-reconocimiento-a-la-dignificacion-de-las-victimas-y-de-responsabilidades?bloque=13",
           image:"/themes/custom/cevtheme/dialogo-social-timeline/img/4c.png",
           popover: {
             text: "Reconocimiento a las mujeres y familiares que buscan personas desaparecidas",
@@ -82,7 +82,7 @@ const timeline = [
           type: ITEM_TYPE.SMALL_IMAGE,
           nid: "",
           imageAlt: "Evento, personas se dirigen a una audiencia",
-          link: "https://archivo.comisiondelaverdad.co/promoviendo-el-reconocimiento-a-la-dignificacion-de-las-victimas-y-de-responsabilidades#section19",
+          link: "https://archivo.comisiondelaverdad.co/promoviendo-el-reconocimiento-a-la-dignificacion-de-las-victimas-y-de-responsabilidades?bloque=19",
           image:"/themes/custom/cevtheme/dialogo-social-timeline/img/4d.png",
           popover: {
             text: "Reconocimiento de los impactos del conflicto armado en niños, niñas y adolescentes",
@@ -92,7 +92,7 @@ const timeline = [
           type: ITEM_TYPE.SMALL_IMAGE,
           nid: "",
           imageAlt: "Retrato de hombre con sombrero. Texto: “el campo cuenta la verdad”",
-          link: "https://archivo.comisiondelaverdad.co/promoviendo-el-reconocimiento-a-la-dignificacion-de-las-victimas-y-de-responsabilidades#section24",
+          link: "https://archivo.comisiondelaverdad.co/promoviendo-el-reconocimiento-a-la-dignificacion-de-las-victimas-y-de-responsabilidades?bloque=24",
           image: "/themes/custom/cevtheme/dialogo-social-timeline/img/4e.png",
           popover: {
             text: "Reconocimiento de los impactos a las poblaciones campesinas ",
@@ -225,7 +225,7 @@ const timeline = [
           // Enlace Sim
           nid: "",
           imageAlt: "",
-          link: "https://archivo.comisiondelaverdad.co/escuchando-a-las-victimas-actores-y-sectores-del-pais#section19",
+          link: "https://archivo.comisiondelaverdad.co/escuchando-a-las-victimas-actores-y-sectores-del-pais?bloque=19",
           image:
             "/themes/custom/cevtheme/dialogo-social-timeline/img/8c.png",
           popover: {
@@ -237,7 +237,7 @@ const timeline = [
           // Enlace Sim
           nid: "",
           imageAlt: "",
-          link: "https://archivo.comisiondelaverdad.co/escuchando-a-las-victimas-actores-y-sectores-del-pais#section32",
+          link: "https://archivo.comisiondelaverdad.co/escuchando-a-las-victimas-actores-y-sectores-del-pais?bloque=32",
           image:
             "/themes/custom/cevtheme/dialogo-social-timeline/img/8d.png",
           popover: {
@@ -806,7 +806,7 @@ const timeline = [
           //Enlace Sim
           nid: "",
           imageAlt: "Dos jóvenes sostienen una pancarta con manos y mundo pintado. Texto: paz",
-          link: "https://archivo.comisiondelaverdad.co/promoviendo-el-reconocimiento-a-la-dignificacion-de-las-victimas-y-de-responsabilidades#section49",
+          link: "https://archivo.comisiondelaverdad.co/promoviendo-el-reconocimiento-a-la-dignificacion-de-las-victimas-y-de-responsabilidades?bloque=49",
           image:
             "/themes/custom/cevtheme/dialogo-social-timeline/img/12b.png",
           popover: {
@@ -842,7 +842,7 @@ const timeline = [
           //Enlace Sim
           nid: "",
           imageAlt: "Evento público. Hombre sentado sostiene documentos en sus manos",
-          link: "https://archivo.comisiondelaverdad.co/promoviendo-el-reconocimiento-a-la-dignificacion-de-las-victimas-y-de-responsabilidades#section49",
+          link: "https://archivo.comisiondelaverdad.co/promoviendo-el-reconocimiento-a-la-dignificacion-de-las-victimas-y-de-responsabilidades?bloque=49",
           image:
             "/themes/custom/cevtheme/dialogo-social-timeline/img/12e.png",
           popover: {
@@ -854,7 +854,7 @@ const timeline = [
           //Enlace Sim
           nid: "",
           imageAlt: "2 personas hablan desde atriles. texto: reconocer para no repetir",
-          link: "https://archivo.comisiondelaverdad.co/promoviendo-el-reconocimiento-a-la-dignificacion-de-las-victimas-y-de-responsabilidades#section49",
+          link: "https://archivo.comisiondelaverdad.co/promoviendo-el-reconocimiento-a-la-dignificacion-de-las-victimas-y-de-responsabilidades?bloque=49",
           image:
             "/themes/custom/cevtheme/dialogo-social-timeline/img/12f.png",
           popover: {
@@ -866,7 +866,7 @@ const timeline = [
           //Enlace Sim
           nid: "",
           imageAlt: "Hombre de pie frente a un atril  se dirige a una audiencia",
-          link: "https://archivo.comisiondelaverdad.co/promoviendo-el-reconocimiento-a-la-dignificacion-de-las-victimas-y-de-responsabilidades#section49",
+          link: "https://archivo.comisiondelaverdad.co/promoviendo-el-reconocimiento-a-la-dignificacion-de-las-victimas-y-de-responsabilidades?bloque=49",
           image:
             "/themes/custom/cevtheme/dialogo-social-timeline/img/12g.png",
           popover: {
@@ -878,7 +878,7 @@ const timeline = [
           //Enlace Sim
           nid: "",
           imageAlt: "Retrato de hombre indígena con bastón de mando y sombrero",
-          link: "https://archivo.comisiondelaverdad.co/promoviendo-el-reconocimiento-a-la-dignificacion-de-las-victimas-y-de-responsabilidades#section49",
+          link: "https://archivo.comisiondelaverdad.co/promoviendo-el-reconocimiento-a-la-dignificacion-de-las-victimas-y-de-responsabilidades?bloque=49",
           image:
             "/themes/custom/cevtheme/dialogo-social-timeline/img/12h.png",
           popover: {
@@ -890,7 +890,7 @@ const timeline = [
           //Enlace Sim
           nid: "",
           imageAlt: "grupo de personas levantan sus manos, portan diversos objetos",
-          link: "https://archivo.comisiondelaverdad.co/promoviendo-el-reconocimiento-a-la-dignificacion-de-las-victimas-y-de-responsabilidades#section49",
+          link: "https://archivo.comisiondelaverdad.co/promoviendo-el-reconocimiento-a-la-dignificacion-de-las-victimas-y-de-responsabilidades?bloque=49",
           image:
             "/themes/custom/cevtheme/dialogo-social-timeline/img/12i.png",
           popover: {
@@ -902,7 +902,7 @@ const timeline = [
           //Enlace Sim
           nid: "",
           imageAlt: "Francisco de Roux, Salvatore Mancuso y Rodrigo Londoño en videoconferencia",
-          link: "https://archivo.comisiondelaverdad.co/promoviendo-el-reconocimiento-a-la-dignificacion-de-las-victimas-y-de-responsabilidades#section49",
+          link: "https://archivo.comisiondelaverdad.co/promoviendo-el-reconocimiento-a-la-dignificacion-de-las-victimas-y-de-responsabilidades?bloque=49",
           image:
             "/themes/custom/cevtheme/dialogo-social-timeline/img/12j.png",
           popover: {
