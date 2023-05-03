@@ -1193,3 +1193,7 @@
   .divAnalitica{
       margin-left: 20px;
   }
+
+  .divAnalitica p a {
+    color: #EFF6E2;
+}
