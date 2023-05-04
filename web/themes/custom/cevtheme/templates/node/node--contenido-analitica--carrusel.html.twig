@@ -61,7 +61,7 @@ other methods (such as node.delete) will result in an exception.
 #}
 {##}
 <div class="col d-block w-100">
-        <a {% if node.field_id_modal is not empty %}href="#" class="modal_cev" data-nid="{{ content.field_id_modal }}"{% endif %} {% if node.field_enlace is not empty %}href="{{ content.field_enlace }}" target="_blank"{% endif %}
+        <a {% if node.field_id_modal is not empty %}href="#" class="modal_cev" data-nid="{% spaceless %}{{ content.field_id_modal }}{% endspaceless %}"{% endif %} {% if node.field_enlace is not empty %}href="{{ content.field_enlace }}" target="_blank"{% endif %}
                 <span class="icono">
                         <img src="{{file_url(node.field_icono.entity.fileuri)}}" alt="logo herramientas pedagogicas {{file_url(node.field_icono.entity.fileuri)}} "  /> 
                 </span>
