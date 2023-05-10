@@ -489,6 +489,7 @@
       background-position: center left;
       background-size: cover;
       background-repeat: no-repeat;
+      color: #58457A;  
   }
   .segundoCuerpo .carousel-indicators [data-bs-target]{
       background-color: #EFF6E2;
