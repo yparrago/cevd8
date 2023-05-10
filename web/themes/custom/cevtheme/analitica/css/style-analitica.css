@@ -1193,7 +1193,8 @@
   .divAnalitica{
       margin-left: 20px;
   }
-
-  .divAnalitica p a {
-    color: #EFF6E2;
-}
+  
+  .divAnalitica p a,
+  .divAnalitica h5 a {
+      color: #EFF6E2;
+  }
